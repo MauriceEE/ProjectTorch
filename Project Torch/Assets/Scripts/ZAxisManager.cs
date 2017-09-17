@@ -8,22 +8,20 @@ public class ZAxisManager : MonoBehaviour {
     public float minY, maxY;
 
     //Reference to the player
-    public GameObject player;
+    //public GameObject player;
     public GameObject[] objs;
 
     public float MinY { get { return minY; } }
     public float MaxY { get { return maxY; } }
 
 	void Start () {
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
 	}
 	
 	void Update () {
-        UpdateZAxis(player);
-        foreach(GameObject g in objs)
-        {
-            UpdateZAxis(g);
-        }
+        //UpdateZAxis(player);
+        for (int i = 0; i < objs.Length; ++i)
+            UpdateZAxis(objs[i]);
 	}
 
     void UpdateZAxis(GameObject o)
