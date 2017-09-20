@@ -13,8 +13,11 @@ public class PlayerMovement : MonoBehaviour {
     protected Collider2D[] obstacles;
     //A reference to the player's bounds just to make things less tedious to write
     protected Collider2D playerCollider;
+    //Whether or not the player can move, can be accessed and modified by other scripts
+    private bool canMove = true;
+    public bool CanMove { get { return canMove; } set { canMove = value; } }
 
-	void Start () {
+    void Start () {
         minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
         maxY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MaxY;
         playerCollider = this.GetComponent<Collider2D>();
@@ -28,21 +31,14 @@ public class PlayerMovement : MonoBehaviour {
         //Reset displacement this frame
         displacement = Vector2.zero;
 
-        // --TEMP-- //
-        //Move with keyboard keys
-        if (Input.GetKey(KeyCode.A))
-            displacement += new Vector2(-moveSpeed.x, 0);
-        else if (Input.GetKey(KeyCode.D))
-            displacement += new Vector2(moveSpeed.x, 0);
-        if (Input.GetKey(KeyCode.W))
-            displacement += new Vector2(0, moveSpeed.y);
-        else if (Input.GetKey(KeyCode.S))
-            displacement += new Vector2(0, -moveSpeed.y);
+        //Move with controller
+        displacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
 
         //Make sure you won't run into an obstacle
         this.CheckCollisions();
         //Move the player
-        this.Move();
+        if (canMove)
+            this.Move();
     }
 
     /// <summary>
@@ -54,20 +50,17 @@ public class PlayerMovement : MonoBehaviour {
         //Loop through obstacles in the level
         for (int i = 0; i < obstacles.Length; ++i) 
         {
+            Rect r1 = new Rect(new Vector2(playerCollider.bounds.center.x + displacement.x, playerCollider.bounds.center.y + displacement.y), new Vector2(playerCollider.bounds.extents.x, playerCollider.bounds.extents.y));
+            Rect r2 = new Rect(new Vector2(obstacles[i].bounds.center.x, obstacles[i].bounds.center.y), new Vector2(obstacles[i].bounds.extents.x, obstacles[i].bounds.extents.y));
             //See if we're inside the obstacle
-            if (AABB(obstacles[i]))
+            if (Helper.AABB(r1, r2))
             {
                 displacement = Vector2.zero;
             }
         }
     }
 
-    protected bool AABB(Collider2D other)
-    {
-        Rect r1 = new Rect(new Vector2(playerCollider.bounds.center.x + displacement.x, playerCollider.bounds.center.y + displacement.y), new Vector2(playerCollider.bounds.extents.x, playerCollider.bounds.extents.y));
-        Rect r2 = new Rect(new Vector2(other.bounds.center.x, other.bounds.center.y), new Vector2(other.bounds.extents.x, other.bounds.extents.y));
-        return (r1.x < r2.x + r2.width && r1.x + r1.width > r2.x && r1.y < r2.y + r2.height && r1.height + r1.y > r2.y) ;
-    }
+
 
     protected void Move()
     {

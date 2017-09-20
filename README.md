@@ -5,3 +5,5 @@
 <ul><li>This is the format for change logs</li></ul>
 <h2>Joey Tong - 9/117/17 - 2:00 - "Dialogue"</h2>
 <ul><li>Dialogue System implemented</li><li>Placeholder textures & test code to be removed in future</li></ul>
+<h2>Connor Menard - 9/19/17 - 20:00 - "Dialogue"</h2>
+<ul><li>Controller input and some simple combat input/system</li><li>Hitboxes and frame data tools in editor</li></ul>

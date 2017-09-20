@@ -408,7 +408,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 482044648}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -5.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1003908000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +769,7 @@ GameObject:
   - component: {fileID: 1145523781}
   - component: {fileID: 1145523785}
   - component: {fileID: 1145523782}
+  - component: {fileID: 1145523786}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -865,6 +866,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {x: 0.1, y: 0.1}
+--- !u!114 &1145523786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145523780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fabd0cd0ee07b0449f340de96e0c423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slStartup: 6
+  slActive: 10
+  slRecovery: 8
+  slEditorHitboxes: 1
+  slHB1:
+    serializedVersion: 2
+    x: 0.53
+    y: 0.82
+    width: 1.94
+    height: 0.53
+  slHB2FirstActiveFrame: 4
+  slHB2:
+    serializedVersion: 2
+    x: 0.6
+    y: 0.37
+    width: 2.03
+    height: 0.52
+  slHB3FirstActiveFrame: 7
+  slHB3:
+    serializedVersion: 2
+    x: 0.39
+    y: -0.07
+    width: 1.96
+    height: 0.53
+  thStartup: 12
+  thActive: 7
+  thRecovery: 10
+  thEditorHitboxes: 0
+  thHB1:
+    serializedVersion: 2
+    x: 0.41
+    y: 0.39
+    width: 1.07
+    height: 0.7
+  thHB2FirstActiveFrame: 3
+  thHB2:
+    serializedVersion: 2
+    x: 1.46
+    y: 0.32
+    width: 0.93
+    height: 0.56
+  thHB3FirstActiveFrame: 5
+  thHB3:
+    serializedVersion: 2
+    x: 2.38
+    y: 0.27
+    width: 0.93
+    height: 0.47
+  normalMaterial: {fileID: 2100000, guid: 78489f06dd27eb54ebee3cf6c36eb39a, type: 2}
+  attackingMaterial: {fileID: 2100000, guid: 16393458d8c7ec942bb487d6457cde33, type: 2}
+  tempHitboxObj:
+  - {fileID: 1394883709903306, guid: 7dd2707acb36b8a4886368823a2a97d2, type: 2}
+  - {fileID: 1596157298349924, guid: c65bbe142abb6284b9223233d0fa6205, type: 2}
+  - {fileID: 1997104854242884, guid: 4de17d01d96a1c14aa4fc7e5cdc059f9, type: 2}
 --- !u!1 &1558710315
 GameObject:
   m_ObjectHideFlags: 0

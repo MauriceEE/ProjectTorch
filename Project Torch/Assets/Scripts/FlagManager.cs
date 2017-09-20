@@ -10,18 +10,18 @@ public class FlagManager : MonoBehaviour {
         bob,joe,john
     }
 
-    private FlagNames name;
+    private FlagNames flagname;
     private Dictionary<FlagNames, bool> flags;
 
 	// Use this for initialization
 	void Start () {
-        name = FlagNames.bob;
+        flagname = FlagNames.bob;
         flags = new Dictionary<FlagNames, bool>();
         flags.Add(FlagNames.bob, true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(flags[name]);
+        //Debug.Log(flags[flagname]);
 	}
 }

@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour {
     void Start() {
        
        
-        Debug.Log("----------Execute----------");
+        //Debug.Log("----------Execute----------");
         //SetText(currentText);
         letterTimer = letterPause * scrollSpeed;
         textScrollTimer = textScrollPause * scrollSpeed;
