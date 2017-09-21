@@ -120,7 +120,7 @@ public class PlayerCombat : MonoBehaviour {
         if (combatState == CombatStates.None && canAttack)
         {
             //See if they input an attack button
-            if (Input.GetKeyDown(KeyCode.JoystickButton2))//SQUARE / X
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.J))//SQUARE / X
             {
                 attackTime = 0f;
                 //Start attacking
@@ -129,7 +129,7 @@ public class PlayerCombat : MonoBehaviour {
                 canAttack = false;
                 this.GetComponent<PlayerMovement>().CanMove = false;
             }
-            else if (Input.GetKeyDown(KeyCode.JoystickButton3))//TRIANGLE / Y
+            else if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.K))//TRIANGLE / Y
             {
                 attackTime = 0f;
                 //Start attacking
