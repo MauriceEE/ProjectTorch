@@ -37,11 +37,17 @@ public class DialogueManager : MonoBehaviour {
     float scrollSpeed = .1f;
 
     //test dialogue array
-    string[] dialogue = { "Dude:\nHello.", "Dude:\nThis is a test", "Dude:\ntesting, testing, 1. 2. 3.", "Dude:\neverything looks good" };
-    int dialogueIndex = 0;
+    Queue<string> dialogue;
+
+    //USE THIS METHOD TO ADD A DIALOGUE SEQUENCE TO THE TEXT BOX. 
+    public void AddDialogueSequence(string[] dialogue) {
+        this.dialogue = new Queue<string>(dialogue);
+    }
+    
     // Use this for initialization
     void Start() {
-       
+        string[] temp = { "Joey:\n Yo", "Dude:\n Ayy lmao", "Joey:\n SHIT IT'S DA FUZZ" };
+        AddDialogueSequence(temp);
        
         //Debug.Log("----------Execute----------");
         //SetText(currentText);
@@ -74,23 +80,21 @@ public class DialogueManager : MonoBehaviour {
                 for (int i = 0; i < Input.touchCount; i++) {
                     if (Input.GetTouch(i).phase == TouchPhase.Began) {
                         ClearText();
-                        SetText(dialogue[dialogueIndex]);
-                        dialogueIndex++;
+                        if(dialogue.Count > 0) {
+                            SetText(dialogue.Dequeue());
+                        }
                         letterTimer = letterPause * scrollSpeed;
                         isClicked = false;
                     }
                 }
             }else {
                 ClearText();
-                SetText(dialogue[dialogueIndex]);
-                dialogueIndex++;
+                if (dialogue.Count > 0) {
+                    SetText(dialogue.Dequeue());
+                }
                 letterTimer = letterPause * scrollSpeed;
                 isClicked = false;
             }
-            if(dialogueIndex > 3) {
-                dialogueIndex = 0;
-            }
-
         }
          //Display all text on left click
          else if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0) && isClicked) {//&& dialogueBox.transform.parent.GetComponent<DialogueBox>().isClicked()) {
@@ -157,36 +161,4 @@ public class DialogueManager : MonoBehaviour {
         char[] newChars = bufferText.ToArray().Concat(s.ToCharArray()).ToArray();
         bufferText = new Queue<char>(newChars);
     }
-    //dialogue choice making
-    /*public void ChoiceInit(string[] texts) {
-        ResetChoice();
-        choiceState = true;
-        for(int i = 0; i < texts.Length; i++) {
-            GameObject temp = ChoiceContainer.transform.GetChild(i).gameObject;
-            temp.SetActive(true);
-            temp.transform.FindChild("Text").GetComponent<Text>().text = texts[i];
-        }
-    }
-    public void ResetChoice() {
-        choiceState = false;
-        choiceBuffer = false;
-        selectedChoice = -1;
-        for (int i = 0; i < 4; i++) {
-            GameObject temp = ChoiceContainer.transform.GetChild(i).gameObject;
-            if(temp != null) {
-                temp.transform.FindChild("Text").GetComponent<Text>().text = "";
-                temp.SetActive(false);
-            }
-        }
-    }
-    public int GetSelectedChoice() {
-        return selectedChoice;
-    }
-    public void SetSelectedChoice(int choice) {
-        if (choiceState) {
-            selectedChoice = choice;
-            choiceState = false;
-            choiceBuffer = true;
-        }
-    }*/
 }
