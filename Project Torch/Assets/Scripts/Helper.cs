@@ -29,4 +29,14 @@ public class Helper{
     public static float Map(float n, float a1, float b1, float a2, float b2) {
         return (n - a1) / (b1 - a1) * (b2 - a2) + a2;
     }
+
+    /// <summary>
+    /// Takes in a rect in local coordinates and turns them into global coordinates
+    /// </summary>
+    /// <param name="r">The source rect</param>
+    /// <param name="parentPosition">The position it's parented to</param>
+    /// <returns>'r' in global coordinates</returns>
+    public static Rect LocalToWorldRect(Rect r, Vector3 parentPosition) {
+        return new Rect(new Vector3(parentPosition.x + r.x, parentPosition.y + r.y, parentPosition.z), new Vector2(r.width, r.height));
+    }
 }

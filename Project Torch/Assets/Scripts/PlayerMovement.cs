@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour {
 
     protected float minY, maxY;//NOTE FOR ME: make visuals for these later so they can be set up easily during level design
     public Vector2 moveSpeed;
+    public Vector2 dashSpeed;
+    //Max time the player can dash
+    public float maxDashTime;
 
     //Speed this current frame - add to this before calling Move
     protected Vector2 displacement;
@@ -14,8 +17,14 @@ public class PlayerMovement : MonoBehaviour {
     //A reference to the player's bounds just to make things less tedious to write
     protected Collider2D playerCollider;
     //Whether or not the player can move, can be accessed and modified by other scripts
-    private bool canMove = true;
+    protected bool canMove = true;
     public bool CanMove { get { return canMove; } set { canMove = value; } }
+    //Whether or not the player is facing right
+    protected bool right = true;
+    public bool FacingRight { get { return right; }  }
+    //Time left for the player to dash
+    protected float dashTime = 0f;
+    
 
     void Start () {
         minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
@@ -28,17 +37,27 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-        //Reset displacement this frame
-        displacement = Vector2.zero;
 
-        //Move with controller
-        displacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
-
-        //Make sure you won't run into an obstacle
-        this.CheckCollisions();
-        //Move the player
         if (canMove)
+        {
+            //Reset displacement this frame
+            displacement = Vector2.zero;
+
+            //Move with controller
+            displacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
+
+            //Update direction
+            if (displacement.x > 0.001f)
+                right = true;
+            else if (displacement.x < -0.001f)
+                right = false;
+
+            //Make sure you won't run into an obstacle
+            this.CheckCollisions();
+
+            //Move the player
             this.Move();
+        }
     }
 
     /// <summary>
