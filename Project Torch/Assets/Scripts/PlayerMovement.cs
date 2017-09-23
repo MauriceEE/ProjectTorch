@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    protected float frame = 1f / 60f;
+
     protected float minY, maxY;//NOTE FOR ME: make visuals for these later so they can be set up easily during level design
     public Vector2 moveSpeed;
+    [Header("Dash data")]
+    public float dashIFrames = 6;
+    public float dashFrames = 10;
     public Vector2 dashSpeed;
-    //Max time the player can dash
-    public float maxDashTime;
+    //Makes the dash more smooth
+    [Range(0.50f, 1.00f)]
+    public float dashFriction;
 
     //Speed this current frame - add to this before calling Move
     protected Vector2 displacement;
+    //Speed the player inputs
+    protected Vector2 inputDisplacement;
     //Obstalces to check for during collision
     protected Collider2D[] obstacles;
     //A reference to the player's bounds just to make things less tedious to write
@@ -19,16 +27,24 @@ public class PlayerMovement : MonoBehaviour {
     //Whether or not the player can move, can be accessed and modified by other scripts
     protected bool canMove = true;
     public bool CanMove { get { return canMove; } set { canMove = value; } }
+    //Whether or not the player can dodge, can be accessed and modified by other scripts
+    protected bool canDash = true;
+    public bool CanDash { get { return canDash; } set { canDash = value; } }
     //Whether or not the player is facing right
     protected bool right = true;
     public bool FacingRight { get { return right; }  }
     //Time left for the player to dash
     protected float dashTime = 0f;
-    
+    //Reference to the combat class
+    protected PlayerCombat combat;
+    //Whether the player can take damage
+    protected bool invincible = false;
 
     void Start () {
+        canDash = true;
         minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
         maxY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MaxY;
+        combat = this.GetComponent<PlayerCombat>();
         playerCollider = this.GetComponent<Collider2D>();
         GameObject[] obstacleGameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
         obstacles = new Collider2D[obstacleGameObjects.Length];
@@ -37,14 +53,65 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-
-        if (canMove)
+        
+        //If NOT DASHING
+        if (dashTime <= 0f)
         {
-            //Reset displacement this frame
+            //Reset displacement this frame if not dashing
             displacement = Vector2.zero;
 
             //Move with controller
-            displacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
+            inputDisplacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
+
+            //Check to see if they want to dash
+            if (canDash && Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))
+            {
+                //Start the dash timer
+                dashTime = dashFrames * frame;
+
+                //Set initial velocity of dash
+                inputDisplacement.Normalize();
+                displacement = new Vector2(inputDisplacement.x * dashSpeed.x, inputDisplacement.y * dashSpeed.y);
+
+                //Can't move or attack while dashing, gotta commit
+                canMove = false;
+                combat.CanAttack = false;
+            }
+        }
+        //If DASHING
+        if (dashTime > 0f)
+        {
+            //Check to see if you're still invincible
+            if (dashTime > (dashFrames - dashIFrames) * frame)
+                invincible = true;
+            else
+                invincible = false;
+
+            //Scale down displacement with dampening
+            displacement *= dashFriction;
+
+            //Check for collisions
+            this.CheckCollisions();
+
+            //Move the player
+            this.Move();
+
+            //Reduce dash time remaining
+            dashTime -= Time.deltaTime;
+
+            //Check if you can now move and attack
+            if(dashTime<0f)
+            {
+                canMove = true;
+                combat.CanAttack = true;
+                return;//don't fall through into the normal movement stuff
+            }
+        }
+        //Normal movement when not dashing
+        if (canMove && dashTime <= 0f) 
+        {
+            //Apply displacement
+            displacement = inputDisplacement;
 
             //Update direction
             if (displacement.x > 0.001f)
@@ -79,8 +146,6 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-
-
     protected void Move()
     {
         //Attempt to move
@@ -92,6 +157,19 @@ public class PlayerMovement : MonoBehaviour {
             this.transform.position = new Vector3(this.transform.position.x, minY, this.transform.position.z);
     }
 
+    /*Don't think we'll use this
+    protected void DashMove()
+    {
+        //Attempt to move
+        this.transform.position += new Vector3(displacement.x, displacement.y, 0);
+        //Keep within bounds of level
+        if (this.transform.position.y > maxY)
+            this.transform.position = new Vector3(this.transform.position.x, maxY, this.transform.position.z);
+        else if (this.transform.position.y < minY)
+            this.transform.position = new Vector3(this.transform.position.x, minY, this.transform.position.z);
+    }*/
+
+    /*Don't think we'll use this
     protected class BoxCollisionHitInfo
     {
         protected bool[] corners;//0 = top left, 1 = top right, 2 = low left, 3 = low right
@@ -122,5 +200,5 @@ public class PlayerMovement : MonoBehaviour {
         { get { return corners[2]; } }
         public bool LowRight
         { get { return corners[3]; } }
-    }
+    }*/
 }

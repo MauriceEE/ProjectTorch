@@ -120,6 +120,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {x: 0.075, y: 0.055}
+  dashIFrames: 6
+  dashFrames: 26
+  dashSpeed: {x: 0.32, y: 0.24}
+  dashFriction: 0.888
 --- !u!114 &114932952136386398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +186,7 @@ MonoBehaviour:
     width: 0.72
     height: 0.47
   normalMaterial: {fileID: 2100000, guid: 78489f06dd27eb54ebee3cf6c36eb39a, type: 2}
-  attackingMaterial: {fileID: 2100000, guid: 16393458d8c7ec942bb487d6457cde33, type: 2}
+  attackingMaterial: {fileID: 2100000, guid: e7e9dfc8a379a9d43b9cd01891f5c9f9, type: 2}
   tempHitboxObj:
   - {fileID: 1394883709903306, guid: 7dd2707acb36b8a4886368823a2a97d2, type: 2}
   - {fileID: 1596157298349924, guid: c65bbe142abb6284b9223233d0fa6205, type: 2}

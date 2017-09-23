@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
+    //List of all enemies... used for other classes
     protected List<GameObject> enemies;
     public List<GameObject> Enemies { get { return enemies; } }
-
+    //Array of enemies gathered from the FindGameObjectsWithTag function
     protected GameObject[] enemiesArray;
 
 	void Start () {
         enemies = new List<GameObject>();
-        //Object[] etemp = FindObjectsOfType<Enemy>();
-        //enemiesArray = new GameObject[etemp.Length];
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
-        //for (int i = 0; i < etemp.Length; ++i)
-        //    enemiesArray[i] = etemp[i] as GameObject;
         foreach (GameObject o in enemiesArray)
             enemies.Add(o);
 	}
@@ -24,6 +21,9 @@ public class EnemyManager : MonoBehaviour {
         CleanupEnemies();
 	}
 
+    /// <summary>
+    /// Removes any enemies that have been flagged as not alive
+    /// </summary>
     void CleanupEnemies()
     {
         for(int i=0; i< enemiesArray.Length; ++i)

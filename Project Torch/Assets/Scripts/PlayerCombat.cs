@@ -144,6 +144,7 @@ public class PlayerCombat : MonoBehaviour {
                 currentAttack = Attacks.Slash;
                 canAttack = false;
                 movement.CanMove = false;
+                movement.CanDash = false;
             }
             else if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.K))//TRIANGLE / Y
             {
@@ -153,6 +154,7 @@ public class PlayerCombat : MonoBehaviour {
                 currentAttack = Attacks.Thrust;
                 canAttack = false;
                 movement.CanMove = false;
+                movement.CanDash = false;
             }
         }
         //DON'T make this an else or the player won't actually attack until one frame later
@@ -236,6 +238,7 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.None;
                         canAttack = true;
                         movement.CanMove = true;
+                        movement.CanDash = true;
                         attackTime = 0f;
                     }
                     break;
@@ -245,6 +248,7 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.None;
                         canAttack = true;
                         movement.CanMove = true;
+                        movement.CanDash = true;
                         attackTime = 0f;
                     }
                     break;

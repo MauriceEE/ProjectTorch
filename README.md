@@ -12,3 +12,5 @@
 <ul><li>Dialogue API implemented.</li><li>Call AddDialogueSequence(string[]) to display a sequence of dialogue lines to the screen.</li>
 <li>Format dialogues as arrays of dialogue. Lines should be formatted as such: Charactername:\nDialogue goes here.</li>
 <li>Placeholder textures & test code to be removed in future</li></ul>
+<h2>Connor Menard - 9/23/17 - 18:00</h2>
+<ul><li>Finished combat basics (no shine yet), added dummy enemies</li><li>Torch timer in the top left counts down visually</li></ul>
