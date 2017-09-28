@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Deals with all manner of player combat functions
+/// Hitboxes, frame data, attack states, and more
+/// </summary>
 public class PlayerCombat : MonoBehaviour {
-
+    #region Constants
     //I'm just putting this here for ease of access, so "frame" data can be easily adjusted later
-    protected float frame = 1f / 60f;
-
+    protected const float frame = 1f / 60f;
+#endregion
+    #region Enums
     protected enum CombatStates
     {
         None,
@@ -14,8 +18,7 @@ public class PlayerCombat : MonoBehaviour {
         Active,
         Recovery,
     }
-    protected CombatStates combatState;
-
+    
     protected enum Attacks
     {
         None,
@@ -23,24 +26,8 @@ public class PlayerCombat : MonoBehaviour {
         Thrust,
         Shine
     }
-    protected Attacks currentAttack;
-
-    //Whether or not the player is currently attacking
-//    protected bool attacking = false;
-    //Time spent since attack began
-    protected float attackTime = 0f;
-    //Whether or not the player can attack, can be accessed and modified by other scripts
-    private bool canAttack = true;
-    public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
-    //Whether or not the player is holding the torch
-    protected bool holdingTorch = true;
-    //Reference to the movement class
-    protected PlayerMovement movement;
-    //Reference to enemy manager
-    protected EnemyManager enemyMan;
-    //Used to attack left/right
-    protected int hitBoxDirectionMove;
-
+    #endregion
+    #region Public Fields
     [Header("Slash data")]
     public float slDamage = 10;
     public float slStartup = 6;
@@ -68,60 +55,44 @@ public class PlayerCombat : MonoBehaviour {
     public Material normalMaterial;
     public Material attackingMaterial;
     public GameObject[] tempHitboxObj;
-
-    void OnDrawGizmos()
+    #endregion
+    #region Private Fields
+    //Time spent since attack began
+    protected float attackTime = 0f;
+    //Whether or not the player can attack, can be accessed and modified by other scripts
+    private bool canAttack = true;
+    //Whether or not the player is holding the torch
+    protected bool holdingTorch = true;
+    //Reference to the movement class
+    protected PlayerMovement movement;
+    //Reference to the entity class
+    protected Entity entity;
+    //Reference to enemy manager
+    protected EnemyManager enemyMan;
+    //Used to attack left/right
+    protected int hitBoxDirectionMove;
+    //The player's combat state
+    protected CombatStates combatState;
+    //The player's current attack state
+    protected Attacks currentAttack;
+    #endregion
+    #region Properties
+    public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
+    #endregion
+    #region Unity Methods
+    void Start()
     {
-        //Gizmos.color = Color.magenta;
-        if (slEditorHitboxes)
-        {
-            Gizmos.color = Color.red;
-            DrawHitbox(slHB1);
-            Gizmos.color = Color.green;
-            DrawHitbox(slHB2);
-            Gizmos.color = Color.blue;
-            DrawHitbox(slHB3);
-        }
-        if (thEditorHitboxes)
-        {
-            Gizmos.color = Color.red;
-            DrawHitbox(thHB1);
-            Gizmos.color = Color.green;
-            DrawHitbox(thHB2);
-            Gizmos.color = Color.blue;
-            DrawHitbox(thHB3);
-        }
-    }
-
-    void DrawHitbox(Rect hb)
-    {
-        //Top
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z));
-        //Left
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-        //Bottom
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-        //Right
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-    }
-
-    void Start () {
         combatState = CombatStates.None;
         currentAttack = Attacks.None;
+        entity = this.GetComponent<Entity>();
         movement = this.GetComponent<PlayerMovement>();
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
-	}
-	
-	void Update () {
+    }
+
+    void Update()
+    {
         //Temp scalar which will affect hitboxes on left/right side
-        if (movement.FacingRight)
+        if (entity.FacingRight)
             hitBoxDirectionMove = 1;
         else
             hitBoxDirectionMove = -1;
@@ -143,7 +114,7 @@ public class PlayerCombat : MonoBehaviour {
                 combatState = CombatStates.Startup;
                 currentAttack = Attacks.Slash;
                 canAttack = false;
-                movement.CanMove = false;
+                entity.CanMove = false;
                 movement.CanDash = false;
             }
             else if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.K))//TRIANGLE / Y
@@ -153,7 +124,7 @@ public class PlayerCombat : MonoBehaviour {
                 combatState = CombatStates.Startup;
                 currentAttack = Attacks.Thrust;
                 canAttack = false;
-                movement.CanMove = false;
+                entity.CanMove = false;
                 movement.CanDash = false;
             }
         }
@@ -175,7 +146,7 @@ public class PlayerCombat : MonoBehaviour {
                     break;
             }
         }
-        if (combatState == CombatStates.Active) 
+        if (combatState == CombatStates.Active)
         {
             //Check to see if we need to activate another hitbox
             switch (currentAttack)
@@ -237,7 +208,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         combatState = CombatStates.None;
                         canAttack = true;
-                        movement.CanMove = true;
+                        entity.CanMove = true;
                         movement.CanDash = true;
                         attackTime = 0f;
                     }
@@ -247,7 +218,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         combatState = CombatStates.None;
                         canAttack = true;
-                        movement.CanMove = true;
+                        entity.CanMove = true;
                         movement.CanDash = true;
                         attackTime = 0f;
                     }
@@ -256,7 +227,54 @@ public class PlayerCombat : MonoBehaviour {
                     break;
             }
         }
-	}
+    }
+
+    /// <summary>
+    /// Used to render hitboxes in the editor, remove when game is published
+    /// </summary>
+    void OnDrawGizmos()
+    {
+        //Gizmos.color = Color.magenta;
+        if (slEditorHitboxes)
+        {
+            Gizmos.color = Color.red;
+            DrawHitbox(slHB1);
+            Gizmos.color = Color.green;
+            DrawHitbox(slHB2);
+            Gizmos.color = Color.blue;
+            DrawHitbox(slHB3);
+        }
+        if (thEditorHitboxes)
+        {
+            Gizmos.color = Color.red;
+            DrawHitbox(thHB1);
+            Gizmos.color = Color.green;
+            DrawHitbox(thHB2);
+            Gizmos.color = Color.blue;
+            DrawHitbox(thHB3);
+        }
+    }
+    #endregion
+    #region Custom Methods
+    void DrawHitbox(Rect hb)
+    {
+        //Top
+        Debug.DrawLine(
+            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z));
+        //Left
+        Debug.DrawLine(
+            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+        //Bottom
+        Debug.DrawLine(
+            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+        //Right
+        Debug.DrawLine(
+            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+    }
 
     void Attack(Rect hitbox)
     {
@@ -272,4 +290,5 @@ public class PlayerCombat : MonoBehaviour {
             }
         }
     }
+#endregion
 }

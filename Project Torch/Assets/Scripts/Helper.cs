@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 /// <summary>
 /// This class contains useful methods that can be used in other scripts
 /// </summary>
 public class Helper{
-
     /// <summary>
     /// Handles AABB collision detection between two rects
     /// </summary>
@@ -16,7 +14,6 @@ public class Helper{
     public static bool AABB(Rect r1, Rect r2) {
         return (r1.x < r2.x + r2.width && r1.x + r1.width > r2.x && r1.y < r2.y + r2.height && r1.height + r1.y > r2.y);
     }
-
     /// <summary>
     /// Maps a value between two ranges
     /// </summary>
@@ -29,7 +26,6 @@ public class Helper{
     public static float Map(float n, float a1, float b1, float a2, float b2) {
         return (n - a1) / (b1 - a1) * (b2 - a2) + a2;
     }
-
     /// <summary>
     /// Takes in a rect in local coordinates and turns them into global coordinates
     /// </summary>

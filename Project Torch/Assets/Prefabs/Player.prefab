@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114790601740790012}
   - component: {fileID: 61779339717171698}
   - component: {fileID: 114932952136386398}
+  - component: {fileID: 114911502257054008}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -124,6 +125,17 @@ MonoBehaviour:
   dashFrames: 26
   dashSpeed: {x: 0.32, y: 0.24}
   dashFriction: 0.888
+--- !u!114 &114911502257054008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945604058392810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acc0162c4e5b474c922a081ec0c4ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114932952136386398
 MonoBehaviour:
   m_ObjectHideFlags: 1

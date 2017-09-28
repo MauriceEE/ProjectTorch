@@ -1,29 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[RequireComponent(typeof(BoxCollider2D))]
+/// <summary>
+/// Basic enemy class
+/// Right now it just stands there, takes damage, and eventually dies
+/// TODO: basic attack functions
+/// 
+/// Stuff to know:
+///     Properties:
+///         bool Alive - whether or not the enemy manager should destroy it
+///         bool CanTakeDamage - whether or not the enemy 
+/// </summary>
 public class Enemy : MonoBehaviour {
-
-    //Health points
-    public float hp;
+    #region Private Fields
     //When set to false the enemy manager will destroy&remove the object
     protected bool alive;
-    public bool Alive { get { return alive; } }
     //Reference to the hitbox
     protected BoxCollider2D hitBox;
-    public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     //For the hit response visual... still a temporary solution???
     protected float hitFlashTimer;
-    public Material defaultMat, hitflashMat;
     //Prevents taking damage from multiple sources in the same (very small) time frame
     protected float damageTimer = 0f;
-    public bool CanTakeDamage { get { return (damageTimer <= 0f); } }
+    //Reference to the entity class
+    protected Entity entity;
 
-	void Start () {
+    ///List<Rect> hitboxesCollidedWith  //Resume from here... make a better hitbox delay function
+    #endregion
+    #region Public Fields
+    //Health points
+    public float hp;
+    //Materials used for flashing when hit... //DEBUG//
+    public Material defaultMat, hitflashMat;
+    #endregion
+    #region Properties
+    public bool Alive { get { return alive; } }
+    public bool CanTakeDamage { get { return (damageTimer <= 0f); } }
+    public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
+    #endregion
+    #region Unity Methods
+    void Start () {
         alive = true;
         hitBox = this.GetComponent<BoxCollider2D>();
         hitFlashTimer = 0f;
+        entity = this.GetComponent<Entity>();
 	}
 	
 	void Update () {
@@ -41,7 +60,8 @@ public class Enemy : MonoBehaviour {
         if (damageTimer > 0f)
             damageTimer -= Time.deltaTime;
 	}
-
+    #endregion
+    #region Custom Methods
     /// <summary>
     /// Deals HP damage to this enemy
     /// </summary>
@@ -54,4 +74,7 @@ public class Enemy : MonoBehaviour {
         if (hp < 0)
             alive = false;
     }
+
+    //public bool CanTakeDamageFromHitbox()
+#endregion
 }
