@@ -151,6 +151,8 @@ MonoBehaviour:
   slStartup: 6
   slActive: 10
   slRecovery: 8
+  slKnockbackTime: 0.2
+  slKnockbackSpeed: 0.06
   slEditorHitboxes: 1
   slHB1:
     serializedVersion: 2
@@ -176,6 +178,8 @@ MonoBehaviour:
   thStartup: 14
   thActive: 7
   thRecovery: 12
+  thKnockbackTime: 0.6
+  thKnockbackSpeed: 0.42
   thEditorHitboxes: 1
   thHB1:
     serializedVersion: 2

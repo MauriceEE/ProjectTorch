@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61621882794434438}
   - component: {fileID: 114988248729391038}
   - component: {fileID: 114952855302397394}
+  - component: {fileID: 114098718654664060}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.41666317}
+  m_Offset: {x: 0, y: -0.09242976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -106,8 +107,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.16667366}
+  m_Size: {x: 1, y: 0.8151405}
   m_EdgeRadius: 0
+--- !u!114 &114098718654664060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195452643779594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acc0162c4e5b474c922a081ec0c4ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114952855302397394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e109c484443a1e4188d43e1a09cb36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 50
+  knockbackFriction: 0.69
   defaultMat: {fileID: 2100000, guid: 16393458d8c7ec942bb487d6457cde33, type: 2}
   hitflashMat: {fileID: 2100000, guid: 14925abaa5a81fc4897430c22c60b210, type: 2}

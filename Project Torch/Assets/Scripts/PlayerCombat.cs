@@ -33,6 +33,8 @@ public class PlayerCombat : MonoBehaviour {
     public float slStartup = 6;
     public float slActive = 10;
     public float slRecovery = 8;
+    public float slKnockbackTime;
+    public float slKnockbackSpeed;
     public bool slEditorHitboxes = true;//DEBUG//
     public Rect slHB1;
     public float slHB2FirstActiveFrame = 4;
@@ -45,6 +47,8 @@ public class PlayerCombat : MonoBehaviour {
     public float thStartup = 12;
     public float thActive = 7;
     public float thRecovery = 10;
+    public float thKnockbackTime;
+    public float thKnockbackSpeed;
     public bool thEditorHitboxes = true;//DEBUG//
     public Rect thHB1;
     public float thHB2FirstActiveFrame = 3;
@@ -75,6 +79,8 @@ public class PlayerCombat : MonoBehaviour {
     protected CombatStates combatState;
     //The player's current attack state
     protected Attacks currentAttack;
+    //A list of hit enemies, used in collision detection
+    protected List<Enemy> hitEnemies;
     #endregion
     #region Properties
     public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
@@ -153,20 +159,20 @@ public class PlayerCombat : MonoBehaviour {
             {
                 case Attacks.Slash:
                     // --do AABB for box 1--
-                    Attack(slHB1);
+                    AttackRoutine(slHB1, slDamage, slKnockbackTime, slKnockbackSpeed);
                     GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
                     tempObjBox1.transform.localPosition = new Vector3(slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
                     if (attackTime > (slStartup + slHB2FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 2--
-                        Attack(slHB2);
+                        AttackRoutine(slHB2, slDamage, slKnockbackTime, slKnockbackSpeed);
                         GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
                         tempObjBox2.transform.localPosition = new Vector3(slHB2.center.x * hitBoxDirectionMove, slHB2.center.y, 0);
                     }
                     if (attackTime > (slStartup + slHB3FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 3--
-                        Attack(slHB3);
+                        AttackRoutine(slHB3, slDamage, slKnockbackTime, slKnockbackSpeed);
                         GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
                         tempObjBox3.transform.localPosition = new Vector3(slHB3.center.x * hitBoxDirectionMove, slHB3.center.y, 0);
                     }
@@ -175,20 +181,20 @@ public class PlayerCombat : MonoBehaviour {
                     break;
                 case Attacks.Thrust:
                     // --do AABB for box 1--
-                    Attack(thHB1);
+                    AttackRoutine(thHB1, thDamage, thKnockbackTime, thKnockbackSpeed);
                     GameObject tempObjBox1th = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
                     tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 2--
-                        Attack(thHB2);
+                        AttackRoutine(thHB2, thDamage, thKnockbackTime, thKnockbackSpeed);
                         GameObject tempObjBox2th = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
                         tempObjBox2th.transform.localPosition = new Vector3(thHB2.center.x * hitBoxDirectionMove, thHB2.center.y, 0);
                     }
                     if (attackTime > (thStartup + thHB3FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 3--
-                        Attack(thHB3);
+                        AttackRoutine(thHB3, thDamage, thKnockbackTime, thKnockbackSpeed);
                         GameObject tempObjBox3th = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
                         tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     }
@@ -276,17 +282,47 @@ public class PlayerCombat : MonoBehaviour {
             new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
     }
 
-    void Attack(Rect hitbox)
+    void Attack(Enemy e, float damage)
     {
+        if (e.CanTakeDamage)
+            e.TakeDamage(damage);
+    }
+
+    void Knockback(Enemy e, float time, Vector2 speed)
+    {
+        if (e.CanKnockback)
+            e.RecieveKnockback(time, speed);
+    }
+
+    protected List<Enemy> CheckCollisions(Rect hitbox)
+    {
+        List<Enemy> hit = new List<Enemy>();
         Rect newHB = hitbox;
         if (hitBoxDirectionMove < 0)
             newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
         for (int i = 0; i < enemyMan.Enemies.Count; ++i)
         {
             Enemy e = enemyMan.Enemies[i].GetComponent<Enemy>();
-            if (e.CanTakeDamage && Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), e.HitBoxRect))
+            if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), e.HitBoxRect))
             {
-                e.TakeDamage(slDamage);
+                hit.Add(e);
+                //e.TakeDamage(slDamage);
+            }
+        }
+        return hit;
+    }
+
+    protected void AttackRoutine(Rect hitbox, float damage, float knockbackTime, float knockbackSpeed)
+    {
+        hitEnemies = CheckCollisions(hitbox);
+        if (hitEnemies.Count > 0)
+        {
+            Vector3 v;
+            for (int i = 0; i < hitEnemies.Count; ++i)
+            {
+                v = hitEnemies[i].transform.position - this.transform.position;
+                Attack(hitEnemies[i], damage);
+                Knockback(hitEnemies[i], knockbackTime, new Vector2(v.x, v.y) * knockbackSpeed);
             }
         }
     }
