@@ -127,5 +127,14 @@ public class PlayerMovement : MonoBehaviour {
             entity.Move();
         }
     }
+    //get the speed of the player, necessary for background scrolling
+    public Vector3 GetSpeed() {
+        if(entity != null) {
+            return entity.Displacement;
+        }else {
+            return new Vector3();
+        }
+
+    }
 #endregion
 }
