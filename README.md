@@ -19,3 +19,5 @@
   <li>Camera Following implemented</li>
   <li>Background scrolling & parallax layers implemented</li>
 </ul>
+<h2>Connor Menard - 10/1/17 - 2:44</h2>
+<ul><li>Lots and lots of code cleanup and hitbox shenanigans</li><li>Enemies now recieve knockback on attacks</li></ul>

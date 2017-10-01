@@ -182,20 +182,24 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Thrust:
                     // --do AABB for box 1--
                     AttackRoutine(thHB1, thDamage, thKnockbackTime, thKnockbackSpeed);
-                    GameObject tempObjBox1th = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
-                    tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);
+                    GameObject tempObjBox1th = Instantiate(tempHitboxObj[3] as GameObject, this.transform);
+                    tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);//original
+                    //tempObjBox1th.transform.localPosition = new Vector3((thHB1.x - (thHB1.width / 2f)) * hitBoxDirectionMove, thHB1.y - (thHB1.height / 2f), 0);
+                    //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(Helper.Midpoint(thHB1.min, thHB1.max));
+                    //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(thHB1.min);
+                    Debug.Log("center: " + thHB1.center);
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 2--
                         AttackRoutine(thHB2, thDamage, thKnockbackTime, thKnockbackSpeed);
-                        GameObject tempObjBox2th = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
+                        GameObject tempObjBox2th = Instantiate(tempHitboxObj[4] as GameObject, this.transform);
                         tempObjBox2th.transform.localPosition = new Vector3(thHB2.center.x * hitBoxDirectionMove, thHB2.center.y, 0);
                     }
                     if (attackTime > (thStartup + thHB3FirstActiveFrame) * frame)
                     {
                         // --do AABB for box 3--
                         AttackRoutine(thHB3, thDamage, thKnockbackTime, thKnockbackSpeed);
-                        GameObject tempObjBox3th = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
+                        GameObject tempObjBox3th = Instantiate(tempHitboxObj[5] as GameObject, this.transform);
                         tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     }
                     if (attackTime > (thStartup + thActive) * frame)
@@ -266,20 +270,28 @@ public class PlayerCombat : MonoBehaviour {
     {
         //Top
         Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z));
+            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.min.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.min.y, this.transform.position.z));
+        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z));
         //Left
         Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.min.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.max.y, this.transform.position.z));
+        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
+        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
         //Bottom
         Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.max.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.max.y, this.transform.position.z));
+        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z),
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
         //Right
         Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.min.y, this.transform.position.z),
+            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.max.y, this.transform.position.z));
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
     }
 
     void Attack(Enemy e, float damage)

@@ -35,4 +35,25 @@ public class Helper{
     public static Rect LocalToWorldRect(Rect r, Vector3 parentPosition) {
         return new Rect(new Vector3(parentPosition.x + r.x, parentPosition.y + r.y, parentPosition.z), new Vector2(r.width, r.height));
     }
+
+    /// <summary>
+    /// Calculates the midpoint between two vectors
+    /// </summary>
+    /// <param name="p1">Point 1</param>
+    /// <param name="p2">Point 2</param>
+    /// <returns>The midpoint as a vector2</returns>
+    public static Vector2 Midpoint(Vector2 p1, Vector2 p2)
+    {
+        return new Vector2((p1.x + p2.x) / 2f, (p1.y + p2.y) / 2f);
+    }
+
+    /// <summary>
+    /// Returns a vector3 with x and y of a vector2, and a z of zero
+    /// </summary>
+    /// <param name="v">Vector to convert</param>
+    /// <returns>A vector of (v.x,v.y,0)</returns>
+    public static Vector3 Vec2ToVec3(Vector2 v)
+    {
+        return new Vector3(v.x, v.y, 0f);
+    }
 }
