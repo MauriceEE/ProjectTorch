@@ -21,3 +21,13 @@
 </ul>
 <h2>Connor Menard - 10/1/17 - 2:44</h2>
 <ul><li>Lots and lots of code cleanup and hitbox shenanigans</li><li>Enemies now recieve knockback on attacks</li></ul>
+<h2>Maurice Edwards - 10/3/17 19:37 </h2>
+<ul>
+<li>Decreased base movement speed</li>
+<li>Tweaked dash speed and increased dash frames</li>
+<li>The player can now move during slash</li>
+<li>Enabled the player to chain Slash into itself up to 2 additional times or into another attack once</li>
+<li>Increased Slash recovery and decreased Slash damage</li>
+<li>Added Cancel method to cancel any attacks and dash. Press Spacebar to test Cancel. DashTime is public now, by the way</li>
+<li>Added HitStop method for combat feel, but nothing calls it yet</li>
+</ul>

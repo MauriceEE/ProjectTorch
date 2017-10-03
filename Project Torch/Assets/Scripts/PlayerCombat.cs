@@ -81,6 +81,8 @@ public class PlayerCombat : MonoBehaviour {
     protected Attacks currentAttack;
     //A list of hit enemies, used in collision detection
     protected List<Enemy> hitEnemies;
+    //Number of consecutive Slashes
+    private int consecSlashCount = 0;
     #endregion
     #region Properties
     public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
@@ -107,36 +109,75 @@ public class PlayerCombat : MonoBehaviour {
             this.GetComponent<MeshRenderer>().material = normalMaterial;
         else
             this.GetComponent<MeshRenderer>().material = attackingMaterial;
-
         attackTime += Time.deltaTime;
+
+        //Cancel attack
+        if (Input.GetKeyDown(KeyCode.Space)) Cancel();
+
         //Check to see if the player can attack
-        if (combatState == CombatStates.None && canAttack)
+        if (canAttack)
         {
-            //See if they input an attack button
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.J))//SQUARE / X
+            // Detect input for any attacks out of neutral stance and any that chain from Slash while it is in Recovery
+            if (combatState == CombatStates.None || (currentAttack == Attacks.Slash && combatState == CombatStates.Recovery))
             {
-                attackTime = 0f;
-                //Start attacking
-                combatState = CombatStates.Startup;
-                currentAttack = Attacks.Slash;
-                canAttack = false;
-                entity.CanMove = false;
-                movement.CanDash = false;
-            }
-            else if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.K))//TRIANGLE / Y
-            {
-                attackTime = 0f;
-                //Start attacking
-                combatState = CombatStates.Startup;
-                currentAttack = Attacks.Thrust;
-                canAttack = false;
-                entity.CanMove = false;
-                movement.CanDash = false;
-            }
+                //See if they input an attack button
+                if (consecSlashCount < 2 && (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.J)))//SQUARE / X
+                {
+                    // If in Slash's Recovery frames still, cancel it
+                    if (combatState == CombatStates.Recovery)
+                    {
+                        Cancel();
+
+                        // Go through Slash's pertinent recovery code
+                        canAttack = true;
+                        entity.CanMove = true;
+                        entity.Speed *= 1.5f;
+
+                        // increment Slash count
+                        consecSlashCount++;
+                    }
+
+                    attackTime = 0f;
+                    //Start attacking
+                    combatState = CombatStates.Startup;
+                    currentAttack = Attacks.Slash;
+                    if (consecSlashCount == 2) canAttack = false;
+                    //entity.CanMove = false;
+                    entity.Speed /= 1.5f;
+                    movement.CanDash = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.K))//TRIANGLE / Y
+                {
+                    // Reset consecutive Slash count since this isn't a Slash attack
+                    consecSlashCount = 0;
+                    // If in Slash's Recovery frames still, cancel it
+                    if (combatState == CombatStates.Recovery)
+                    {
+                        Cancel();
+                        // Reset player speed from the slow movement from Slash's start-up
+                        entity.Speed *= 1.5f;
+
+                        // increment Slash count
+                        consecSlashCount++;
+                    }
+                    attackTime = 0f;
+                    //Start attacking
+                    combatState = CombatStates.Startup;
+                    currentAttack = Attacks.Thrust;
+                    canAttack = false;
+                    entity.CanMove = false;
+                    movement.CanDash = false;
+                }
+
+                // PUT SHINE CODE HERE since it will also chain from Slash
+
+            } // end chain attacks from Slash
         }
         //DON'T make this an else or the player won't actually attack until one frame later
         if (combatState == CombatStates.Startup)
         {
+            movement.CanDash = false;
             switch (currentAttack)
             {
                 //Check to move to active frames
@@ -154,6 +195,8 @@ public class PlayerCombat : MonoBehaviour {
         }
         if (combatState == CombatStates.Active)
         {
+            entity.CanMove = false;
+            movement.CanDash = false;
             //Check to see if we need to activate another hitbox
             switch (currentAttack)
             {
@@ -219,8 +262,10 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.None;
                         canAttack = true;
                         entity.CanMove = true;
+                        entity.Speed *= 1.5f;
                         movement.CanDash = true;
                         attackTime = 0f;
+                        consecSlashCount = 0;
                     }
                     break;
                 case Attacks.Thrust:
@@ -234,6 +279,13 @@ public class PlayerCombat : MonoBehaviour {
                     }
                     break;
                 case Attacks.Shine:
+                    break;
+                case Attacks.None:
+                    combatState = CombatStates.None;
+                    canAttack = true;
+                    entity.CanMove = true;
+                    movement.CanDash = true;
+                    attackTime = 0f;
                     break;
             }
         }
@@ -264,6 +316,8 @@ public class PlayerCombat : MonoBehaviour {
             DrawHitbox(thHB3);
         }
     }
+
+    
     #endregion
     #region Custom Methods
     void DrawHitbox(Rect hb)
@@ -297,7 +351,35 @@ public class PlayerCombat : MonoBehaviour {
     void Attack(Enemy e, float damage)
     {
         if (e.CanTakeDamage)
+        {
             e.TakeDamage(damage);
+        }
+    }
+
+    /// <summary>
+    /// Used to Cancel any ongoing attack and dash frames
+    /// </summary>
+    void Cancel()
+    {
+        // Set combat state to Recovery
+        combatState = CombatStates.Recovery;
+        // Set attackTime to the max float value to immediately end recovery frames
+        attackTime = float.MaxValue;
+        movement.dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
+    }
+
+    // Stops all progression of time to give weight to hits
+    void HitStop(float lengthInframes)
+    {
+        while (lengthInframes >= 0)
+        {
+            lengthInframes -= Time.deltaTime;
+            // Ssssstop
+            Time.timeScale = 0;
+        }
+
+        // reset time scale to normal
+        Time.timeScale = 1f;
     }
 
     void Knockback(Enemy e, float time, Vector2 speed)
@@ -338,5 +420,7 @@ public class PlayerCombat : MonoBehaviour {
             }
         }
     }
+
+
 #endregion
 }

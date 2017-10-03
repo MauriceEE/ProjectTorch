@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
     //Whether or not the player can dodge, can be accessed and modified by other scripts
     protected bool canDash = true;
     //Time left for the player to dash
-    protected float dashTime = 0f;
+    public float dashTime = 0f;
     //Reference to the combat class
     protected PlayerCombat combat;
     //Whether the player can take damage
@@ -101,10 +101,11 @@ public class PlayerMovement : MonoBehaviour {
             dashTime -= Time.deltaTime;
 
             //Check if you can now move and attack
-            if(dashTime<0f)
+            if(dashTime<=0f)
             {
                 entity.CanMove = true;
                 combat.CanAttack = true;
+                invincible = false; // sets to false here to ensure that this is turned off in case the player cancels the dash during the invincibility period
                 return;//don't fall through into the normal movement stuff
             }
         }
