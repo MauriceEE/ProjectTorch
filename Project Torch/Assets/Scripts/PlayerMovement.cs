@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour {
             inputDisplacement = new Vector2(Input.GetAxis("Horizontal") * entity.Speed.x, Input.GetAxis("Vertical") * entity.Speed.y);
 
             //Check to see if they want to dash
-            if (canDash && Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))
+            if (canDash && (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))) 
             {
                 //Start the dash timer
                 dashTime = dashFrames * frame;

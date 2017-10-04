@@ -17,8 +17,7 @@ public class PlayerCombat : MonoBehaviour {
         Startup,
         Active,
         Recovery,
-    }
-    
+    }    
     protected enum Attacks
     {
         None,
@@ -54,7 +53,13 @@ public class PlayerCombat : MonoBehaviour {
     public float thHB2FirstActiveFrame = 3;
     public Rect thHB2;
     public float thHB3FirstActiveFrame = 5;
-    public Rect thHB3;
+    public Rect thHB3;[Space(10)]
+    [Header("Shine data")]
+    public float shStartup = 12;
+    public float shActive = 7;
+    public float shRecovery = 10;
+    public bool shEditorHitboxes = true;//DEBUG//
+    public Rect[] shHB;
     [Header("Debug")]
     public Material normalMaterial;
     public Material attackingMaterial;
@@ -171,6 +176,27 @@ public class PlayerCombat : MonoBehaviour {
                 }
 
                 // PUT SHINE CODE HERE since it will also chain from Slash
+                if (Input.GetKeyDown(KeyCode.JoystickButton5) || Input.GetKeyDown(KeyCode.F))//R1
+                {
+                    //Reset consecutive slashes
+                    consecSlashCount = 0;
+                    //Cancel from recovery frames
+                    if (combatState == CombatStates.Recovery)
+                    {
+                        Cancel();
+                        //Reset speed from slash's startup
+                        entity.Speed *= 1.5f;
+                        //increment slash count
+                        ++consecSlashCount;
+                    }
+                    attackTime = 0f;
+                    //Start shining
+                    combatState = CombatStates.Startup;
+                    currentAttack = Attacks.Shine;
+                    canAttack = false;
+                    entity.CanMove = false;
+                    movement.CanDash = false;
+                }
 
             } // end chain attacks from Slash
         }
@@ -190,6 +216,8 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.Active;
                     break;
                 case Attacks.Shine:
+                    if (attackTime > shStartup * frame)
+                        combatState = CombatStates.Active;
                     break;
             }
         }
@@ -249,6 +277,11 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.Recovery;
                     break;
                 case Attacks.Shine:
+                    //Test shine method for each hitbox in the shine
+                    for (int i = 0; i < shHB.Length; ++i) 
+                    {
+                        Shine(shHB[i]);
+                    }
                     break;
             }
         }
@@ -279,6 +312,14 @@ public class PlayerCombat : MonoBehaviour {
                     }
                     break;
                 case Attacks.Shine:
+                    if (attackTime > (shStartup + shActive + shRecovery) * frame)
+                    {
+                        combatState = CombatStates.None;
+                        canAttack = true;
+                        entity.CanMove = true;
+                        movement.CanDash = true;
+                        attackTime = 0f;
+                    }
                     break;
                 case Attacks.None:
                     combatState = CombatStates.None;
@@ -315,6 +356,13 @@ public class PlayerCombat : MonoBehaviour {
             Gizmos.color = Color.blue;
             DrawHitbox(thHB3);
         }
+        if (shEditorHitboxes)
+        {
+            for (int i = 0; i < shHB.Length; ++i)
+            {
+                DrawHitbox(shHB[i]);
+            }
+        }
     }
 
     
@@ -348,6 +396,11 @@ public class PlayerCombat : MonoBehaviour {
         //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
     }
 
+    /// <summary>
+    /// Simply deals damage to an enemy
+    /// </summary>
+    /// <param name="e">Reference of the enemy to damage</param>
+    /// <param name="damage">Amount of damage to dish out</param>
     void Attack(Enemy e, float damage)
     {
         if (e.CanTakeDamage)
@@ -368,7 +421,10 @@ public class PlayerCombat : MonoBehaviour {
         movement.dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
     }
 
-    // Stops all progression of time to give weight to hits
+    /// <summary>
+    /// Stops all progression of time to give weight to hits
+    /// </summary>
+    /// <param name="lengthInframes"></param>
     void HitStop(float lengthInframes)
     {
         while (lengthInframes >= 0)
@@ -382,12 +438,23 @@ public class PlayerCombat : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    /// <summary>
+    /// Checks to see if an enemy can be knocked back, and if so, knocks him back
+    /// </summary>
+    /// <param name="e">Enemy to knockback</param>
+    /// <param name="time">Duration of the knockback</param>
+    /// <param name="speed">Velocity of the knockback</param>
     void Knockback(Enemy e, float time, Vector2 speed)
     {
         if (e.CanKnockback)
             e.RecieveKnockback(time, speed);
     }
 
+    /// <summary>
+    /// Tests collisions with all enemies
+    /// </summary>
+    /// <param name="hitbox">Hitbox to compare with enemies</param>
+    /// <returns>A list of all enemies collided with</returns>
     protected List<Enemy> CheckCollisions(Rect hitbox)
     {
         List<Enemy> hit = new List<Enemy>();
@@ -406,6 +473,14 @@ public class PlayerCombat : MonoBehaviour {
         return hit;
     }
 
+    /// <summary>
+    /// Checks for collisions, attacks enemies, and knocks them back
+    /// Basically compresses the three steps into one method to save space 
+    /// </summary>
+    /// <param name="hitbox">Hitbox of the attack</param>
+    /// <param name="damage">Amount of damage to deal</param>
+    /// <param name="knockbackTime">Duration of knockback</param>
+    /// <param name="knockbackSpeed">Velocity of knockback</param>
     protected void AttackRoutine(Rect hitbox, float damage, float knockbackTime, float knockbackSpeed)
     {
         hitEnemies = CheckCollisions(hitbox);
@@ -421,6 +496,15 @@ public class PlayerCombat : MonoBehaviour {
         }
     }
 
-
+    /// <summary>
+    /// Performs the shine and resolves hitbox collisions
+    /// </summary>
+    /// <param name="hitbox">Hitbox of the shine to test</param>
+    protected void Shine(Rect hitbox)
+    {
+        Debug.Log("SHINE!!!!!");
+        ///TODO: collision detection for projectiles, once projectiles are implemented
+        ///TODO: enemy attack countering, once enemy attacks are implemented
+    }
 #endregion
 }
