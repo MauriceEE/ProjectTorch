@@ -282,6 +282,8 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Shine(shHB[i]);
                     }
+                    if (attackTime > (shStartup + shActive) * frame)
+                        combatState = CombatStates.Recovery;
                     break;
             }
         }

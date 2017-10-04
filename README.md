@@ -33,3 +33,5 @@
 </ul>
 <h2>Connor Menard - 10/4/17 - 17:00</h2>
 <ul><li>Fixed moving while attacking bug</li><li>Started Shine, still bugged though</li></ul>
+<h2>Connor Menard - 10/4/17 - 17:30</h2>
+<ul><li>Ok I fixed shine</li>

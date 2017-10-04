@@ -509,52 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d35e5fbb0d4c8448410e5935c46872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &263245986
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1145523787}
-    m_Modifications:
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.834
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.531
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405751852123326, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137715606811254, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &375022666 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077,
