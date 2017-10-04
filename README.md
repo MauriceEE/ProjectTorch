@@ -31,3 +31,5 @@
 <li>Added Cancel method to cancel any attacks and dash. Press Spacebar to test Cancel. DashTime is public now, by the way</li>
 <li>Added HitStop method for combat feel, but nothing calls it yet</li>
 </ul>
+<h2>Connor Menard - 10/4/17 - 17:00</h2>
+<ul><li>Fixed moving while attacking bug</li><li>Started Shine, still bugged though</li></ul>
