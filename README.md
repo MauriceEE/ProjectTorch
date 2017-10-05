@@ -35,3 +35,5 @@
 <ul><li>Fixed moving while attacking bug</li><li>Started Shine, still bugged though</li></ul>
 <h2>Connor Menard - 10/4/17 - 17:30</h2>
 <ul><li>Ok I fixed shine</li>
+<h2>Steven Ma - 10/4/17 - 1:41</h2>
+<ul><li>Finished up the level blocking</li>
