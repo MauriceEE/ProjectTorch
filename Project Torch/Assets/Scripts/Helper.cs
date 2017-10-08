@@ -56,4 +56,47 @@ public class Helper{
     {
         return new Vector3(v.x, v.y, 0f);
     }
+
+    /// <summary>
+    /// Returns a vector2 with x and y of a vector3
+    /// </summary>
+    /// <param name="v">Vector to convert</param>
+    /// <returns>A vector of (v.x,v.y)</returns>
+    public static Vector2 Vec3ToVec2(Vector3 v)
+    {
+        return new Vector2(v.x, v.y);
+    }
+
+    public static void DebugDrawRect(Vector3 position, Rect box)
+    {
+        //Top
+        Debug.DrawLine(
+            new Vector3(position.x + box.min.x, position.y + box.min.y, position.z),
+            new Vector3(position.x + box.max.x, position.y + box.min.y, position.z));
+        //new Vector3(this.transform.boxsition.xransform.posiboxon.y + hform.position.z),
+        //new Vector3(this.transform.boxsition.xdth, this.traboxform.pos this.transform.position.z));
+        //Left                       box                     box
+        Debug.DrawLine(                                      
+            new Vector3(position.x + box.min.x, position.y + box.min.y, position.z),
+            new Vector3(position.x + box.min.x, position.y + box.max.y, position.z));
+        //new Vector3(thsition.x + hbbox, this.ton.y + hb.y, boxis.trans),
+        //new Vector3(thsition.x + hbbox, this.ton.y + hb.y -boxb.heightm.position.z));
+        //Bottom                     box                     box
+        Debug.DrawLine(                                      
+            new Vector3(position.x + box.min.x, position.y + box.max.y, position.z),
+            new Vector3(position.x + box.max.x, position.y + box.max.y, position.z));
+        //new Vector3(thsition.x + hbbox, this.ton.y + hb.y -boxb.heightm.position.z),
+        //new Vector3(thsition.x + hbbox + hb.wiform.positionbox + hb.y is.transform.position.z));
+        //Right                      box                     box
+        Debug.DrawLine(                                      
+            new Vector3(position.x + box.max.x, position.y + box.min.y, position.z),
+            new Vector3(position.x + box.max.x, position.y + box.max.y, position.z));
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
+        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+    }
+
+    #region Constants
+    //I'm just putting this here for ease of access, so "frame" data can be easily adjusted later
+    public const float frame = 1f / 60f;
+    #endregion
 }

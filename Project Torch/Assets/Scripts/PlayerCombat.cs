@@ -6,10 +6,6 @@ using UnityEngine;
 /// Hitboxes, frame data, attack states, and more
 /// </summary>
 public class PlayerCombat : MonoBehaviour {
-    #region Constants
-    //I'm just putting this here for ease of access, so "frame" data can be easily adjusted later
-    protected const float frame = 1f / 60f;
-#endregion
     #region Enums
     protected enum CombatStates
     {
@@ -61,8 +57,8 @@ public class PlayerCombat : MonoBehaviour {
     public bool shEditorHitboxes = true;//DEBUG//
     public Rect[] shHB;
     [Header("Debug")]
-    public Material normalMaterial;
-    public Material attackingMaterial;
+    //public Material normalMaterial;
+    //public Material attackingMaterial;
     public GameObject[] tempHitboxObj;
     #endregion
     #region Private Fields
@@ -91,6 +87,7 @@ public class PlayerCombat : MonoBehaviour {
     #endregion
     #region Properties
     public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
+    public Rect HitBoxRect { get { return entity.HitBoxRect; } }
     #endregion
     #region Unity Methods
     void Start()
@@ -110,10 +107,7 @@ public class PlayerCombat : MonoBehaviour {
         else
             hitBoxDirectionMove = -1;
 
-        if (canAttack)
-            this.GetComponent<MeshRenderer>().material = normalMaterial;
-        else
-            this.GetComponent<MeshRenderer>().material = attackingMaterial;
+        
         attackTime += Time.deltaTime;
 
         //Cancel attack
@@ -208,15 +202,15 @@ public class PlayerCombat : MonoBehaviour {
             {
                 //Check to move to active frames
                 case Attacks.Slash:
-                    if (attackTime > slStartup * frame)
+                    if (attackTime > slStartup * Helper.frame)
                         combatState = CombatStates.Active;
                     break;
                 case Attacks.Thrust:
-                    if (attackTime > thStartup * frame)
+                    if (attackTime > thStartup * Helper.frame)
                         combatState = CombatStates.Active;
                     break;
                 case Attacks.Shine:
-                    if (attackTime > shStartup * frame)
+                    if (attackTime > shStartup * Helper.frame)
                         combatState = CombatStates.Active;
                     break;
             }
@@ -233,21 +227,21 @@ public class PlayerCombat : MonoBehaviour {
                     AttackRoutine(slHB1, slDamage, slKnockbackTime, slKnockbackSpeed);
                     GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
                     tempObjBox1.transform.localPosition = new Vector3(slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
-                    if (attackTime > (slStartup + slHB2FirstActiveFrame) * frame)
+                    if (attackTime > (slStartup + slHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
                         AttackRoutine(slHB2, slDamage, slKnockbackTime, slKnockbackSpeed);
                         GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
                         tempObjBox2.transform.localPosition = new Vector3(slHB2.center.x * hitBoxDirectionMove, slHB2.center.y, 0);
                     }
-                    if (attackTime > (slStartup + slHB3FirstActiveFrame) * frame)
+                    if (attackTime > (slStartup + slHB3FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 3--
                         AttackRoutine(slHB3, slDamage, slKnockbackTime, slKnockbackSpeed);
                         GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
                         tempObjBox3.transform.localPosition = new Vector3(slHB3.center.x * hitBoxDirectionMove, slHB3.center.y, 0);
                     }
-                    if (attackTime > (slStartup + slActive) * frame)
+                    if (attackTime > (slStartup + slActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
                     break;
                 case Attacks.Thrust:
@@ -259,21 +253,21 @@ public class PlayerCombat : MonoBehaviour {
                     //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(Helper.Midpoint(thHB1.min, thHB1.max));
                     //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(thHB1.min);
                     Debug.Log("center: " + thHB1.center);
-                    if (attackTime > (thStartup + thHB2FirstActiveFrame) * frame)
+                    if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
                         AttackRoutine(thHB2, thDamage, thKnockbackTime, thKnockbackSpeed);
                         GameObject tempObjBox2th = Instantiate(tempHitboxObj[4] as GameObject, this.transform);
                         tempObjBox2th.transform.localPosition = new Vector3(thHB2.center.x * hitBoxDirectionMove, thHB2.center.y, 0);
                     }
-                    if (attackTime > (thStartup + thHB3FirstActiveFrame) * frame)
+                    if (attackTime > (thStartup + thHB3FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 3--
                         AttackRoutine(thHB3, thDamage, thKnockbackTime, thKnockbackSpeed);
                         GameObject tempObjBox3th = Instantiate(tempHitboxObj[5] as GameObject, this.transform);
                         tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     }
-                    if (attackTime > (thStartup + thActive) * frame)
+                    if (attackTime > (thStartup + thActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
                     break;
                 case Attacks.Shine:
@@ -282,7 +276,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Shine(shHB[i]);
                     }
-                    if (attackTime > (shStartup + shActive) * frame)
+                    if (attackTime > (shStartup + shActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
                     break;
             }
@@ -292,7 +286,7 @@ public class PlayerCombat : MonoBehaviour {
             switch (currentAttack)
             {
                 case Attacks.Slash:
-                    if (attackTime > (slStartup + slActive + slRecovery) * frame)
+                    if (attackTime > (slStartup + slActive + slRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
                         canAttack = true;
@@ -304,7 +298,7 @@ public class PlayerCombat : MonoBehaviour {
                     }
                     break;
                 case Attacks.Thrust:
-                    if (attackTime > (thStartup + thActive + thRecovery) * frame)
+                    if (attackTime > (thStartup + thActive + thRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
                         canAttack = true;
@@ -314,7 +308,7 @@ public class PlayerCombat : MonoBehaviour {
                     }
                     break;
                 case Attacks.Shine:
-                    if (attackTime > (shStartup + shActive + shRecovery) * frame)
+                    if (attackTime > (shStartup + shActive + shRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
                         canAttack = true;
@@ -343,26 +337,26 @@ public class PlayerCombat : MonoBehaviour {
         if (slEditorHitboxes)
         {
             Gizmos.color = Color.red;
-            DrawHitbox(slHB1);
+            Helper.DebugDrawRect(this.transform.position, slHB1);
             Gizmos.color = Color.green;
-            DrawHitbox(slHB2);
+            Helper.DebugDrawRect(this.transform.position, slHB2);
             Gizmos.color = Color.blue;
-            DrawHitbox(slHB3);
+            Helper.DebugDrawRect(this.transform.position, slHB3);
         }
         if (thEditorHitboxes)
         {
             Gizmos.color = Color.red;
-            DrawHitbox(thHB1);
+            Helper.DebugDrawRect(this.transform.position, thHB1);
             Gizmos.color = Color.green;
-            DrawHitbox(thHB2);
+            Helper.DebugDrawRect(this.transform.position, thHB2);
             Gizmos.color = Color.blue;
-            DrawHitbox(thHB3);
+            Helper.DebugDrawRect(this.transform.position, thHB3);
         }
         if (shEditorHitboxes)
         {
             for (int i = 0; i < shHB.Length; ++i)
             {
-                DrawHitbox(shHB[i]);
+                Helper.DebugDrawRect(this.transform.position, shHB[i]);
             }
         }
     }
@@ -370,34 +364,6 @@ public class PlayerCombat : MonoBehaviour {
     
     #endregion
     #region Custom Methods
-    void DrawHitbox(Rect hb)
-    {
-        //Top
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.min.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.min.y, this.transform.position.z));
-        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z));
-        //Left
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.min.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.max.y, this.transform.position.z));
-        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y, this.transform.position.z),
-        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-        //Bottom
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.min.x, this.transform.position.y + hb.max.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.max.y, this.transform.position.z));
-        //new Vector3(this.transform.position.x + hb.x, this.transform.position.y + hb.y - hb.height, this.transform.position.z),
-        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-        //Right
-        Debug.DrawLine(
-            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.min.y, this.transform.position.z),
-            new Vector3(this.transform.position.x + hb.max.x, this.transform.position.y + hb.max.y, this.transform.position.z));
-        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
-        //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
-    }
-
     /// <summary>
     /// Simply deals damage to an enemy
     /// </summary>

@@ -37,3 +37,5 @@
 <ul><li>Ok I fixed shine</li>
 <h2>Steven Ma - 10/4/17 - 1:41</h2>
 <ul><li>Finished up the level blocking</li>
+<h2>Connor Menard - 10/7/17 - 21:30</h2>
+<ul><li>Started doing stuff for the encounter manager and overall added more enemy stuff</li><li>Put in Judi and a shadow monster sprite</li>

@@ -13,6 +13,7 @@ using UnityEngine;
 ///         void Move() - translates transform by Displacement and then makes sure it's still in bounds of the level
 /// </summary>
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class Entity : MonoBehaviour {
     #region Private Fields
     //Maximum and minimum world positions for the entity
@@ -20,11 +21,13 @@ public class Entity : MonoBehaviour {
     //Movement speed of the entity
     protected Vector2 speed;
     //Speed this current frame - add to this before calling Move
-    protected Vector2 displacement;
+    protected Vector2 displacement = Vector2.zero;
     //Whether or not the entity can move
     protected bool canMove = true;
     //Whether or not the entity is facing right
     protected bool right = true;
+    //Reference to the hitbox
+    protected BoxCollider2D hitBox;
     #endregion
     #region Public Fields
     // N/A
@@ -34,12 +37,14 @@ public class Entity : MonoBehaviour {
     public Vector2 Displacement { get { return displacement; } set { displacement = value; } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool FacingRight { get { return right; } set { right = value; } }
+    public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     #endregion
     #region Unity Methods
     void Start()
     {
         minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
         maxY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MaxY;
+        hitBox = this.GetComponent<BoxCollider2D>();
     }
     #endregion
     #region Custom Methods
@@ -47,6 +52,14 @@ public class Entity : MonoBehaviour {
     {
         //Attempt to move
         this.transform.position += new Vector3(displacement.x, displacement.y, 0);
+        //Check to see if we've changed direction
+        if(displacement!=Vector2.zero)
+        {
+            //Update right
+            right = (displacement.x > 0);
+            //Update sprite if flipping is necessary
+            this.GetComponent<SpriteRenderer>().flipX = right;
+        }
         //Keep within bounds of level
         if (this.transform.position.y > maxY)
             this.transform.position = new Vector3(this.transform.position.x, maxY, this.transform.position.z);

@@ -6,9 +6,6 @@ using UnityEngine;
 /// Communicates with PlayerCombat to make sure they don't move while attacking and whatnot
 /// </summary>
 public class PlayerMovement : MonoBehaviour {
-    #region Constants
-    protected const float frame = 1f / 60f;
-    #endregion
     #region Public Fields
     public Vector2 moveSpeed;
     [Header("Dash data")]
@@ -68,7 +65,7 @@ public class PlayerMovement : MonoBehaviour {
             if (canDash && (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))) 
             {
                 //Start the dash timer
-                dashTime = dashFrames * frame;
+                dashTime = dashFrames * Helper.frame;
 
                 //Set initial velocity of dash
                 inputDisplacement.Normalize();
@@ -83,7 +80,7 @@ public class PlayerMovement : MonoBehaviour {
         if (dashTime > 0f)
         {
             //Check to see if you're still invincible
-            if (dashTime > (dashFrames - dashIFrames) * frame)
+            if (dashTime > (dashFrames - dashIFrames) * Helper.frame)
                 invincible = true;
             else
                 invincible = false;
