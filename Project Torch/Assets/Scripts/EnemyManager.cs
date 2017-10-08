@@ -18,14 +18,16 @@ public class EnemyManager : MonoBehaviour {
     //Reference to the player
     protected GameObject player;
     //Enemies in a combat encounter
-    protected List<GameObject> encounterEnemies;
+    public List<GameObject> encounterEnemies;
     //Whether or not a spot is occupied in the grid, in the following format:
     //      3         0
     //    4      P      1
     //      4         3
-    protected bool[] surroundingGridOccupancy;
+    //protected bool[] surroundingGridOccupancy;
     //Time currently waiting between attacks
     protected float timeBeforeNextAttack;
+    //Whether or not currently in an encounter
+    protected bool encounterActive = false;
     #endregion
     #region Public Fields
     //Range of encounters
@@ -52,13 +54,20 @@ public class EnemyManager : MonoBehaviour {
         foreach (GameObject o in gameEnemies)
             zoneEnemies.Add(o);
         player = GameObject.Find("Player");
-        surroundingGridOccupancy = new bool[6];
-        ResetGridOccupancy();
+        //surroundingGridOccupancy = new bool[6];
+
+
+        //DEBUG!! REMOVE THESE AFTER THE MILESTONE
+        attackMinWait = 1f;
+        attackMaxWait = 3f;
+        encounterRadius = 6f;
 	}
 	
 	void Update () {
         CleanupEnemies();
-        MoveEnemies();
+        //MoveEnemies();
+        if (encounterActive)
+            ManageEncounter();
 	}
     #endregion
     #region Custom Methods
@@ -84,6 +93,9 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// NOTE: This is just a temporary thing to test enemy movement
+    /// </summary>
     void MoveEnemies()
     {
         Enemy e;
@@ -103,51 +115,42 @@ public class EnemyManager : MonoBehaviour {
     /// <param name="location">Location of the enemy that was hit - encounter centers around there</param>
     public void StartEncounter(Vector3 location)
     {
+        Debug.Log("Starting Encounter...");
+        //Set flagged for being in an encounter
+        encounterActive = true;
         //Update position of the encounter (which will simply be used as this object's location)
         this.transform.position = location;
         //Grab enemies within range and add them to the encounter
-        foreach (GameObject g in zoneEnemies)
+        for (int i = 0; i < zoneEnemies.Count; ++i) 
         {
-            if ((location - g.transform.position).sqrMagnitude <= Mathf.Pow(encounterRadius, 2))
+            if ((location - zoneEnemies[i].transform.position).sqrMagnitude <= Mathf.Pow(encounterRadius, 2))
             {
-                encounterEnemies.Add(g);
-                g.GetComponent<Enemy>().StartEncounter();
+                encounterEnemies.Add(zoneEnemies[i]);
+                zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
+                Debug.Log("Enemy added to encounter " + i);
             }
         }
     }
 
-    protected void EndEncounter()
-    {
-        ResetGridOccupancy();
-    }
-
     /// <summary>
-    /// This method exists purely to call other encounter-related subroutines for organization sake
+    /// This method calls other encounter-related subroutines for organization sake
     /// </summary>
     protected void ManageEncounter()
     {
-
+        MoveToAttack();
     }
 
-
-    protected void AssignEnemiesToGrid()
-    {
-        //////////////
-    }
-
-    protected void ResetGridOccupancy()
-    {
-        for (int i = 0; i < 6; ++i)
-            surroundingGridOccupancy[i] = false;
-    }
-
-    protected void MoveToAttack(Enemy e)
+    /// <summary>
+    /// Tells an enemy to move in to position and attack
+    /// </summary>
+    protected void MoveToAttack()
     {
         //IF ready to attack, attack
         if (timeBeforeNextAttack <= 0) 
         {
-
-
+            //Make random enemy attack
+            encounterEnemies[Random.Range(0, encounterEnemies.Count)].GetComponent<Enemy>().MoveToAttack(player);
+            //Cooldown before next attack order
             timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
         }
         else

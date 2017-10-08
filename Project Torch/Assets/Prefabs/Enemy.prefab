@@ -122,6 +122,10 @@ MonoBehaviour:
     y: -0.18
     width: 1.26
     height: 0.21
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
 --- !u!212 &212438699154619596
 SpriteRenderer:
   m_ObjectHideFlags: 1

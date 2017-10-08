@@ -13,7 +13,7 @@ using UnityEngine;
 /// </summary>
 public class Enemy : MonoBehaviour {
     #region Enums
-    public enum EnemyState
+    public enum EnemyStates
     {
         Idle,
         ApproachingToAttack,
@@ -45,12 +45,14 @@ public class Enemy : MonoBehaviour {
     protected float knockbackTime;
     //Target to move towards
     protected Vector2 moveTarget;
+    //Target to attack
+    protected GameObject attackTarget;
     //Position for the enemy to return to if the player escapes/dies
     protected Vector2 returnPosition;
     //Whether or not this enemy is in a combat encounter
     protected bool inEncounter = false;
     //Current state of the enemy
-    protected EnemyState enemyState;
+    protected EnemyStates enemyState;
     //Current attack state
     protected CombatStates combatState;
     //Amount of time spent attacking
@@ -86,6 +88,8 @@ public class Enemy : MonoBehaviour {
     public Rect atHB2;
     public float atHB3FirstActiveFrame;
     public Rect atHB3;
+    //DEBUG//
+    public GameObject[] tempHitboxObj;
     #endregion
     #region Properties
     public bool Alive { get { return alive; } }
@@ -111,9 +115,11 @@ public class Enemy : MonoBehaviour {
         alive = true;
         hitFlashTimer = 0f;
         entity = this.GetComponent<Entity>();
-        enemyState = EnemyState.Idle;
+        enemyState = EnemyStates.Idle;
         combatState = CombatStates.None;
         player = GameObject.Find("Player");
+        //DEBUG!!! REMOVE LATER!!
+        attackRange = 4f;
 	}
 	
 	void Update () {
@@ -133,22 +139,28 @@ public class Enemy : MonoBehaviour {
 
         switch (enemyState)
         {
-            case EnemyState.Idle:
+            case EnemyStates.Idle:
                 //Nothing special for now.........
                 break;
-            case EnemyState.Attacking:
-                //Should this even be here? Might not be necessary
+            case EnemyStates.Attacking:
+                attackTime += Time.deltaTime;
+                entity.Displacement = Vector2.zero;//Can't move while attacking
                 break;
-            case EnemyState.ApproachingToAttack:
-                //Move towards player
+            case EnemyStates.ApproachingToAttack:
+                //Update move target
+                moveTarget = attackTarget.transform.position;
+                //Move towards target
                 SeekTarget();
                 //See if you're within range
                 if ((this.transform.position - Helper.Vec2ToVec3(moveTarget)).sqrMagnitude <= Mathf.Pow(attackRange, 2)) 
                 {
-
+                    //Change states accordingly
+                    combatState = CombatStates.Startup;
+                    enemyState = EnemyStates.Attacking;
+                    attackTime = 0f;
                 }
                 break;
-            case EnemyState.Returning:
+            case EnemyStates.Returning:
                 //TODO: Stuff the enemy needs to do after making an attack
                 moveTarget = this.transform.position;//temp
                 break;
@@ -158,19 +170,46 @@ public class Enemy : MonoBehaviour {
         {
             case CombatStates.Active:
                 entity.CanMove = false;
+                // --do AABB for box 1--
+                AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
+                GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
+                tempObjBox1.transform.localPosition = new Vector3(atHB1.center.x * hitBoxDirectionMove, atHB1.center.y, 0);
+                if (attackTime > (atStartup + atHB2FirstActiveFrame) * Helper.frame)
+                {
+                    // --do AABB for box 2--
+                    AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
+                    tempObjBox2.transform.localPosition = new Vector3(atHB2.center.x * hitBoxDirectionMove, atHB2.center.y, 0);
+                }
+                if (attackTime > (atStartup + atHB3FirstActiveFrame) * Helper.frame)
+                {
+                    // --do AABB for box 3--
+                    AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
+                    tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
+                }
+                if (attackTime > (atStartup + atActive) * Helper.frame)
+                    combatState = CombatStates.Recovery;
                 break;
             case CombatStates.Recovery:
                 entity.CanMove = false;
+                if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
+                {
+                    combatState = CombatStates.None;
+                    enemyState = EnemyStates.Returning;
+                    entity.CanMove = true;
+                    //entity.Speed *= 1.5f;
+                    attackTime = 0f;
+                }
                 break;
             case CombatStates.Startup:
                 entity.CanMove = false;
-                attackTime += Time.deltaTime;
                 if (attackTime > atStartup * Helper.frame)
                     combatState = CombatStates.Active;
                 break;
             case CombatStates.None:
-                if (!inKnockback)
-                    entity.CanMove = true;
+                //if (!inKnockback)
+                    //entity.CanMove = true;
                 break;
         }
 
@@ -258,10 +297,16 @@ public class Enemy : MonoBehaviour {
         inEncounter = true;
     }
 
-    public void MoveToAttack(Vector3 targetLoc)
+    /// <summary>
+    /// Orders this enemy to engage an attack
+    /// </summary>
+    /// <param name="targetObj">Target to attack</param>
+    public void MoveToAttack(GameObject targetObj)
     {
         //Assign player as target
-        moveTarget = Helper.Vec3ToVec2(targetLoc);
+        attackTarget = targetObj;
+        //Change to move to attack state
+        enemyState = EnemyStates.ApproachingToAttack;
     }
 
     protected bool CheckCollisions(Rect hitbox)
