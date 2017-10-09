@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -244,6 +244,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -410,7 +425,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -426,6 +441,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -780,7 +810,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -796,6 +826,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -879,7 +924,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -895,6 +940,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1029,7 +1089,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1045,6 +1105,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1326,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d35e5fbb0d4c8448410e5935c46872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  encounterEnemies: []
   encounterRadius: 0
   surroundingGridSize: {x: 0, y: 0}
   surroundingGridCirclesSize: 0
@@ -1676,7 +1752,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1692,6 +1768,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1942,7 +2033,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1958,6 +2049,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2271,7 +2377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &376737624
 Transform:
   m_ObjectHideFlags: 0
@@ -2591,7 +2697,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2607,6 +2713,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2726,7 +2847,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2742,6 +2863,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3031,7 +3167,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3047,6 +3183,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3242,7 +3393,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3258,6 +3409,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3405,7 +3571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &647726122
 Transform:
   m_ObjectHideFlags: 0
@@ -3727,7 +3893,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3743,6 +3909,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3906,7 +4087,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3922,6 +4103,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4026,7 +4222,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4042,6 +4238,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4437,7 +4648,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4453,6 +4664,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4536,7 +4762,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4552,6 +4778,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4767,6 +5008,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: maxVelocity
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -4876,7 +5137,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4892,6 +5153,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5735,7 +6011,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5751,6 +6027,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5824,7 +6115,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5840,6 +6131,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6220,7 +6526,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6236,6 +6542,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6345,7 +6666,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6361,6 +6682,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6596,7 +6932,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6612,6 +6948,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7047,7 +7398,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7063,6 +7414,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7642,7 +8008,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7658,6 +8024,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7762,7 +8143,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7778,6 +8159,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8656,7 +9052,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8672,6 +9068,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8745,7 +9156,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8761,6 +9172,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8905,7 +9331,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8921,6 +9347,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9203,7 +9644,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9219,6 +9660,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9492,7 +9948,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9508,6 +9964,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9859,7 +10330,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9875,6 +10346,21 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}

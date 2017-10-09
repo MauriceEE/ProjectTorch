@@ -61,6 +61,12 @@ public class Enemy : MonoBehaviour {
     protected int hitBoxDirectionMove;
     //Reference to player hitbox
     protected GameObject player;
+    // Base color
+    protected Color baseColor;
+    // reaction bools
+    protected bool guarding;
+    protected bool counterattacking;
+    protected bool dodging; // probably will need to be an enum state
     ///List<Rect> hitboxesCollidedWith  //Resume from here... make a better hitbox delay function
     #endregion
     #region Public Fields
@@ -90,6 +96,10 @@ public class Enemy : MonoBehaviour {
     public Rect atHB3;
     //DEBUG//
     public GameObject[] tempHitboxObj;
+    [Header("Reaction Chances")]
+    public int guardChance;
+    public int counterAttackChance;
+    public int dodgeChance;
     #endregion
     #region Properties
     public bool Alive { get { return alive; } }
@@ -120,6 +130,13 @@ public class Enemy : MonoBehaviour {
         player = GameObject.Find("Player");
         //DEBUG!!! REMOVE LATER!!
         attackRange = 4f;
+        baseColor = Color.white;
+        guarding = false;
+        counterattacking = false;
+        dodging = false;
+        guardChance = 15;
+        counterAttackChance = 0;
+        dodgeChance = 0;
 	}
 	
 	void Update () {
@@ -136,6 +153,22 @@ public class Enemy : MonoBehaviour {
         //Decelerate knockback if being knocked back
         if (inKnockback)
             UpdateKnockback();
+
+        // color changing for conveyance
+        if(hitFlashTimer > 0)
+        {
+            hitFlashTimer -= Time.deltaTime;
+            this.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        else
+        {
+            // states must be in order from longest active to least active
+            if (guarding) baseColor = Color.yellow;
+            if (counterattacking) baseColor = new Color((255f/255f), (140f/255f), (30f/255f));
+            if (dodging) baseColor = Color.blue;
+            if (!dodging && !counterattacking && !guarding) baseColor = Color.white;
+            this.GetComponent<SpriteRenderer>().color = baseColor;
+        }
 
         switch (enemyState)
         {
@@ -237,6 +270,12 @@ public class Enemy : MonoBehaviour {
             inEncounter = true;
             //StartEncounter();//Actually let's let the enemy manager call this for consistency's sake
         }
+    }
+
+    private void React()
+    {
+        //Random rand1 = new Random();
+        
     }
 
     /// <summary>
