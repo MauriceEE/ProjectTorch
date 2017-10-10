@@ -55,12 +55,6 @@ public class EnemyManager : MonoBehaviour {
             zoneEnemies.Add(o);
         player = GameObject.Find("Player");
         //surroundingGridOccupancy = new bool[6];
-
-
-        //DEBUG!! REMOVE THESE AFTER THE MILESTONE
-        attackMinWait = 1f;
-        attackMaxWait = 3f;
-        encounterRadius = 6f;
 	}
 	
 	void Update () {

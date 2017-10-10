@@ -93,8 +93,8 @@ MonoBehaviour:
   hp: 50
   knockbackFriction: 0.69
   maxVelocity: 0.02
-  arrivalRadius: 4
-  attackRange: 0
+  arrivalRadius: 5.4
+  attackRange: 3.2
   atDamage: 10
   atStartup: 6
   atActive: 10

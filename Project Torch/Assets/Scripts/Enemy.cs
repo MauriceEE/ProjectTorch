@@ -118,8 +118,6 @@ public class Enemy : MonoBehaviour {
         enemyState = EnemyStates.Idle;
         combatState = CombatStates.None;
         player = GameObject.Find("Player");
-        //DEBUG!!! REMOVE LATER!!
-        attackRange = 4f;
 	}
 	
 	void Update () {
