@@ -260,6 +260,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -456,6 +471,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -842,6 +872,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -955,6 +1000,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1120,6 +1180,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1784,6 +1859,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -2064,6 +2154,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2729,6 +2834,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -2878,6 +2998,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3199,6 +3334,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -3424,6 +3574,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3925,6 +4090,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -4119,6 +4299,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -4253,6 +4448,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4680,6 +4890,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -4793,6 +5018,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5028,6 +5268,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -5168,6 +5423,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6043,6 +6313,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -6146,6 +6431,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6558,6 +6858,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -6697,6 +7012,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6963,6 +7293,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7429,6 +7774,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8040,6 +8400,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -8174,6 +8549,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9084,6 +9474,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -9187,6 +9592,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9362,6 +9782,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9676,6 +10111,21 @@ Prefab:
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -9979,6 +10429,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -10361,6 +10826,21 @@ Prefab:
         type: 2}
       propertyPath: atEditorHitboxes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}

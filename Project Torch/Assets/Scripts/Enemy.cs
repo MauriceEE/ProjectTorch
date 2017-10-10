@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 /// <summary>
 /// Basic enemy class
@@ -63,8 +64,10 @@ public class Enemy : MonoBehaviour {
     protected GameObject player;
     // Base color
     protected Color baseColor;
-    // reaction bools
+    // reaction variables
     protected bool guarding;
+    protected int guardStacks;
+    protected int maxGuardStacks = 1;
     protected bool counterattacking;
     protected bool dodging; // probably will need to be an enum state
     ///List<Rect> hitboxesCollidedWith  //Resume from here... make a better hitbox delay function
@@ -81,6 +84,8 @@ public class Enemy : MonoBehaviour {
     public float arrivalRadius;
     //When the enemy will start attacking
     public float attackRange;
+    // If enemy is currently attacking
+    public bool isAttacking;
     [Header("Attack data")]
     public float atDamage;
     public float atStartup;
@@ -134,10 +139,13 @@ public class Enemy : MonoBehaviour {
         guarding = false;
         counterattacking = false;
         dodging = false;
-        guardChance = 15;
-        counterAttackChance = 0;
-        dodgeChance = 0;
-	}
+        isAttacking = false;
+
+        // if standard enemy, set chances
+        //guardChance = 15;
+        //counterAttackChance = 0;
+        //dodgeChance = 0;
+    }
 	
 	void Update () {
         //Temp scalar which will affect hitboxes on left/right side
@@ -166,7 +174,7 @@ public class Enemy : MonoBehaviour {
             if (guarding) baseColor = Color.yellow;
             if (counterattacking) baseColor = new Color((255f/255f), (140f/255f), (30f/255f));
             if (dodging) baseColor = Color.blue;
-            if (!dodging && !counterattacking && !guarding) baseColor = Color.white;
+            if (!dodging && !counterattacking && !guarding) baseColor = Color.white; // default
             this.GetComponent<SpriteRenderer>().color = baseColor;
         }
 
@@ -174,12 +182,15 @@ public class Enemy : MonoBehaviour {
         {
             case EnemyStates.Idle:
                 //Nothing special for now.........
+                isAttacking = false;
                 break;
             case EnemyStates.Attacking:
+                isAttacking = true;
                 attackTime += Time.deltaTime;
                 entity.Displacement = Vector2.zero;//Can't move while attacking
                 break;
             case EnemyStates.ApproachingToAttack:
+                isAttacking = false; // might change this if it proves cheap
                 //Update move target
                 moveTarget = attackTarget.transform.position;
                 //Move towards target
@@ -195,6 +206,8 @@ public class Enemy : MonoBehaviour {
                 break;
             case EnemyStates.Returning:
                 //TODO: Stuff the enemy needs to do after making an attack
+                isAttacking = false;
+                counterattacking = false;
                 moveTarget = this.transform.position;//temp
                 break;
         }
@@ -260,9 +273,7 @@ public class Enemy : MonoBehaviour {
         hp -= damage;
         hitFlashTimer = 0.6f;
         damageTimer = 0.2f;
-        //kill if dead
-        if (hp < 0)
-            alive = false;
+
         //flag encounter if not yet flagged
         if (!inEncounter)
         {
@@ -270,12 +281,51 @@ public class Enemy : MonoBehaviour {
             inEncounter = true;
             //StartEncounter();//Actually let's let the enemy manager call this for consistency's sake
         }
+
+        //kill if dead
+        if (hp < 0)
+        {
+            alive = false;
+        }
+        // if not dead, try a reaction
+        else React();
     }
 
     private void React()
     {
-        //Random rand1 = new Random();
+        // this method will generate a random number between 1 and 100 and check to see if it falls within the ranges of chance for the reactions
+        System.Random rand1 = new System.Random();
+        int num = (rand1.Next(0, 100)) + 1; // roll to see what number they get
         
+        if(num > 0 && num <= guardChance) // if greater than zero (impossible to be false unless an error), and less than guard chance, it is a guard
+        {
+            // set guarding to true, increment the stacks, halve the movement speed
+            guarding = true;
+            if(guardStacks < maxGuardStacks) guardStacks++;
+            float oldMaxVelocity = maxVelocity;
+            float newMaxVelocity = maxVelocity / 2;
+            maxVelocity = newMaxVelocity; // CAN'T RESET
+            //Debug.Log("Guard Reaction");
+        }
+        // create and check next threshold, defined as the numbers between the previous reaction chance(s) and the sum of the next reaction chance added to the previous one(s)
+        else if(num > guardChance && num <= (counterAttackChance + guardChance))
+        {
+            // Ask Encounter Manager if it can attack
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            {
+                counterattacking = true;
+                MoveToAttack(player);
+                //Debug.Log("CounterAttack Reaction");
+            }
+            else return;
+
+        }
+        // create and check next threshold
+        else if(num > (guardChance + counterAttackChance) && num <= (dodgeChance + counterAttackChance + guardChance))
+        {
+            dodging = true;
+            //Debug.Log("Dodge Reaction");
+        }
     }
 
     /// <summary>
