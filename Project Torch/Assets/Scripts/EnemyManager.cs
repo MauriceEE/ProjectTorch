@@ -101,7 +101,7 @@ public class EnemyManager : MonoBehaviour {
         }
     }
     #endregion
-#region Encounter Methods
+    #region Encounter Methods
     /// <summary>
     /// Sets up an encounter
     /// CALLED BY ENEMIES

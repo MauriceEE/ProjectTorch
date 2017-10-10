@@ -92,11 +92,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 50
   knockbackFriction: 0.69
-  maxVelocity: 0.02
+  maxVelocity: 0.04
   arrivalRadius: 5.4
-  attackRange: 3.2
+  attackRange: 4
+  isAttacking: 0
   atDamage: 10
-  atStartup: 6
+  atStartup: 12
   atActive: 10
   atRecovery: 10
   atKnockbackTime: 0
@@ -126,6 +127,9 @@ MonoBehaviour:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
 --- !u!212 &212438699154619596
 SpriteRenderer:
   m_ObjectHideFlags: 1
