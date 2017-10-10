@@ -126,6 +126,16 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
+    public bool CanEnemiesAttack()
+    {
+        // loop through all enemies, checking to see if anyone is currently attacking
+        for (int i = 0; i < encounterEnemies.Count - 1; i++)
+        {
+            if (encounterEnemies[i].GetComponent<Enemy>().isAttacking == true) return false;
+        }
+        return true;
+    }
+
     /// <summary>
     /// This method calls other encounter-related subroutines for organization sake
     /// </summary>
@@ -140,7 +150,7 @@ public class EnemyManager : MonoBehaviour {
     protected void MoveToAttack()
     {
         //IF ready to attack, attack
-        if (timeBeforeNextAttack <= 0) 
+        if (CanEnemiesAttack() && timeBeforeNextAttack <= 0) 
         {
             //Make random enemy attack
             encounterEnemies[Random.Range(0, encounterEnemies.Count)].GetComponent<Enemy>().MoveToAttack(player);

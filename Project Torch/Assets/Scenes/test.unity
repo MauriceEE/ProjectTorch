@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+>>>>>>> origin/master
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -228,7 +232,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -244,6 +248,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -410,7 +444,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -426,6 +460,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -780,7 +844,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -796,6 +860,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -879,7 +973,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -895,6 +989,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1029,7 +1153,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1045,6 +1169,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1327,7 +1481,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterEnemies: []
+<<<<<<< HEAD
   encounterRadius: 12
+=======
+  encounterRadius: 0
+>>>>>>> origin/master
   surroundingGridSize: {x: 0, y: 0}
   surroundingGridCirclesSize: 0
   surroundingGridCirclesMinWait: 0
@@ -1677,7 +1835,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1693,6 +1851,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1943,7 +2131,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1959,6 +2147,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2592,7 +2810,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2608,6 +2826,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2727,7 +2975,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2743,6 +2991,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3032,7 +3310,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3048,6 +3326,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3243,7 +3551,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3259,6 +3567,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3728,7 +4066,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3744,6 +4082,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3907,7 +4275,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3923,6 +4291,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4027,7 +4425,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4043,6 +4441,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4438,7 +4866,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4454,6 +4882,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4537,7 +4995,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4553,6 +5011,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4768,6 +5256,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: maxVelocity
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -4877,7 +5400,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4893,6 +5416,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5736,7 +6289,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5752,6 +6305,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5825,7 +6408,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5841,6 +6424,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6221,7 +6834,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6237,6 +6850,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6346,7 +6989,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6362,6 +7005,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6597,7 +7270,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6613,6 +7286,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7048,7 +7751,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7064,6 +7767,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7643,7 +8376,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7659,6 +8392,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7763,7 +8526,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7779,6 +8542,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8657,7 +9450,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8673,6 +9466,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8746,7 +9569,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8762,6 +9585,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8906,7 +9759,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8922,6 +9775,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9204,7 +10087,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9220,6 +10103,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9493,7 +10406,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9509,6 +10422,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9860,7 +10803,7 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9876,6 +10819,36 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atEditorHitboxes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: guardChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: counterAttackChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}

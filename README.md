@@ -39,3 +39,9 @@
 <ul><li>Finished up the level blocking</li>
 <h2>Connor Menard - 10/7/17 - 21:30</h2>
 <ul><li>Started doing stuff for the encounter manager and overall added more enemy stuff</li><li>Put in Judi and a shadow monster sprite</li>
+<h2>Maurice Edwards - 10/10/17 - 1:11 </h2>
+<ul>
+  <li>Coded reaction selection for enemies, but not the reactions themselves fully</li>
+  <li>Added a function in the EM that checks if any enemies are attacking. I have it call that before it chooses an enemy to attack and before any enemies want to counterattack</li>
+  <li>Added isAttacking variable to enemies for use in offensive regulations for the EM</li>
+</ul>
