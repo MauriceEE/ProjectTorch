@@ -11,6 +11,8 @@ public class BackgroundManager : MonoBehaviour {
     public GameObject Front;
     public GameObject Details;
 
+
+
     //speed multipliers (1.0 is the current player speed)
 
     //this affects ALL background elements at once
@@ -21,6 +23,11 @@ public class BackgroundManager : MonoBehaviour {
     public float frontSpeedMultiplier;
     public float cloudSpeedMultiplier;
     public float backgroundSpeedMultiplier;
+
+    public Vector3 battlefieldSpawn;
+    public Vector3 sullenVillageSpawn;
+    public Vector3 thrivingVillageSpawn;
+    
     /*float groundSpeed;
     float skySpeed;
     float frontSpeed;
