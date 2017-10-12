@@ -24,10 +24,16 @@ public class BackgroundManager : MonoBehaviour {
     public float cloudSpeedMultiplier;
     public float backgroundSpeedMultiplier;
 
+    //spawns
     public Vector3 battlefieldSpawn;
     public Vector3 sullenVillageSpawn;
     public Vector3 thrivingVillageSpawn;
-    
+
+    //zones
+    public GameObject Battlefield;
+    public GameObject SullenVillage;
+    public GameObject ThrivingVillage;
+
     /*float groundSpeed;
     float skySpeed;
     float frontSpeed;
@@ -44,6 +50,18 @@ public class BackgroundManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.F1)) {
+            DisableAllZones();
+            SetZone(Battlefield);
+        }
+        if (Input.GetKeyDown(KeyCode.F2)) {
+            DisableAllZones();
+            SetZone(SullenVillage);
+        }
+        if (Input.GetKeyDown(KeyCode.F3)) {
+            DisableAllZones();
+            SetZone(ThrivingVillage);
+        }
         moveSpeed = pmover.GetSpeed().x * -120;
         
         Ground.transform.position +=  new Vector3(Time.deltaTime * moveSpeed * groundSpeedMultiplier * globalSpeedMultiplier,0f,0f);
@@ -56,5 +74,25 @@ public class BackgroundManager : MonoBehaviour {
     }
     public void MoveByBackgroundOffset(Transform entity) {
         entity.position += new Vector3(Time.deltaTime * pmover.GetSpeed().x * -120 * globalSpeedMultiplier, 0f, 0f);
+    }
+    public void SetZone(GameObject zone) {
+        zone.SetActive(true);
+        Ground = zone.transform.Find("ActiveArea").gameObject;
+        GameObject environment = zone.transform.Find("Environment").gameObject;
+
+        Sky = environment.transform.Find("Sky").gameObject;
+
+        Background = environment.transform.Find("Background").gameObject;
+
+        Front = environment.transform.Find("Front").gameObject;
+
+        Details = environment.transform.Find("Details").gameObject;
+
+        Clouds = environment.transform.Find("Clouds").gameObject;
+    }
+    public void DisableAllZones() {
+        Battlefield.SetActive(false);
+        ThrivingVillage.SetActive(false);
+        SullenVillage.SetActive(false);
     }
 }
