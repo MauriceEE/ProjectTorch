@@ -33,15 +33,16 @@ public class BackgroundManager : MonoBehaviour {
     public GameObject Battlefield;
     public GameObject SullenVillage;
     public GameObject ThrivingVillage;
-
     /*float groundSpeed;
     float skySpeed;
     float frontSpeed;
     float cloudSpeed;
     */
     public GameObject Player;
+
     PlayerMovement pmover;
     float moveSpeed;
+    bool fading;
 	// Use this for initialization
 	void Start () {
         pmover = Player.GetComponent<PlayerMovement>();
@@ -94,5 +95,11 @@ public class BackgroundManager : MonoBehaviour {
         Battlefield.SetActive(false);
         ThrivingVillage.SetActive(false);
         SullenVillage.SetActive(false);
+    }
+    public void FadeToBlack(float seconds) {
+
+    }
+    public void FadeToTransparent(float seconds) {
+
     }
 }
