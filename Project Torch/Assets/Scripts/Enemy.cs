@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEditor;
 /// <summary>
 /// Basic enemy class
 /// Right now it just stands there, takes damage, and eventually dies
@@ -19,7 +20,9 @@ public class Enemy : MonoBehaviour {
         Idle,
         ApproachingToAttack,
         Attacking,
-        Returning
+        SurroundingPlayer,
+        ReturningFromAttack,
+        ReturningFromEncounter
     }
     protected enum CombatStates
     {
@@ -29,6 +32,7 @@ public class Enemy : MonoBehaviour {
         Recovery,
     }
     #endregion
+
     #region Private Fields
     //When set to false the enemy manager will destroy&remove the object
     protected bool alive;
@@ -62,6 +66,8 @@ public class Enemy : MonoBehaviour {
     protected int hitBoxDirectionMove;
     //Reference to player hitbox
     protected GameObject player;
+    //Reference to the connected encounter (Note: there doesn't necessarily have to be one)
+    protected GameObject encounter;
     // Base color
     protected Color baseColor;
     // reaction variables
@@ -72,6 +78,7 @@ public class Enemy : MonoBehaviour {
     protected bool dodging; // probably will need to be an enum state
     ///List<Rect> hitboxesCollidedWith  //Resume from here... make a better hitbox delay function
     #endregion
+
     #region Public Fields
     //Health points
     public float hp;
@@ -84,6 +91,8 @@ public class Enemy : MonoBehaviour {
     public float arrivalRadius;
     //When the enemy will start attacking
     public float attackRange;
+    //If the player stays out of this, the encounter will end
+    public float awarenessRange;
     // If enemy is currently attacking
     public bool isAttacking;
     [Header("Attack data")]
@@ -106,6 +115,7 @@ public class Enemy : MonoBehaviour {
     public int counterAttackChance;
     public int dodgeChance;
     #endregion
+
     #region Properties
     public bool Alive { get { return alive; } }
     public bool CanTakeDamage { get { return (damageTimer <= 0f); } }
@@ -114,7 +124,10 @@ public class Enemy : MonoBehaviour {
     public Vector2 MoveTarget { get { return moveTarget; } set { moveTarget = value; } }
     public Vector2 ReturnPosition { get { return returnPosition; } set { returnPosition = value; } }
     public Rect HitBoxRect { get { return entity.HitBoxRect; } }
+    public GameObject Encounter { get { return encounter; } set { encounter = value; } }
+    public float AwarenessRange { get { return awarenessRange; } set { awarenessRange = value; } }
     #endregion
+
     #region Unity Methods
     private void OnDrawGizmos()
     {
@@ -196,11 +209,22 @@ public class Enemy : MonoBehaviour {
                     attackTime = 0f;
                 }
                 break;
-            case EnemyStates.Returning:
+            case EnemyStates.ReturningFromAttack:
+                Debug.Log("State: returningFromAttack");
                 //TODO: Stuff the enemy needs to do after making an attack
                 isAttacking = false;
                 counterattacking = false;
-                moveTarget = this.transform.position;//temp
+                RequestMoveTarget();//TODO fixed?
+                break;
+            case EnemyStates.ReturningFromEncounter:
+                //moveTarget = returnPosition;
+                //Merely move back to the return position and wait
+                //TODO: stuff after returning to the return position?
+                SeekTarget();
+                break;
+            case EnemyStates.SurroundingPlayer:
+                //Merely follow the enemy manager's orders (it handles updating move target automatically)
+                SeekTarget();
                 break;
         }
 
@@ -234,7 +258,7 @@ public class Enemy : MonoBehaviour {
                 if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
                 {
                     combatState = CombatStates.None;
-                    enemyState = EnemyStates.Returning;
+                    enemyState = EnemyStates.ReturningFromAttack;
                     entity.CanMove = true;
                     //entity.Speed *= 1.5f;
                     attackTime = 0f;
@@ -255,6 +279,7 @@ public class Enemy : MonoBehaviour {
         entity.Move();
 	}
     #endregion
+
     #region Custom Methods
     /// <summary>
     /// Deals HP damage to this enemy
@@ -269,13 +294,20 @@ public class Enemy : MonoBehaviour {
         //flag encounter if not yet flagged
         if (!inEncounter)
         {
-            GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().StartEncounter(this.transform.position);
-            inEncounter = true;
-            //StartEncounter();//Actually let's let the enemy manager call this for consistency's sake
+            //If encounter is assigned, tell it to start an encounter
+            if (encounter)
+            {
+                encounter.GetComponent<Encounter>().StartEncounter();
+            }
+            else
+            {
+                //TODO: What if the enemy isn't attached to an encounter?????
+                Debug.Log("Encounter object not yet assigned to this enemy!");
+            }
         }
 
         //kill if dead
-        if (hp < 0)
+        if (hp <= 0)
         {
             alive = false;
         }
@@ -379,6 +411,19 @@ public class Enemy : MonoBehaviour {
     }
 
     /// <summary>
+    /// Unflags inEncounter and tells the enemy to return to its starting position
+    /// </summary>
+    public void EndEncounter()
+    {
+        //No longer in an encounter
+        inEncounter = false;
+        //Set move target to the return position
+        this.moveTarget = returnPosition;
+        //Set state to returning to said position
+        this.enemyState = EnemyStates.ReturningFromEncounter;
+    }
+
+    /// <summary>
     /// Orders this enemy to engage an attack
     /// </summary>
     /// <param name="targetObj">Target to attack</param>
@@ -390,7 +435,22 @@ public class Enemy : MonoBehaviour {
         enemyState = EnemyStates.ApproachingToAttack;
     }
 
-    protected bool CheckCollisions(Rect hitbox)
+    /// <summary>
+    /// Tells this enemy to circle around the player.
+    /// This is done by changing the enemy's current state,
+    /// nothing else at the moment
+    /// </summary>
+    public void CircleAroundPlayer()
+    {
+        this.enemyState = EnemyStates.SurroundingPlayer;
+    }
+
+    /// <summary>
+    /// Returns true if the enemy hit the player
+    /// </summary>
+    /// <param name="hitbox">Hitbox to check with</param>
+    /// <returns>Whether or not the player was hit</returns>
+    protected bool CheckCollisionsWithPlayer(Rect hitbox)
     {
         Rect newHB = hitbox;
         if (hitBoxDirectionMove < 0)
@@ -398,12 +458,59 @@ public class Enemy : MonoBehaviour {
         return (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), player.GetComponent<PlayerCombat>().HitBoxRect));
     }
 
+    /// <summary>
+    /// Handles all the necessary attacking methods
+    /// TODO: Check whether or not allied with player
+    /// TODO: Damage other enemies of opposing factions
+    /// </summary>
+    /// <param name="hitbox">Hitbox to check</param>
+    /// <param name="damage">Damage of attack</param>
+    /// <param name="knockbackTime">Knockback time of attack</param>
+    /// <param name="knockbackSpeed">Knockback speed of attack</param>
     protected void AttackRoutine(Rect hitbox, float damage, float knockbackTime, float knockbackSpeed)
     {
-        if (CheckCollisions(hitbox))
+        if (CheckCollisionsWithPlayer(hitbox))
         {
-            Debug.Log("PLAYER HIT");
+            player.GetComponent<PlayerCombat>().TakeDamage(atDamage);
         }
     }
+
+    /// <summary>
+    /// Assigns this enemy to an encounter
+    /// Should be called if enemy runs within range of an active encounter,
+    ///     or if an encounter begins with this enemy inside its range
+    /// </summary>
+    /// <param name="enc">Encounter gameobject to be added to</param>
+    public void AssignToEncounter(GameObject enc)
+    {
+        this.encounter = enc;
+        this.encounter.GetComponent<Encounter>().TriggerEnemies.Add(this.gameObject);
+    }
     #endregion
+
+    /// <summary>
+    /// Asks the enemy manager for a spot to move to surrounding the player
+    /// NOTE: Calling this will also set this enemy to be in the grid surrounding the player
+    /// </summary>
+    protected void RequestMoveTarget()
+    {
+        moveTarget = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SendNewMoveTarget(this);
+    }
 }
+#region Classes
+/// <summary>
+/// This little bit here draws lines and arcs visually showing the visibility range
+/// </summary>
+[CustomEditor(typeof(Enemy))]
+public class DrawWireArcEnemy : Editor
+{
+    void OnSceneGUI()
+    {
+        Handles.color = Color.red;
+        Enemy enemy = (Enemy)target;
+        Handles.DrawWireArc(enemy.transform.position, new Vector3(0, 0, 1), new Vector3(0, 1, 0), 360f, enemy.awarenessRange);
+        Handles.DrawDottedLine(enemy.transform.position, enemy.transform.position + new Vector3(0, enemy.awarenessRange, 0), 12f);
+        Handles.DrawDottedLine(enemy.transform.position, enemy.transform.position + new Vector3(enemy.awarenessRange, 0, 0), 12f);
+    }
+}
+#endregion

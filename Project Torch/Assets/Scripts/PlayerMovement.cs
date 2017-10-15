@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
     [Range(0.50f, 1.00f)]
     public float dashFriction;
     #endregion
+
     #region Private Fields
     //Speed the player inputs
     protected Vector2 inputDisplacement;
@@ -34,9 +35,11 @@ public class PlayerMovement : MonoBehaviour {
     //Reference to Entity base script
     protected Entity entity;
     #endregion
+
     #region Properties
     public bool CanDash { get { return canDash; } set { canDash = value; } }
     #endregion
+
     #region Unity Methods
     void Start () {
         canDash = true;

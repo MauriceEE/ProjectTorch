@@ -67,6 +67,11 @@ public class Helper{
         return new Vector2(v.x, v.y);
     }
 
+    /// <summary>
+    /// Displays a rectangle in the editor
+    /// </summary>
+    /// <param name="position">Position of the rect</param>
+    /// <param name="box">The rect itself</param>
     public static void DebugDrawRect(Vector3 position, Rect box)
     {
         //Top
@@ -75,24 +80,32 @@ public class Helper{
             new Vector3(position.x + box.max.x, position.y + box.min.y, position.z));
         //new Vector3(this.transform.boxsition.xransform.posiboxon.y + hform.position.z),
         //new Vector3(this.transform.boxsition.xdth, this.traboxform.pos this.transform.position.z));
-        //Left                       box                     box
+        //Left
         Debug.DrawLine(                                      
             new Vector3(position.x + box.min.x, position.y + box.min.y, position.z),
             new Vector3(position.x + box.min.x, position.y + box.max.y, position.z));
         //new Vector3(thsition.x + hbbox, this.ton.y + hb.y, boxis.trans),
         //new Vector3(thsition.x + hbbox, this.ton.y + hb.y -boxb.heightm.position.z));
-        //Bottom                     box                     box
+        //Bottom
         Debug.DrawLine(                                      
             new Vector3(position.x + box.min.x, position.y + box.max.y, position.z),
             new Vector3(position.x + box.max.x, position.y + box.max.y, position.z));
         //new Vector3(thsition.x + hbbox, this.ton.y + hb.y -boxb.heightm.position.z),
         //new Vector3(thsition.x + hbbox + hb.wiform.positionbox + hb.y is.transform.position.z));
-        //Right                      box                     box
+        //Right
         Debug.DrawLine(                                      
             new Vector3(position.x + box.max.x, position.y + box.min.y, position.z),
             new Vector3(position.x + box.max.x, position.y + box.max.y, position.z));
         //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y, this.transform.position.z),
         //new Vector3(this.transform.position.x + hb.x + hb.width, this.transform.position.y + hb.y - hb.height, this.transform.position.z));
+    }
+
+    /// <summary>
+    /// Puts a divider in the console so things can be easier to read sometimes
+    /// </summary>
+    public static void DebugLogDivider()
+    {
+        Debug.Log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
     }
 
     #region Constants

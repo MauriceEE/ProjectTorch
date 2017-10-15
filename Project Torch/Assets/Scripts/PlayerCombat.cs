@@ -22,7 +22,9 @@ public class PlayerCombat : MonoBehaviour {
         Shine
     }
     #endregion
+
     #region Public Fields
+    public float hp = 100f;
     [Header("Slash data")]
     public float slDamage = 10;
     public float slStartup = 6;
@@ -57,10 +59,9 @@ public class PlayerCombat : MonoBehaviour {
     public bool shEditorHitboxes = true;//DEBUG//
     public Rect[] shHB;
     [Header("Debug")]
-    //public Material normalMaterial;
-    //public Material attackingMaterial;
     public GameObject[] tempHitboxObj;
     #endregion
+
     #region Private Fields
     //Time spent since attack began
     protected float attackTime = 0f;
@@ -85,10 +86,12 @@ public class PlayerCombat : MonoBehaviour {
     //Number of consecutive Slashes
     private int consecSlashCount = 0;
     #endregion
+
     #region Properties
     public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
     public Rect HitBoxRect { get { return entity.HitBoxRect; } }
     #endregion
+
     #region Unity Methods
     void Start()
     {
@@ -363,6 +366,7 @@ public class PlayerCombat : MonoBehaviour {
 
     
     #endregion
+
     #region Custom Methods
     /// <summary>
     /// Simply deals damage to an enemy
@@ -473,6 +477,20 @@ public class PlayerCombat : MonoBehaviour {
         Debug.Log("SHINE!!!!!");
         ///TODO: collision detection for projectiles, once projectiles are implemented
         ///TODO: enemy attack countering, once enemy attacks are implemented
+    }
+
+    /// <summary>
+    /// Makes the player lose HP
+    /// </summary>
+    /// <param name="damage">Damage (Positive; this method will subtract)</param>
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+        {
+            Debug.Log("Player died");
+            //TODO: Death stuff
+        }
     }
 #endregion
 }

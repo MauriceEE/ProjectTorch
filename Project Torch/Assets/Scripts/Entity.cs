@@ -29,9 +29,11 @@ public class Entity : MonoBehaviour {
     //Reference to the hitbox
     protected BoxCollider2D hitBox;
     #endregion
+
     #region Public Fields
     // N/A
     #endregion
+
     #region Properties
     public Vector2 Speed { get { return speed; } set { speed = value; } }
     public Vector2 Displacement { get { return displacement; } set { displacement = value; } }
@@ -39,6 +41,7 @@ public class Entity : MonoBehaviour {
     public bool FacingRight { get { return right; } set { right = value; } }
     public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     #endregion
+
     #region Unity Methods
     void Start()
     {
@@ -47,6 +50,7 @@ public class Entity : MonoBehaviour {
         hitBox = this.GetComponent<BoxCollider2D>();
     }
     #endregion
+
     #region Custom Methods
     public void Move()
     {

@@ -95,6 +95,7 @@ MonoBehaviour:
   maxVelocity: 0.04
   arrivalRadius: 5.4
   attackRange: 4
+  awarenessRange: 7
   isAttacking: 0
   atDamage: 10
   atStartup: 12
