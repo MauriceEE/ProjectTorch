@@ -17,7 +17,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour {
     #region Private Fields
     //Maximum and minimum world positions for the entity
-    protected float minY, maxY;//NOTE FOR ME: make visuals for these later so they can be set up easily during level design
+    protected float minY, maxY;//TODO: make visuals for these later so they can be set up easily during level design
     //Movement speed of the entity
     protected Vector2 speed;
     //Speed this current frame - add to this before calling Move
@@ -28,6 +28,8 @@ public class Entity : MonoBehaviour {
     protected bool right = true;
     //Reference to the hitbox
     protected BoxCollider2D hitBox;
+    //Scale to apply to speed, use with slows and whatnot
+    protected float speedModifier;
     #endregion
 
     #region Public Fields
@@ -39,6 +41,7 @@ public class Entity : MonoBehaviour {
     public Vector2 Displacement { get { return displacement; } set { displacement = value; } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool FacingRight { get { return right; } set { right = value; } }
+    public float SpeedModifier { get { return speedModifier; } set { speedModifier = value; } }
     public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     #endregion
 
@@ -48,6 +51,7 @@ public class Entity : MonoBehaviour {
         minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
         maxY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MaxY;
         hitBox = this.GetComponent<BoxCollider2D>();
+        speedModifier = 1f;//Always start with default speed
     }
     #endregion
 
@@ -55,9 +59,9 @@ public class Entity : MonoBehaviour {
     public void Move()
     {
         //Attempt to move
-        this.transform.position += new Vector3(displacement.x, displacement.y, 0);
+        this.transform.position += Helper.Vec2ToVec3(displacement * speedModifier);
         //Check to see if we've changed direction
-        if(displacement!=Vector2.zero)
+        if (displacement != Vector2.zero) 
         {
             //Update right
             right = (displacement.x > 0);

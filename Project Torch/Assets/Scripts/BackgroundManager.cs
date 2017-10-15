@@ -45,7 +45,7 @@ public class BackgroundManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         pmover = Player.GetComponent<PlayerMovement>();
-        moveSpeed = pmover.GetSpeed().x * -120;
+        moveSpeed = pmover.Speed.x * -120;
     }
 	
 	// Update is called once per frame
@@ -62,7 +62,7 @@ public class BackgroundManager : MonoBehaviour {
             DisableAllZones();
             SetZone(ThrivingVillage);
         }
-        moveSpeed = pmover.GetSpeed().x * -120;
+        moveSpeed = pmover.Speed.x * -120;
         
         Ground.transform.position +=  new Vector3(Time.deltaTime * moveSpeed * groundSpeedMultiplier * globalSpeedMultiplier,0f,0f);
         Details.transform.position += new Vector3(Time.deltaTime * moveSpeed * groundSpeedMultiplier * globalSpeedMultiplier, 0f, 0f);
@@ -73,7 +73,7 @@ public class BackgroundManager : MonoBehaviour {
         Front.transform.position += new Vector3(Time.deltaTime * moveSpeed * frontSpeedMultiplier * globalSpeedMultiplier, 0f, 0f);
     }
     public void MoveByBackgroundOffset(Transform entity) {
-        entity.position += new Vector3(Time.deltaTime * pmover.GetSpeed().x * -120 * globalSpeedMultiplier, 0f, 0f);
+        entity.position += new Vector3(Time.deltaTime * pmover.Speed.x * -120 * globalSpeedMultiplier, 0f, 0f);
     }
     public void SetZone(GameObject zone) {
         zone.SetActive(true);

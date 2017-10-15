@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 
     #region Properties
     public bool CanDash { get { return canDash; } set { canDash = value; } }
+    public Vector2 Speed { get { return entity.Displacement; } }
     #endregion
 
     #region Unity Methods
@@ -101,7 +102,7 @@ public class PlayerMovement : MonoBehaviour {
             dashTime -= Time.deltaTime;
 
             //Check if you can now move and attack
-            if(dashTime<=0f)
+            if (dashTime <= 0f) 
             {
                 entity.CanMove = true;
                 combat.CanAttack = true;
@@ -127,15 +128,6 @@ public class PlayerMovement : MonoBehaviour {
             //Move the player
             entity.Move();
         }
-    }
-    //get the speed of the player, necessary for background scrolling
-    public Vector3 GetSpeed() {
-        if(entity != null) {
-            return entity.Displacement;
-        }else {
-            return new Vector3();
-        }
-
     }
 #endregion
 }

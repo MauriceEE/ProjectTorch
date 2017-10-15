@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 using UnityEditor;
 /// <summary>
@@ -15,11 +14,12 @@ using UnityEditor;
 /// </summary>
 public class Enemy : MonoBehaviour {
     #region Enums
-    public enum EnemyStates
+    protected enum EnemyStates
     {
         Idle,
         ApproachingToAttack,
         Attacking,
+        Dodging,
         SurroundingPlayer,
         ReturningFromAttack,
         ReturningFromEncounter
@@ -30,6 +30,14 @@ public class Enemy : MonoBehaviour {
         Startup,
         Active,
         Recovery,
+        //Reacting
+    }
+    protected enum ReactionStates
+    {
+        None,
+        Guard,
+        Counter,
+        Dodge
     }
     #endregion
 
@@ -60,14 +68,26 @@ public class Enemy : MonoBehaviour {
     protected EnemyStates enemyState;
     //Current attack state
     protected CombatStates combatState;
+    //Current reaction state
+    protected ReactionStates reactionState;
     //Amount of time spent attacking
     protected float attackTime;
     //Scalar used to make hitboxes go left/right
     protected int hitBoxDirectionMove;
     //Reference to player hitbox
     protected GameObject player;
-    //Reference to the connected encounter (Note: there doesn't necessarily have to be one)
+    //Reference to the connected encounter
     protected GameObject encounter;
+    //Time left for the enemy to dash
+    public float dashTime = 0f;
+    //Whether the enemy can take damage
+    protected bool invincible = false;
+    //Whether or not the enemy's guard is broken
+    protected bool guardBroken = false;
+    //Duration remaining of a stun
+    protected float stunTime;
+    //Multiplier applied to knockback
+    protected float knockbackModifier;
     // Base color
     protected Color baseColor;
     // reaction variables
@@ -85,6 +105,8 @@ public class Enemy : MonoBehaviour {
     //Used to prevent from sliding too far after taking damage
     [Range(0.50f, 1.00f)]
     public float knockbackFriction;
+    //Duration of time to be stunned after a guard break
+    public float guardBreakStunTime;
     //Max movement speed
     public float maxVelocity;
     //How far away the enemy will be when it slows down
@@ -108,17 +130,25 @@ public class Enemy : MonoBehaviour {
     public Rect atHB2;
     public float atHB3FirstActiveFrame;
     public Rect atHB3;
-    //DEBUG//
-    public GameObject[] tempHitboxObj;
+    [Header("Dash data")]
+    public float dashIFrames = 6;
+    public float dashFrames = 10;
+    public float dashSpeed;
+    //Makes the dash more smooth
+    [Range(0.50f, 1.00f)]
+    public float dashFriction;
     [Header("Reaction Chances")]
     public int guardChance;
     public int counterAttackChance;
     public int dodgeChance;
+    //DEBUG//
+    [Header("//DEBUG//")]
+    public GameObject[] tempHitboxObj;
     #endregion
 
     #region Properties
     public bool Alive { get { return alive; } }
-    public bool CanTakeDamage { get { return (damageTimer <= 0f); } }
+    public bool CanTakeDamage { get { return (damageTimer <= 0f && !invincible); } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool CanKnockback { get { return !inKnockback; } }
     public Vector2 MoveTarget { get { return moveTarget; } set { moveTarget = value; } }
@@ -126,6 +156,8 @@ public class Enemy : MonoBehaviour {
     public Rect HitBoxRect { get { return entity.HitBoxRect; } }
     public GameObject Encounter { get { return encounter; } set { encounter = value; } }
     public float AwarenessRange { get { return awarenessRange; } set { awarenessRange = value; } }
+    public bool GuardBroken { get { return guardBroken; } set { guardBroken = value; } }
+    public float KnockbackModifier { get { return knockbackModifier; } }
     #endregion
 
     #region Unity Methods
@@ -145,7 +177,9 @@ public class Enemy : MonoBehaviour {
         entity = this.GetComponent<Entity>();
         enemyState = EnemyStates.Idle;
         combatState = CombatStates.None;
+        reactionState = ReactionStates.None;
         player = GameObject.Find("Player");
+        knockbackModifier = 1f;
         // if standard enemy, set chances
         //guardChance = 15;
         //counterAttackChance = 0;
@@ -183,100 +217,148 @@ public class Enemy : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().color = baseColor;
         }
 
-        switch (enemyState)
+        //Only do the following if not currently stunned...
+        if (stunTime < 0f)
         {
-            case EnemyStates.Idle:
-                //Nothing special for now.........
-                isAttacking = false;
-                break;
-            case EnemyStates.Attacking:
-                isAttacking = true;
-                attackTime += Time.deltaTime;
-                entity.Displacement = Vector2.zero;//Can't move while attacking
-                break;
-            case EnemyStates.ApproachingToAttack:
-                isAttacking = false; // might change this if it proves cheap
-                //Update move target
-                moveTarget = attackTarget.transform.position;
-                //Move towards target
-                SeekTarget();
-                //See if you're within range
-                if ((this.transform.position - Helper.Vec2ToVec3(moveTarget)).sqrMagnitude <= Mathf.Pow(attackRange, 2)) 
-                {
-                    //Change states accordingly
-                    combatState = CombatStates.Startup;
-                    enemyState = EnemyStates.Attacking;
-                    attackTime = 0f;
-                }
-                break;
-            case EnemyStates.ReturningFromAttack:
-                Debug.Log("State: returningFromAttack");
-                //TODO: Stuff the enemy needs to do after making an attack
-                isAttacking = false;
-                counterattacking = false;
-                RequestMoveTarget();//TODO fixed?
-                break;
-            case EnemyStates.ReturningFromEncounter:
-                //moveTarget = returnPosition;
-                //Merely move back to the return position and wait
-                //TODO: stuff after returning to the return position?
-                SeekTarget();
-                break;
-            case EnemyStates.SurroundingPlayer:
-                //Merely follow the enemy manager's orders (it handles updating move target automatically)
-                SeekTarget();
-                break;
-        }
+            //Check stun recovery
+            if (guardBroken)
+            {
+                //Reset knockback modifier
+                knockbackModifier = 1f;
+                //Reset guard broken
+                guardBroken = false;
+                //Reset guarding
+                guarding = false;
+                //Reset speed modifier
+                entity.SpeedModifier = 1f;
+            }
 
-        switch (combatState)
-        {
-            case CombatStates.Active:
-                entity.CanMove = false;
-                // --do AABB for box 1--
-                AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
-                GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
-                tempObjBox1.transform.localPosition = new Vector3(atHB1.center.x * hitBoxDirectionMove, atHB1.center.y, 0);
-                if (attackTime > (atStartup + atHB2FirstActiveFrame) * Helper.frame)
-                {
-                    // --do AABB for box 2--
-                    AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
-                    GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
-                    tempObjBox2.transform.localPosition = new Vector3(atHB2.center.x * hitBoxDirectionMove, atHB2.center.y, 0);
-                }
-                if (attackTime > (atStartup + atHB3FirstActiveFrame) * Helper.frame)
-                {
-                    // --do AABB for box 3--
-                    AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
-                    GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
-                    tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
-                }
-                if (attackTime > (atStartup + atActive) * Helper.frame)
-                    combatState = CombatStates.Recovery;
-                break;
-            case CombatStates.Recovery:
-                entity.CanMove = false;
-                if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
-                {
-                    combatState = CombatStates.None;
-                    enemyState = EnemyStates.ReturningFromAttack;
-                    entity.CanMove = true;
-                    //entity.Speed *= 1.5f;
-                    attackTime = 0f;
-                }
-                break;
-            case CombatStates.Startup:
-                entity.CanMove = false;
-                if (attackTime > atStartup * Helper.frame)
-                    combatState = CombatStates.Active;
-                break;
-            case CombatStates.None:
-                //if (!inKnockback)
+            //Big switch over the current state
+            switch (enemyState)
+            {
+                case EnemyStates.Idle:
+                    //Nothing special for now.........
+                    isAttacking = false;
+                    break;
+                case EnemyStates.Attacking:
+                    isAttacking = true;
+                    attackTime += Time.deltaTime;
+                    entity.Displacement = Vector2.zero;//Can't move while attacking
+                    break;
+                case EnemyStates.ApproachingToAttack:
+                    isAttacking = false; // might change this if it proves cheap
+                                         //Update move target
+                    moveTarget = attackTarget.transform.position;
+                    //Move towards target
+                    SeekTarget();
+                    //See if you're within range
+                    if ((this.transform.position - Helper.Vec2ToVec3(moveTarget)).sqrMagnitude <= Mathf.Pow(attackRange, 2))
+                    {
+                        //Change states accordingly
+                        combatState = CombatStates.Startup;
+                        enemyState = EnemyStates.Attacking;
+                        attackTime = 0f;
+                    }
+                    break;
+                case EnemyStates.ReturningFromAttack:
+                    isAttacking = false;
+                    counterattacking = false;
+                    RequestMoveTarget();
+                    break;
+                case EnemyStates.ReturningFromEncounter:
+                    //moveTarget = returnPosition;
+                    //Merely move back to the return position and wait
+                    //TODO: stuff after returning to the return position?
+                    SeekTarget();
+                    break;
+                case EnemyStates.SurroundingPlayer:
+                    //Merely follow the enemy manager's orders (it handles updating move target automatically)
+                    SeekTarget();
+                    break;
+                case EnemyStates.Dodging:
+                    //Continue the dodge action
+                    SeekTarget();
+                    dashTime -= Time.deltaTime;
+                    //IF the dodge is over...
+                    if (dashTime <= 0f)
+                    {
+                        //Reset flag
+                        dodging = false;
+                        //Return from attack (i.e. let enemy manager figure out what to do next)
+                        enemyState = EnemyStates.ReturningFromAttack;
+                        //Return speed to normal
+                        entity.SpeedModifier = 1f;
+                        //Reset invinicibility
+                        invincible = false;
+                    }
+                    //If you're still dodging...
+                    else
+                    {
+                        //Check to see if you're still invincible
+                        if (dashTime > (dashFrames - dashIFrames) * Helper.frame)
+                            invincible = true;
+                        else
+                            invincible = false;
+                        //Scale down displacement with dampening
+                        //entity.Displacement *= dashFriction;//What the player version uses
+                        entity.SpeedModifier *= dashFriction;
+                    }
+                    break;
+            }
+
+            //Second big switch handling combat
+            switch (combatState)
+            {
+                case CombatStates.Active:
+                    entity.CanMove = false;
+                    // --do AABB for box 1--
+                    AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
+                    tempObjBox1.transform.localPosition = new Vector3(atHB1.center.x * hitBoxDirectionMove, atHB1.center.y, 0);
+                    if (attackTime > (atStartup + atHB2FirstActiveFrame) * Helper.frame)
+                    {
+                        // --do AABB for box 2--
+                        AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
+                        GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
+                        tempObjBox2.transform.localPosition = new Vector3(atHB2.center.x * hitBoxDirectionMove, atHB2.center.y, 0);
+                    }
+                    if (attackTime > (atStartup + atHB3FirstActiveFrame) * Helper.frame)
+                    {
+                        // --do AABB for box 3--
+                        AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
+                        GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
+                        tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
+                    }
+                    if (attackTime > (atStartup + atActive) * Helper.frame)
+                        combatState = CombatStates.Recovery;
+                    break;
+                case CombatStates.Recovery:
+                    entity.CanMove = false;
+                    if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
+                    {
+                        combatState = CombatStates.None;
+                        enemyState = EnemyStates.ReturningFromAttack;
+                        entity.CanMove = true;
+                        //entity.Speed *= 1.5f;
+                        attackTime = 0f;
+                    }
+                    break;
+                case CombatStates.Startup:
+                    entity.CanMove = false;
+                    if (attackTime > atStartup * Helper.frame)
+                        combatState = CombatStates.Active;
+                    break;
+                case CombatStates.None:
+                    //if (!inKnockback)
                     //entity.CanMove = true;
-                break;
-        }
+                    break;
+            }
 
-        //Move (even if displacement is zero)
-        entity.Move();
+            //Move (even if displacement is zero)
+            entity.Move();
+        }
+        else
+            stunTime -= Time.deltaTime;
 	}
     #endregion
 
@@ -285,13 +367,22 @@ public class Enemy : MonoBehaviour {
     /// Deals HP damage to this enemy
     /// </summary>
     /// <param name="damage">Amout of HP damage the enemy will take</param>
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, PlayerCombat.Attacks attackType)
     {
-        hp -= damage;
-        hitFlashTimer = 0.6f;
-        damageTimer = 0.2f;
+        //Only actually take damage if your guard is down
+        if (guardStacks == 0)
+        {
+            hp -= damage;
+            hitFlashTimer = 0.6f;
+            damageTimer = 0.2f;
+        }
 
-        //flag encounter if not yet flagged
+        //Get out of stun if your guard was broken and you're taking damage
+        if (guardBroken)
+            stunTime = 0f;
+        Debug.Log("guard breaken @ " + Time.fixedTime);
+
+        //Flag encounter if not yet flagged
         if (!inEncounter)
         {
             //If encounter is assigned, tell it to start an encounter
@@ -306,16 +397,92 @@ public class Enemy : MonoBehaviour {
             }
         }
 
+        //If guard up...
+        if (guardStacks > 0) 
+        {
+            //If hit by thrust...
+            if (attackType == PlayerCombat.Attacks.Thrust)
+            {
+                //Remove stack, and if that was the last one...
+                if (--guardStacks <= 0)
+                {
+                    //Flag guard broken state
+                    guardBroken = true;
+                    //Get stunned
+                    stunTime = guardBreakStunTime;
+                    //Double knockback
+                    knockbackModifier = 2f;
+                }
+            }
+            //TODO: If hit by slash, do some reboud fancy thing
+            if (attackType == PlayerCombat.Attacks.Slash)
+            {
+                Debug.Log("TODO: REBOUND THINGEY");
+            }
+        }
+
         //kill if dead
         if (hp <= 0)
         {
             alive = false;
         }
-        // if not dead, try a reaction
-        else React();
+        // if not dead, try a reaction if not already trying one
+        else if (!guarding && !dodging && !counterattacking && !guardBroken)
+            React();
     }
 
-    private void React()
+    protected void React()
+    {
+        //Generate random chance between 0% and 100% (represented as 0 to 100)
+        float rand = Random.Range(0f, 100f);
+        //Check to see if we fell within guard's percent chance
+        if (rand > 100f - guardChance)
+        {
+            //Enter guarding state
+            guarding = true;
+            //Increment stacks but stay within bounds
+            if (++guardStacks > maxGuardStacks)
+                guardStacks = maxGuardStacks;
+            //Halve speed
+            this.entity.SpeedModifier = 0.5f;
+        }
+        else if (rand > 100f - guardChance + counterAttackChance)
+        {
+            // Ask Encounter Manager if it can attack
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            {
+                //Enter counterattack state
+                counterattacking = true;
+                //Attack the player
+                MoveToAttack(player);
+            }
+        }
+        else if (rand > 100f - guardChance + counterAttackChance + dodgeChance)
+        {
+            //Flag as dodging
+            dodging = true;
+            //Enter dodging state
+            enemyState = EnemyStates.Dodging;
+            //Set new move target away from player
+            moveTarget = this.transform.position + (this.transform.position - player.transform.position) * 2;
+            //Set duration of dash
+            dashTime = dashFrames * Helper.frame;
+            //Modify speed
+            entity.SpeedModifier = dashSpeed;
+            //Remove from occupancy grid
+            RequestRemoveFromEncounterGrid();
+        }
+    }
+
+    /// <summary>
+    /// Asks the enemy manager to remove this enemy from the surrounding occupancy grid
+    /// </summary>
+    protected void RequestRemoveFromEncounterGrid()
+    {
+        GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().RemoveEnemyFromOccupancyGrid(this);
+    }
+
+    private void OldReact()
     {
         // this method will generate a random number between 1 and 100 and check to see if it falls within the ranges of chance for the reactions
         System.Random rand1 = new System.Random();
@@ -361,7 +528,9 @@ public class Enemy : MonoBehaviour {
     {
         canMove = false;
         knockbackTime = time;
-        entity.Displacement = speed;
+        entity.Displacement = speed * knockbackModifier;
+        //reset knockback modifer
+        knockbackModifier = 1f;
         inKnockback = true;
     }
 
@@ -486,7 +655,6 @@ public class Enemy : MonoBehaviour {
         this.encounter = enc;
         this.encounter.GetComponent<Encounter>().TriggerEnemies.Add(this.gameObject);
     }
-    #endregion
 
     /// <summary>
     /// Asks the enemy manager for a spot to move to surrounding the player
@@ -496,6 +664,7 @@ public class Enemy : MonoBehaviour {
     {
         moveTarget = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SendNewMoveTarget(this);
     }
+    #endregion
 }
 #region Classes
 /// <summary>

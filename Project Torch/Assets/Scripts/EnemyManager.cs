@@ -126,7 +126,6 @@ public class EnemyManager : MonoBehaviour {
     public void StartEncounter(Encounter enc)
     {
         Helper.DebugLogDivider();
-        Debug.Log("Starting Encounter...");
         //Set flagged for being in an encounter
         encounterActive = true;
         //Update position of the encounter (which will simply be used as this object's location for debug purposes)
@@ -139,18 +138,16 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterEnemies.Add(zoneEnemies[i]);
                 zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
-                Debug.Log("Enemy added to encounter " + i);
                 //Try to add enemy to grid cell
                 Enemy e = encounterEnemies[encounterEnemies.Count - 1].GetComponent<Enemy>();
                 e.MoveTarget = SendNewMoveTarget(e);
                 //e.CircleAroundPlayer();
-                Debug.Log("New move target applied to enemy, added to grid cell...");
             }
 
             if (encounterEnemies.Count > 6)
                 throw new UnityException();//Don't allow more than 6 enemies in an encounter... if this line of code triggers then we need to fix something
         }
-        Debug.Log("Enemies in encounter = " + encounterEnemies.Count);
+        Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count);
     }
 
     public bool CanEnemiesAttack()
@@ -171,7 +168,6 @@ public class EnemyManager : MonoBehaviour {
         CheckEncounterEnd();
         if (encounterActive)
         {
-            Debug.Log("Updating active encounter...");
             UpdateEnemiesInGrid();
             MoveToAttack();
         }
@@ -215,6 +211,17 @@ public class EnemyManager : MonoBehaviour {
     }
 
     /// <summary>
+    /// Removes a specific enemy from the occupants grid
+    /// </summary>
+    /// <param name="e">Enemy to remove</param>
+    public void RemoveEnemyFromOccupancyGrid(Enemy e)
+    {
+        for (int i = 0; i < 6; ++i)
+            if (surroundingGridOccupants[i] == e.gameObject)
+                surroundingGridOccupants[i] = null;
+    }
+
+    /// <summary>
     /// Checks end conditions for the encounter
     /// TODO: only check for non-allied NPCs when deciding if there are no enemies left
     /// </summary>
@@ -255,7 +262,7 @@ public class EnemyManager : MonoBehaviour {
             {
                 //Update moveTarget
                 surroundingGridOccupants[i].GetComponent<Enemy>().MoveTarget = GeneratePositionInGridCircle(i, surroundingGridOccupants[i].transform.position);
-                Debug.Log("Enemy " + i + " in grid updated...");
+                //Debug.Log("Enemy " + i + " in grid updated...");
             }
         }
     }
@@ -383,9 +390,6 @@ public class EnemyManager : MonoBehaviour {
         gridPositions[3] = new Vector2(-(surroundingGridRadius * (Mathf.Cos(Mathf.Deg2Rad * surroundingGridAngle))), surroundingGridRadius * (Mathf.Sin(Mathf.Deg2Rad * surroundingGridAngle)));
         gridPositions[4] = new Vector2(-surroundingGridRadius, 0);
         gridPositions[5] = new Vector2(-(surroundingGridRadius * (Mathf.Cos(Mathf.Deg2Rad * surroundingGridAngle))), -(surroundingGridRadius * (Mathf.Sin(Mathf.Deg2Rad * surroundingGridAngle))));
-        Debug.Log("Generated grid positions:");
-        foreach (Vector2 v in gridPositions)
-            Debug.Log(v);
     }
     #endregion
 }

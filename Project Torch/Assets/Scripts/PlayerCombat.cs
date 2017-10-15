@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour {
         Active,
         Recovery,
     }    
-    protected enum Attacks
+    public enum Attacks
     {
         None,
         Slash,
@@ -85,6 +85,8 @@ public class PlayerCombat : MonoBehaviour {
     protected List<Enemy> hitEnemies;
     //Number of consecutive Slashes
     private int consecSlashCount = 0;
+    //List of enemies you can hit this frame
+    protected List<GameObject> hittableEnemies;
     #endregion
 
     #region Properties
@@ -222,6 +224,8 @@ public class PlayerCombat : MonoBehaviour {
         {
             entity.CanMove = false;
             movement.CanDash = false;
+            //Make copy of enemy manager's list of enemies
+            hittableEnemies = new List<GameObject>(enemyMan.Enemies);
             //Check to see if we need to activate another hitbox
             switch (currentAttack)
             {
@@ -255,7 +259,6 @@ public class PlayerCombat : MonoBehaviour {
                     //tempObjBox1th.transform.localPosition = new Vector3((thHB1.x - (thHB1.width / 2f)) * hitBoxDirectionMove, thHB1.y - (thHB1.height / 2f), 0);
                     //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(Helper.Midpoint(thHB1.min, thHB1.max));
                     //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(thHB1.min);
-                    Debug.Log("center: " + thHB1.center);
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
@@ -377,7 +380,7 @@ public class PlayerCombat : MonoBehaviour {
     {
         if (e.CanTakeDamage)
         {
-            e.TakeDamage(damage);
+            e.TakeDamage(damage, this.currentAttack);
         }
     }
 
@@ -433,12 +436,15 @@ public class PlayerCombat : MonoBehaviour {
         Rect newHB = hitbox;
         if (hitBoxDirectionMove < 0)
             newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
-        for (int i = 0; i < enemyMan.Enemies.Count; ++i)
+        for (int i = 0; i < hittableEnemies.Count; ++i)
         {
-            Enemy e = enemyMan.Enemies[i].GetComponent<Enemy>();
+            Enemy e = hittableEnemies[i].GetComponent<Enemy>();
             if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), e.HitBoxRect))
             {
                 hit.Add(e);
+                //Remove enemies we hit so we don't hit them again this frame
+                hittableEnemies.RemoveAt(i);
+                --i;
                 //e.TakeDamage(slDamage);
             }
         }

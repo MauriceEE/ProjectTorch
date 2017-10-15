@@ -90,8 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e109c484443a1e4188d43e1a09cb36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashTime: 0
   hp: 50
   knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
   maxVelocity: 0.04
   arrivalRadius: 5.4
   attackRange: 4
@@ -124,13 +126,17 @@ MonoBehaviour:
     y: -0.18
     width: 1.26
     height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 0
+  counterAttackChance: 0
+  dodgeChance: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
-  guardChance: 15
-  counterAttackChance: 0
-  dodgeChance: 0
 --- !u!212 &212438699154619596
 SpriteRenderer:
   m_ObjectHideFlags: 1

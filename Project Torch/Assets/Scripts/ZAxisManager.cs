@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// At present, this class merely makes sure the Z of all moving objects are correct so that they display properly with depth
+/// Version 2.0, now updated to never touch the Z axis
+/// No more complaining about Z axis lighting shenanigans!
 /// </summary>
 public class ZAxisManager : MonoBehaviour {
     #region Public Fields
-    public float minZ, maxZ;
+    public int minZ, maxZ;
     public float minY, maxY;
     public GameObject[] objs;
     #endregion
@@ -30,7 +31,8 @@ public class ZAxisManager : MonoBehaviour {
     #endregion
     #region Custom Methods
     void UpdateZAxis(GameObject o) {
-        o.transform.position = new Vector3(o.transform.position.x, o.transform.position.y, Helper.Map(o.transform.position.y, minY, maxY, minZ, maxZ));
+        o.GetComponent<SpriteRenderer>().sortingOrder = (int)Helper.Map(o.transform.position.y, minY, maxY, minZ, maxZ);
+        //o.transform.position = new Vector3(o.transform.position.x, o.transform.position.y, );//This is the old method
     }
 #endregion
 }
