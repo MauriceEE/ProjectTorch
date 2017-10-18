@@ -61,7 +61,7 @@ public class Entity : MonoBehaviour {
         //Attempt to move
         this.transform.position += Helper.Vec2ToVec3(displacement * speedModifier);
         //Check to see if we've changed direction
-        if (displacement != Vector2.zero) 
+        if (displacement.x != 0) 
         {
             //Update right
             right = (displacement.x > 0);

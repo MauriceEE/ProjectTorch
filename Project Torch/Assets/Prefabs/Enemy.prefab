@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195452643779594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5999975, y: -1.5428573, z: -0.5}
+  m_LocalPosition: {x: -6.392858, y: -3.8142853, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,9 +130,9 @@ MonoBehaviour:
   dashFrames: 10
   dashSpeed: 12
   dashFriction: 0.919
-  guardChance: 0
+  guardChance: 15
   counterAttackChance: 0
-  dodgeChance: 0
+  dodgeChance: 80
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}

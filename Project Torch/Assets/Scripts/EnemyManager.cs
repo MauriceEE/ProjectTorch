@@ -47,10 +47,16 @@ public class EnemyManager : MonoBehaviour {
     //Min/Max amount of time between attacks
     public float attackMinWait;
     public float attackMaxWait;
+    //Enemy categories for spawning in encounters
+    //Encounter objects will fetch these values when trying to see what kind of enemies to spawn
+    public GameObject[] humanEnemyCategories;
+    public GameObject[] shadowEnemyCategories;
     #endregion
 
     #region Properties
     public List<GameObject> Enemies { get { return zoneEnemies; } }
+    public GameObject[] HumanEnemyCategories { get { return humanEnemyCategories; } }
+    public GameObject[] ShadowEnemyCategories { get { return shadowEnemyCategories; } }
     #endregion
 
     #region Unity Methods
