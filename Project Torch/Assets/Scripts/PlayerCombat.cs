@@ -175,7 +175,7 @@ public class PlayerCombat : MonoBehaviour {
                 }
 
                 // PUT SHINE CODE HERE since it will also chain from Slash
-                if (Input.GetKeyDown(KeyCode.JoystickButton5) || Input.GetKeyDown(KeyCode.F))//R1
+                if (Input.GetKeyDown(KeyCode.JoystickButton5) || Input.GetKeyDown(KeyCode.I))//R1
                 {
                     //Reset consecutive slashes
                     consecSlashCount = 0;

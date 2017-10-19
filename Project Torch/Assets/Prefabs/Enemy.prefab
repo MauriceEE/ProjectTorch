@@ -94,13 +94,13 @@ MonoBehaviour:
   hp: 50
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
-  maxVelocity: 0.04
-  arrivalRadius: 5.4
-  attackRange: 4
+  maxVelocity: 0.05
+  arrivalRadius: 3.6
+  attackRange: 1.8
   awarenessRange: 7
   isAttacking: 0
   atDamage: 10
-  atStartup: 12
+  atStartup: 17
   atActive: 10
   atRecovery: 10
   atKnockbackTime: 0

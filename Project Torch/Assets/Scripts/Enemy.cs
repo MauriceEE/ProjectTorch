@@ -96,6 +96,7 @@ public class Enemy : MonoBehaviour {
     protected int maxGuardStacks = 1;
     protected bool counterattacking;
     protected bool dodging; // probably will need to be an enum state
+    protected float elapsedApproachTime;
     ///List<Rect> hitboxesCollidedWith  //Resume from here... make a better hitbox delay function
     #endregion
 
@@ -109,10 +110,14 @@ public class Enemy : MonoBehaviour {
     public float guardBreakStunTime;
     //Max movement speed
     public float maxVelocity;
+    //The original max velocity
+    public float ogMaxVelocity;
     //How far away the enemy will be when it slows down
     public float arrivalRadius;
     //When the enemy will start attacking
     public float attackRange;
+    //The original attackRange
+    public float ogAttackRange;
     //If the player stays out of this, the encounter will end
     public float awarenessRange;
     // If enemy is currently attacking
@@ -180,6 +185,9 @@ public class Enemy : MonoBehaviour {
         reactionState = ReactionStates.None;
         player = GameObject.Find("Player");
         knockbackModifier = 1f;
+        ogMaxVelocity = maxVelocity;
+        ogAttackRange = attackRange;
+        elapsedApproachTime = 0;
         // if standard enemy, set chances
         //guardChance = 15;
         //counterAttackChance = 0;
@@ -214,6 +222,7 @@ public class Enemy : MonoBehaviour {
             if (counterattacking) baseColor = new Color((255f/255f), (140f/255f), (30f/255f));
             if (dodging) baseColor = Color.blue;
             if (!dodging && !counterattacking && !guarding) baseColor = Color.white; // default
+            if (combatState == CombatStates.Startup) baseColor = new Color((255f / 255f), (0f / 255f), (255f / 255f));
             this.GetComponent<SpriteRenderer>().color = baseColor;
         }
 
@@ -239,15 +248,52 @@ public class Enemy : MonoBehaviour {
                 case EnemyStates.Idle:
                     //Nothing special for now.........
                     isAttacking = false;
+                    maxVelocity = ogMaxVelocity;
                     break;
                 case EnemyStates.Attacking:
+                    elapsedApproachTime = 0f;
+                    attackRange = ogAttackRange;
                     isAttacking = true;
                     attackTime += Time.deltaTime;
                     entity.Displacement = Vector2.zero;//Can't move while attacking
                     break;
                 case EnemyStates.ApproachingToAttack:
                     isAttacking = false; // might change this if it proves cheap
-                                         //Update move target
+
+                    // increase movement speed
+                    if(maxVelocity <= (3 * ogMaxVelocity)) maxVelocity += (Time.deltaTime / 15);
+                    elapsedApproachTime += Time.deltaTime;
+
+                    // adjust attack range to increase likelihood of a chasing attack landing
+                    if (elapsedApproachTime >= 1) attackRange = .8f;
+
+                    // if elapsed time is greater than 3 seconds, just cancel their attack and return them to their old location
+                    if (elapsedApproachTime > 3)
+                    {
+
+                        CancelOrHitStun(false);
+                        enemyState = EnemyStates.ReturningFromAttack;
+
+                        // alternative: enemies attempt to attack after approaching for 3 seconds
+                        /*
+                        //Change states accordingly
+                        combatState = CombatStates.Startup;
+                        enemyState = EnemyStates.Attacking;
+                        attackTime = 0f;
+                        Debug.Log("Chase slash attempt");
+                        */
+                    }
+
+                    /*
+                    // if outside of encounter radius, have them return
+                    if ((this.transform.position - Helper.Vec2ToVec3(returnPosition)).sqrMagnitude > 11.55) // hard coded encounter radius
+                    {
+                        CancelOrHitStun(false);
+                        enemyState = EnemyStates.ReturningFromEncounter;
+                    }
+                    */
+                    
+                    //Update move target
                     moveTarget = attackTarget.transform.position;
                     //Move towards target
                     SeekTarget();
@@ -259,11 +305,13 @@ public class Enemy : MonoBehaviour {
                         enemyState = EnemyStates.Attacking;
                         attackTime = 0f;
                     }
+                    attackRange = ogAttackRange;
                     break;
                 case EnemyStates.ReturningFromAttack:
                     isAttacking = false;
                     counterattacking = false;
                     RequestMoveTarget();
+                    maxVelocity = ogMaxVelocity;
                     break;
                 case EnemyStates.ReturningFromEncounter:
                     //moveTarget = returnPosition;
@@ -273,6 +321,8 @@ public class Enemy : MonoBehaviour {
                     break;
                 case EnemyStates.SurroundingPlayer:
                     //Merely follow the enemy manager's orders (it handles updating move target automatically)
+                    // IDEALLY: IF MOVING TOWARDS THE PLAYER, KEEP MAX MOVEMENT. IF NOT, REDUCE IT TO 1/3rd
+                    maxVelocity = ogMaxVelocity / 2;
                     SeekTarget();
                     break;
                 case EnemyStates.Dodging:
@@ -333,6 +383,7 @@ public class Enemy : MonoBehaviour {
                         combatState = CombatStates.Recovery;
                     break;
                 case CombatStates.Recovery:
+                    maxVelocity = ogMaxVelocity;
                     entity.CanMove = false;
                     if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
                     {
@@ -373,6 +424,7 @@ public class Enemy : MonoBehaviour {
         if (guardStacks == 0)
         {
             hp -= damage;
+            CancelOrHitStun(true);
             hitFlashTimer = 0.6f;
             damageTimer = 0.2f;
         }
@@ -613,6 +665,26 @@ public class Enemy : MonoBehaviour {
     {
         this.enemyState = EnemyStates.SurroundingPlayer;
     }
+
+
+    // Cancels any and all frames
+    /// <param name="hitstun">Whether or not to apply stun with the cancel</param>
+    void CancelOrHitStun(bool hitstun)
+    {
+        // Set combat state to Recovery
+        //combatState = CombatStates.Recovery; // causes RunTime error
+
+        // Set attackTime to the max float value to immediately end current state's frames
+        attackTime = float.MaxValue;
+
+        // reset dash time
+        //dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
+
+        // if hitstun, set hitstun frames
+        if (hitstun) stunTime = 20f * Helper.frame;
+        // *Coded by Maurice Edwards
+    }
+
 
     /// <summary>
     /// Returns true if the enemy hit the player
