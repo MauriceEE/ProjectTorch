@@ -47,3 +47,13 @@
 </ul>
 <h2>Connor Menard - 10/15/17 - 5:00</h2>
 <ul><li>Fleshed out encounter manager/encounter objects</li><li>Mostly finished reaction states, still needs number tweaking and a bug or two squashed</li></ul>
+<h2>Maurice Edwards - 10/18/17 and 10/20/17 - 4:43</h2>
+<ul>
+  <li>Adjusted enemy attack initiations. Enemies now dynamically adjust speed and attack range to catch fleeing players while approaching</li>
+  <li>Enemy attack range,  awareness radii, arrival radii, and start-up changed. See build notes on the document for exact numbers</li>
+  <li>Enemies now move at half speed while surrounding the player</li>
+  <li>Changed Shine keyboard input to the 'I' key</li>
+  <li>Coded cancel and hitstun method for enemies, who now take 20 frames of hitstun per attack</li>
+  <li>Added post processing effects. The darkness effect occurs whenever the player eneters an initially dark location</li>
+  <li>Post processing effects are controllable via code via PostProcessChange script and directly via the profile</li>
+</ul>
