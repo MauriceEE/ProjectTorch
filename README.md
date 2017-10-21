@@ -57,3 +57,5 @@
   <li>Added post processing effects. The darkness effect occurs whenever the player eneters an initially dark location</li>
   <li>Post processing effects are controllable via code via PostProcessChange script and directly via the profile</li>
 </ul>
+<h2>Connor Menard - 10/20/17 - 23:00</h2>
+<ul><li>Added outline for the TextManager script</li>
