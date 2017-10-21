@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
     //Reference to the connected encounter
     protected GameObject encounter;
     //Time left for the enemy to dash
-    public float dashTime = 0f;
+    protected float dashTime = 0f;
     //Whether the enemy can take damage
     protected bool invincible = false;
     //Whether or not the enemy's guard is broken
@@ -379,8 +379,10 @@ public class Enemy : MonoBehaviour {
 
         //Get out of stun if your guard was broken and you're taking damage
         if (guardBroken)
+        {
             stunTime = 0f;
-        Debug.Log("guard breaken @ " + Time.fixedTime);
+            Debug.Log("guard breaken @ " + Time.fixedTime);
+        }
 
         //Flag encounter if not yet flagged
         if (!inEncounter)
@@ -436,7 +438,7 @@ public class Enemy : MonoBehaviour {
         //Generate random chance between 0% and 100% (represented as 0 to 100)
         float rand = Random.Range(0f, 100f);
         //Check to see if we fell within guard's percent chance
-        if (rand > 100f - guardChance)
+        if (rand < guardChance)
         {
             //Enter guarding state
             guarding = true;
@@ -446,7 +448,7 @@ public class Enemy : MonoBehaviour {
             //Halve speed
             this.entity.SpeedModifier = 0.5f;
         }
-        else if (rand > 100f - guardChance + counterAttackChance)
+        else if (rand < guardChance + counterAttackChance)
         {
             // Ask Encounter Manager if it can attack
             if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
@@ -457,7 +459,7 @@ public class Enemy : MonoBehaviour {
                 MoveToAttack(player);
             }
         }
-        else if (rand > 100f - guardChance + counterAttackChance + dodgeChance)
+        else if (rand < guardChance + counterAttackChance + dodgeChance)
         {
             //Flag as dodging
             dodging = true;
