@@ -9,15 +9,17 @@ using System.Text;
 public class DialogueManager : MonoBehaviour {
     //reference to the dialogue box UI element
     public Text dialogueBox;
-   // public GameObject AudioManager;
+    // public GameObject AudioManager;
 
-   /* public GameObject ChoiceContainer;
-    public bool choiceState = false;
-    public bool choiceBuffer = false;*/
+    /* public GameObject ChoiceContainer;
+     public bool choiceState = false;
+     public bool choiceBuffer = false;*/
 
     //List<string> choiceTexts;
     //int selectedChoice = -1;
-   
+
+    //Getting all the lines of dialogue in the game
+    public TextManager tManager;
 
     //A buffered queue that stores the chars to be displayed
     Queue<char> bufferText = new Queue<char>();
@@ -61,6 +63,8 @@ public class DialogueManager : MonoBehaviour {
         //rectTransform.sizeDelta = new Vector2(width * .96f, height * .30f);
         rectTransform.offsetMax = new Vector2(width * -PercentageMargin, width * -PercentageMargin);
         rectTransform.offsetMin = new Vector2(width * PercentageMargin, width * PercentageMargin);*/
+
+        tManager = new TextManager();
     }
 
     // Update is called once per frame
@@ -137,7 +141,7 @@ public class DialogueManager : MonoBehaviour {
         bufferText.Clear();
     }
     //displays text to the screen
-    void DisplayText(string s) {
+    public void DisplayText(string s) {
         dialogueBox.text += s;
     }
     //Turn string s into a queue of chars and add to the bufferText queue

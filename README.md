@@ -59,3 +59,5 @@
 </ul>
 <h2>Connor Menard - 10/20/17 - 23:00</h2>
 <ul><li>Added outline for the TextManager script</li>
+<h2>Steven Ma - 10/21/17 - 18:18</h2>
+<ul><li>Added the dialogue lines to the TextManager script</li>
