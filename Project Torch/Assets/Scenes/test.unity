@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -228,12 +228,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -248,12 +248,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -279,6 +279,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -429,12 +434,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -449,12 +454,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -480,6 +485,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -816,12 +826,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -836,12 +846,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -867,6 +877,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -950,12 +965,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -970,12 +985,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1001,6 +1016,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1124,12 +1144,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1144,12 +1164,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1175,6 +1195,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -1765,12 +1790,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1785,12 +1810,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -1816,6 +1841,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2050,12 +2080,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2070,12 +2100,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2101,6 +2131,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2773,12 +2808,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2793,12 +2828,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2824,6 +2859,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -2927,12 +2967,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2947,12 +2987,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -2978,6 +3018,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3267,12 +3312,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3287,12 +3332,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3318,6 +3363,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -3513,12 +3563,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3533,12 +3583,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -3564,6 +3614,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4073,12 +4128,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4093,12 +4148,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4124,6 +4179,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4287,12 +4347,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4307,12 +4367,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4338,6 +4398,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4426,12 +4491,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4446,12 +4511,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -4477,6 +4542,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -4848,7 +4918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &818091452
 Transform:
   m_ObjectHideFlags: 0
@@ -4938,12 +5008,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
+<<<<<<< HEAD
       propertyPath: dodgeChance
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: guardChance
+=======
+      propertyPath: arrivalRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: maxVelocity
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+>>>>>>> origin/master
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5028,12 +5127,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5048,12 +5147,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5079,6 +5178,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -5280,12 +5384,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
+<<<<<<< HEAD
       propertyPath: dodgeChance
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: guardChance
+=======
+      propertyPath: arrivalRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: maxVelocity
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+>>>>>>> origin/master
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5397,12 +5530,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5417,12 +5550,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -5448,6 +5581,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6370,12 +6508,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6390,12 +6528,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6421,6 +6559,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6494,12 +6637,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6514,12 +6657,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6545,6 +6688,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -6927,12 +7075,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6947,12 +7095,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -6978,6 +7126,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7087,12 +7240,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7107,12 +7260,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7138,6 +7291,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7302,12 +7460,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7322,12 +7480,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7353,6 +7511,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -7788,12 +7951,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7808,12 +7971,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -7840,6 +8003,11 @@ Prefab:
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
@@ -7857,6 +8025,8 @@ GameObject:
   - component: {fileID: 1558710321}
   - component: {fileID: 1558710322}
   - component: {fileID: 1558710316}
+  - component: {fileID: 1558710323}
+  - component: {fileID: 1558710324}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7973,6 +8143,31 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1558710323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558710315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 9b806416393ed68448b28b18a185352a, type: 2}
+--- !u!114 &1558710324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558710315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29ee875ef2f3e046a3752e54660fd6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 9b806416393ed68448b28b18a185352a, type: 2}
+  darkness: 0
 --- !u!1 &1645193988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,12 +8572,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8397,12 +8592,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8428,6 +8623,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -8516,12 +8716,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8536,12 +8736,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -8567,6 +8767,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9429,12 +9634,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9449,12 +9654,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9480,6 +9685,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9558,12 +9768,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9578,12 +9788,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9609,6 +9819,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -9860,12 +10075,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9880,12 +10095,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -9911,6 +10126,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -10203,12 +10423,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
+<<<<<<< HEAD
       propertyPath: dodgeChance
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: guardChance
+=======
+      propertyPath: arrivalRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: attackRange
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: maxVelocity
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: atStartup
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: dodgeChance
+>>>>>>> origin/master
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10483,12 +10732,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -10503,12 +10752,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -10534,6 +10783,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
@@ -10853,12 +11107,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: maxVelocity
-      value: 0.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: arrivalRadius
-      value: 5.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -10873,12 +11127,12 @@ Prefab:
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: attackRange
-      value: 4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
       propertyPath: atStartup
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
         type: 2}
@@ -10904,6 +11158,11 @@ Prefab:
         type: 2}
       propertyPath: isAttacking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
+        type: 2}
+      propertyPath: awarenessRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
