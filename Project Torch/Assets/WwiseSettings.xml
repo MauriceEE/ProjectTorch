@@ -1,9 +1,11 @@
-<?xml version='1.0'?>
-<WwiseSettings>
-    <CreateWwiseGlobal>true</CreateWwiseGlobal>
-    <CreateWwiseListener>true</CreateWwiseListener>
-    <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-    <WwiseProjectPath>../Project Torch_WwiseProject/Project Torch_WwiseProject.wproj</WwiseProjectPath>
-    <WwiseInstallationPathWindows>null</WwiseInstallationPathWindows>
-    <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2017.1.2.6361/Wwise.app</WwiseInstallationPathMac>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WwiseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WwiseProjectPath>../Project Torch_WwiseProject/Project Torch_WwiseProject.wproj</WwiseProjectPath>
+  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+  <CreateWwiseGlobal>true</CreateWwiseGlobal>
+  <CreateWwiseListener>true</CreateWwiseListener>
+  <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
+  <WwiseInstallationPathWindows>null</WwiseInstallationPathWindows>
+  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2017.1.2.6361/Wwise.app</WwiseInstallationPathMac>
+  <CreatedPicker>true</CreatedPicker>
 </WwiseSettings>
