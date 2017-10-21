@@ -27,11 +27,11 @@ public class TextManager : MonoBehaviour {
         lines.Add("King of Man - Default",
             new string[]
             {
-                "We meet at last, mysterious warrior.",
-                "I have heard your feats, helping my men defeat those dreaded Shadows.",
-                "I know not who you are, but would ask that you help contribute to our cause.",
-                "We humans were once a proud race, but have been reduced to this sad state by those creatures.",
-                "Their stronghold is far to the west. I implore you, save what remains of my kingdom."
+                "\nWe meet at last, mysterious warrior.",
+                "\nI have heard your feats, helping my men defeat those dreaded Shadows.",
+                "\nI know not who you are, but would ask that you help contribute to our cause.",
+                "\nWe humans were once a proud race, but have been reduced to this sad state by those creatures.",
+                "\nTheir stronghold is far to the west. I implore you, save what remains of my kingdom."
             });
         //^^Feel free to delete this or copy+paste it as a template or something
         //Just make one of these for every set of dialogue lines in the game and you're good

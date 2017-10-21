@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
+#region Public Fields
     //Range at which the player can grab items
     public float playerPickupRange;
     //Total number of items holdable
     public int maxItems;
-
+    #endregion
+#region Private Fields
     //Items currently held by the player
     protected Item[] heldItems;
     //All possible items in level
@@ -17,8 +19,9 @@ public class Inventory : MonoBehaviour {
     protected GameObject player;
     //Effectively count of heldItems array
     protected int numHeldItems;
-
-	void Start () {
+    #endregion
+#region Unity Defaults
+    void Start () {
         numHeldItems = 0;
         heldItems = new Item[maxItems];
         player = GameObject.Find("Player");
@@ -28,46 +31,40 @@ public class Inventory : MonoBehaviour {
         for (int i=0; i<itemObjs.Length; ++i)
             itemsInLevel[i] = itemObjs[i].GetComponent<Item>();
 	}
-	
-	void Update () {
-        PickUpNearbyItems();
-	}
-
+    #endregion
+#region Custom Methods
     /// <summary>
     /// If there's an item nearby, it will be destroyed and then added to inventory
     /// </summary>
-    protected void PickUpNearbyItems()
+    public void PickUpNearbyItems()
     {
-        //Check to see if they're trying to pick up an item
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1))//CHANGE TO ONLY CONTROLLER INPUT LATER
+        //Make sure they don't have too many items already
+        if (numHeldItems < maxItems)
         {
-            //Make sure they don't have too many items already
-            if (numHeldItems < maxItems)
+            Vector2 playerPos, itemPos;
+            playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+            //Loop through all items in level
+            for (int i = 0; i < itemsInLevel.Length; ++i)
             {
-                Vector2 playerPos, itemPos;
-                playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-                //Loop through all items in level
-                for (int i = 0; i < itemsInLevel.Length; ++i)
+                if(itemsInLevel[i]!=null)
                 {
-                    if(itemsInLevel[i]!=null)
+                    itemPos = new Vector2(itemsInLevel[i].gameObject.transform.position.x, itemsInLevel[i].gameObject.transform.position.y);
+                    //Check to see if they're within pickup range
+                    if ((itemPos - playerPos).sqrMagnitude < playerPickupRange * playerPickupRange)
                     {
-                        itemPos = new Vector2(itemsInLevel[i].gameObject.transform.position.x, itemsInLevel[i].gameObject.transform.position.y);
-                        //Check to see if they're within pickup range
-                        if ((itemPos - playerPos).sqrMagnitude < playerPickupRange * playerPickupRange)
-                        {
-                            heldItems[numHeldItems] = itemsInLevel[i];//Add item to inventory
-                            Destroy(itemsInLevel[i].gameObject);//Remove item from world
-                            itemsInLevel[i] = null;//Item can't be picked up again
-                            ++numHeldItems;//Increase number of held items
-                            return; //Don't try to keep picking up items
-                        }
+                        heldItems[numHeldItems] = itemsInLevel[i];//Add item to inventory
+                        Destroy(itemsInLevel[i].gameObject);//Remove item from world
+                        itemsInLevel[i] = null;//Item can't be picked up again
+                        ++numHeldItems;//Increase number of held items
+                        return; //Don't try to keep picking up items
                     }
                 }
             }
-            else
-            {
-                //SHOW ERROR UNABLE TO PICK UP ITEMS
-            }
+        }
+        else
+        {
+            //SHOW ERROR UNABLE TO PICK UP ITEMS
         }
     }
+#endregion
 }
