@@ -33,7 +33,8 @@ public class Entity : MonoBehaviour {
     #endregion
 
     #region Public Fields
-    // N/A
+    //ID which will be cross-referenced in other managers to determine dialogue
+    public TextManager.InteractiveNPCNames npcID;
     #endregion
 
     #region Properties

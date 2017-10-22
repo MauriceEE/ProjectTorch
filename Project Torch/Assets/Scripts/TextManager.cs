@@ -6,23 +6,50 @@ using UnityEngine;
 /// </summary>
 public class TextManager : MonoBehaviour {
 
-    /// <summary>
-    /// A huge batch of every set of dialogue lines in the game
-    /// </summary>
+    #region Enums
+    public enum InteractiveNPCNames
+    {
+        NONE,
+        KingOfMan,
+        KingOfDark,
+        CaptainOfTheGuard
+    }
+    #endregion
+
+    #region Private Fields
+    // A huge batch of every set of dialogue lines in the game
     private Dictionary<string, string[]> lines;
+    // Array of NPCs that can be interacted with
+    private Entity[] interactiveNPCs;
+#endregion
+
+    #region Properties
     public Dictionary<string, string[]> Lines { get { return lines; } }
+    public Entity[] InteractiveNPCs { get { return interactiveNPCs; } }
+    #endregion
 
+    #region Unity Defaults
     void Start () {
-        lines = new Dictionary<string, string[]>();
+        //Grab all entities in the scene
+        Entity[] entities = GameObject.FindObjectsOfType(typeof(Entity)) as Entity[];
+        //Keep hold of ones that are interactive
+        int numInteractiveNPCs = 0;
+        List<Entity> entitiesToKeep = new List<Entity>();
+        for (int i = 0; i < entities.Length; ++i)
+        {
+            if (entities[i].npcID != InteractiveNPCNames.NONE) 
+            {
+                ++numInteractiveNPCs;
+                entitiesToKeep.Add(entities[i]);
+            }
+        }
+        interactiveNPCs = new Entity[numInteractiveNPCs];
+        for (int i = 0; i < numInteractiveNPCs; ++i)
+            interactiveNPCs[i] = entitiesToKeep[i];
 
+        //Instantiate the lines dictionary
+        lines = new Dictionary<string, string[]>();
         //Here we will add all possible lines of dialogue in the game to the dictionary
-        //FORMAT:
-        lines.Add("ID Name for Lines",  //This is what you'll type in other scripts to access this set of lines
-                                        //Consider a format like "King of Man - Default" or something easy to understand like that
-            new string[] {              //This "new string[] {" is necessary to instantiate a string array like this
-            "line1",                    //Just keep adding strings which represent lines of dialogue in this format
-            "line2",                    //NOTE that each string here represents a chunk that will appear at once in a dialogue box
-            "line4" });                 //At the end, add a "});" to close off the stuff opened earlier. That's all there is to it
         //The basic lines the King will say to you with no other triggers
         lines.Add("King of Man - Default",
             new string[]
@@ -32,8 +59,6 @@ public class TextManager : MonoBehaviour {
                 "King of Man:\nTheir King’s fortress lies to the west.",
                 "King of Man:\nLead the charge as I fulfill the last wish of the Serpents."
             });
-        //^^Feel free to delete this or copy+paste it as a template or something
-        //Just make one of these for every set of dialogue lines in the game and you're good
 
         //The lines the King of the Dark says when he's at his last 15% of health and can't move
         lines.Add("King of the Dark - Downed",
@@ -66,4 +91,5 @@ public class TextManager : MonoBehaviour {
                 "Captain of the Gaurd:\nHerald us all to the Serpents’ Promised Flame!"
             });
     }
+#endregion
 }
