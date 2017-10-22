@@ -38,7 +38,7 @@
 <h2>Steven Ma - 10/4/17 - 1:41</h2>
 <ul><li>Finished up the level blocking</li>
 <h2>Connor Menard - 10/7/17 - 21:30</h2>
-<ul><li>Started doing stuff for the encounter manager and overall added more enemy stuff</li><li>Put in Judi and a shadow monster sprite</li>
+<ul><li>Started doing stuff for the encounter manager and overall added more enemy stuff</li><li>Put in Judi and a shadow monster sprite</li></ul>
 <h2>Maurice Edwards - 10/10/17 - 1:11 </h2>
 <ul>
   <li>Coded reaction selection for enemies, but not the reactions themselves fully</li>
@@ -58,6 +58,8 @@
   <li>Post processing effects are controllable via code via PostProcessChange script and directly via the profile</li>
 </ul>
 <h2>Connor Menard - 10/20/17 - 23:00</h2>
-<ul><li>Added outline for the TextManager script</li>
+<ul><li>Added outline for the TextManager script</li></ul>
 <h2>Steven Ma - 10/21/17 - 18:18</h2>
 <ul><li>Added the dialogue lines to the TextManager script</li>
+<h2>Connor Menard - 10/21/17 - 20:30</h2>
+<ul><li>Added interactivity functions, can talk with King of Man (Uses default dialogue only)</li></ul>

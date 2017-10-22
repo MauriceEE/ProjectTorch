@@ -47,9 +47,15 @@ public class FlagManager : MonoBehaviour {
     }
 
     //Dictionary of all flags and a boolean to determine whether or not they're true
-    private Dictionary<FlagNames, bool> flags;
+    protected Dictionary<FlagNames, bool> flags;
+    //Reference to dialogue manager
+    protected DialogueManager dialogue;
+    //Reference to text manager
+    protected TextManager text;
 
-	void Start () {
+    void Start () {
+        dialogue = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        text = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
         flags = new Dictionary<FlagNames, bool>();
         flags.Add(FlagNames.AllMustPerish, false);
         flags.Add(FlagNames.BanditAttack, false);
@@ -60,7 +66,7 @@ public class FlagManager : MonoBehaviour {
         flags.Add(FlagNames.ClosedGate, false);
         flags.Add(FlagNames.AssaultingTheGate, false);
         flags.Add(FlagNames.GateDefender, false);
-        flags.Add(FlagNames.DefaultKingOfManDialogue, false);
+        flags.Add(FlagNames.DefaultKingOfManDialogue, true);
         flags.Add(FlagNames.HostileKingOfMan, false);
         flags.Add(FlagNames.DeathOfMansHope, false);
         flags.Add(FlagNames.FreeThePrincess, false);
@@ -83,4 +89,24 @@ public class FlagManager : MonoBehaviour {
 	void Update () {
         
 	}
+
+    /// <summary>
+    /// This function will make an NPC talk based on their current flags
+    /// Gets called by the interaction manager
+    /// </summary>
+    /// <param name="npcName">Name of the NPC to check flags for</param>
+    public void ActivateNPCDialogue(TextManager.InteractiveNPCNames npcName)
+    {
+        switch (npcName)
+        {
+            case TextManager.InteractiveNPCNames.KingOfMan:
+                if (flags[FlagNames.DefaultKingOfManDialogue]) 
+                    dialogue.AddDialogueSequence(text.Lines["King of Man - Default"]);
+                break;
+            case TextManager.InteractiveNPCNames.KingOfDark:
+                break;
+            case TextManager.InteractiveNPCNames.CaptainOfTheGuard:
+                break;
+        }
+    }
 }
