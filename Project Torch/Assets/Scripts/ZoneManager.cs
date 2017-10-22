@@ -103,12 +103,42 @@ public class ZoneManager : MonoBehaviour {
                         }
                         break;
                     case Zones.SullenVillage:
+                        if (player.transform.position.x <= sullenVillageLeftEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = sullenVillageLeftEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
+                        else if (player.transform.position.x >= sullenVillageRightEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = sullenVillageRightEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
                         break;
                     case Zones.ThrivingVillage:
+                        if (player.transform.position.x <= thrivingVillageLeftEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = thrivingVillageLeftEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
+                        else if (player.transform.position.x >= thrivingVillageRightEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = thrivingVillageRightEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
                         break;
                     case Zones.CastleOfMan:
+                        if (player.transform.position.x <= throneRoomEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = throneRoomEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
                         break;
                     case Zones.FortressOfDark:
+                        if (player.transform.position.x <= fortressKeepEndPoint.transform.position.x)
+                        {
+                            ZoneEndPoint endpoint = fortressKeepEndPoint.GetComponent<ZoneEndPoint>();
+                            ChangeZone(endpoint.nextZone, endpoint.newXCoordinate);
+                        }
                         break;
                 }
                 break;
