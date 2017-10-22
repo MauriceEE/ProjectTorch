@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-        
         //If NOT DASHING
         if (dashTime <= 0f)
         {

@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Encounter : MonoBehaviour {
 
-#region Public Fields
+    #region Public Fields
     public List<GameObject> triggerEnemies;
     //public SpawnedEnemy[] spawnedEnemies;
     //Number of enemies in category x (array number) to spawn
@@ -24,7 +24,7 @@ public class Encounter : MonoBehaviour {
     public float Range { get { return range; } }
     #endregion
 
-#region Unity Defaults
+    #region Unity Defaults
     void Start () {
         active = false;
         //First we gotta make sure that the enemies flagged to be assigned are actually assigned
@@ -38,6 +38,9 @@ public class Encounter : MonoBehaviour {
     #endregion
 
     #region Custom Methods
+    /// <summary>
+    /// Simply starts an encounter
+    /// </summary>
     public void StartEncounter()
     {
         active = true;
@@ -46,19 +49,3 @@ public class Encounter : MonoBehaviour {
     }
 #endregion
 }
-
-#region Classes
-/// <summary>
-/// Merely holds vars needed to parameterize an enemy
-/// TODO: Flesh this out with necessary values
-/// </summary>
-/// No longer using this system
-/*
-[System.Serializable]
-public class SpawnedEnemy
-{
-    public int HP;
-    public Vector2 moveSpeed;
-    public bool test;
-}*/
-#endregion

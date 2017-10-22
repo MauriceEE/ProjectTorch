@@ -7,6 +7,7 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     #region Public Fields
+    //Range at which the player can interact with things
     public float interactRange;
 #endregion
 
@@ -23,6 +24,8 @@ public class InteractionManager : MonoBehaviour
     protected FlagManager flags;
     //Reference to the player
     protected GameObject player;
+    //Braziers
+    protected Brazier[] braziers;
     #endregion
 
     #region Unity Defaults
@@ -34,6 +37,7 @@ public class InteractionManager : MonoBehaviour
         text = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
         player = GameObject.Find("Player");
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+        braziers = GameObject.FindObjectsOfType(typeof(Brazier)) as Brazier[];
     }
 
     void Update()
@@ -65,6 +69,24 @@ public class InteractionManager : MonoBehaviour
                 //Tell the flag manager to look through the flags to determine what line of dialogue to use
                 flags.ActivateNPCDialogue(text.InteractiveNPCs[i].npcID);
                 return; //Only try to interact with 1 NPC 
+            }
+        }
+    }
+    /// <summary>
+    /// Checks interaction with the braziers
+    /// </summary>
+    protected void CheckBraziers()
+    {
+        //Loop through braziers
+        for (int i = 0; i < braziers.Length; ++i) 
+        {
+            //Check to see if you're within range (and in the same level)
+            if (braziers[i].gameObject.activeSelf && (braziers[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f))
+            {
+                //Light up the brazier
+                braziers[i].IgniteBrazier(true);
+                //Make shadow people hate you
+                flags.FlagList[FlagManager.FlagNames.EnemyOfShadow] = true;
             }
         }
     }

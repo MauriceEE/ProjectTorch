@@ -58,9 +58,9 @@ public class ZoneManager : MonoBehaviour {
     protected TransitionPhase phase;
     //The player
     protected GameObject player;
-
+    //Camera clamp
     protected float cameraMin, cameraMax;
-
+    //Stuff to transition the player
     protected Zones nextZone;
     protected float newPlayerXCoordinate;
     #endregion
@@ -149,18 +149,24 @@ public class ZoneManager : MonoBehaviour {
                 FadeOut();
                 break;
         }
-        
-	}
+    }
     #endregion
 
     #region Custom Methods
+    /// <summary>
+    /// Executes fade out to a different zone
+    /// </summary>
+    /// <param name="_nextZone">The next zone to move to</param>
+    /// <param name="newXCoordinate">Where to move the player to</param>
     protected void ChangeZone(Zones _nextZone, float newXCoordinate)
     {
         phase = TransitionPhase.FadingOut;
         nextZone = _nextZone;
         newPlayerXCoordinate = newXCoordinate;
     }
-
+    /// <summary>
+    /// Locks the camera within a bounds, based on the zone
+    /// </summary>
     protected void ClampCamera()
     {
         if (Camera.main.transform.position.x < cameraMin)
@@ -168,7 +174,9 @@ public class ZoneManager : MonoBehaviour {
         else if (Camera.main.transform.position.x > cameraMax)
             Camera.main.transform.position = new Vector3(cameraMax, Camera.main.transform.position.y, Camera.main.transform.position.z);
     }
-
+    /// <summary>
+    /// Updates where the camera should be clamped to
+    /// </summary>
     protected void UpdateCameraClamp()
     {
         switch (currentZone)
@@ -195,7 +203,11 @@ public class ZoneManager : MonoBehaviour {
                 break;
         }
     }
-
+    /// <summary>
+    /// Activates/deactivates the zone game objects
+    /// </summary>
+    /// <param name="zone">Zone to manipulate</param>
+    /// <param name="active">Whether it should be active or inactive</param>
     protected void SetZoneActive(Zones zone, bool active)
     {
         switch (zone)
@@ -217,7 +229,9 @@ public class ZoneManager : MonoBehaviour {
                 break;
         }
     }
-
+    /// <summary>
+    /// Fades out into a black screen and then transitions to a new level
+    /// </summary>
     protected void FadeOut()
     {
         if (screenFade.color.a < 1)
@@ -243,7 +257,9 @@ public class ZoneManager : MonoBehaviour {
             phase = TransitionPhase.FadingIn;
         }
     }
-
+    /// <summary>
+    /// Fades the black screen back in
+    /// </summary>
     protected void FadeIn()
     {
         if (screenFade.color.a > 0)

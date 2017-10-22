@@ -23,6 +23,8 @@ public class EnemyManager : MonoBehaviour {
     protected bool encounterActive = false;
     //Precalculated grid positions
     protected Vector2[] gridPositions;
+    //Flag manager
+    protected FlagManager flags;
     #endregion
 
     #region Public Fields
@@ -72,6 +74,7 @@ public class EnemyManager : MonoBehaviour {
             surroundingGridOccupants[i] = null;
         gridPositions = new Vector2[6];
         GenerateGridPositions();
+        flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
     }
 	
 	void Update () {
@@ -103,23 +106,11 @@ public class EnemyManager : MonoBehaviour {
                         surroundingGridOccupants[j] = null;
                 //Destroy gameobject
                 Destroy(gameEnemies[i]);
+                //Tell the flag manager whether or not the enemy was a human
+                flags.EnemyKilled(gameEnemies[i].GetComponent<Enemy>().faction == Enemy.EnemyFaction.Human);
                 //Set to null
                 gameEnemies[i] = null; 
             }
-        }
-    }
-
-    /// <summary>
-    /// NOTE: This is just a temporary thing to test enemy movement
-    /// </summary>
-    void MoveEnemies()
-    {
-        Enemy e;
-        foreach(GameObject g in zoneEnemies)
-        {
-            e = g.GetComponent<Enemy>();
-            e.MoveTarget = this.transform.position;
-            e.SeekTarget();
         }
     }
     #endregion

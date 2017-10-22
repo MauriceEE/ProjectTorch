@@ -39,6 +39,11 @@ public class Enemy : MonoBehaviour {
         Counter,
         Dodge
     }
+    public enum EnemyFaction
+    {
+        Shadow,
+        Human
+    }
     #endregion
 
     #region Private Fields
@@ -103,6 +108,8 @@ public class Enemy : MonoBehaviour {
     #region Public Fields
     //Health points
     public float hp;
+    //Faction of this enemy
+    public EnemyFaction faction;
     //Used to prevent from sliding too far after taking damage
     [Range(0.50f, 1.00f)]
     public float knockbackFriction;

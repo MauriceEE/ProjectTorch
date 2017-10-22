@@ -38,38 +38,38 @@ public class Inventory : MonoBehaviour {
         #endregion
 
     #region Custom Methods
-        /// <summary>
-        /// If there's an item nearby, it will be destroyed and then added to inventory
-        /// </summary>
-        public void PickUpNearbyItems()
+    /// <summary>
+    /// If there's an item nearby, it will be destroyed and then added to inventory
+    /// </summary>
+    public void PickUpNearbyItems()
+    {
+        //Make sure they don't have too many items already
+        if (numHeldItems < maxItems)
         {
-            //Make sure they don't have too many items already
-            if (numHeldItems < maxItems)
+            Vector2 playerPos, itemPos;
+            playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+            //Loop through all items in level
+            for (int i = 0; i < itemsInLevel.Length; ++i)
             {
-                Vector2 playerPos, itemPos;
-                playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-                //Loop through all items in level
-                for (int i = 0; i < itemsInLevel.Length; ++i)
+                if(itemsInLevel[i]!=null)
                 {
-                    if(itemsInLevel[i]!=null)
+                    itemPos = new Vector2(itemsInLevel[i].gameObject.transform.position.x, itemsInLevel[i].gameObject.transform.position.y);
+                    //Check to see if they're within pickup range
+                    if ((itemPos - playerPos).sqrMagnitude < playerPickupRange * playerPickupRange)
                     {
-                        itemPos = new Vector2(itemsInLevel[i].gameObject.transform.position.x, itemsInLevel[i].gameObject.transform.position.y);
-                        //Check to see if they're within pickup range
-                        if ((itemPos - playerPos).sqrMagnitude < playerPickupRange * playerPickupRange)
-                        {
-                            heldItems[numHeldItems] = itemsInLevel[i];//Add item to inventory
-                            Destroy(itemsInLevel[i].gameObject);//Remove item from world
-                            itemsInLevel[i] = null;//Item can't be picked up again
-                            ++numHeldItems;//Increase number of held items
-                            return; //Don't try to keep picking up items
-                        }
+                        heldItems[numHeldItems] = itemsInLevel[i];//Add item to inventory
+                        Destroy(itemsInLevel[i].gameObject);//Remove item from world
+                        itemsInLevel[i] = null;//Item can't be picked up again
+                        ++numHeldItems;//Increase number of held items
+                        return; //Don't try to keep picking up items
                     }
                 }
             }
-            else
-            {
-                //SHOW ERROR UNABLE TO PICK UP ITEMS
-            }
         }
+        else
+        {
+            //SHOW ERROR UNABLE TO PICK UP ITEMS
+        }
+    }
     #endregion
 }
