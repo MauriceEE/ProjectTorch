@@ -740,5 +740,3 @@ public class Enemy : MonoBehaviour {
     }
     #endregion
 }
-#region Classes
-#endregion
