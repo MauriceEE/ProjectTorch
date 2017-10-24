@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -147,33 +147,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -338,33 +332,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -475,20 +463,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -514,63 +499,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -778,7 +751,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -826,10 +799,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &77531662 stripped
@@ -955,35 +928,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -1055,18 +1022,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -1092,63 +1056,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -1234,18 +1186,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -1271,63 +1220,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -1506,33 +1443,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -1871,10 +1802,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &266378197
@@ -1916,18 +1847,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -1953,63 +1881,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -2063,7 +1979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -2111,10 +2027,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &270367491 stripped
@@ -2311,7 +2227,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2410,10 +2326,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &336001778 stripped
@@ -2609,33 +2525,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -2776,35 +2686,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -2906,10 +2810,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &418879904 stripped
@@ -3039,18 +2943,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -3076,63 +2977,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -3214,10 +3103,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &454667248 stripped
@@ -3312,33 +3201,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -3403,7 +3286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -3427,63 +3310,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -3779,7 +3650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -3803,63 +3674,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -4128,7 +3987,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4233,35 +4092,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -4438,7 +4291,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4484,6 +4337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zone: 2
+  lit: 0
 --- !u!1001 &674782786
 Prefab:
   m_ObjectHideFlags: 0
@@ -4523,33 +4377,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -4638,63 +4486,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -4743,7 +4579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -4791,10 +4627,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &721144189 stripped
@@ -4819,6 +4655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zone: 1
+  lit: 0
 --- !u!1001 &726480915
 Prefab:
   m_ObjectHideFlags: 0
@@ -4856,35 +4693,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -5037,7 +4868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -5085,10 +4916,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &766387357 stripped
@@ -5135,33 +4966,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -5259,10 +5084,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &795595610 stripped
@@ -5405,7 +5230,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5661,33 +5486,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -5754,18 +5573,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -5791,63 +5607,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -6121,36 +5925,34 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
+      propertyPath: m_LocalScale.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6235,7 +6037,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -6259,63 +6061,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -6364,7 +6154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -6412,10 +6202,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &975790946 stripped
@@ -6460,35 +6250,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -6652,35 +6436,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -6896,33 +6674,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -6992,20 +6764,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -7031,63 +6800,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -7374,7 +7131,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7551,33 +7308,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -7642,35 +7393,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -7951,33 +7696,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -8080,10 +7819,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1264571335 stripped
@@ -8165,63 +7904,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -8294,63 +8021,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -8399,7 +8114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -8447,10 +8162,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1292838675 stripped
@@ -8502,7 +8217,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8573,7 +8288,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8672,10 +8387,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1313359231 stripped
@@ -8775,7 +8490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -8799,63 +8514,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -8904,35 +8607,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -9002,35 +8699,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -9143,10 +8834,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1428646869 stripped
@@ -9196,7 +8887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -9249,10 +8940,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1467180921 stripped
@@ -9460,10 +9151,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1497933756 stripped
@@ -9510,33 +9201,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -9649,33 +9334,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -9788,10 +9467,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1540014104 stripped
@@ -9836,7 +9515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -9884,10 +9563,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1543851147 stripped
@@ -9934,18 +9613,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -9971,63 +9647,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -10358,10 +10022,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1582672730 stripped
@@ -10532,10 +10196,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1616263046 stripped
@@ -10631,10 +10295,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1624757750 stripped
@@ -10709,7 +10373,7 @@ MonoBehaviour:
   globalSpeedMultiplier: 0.5
   groundSpeedMultiplier: 1
   skySpeedMultiplier: 0.03
-  frontSpeedMultiplier: 2.5
+  frontSpeedMultiplier: 3
   cloudSpeedMultiplier: 0.1
   backgroundSpeedMultiplier: 1
   battlefieldSpawn: {x: -100, y: 0, z: 0}
@@ -10933,10 +10597,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1673349655 stripped
@@ -11128,18 +10792,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -11165,63 +10826,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -11272,18 +10921,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: hp
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Offset.y
       value: -0.09242976
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 0.8151405
       objectReference: {fileID: 0}
@@ -11309,63 +10955,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -11414,7 +11048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -11462,10 +11096,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1728002685 stripped
@@ -11510,7 +11144,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -11558,10 +11192,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1759904913 stripped
@@ -11734,7 +11368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -11782,10 +11416,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1772297321 stripped
@@ -11835,7 +11469,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11901,7 +11535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -11925,63 +11559,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -12105,35 +11727,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -12348,10 +11964,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1832339866 stripped
@@ -12502,35 +12118,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -12876,7 +12486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.56900024
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12902,41 +12512,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.8751882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.426506
-      objectReference: {fileID: 0}
     - target: {fileID: 1195452643779594, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_Name
       value: Altar
       objectReference: {fileID: 0}
-    - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.099999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195452643779594, guid: 615433962f122584883bd77c787b1077, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c49efcd9996dc5042a0542d028e5bd17, type: 2}
-    - target: {fileID: 212438699154619596, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
-        type: 3}
-    m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1951397176
@@ -13308,10 +12888,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1984780335 stripped
@@ -13455,10 +13035,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2019748362 stripped
@@ -13573,63 +13153,51 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016,
         type: 3}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atEditorHitboxes
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: guardChance
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: counterAttackChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
@@ -14043,33 +13611,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: arrivalRadius
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: attackRange
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: maxVelocity
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: atStartup
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: awarenessRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: dodgeChance
       value: 0
       objectReference: {fileID: 0}
@@ -14172,10 +13734,10 @@ Prefab:
       objectReference: {fileID: 21300000, guid: 0e071c32b46a7764cbafadc04c5ca0ff,
         type: 3}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2111301229 stripped
@@ -14220,7 +13782,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 615433962f122584883bd77c787b1077, type: 2}
       propertyPath: m_LocalScale.x
@@ -14268,10 +13830,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114988248729391038, guid: 615433962f122584883bd77c787b1077, type: 2}
-    - {fileID: 114952855302397394, guid: 615433962f122584883bd77c787b1077, type: 2}
     - {fileID: 0}
-    - {fileID: 61621882794434438, guid: 615433962f122584883bd77c787b1077, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 615433962f122584883bd77c787b1077, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2141305745 stripped
