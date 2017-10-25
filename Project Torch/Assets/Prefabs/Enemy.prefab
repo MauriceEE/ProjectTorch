@@ -19,10 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4726291926951550}
+  - component: {fileID: 61621882794434438}
+  - component: {fileID: 114988248729391038}
+  - component: {fileID: 114952855302397394}
   - component: {fileID: 212438699154619596}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,12 +37,109 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195452643779594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.079999655, y: 0.35, z: -0.35}
-  m_LocalScale: {x: 0.52941203, y: 0.52941203, z: 0.52941203}
+  m_LocalPosition: {x: -6.392858, y: -3.8142853, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61621882794434438
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195452643779594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09242976}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.8151405}
+  m_EdgeRadius: 0
+--- !u!114 &114952855302397394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195452643779594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acc0162c4e5b474c922a081ec0c4ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcID: 0
+--- !u!114 &114988248729391038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195452643779594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e109c484443a1e4188d43e1a09cb36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 0
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3.6
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
 --- !u!212 &212438699154619596
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -72,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e12b26f9339b79c499cffbf482d8c804, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cf7329c7551dc34da8745896fb55016, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

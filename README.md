@@ -63,3 +63,7 @@
 <ul><li>Added the dialogue lines to the TextManager script</li>
 <h2>Connor Menard - 10/21/17 - 20:30</h2>
 <ul><li>Added interactivity functions, can talk with King of Man (Uses default dialogue only)</li></ul>
+<h2>Maurice Edwards 10/24/17 - 20:01</h2>
+<ul>
+<li>Fixed prefab issues. Kept old enemy prefab in just in case the code references it or something, but nothing in the scene uses it</li>
+</ul>
