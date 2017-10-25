@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// Manages all the enemies in the scene
-/// TODO: only manage enemies in the current level
-/// TODO: everything AI related
 /// 
 /// Stuff to know:
 ///     Right now, it only gathers all enemies in the scene and checks whether or not to destroy them on Update
@@ -59,6 +57,27 @@ public class EnemyManager : MonoBehaviour {
     public List<GameObject> Enemies { get { return zoneEnemies; } }
     public GameObject[] HumanEnemyCategories { get { return humanEnemyCategories; } }
     public GameObject[] ShadowEnemyCategories { get { return shadowEnemyCategories; } }
+    /// <summary>
+    /// Returns a list of all enemy hitboxes that are currently active
+    /// Used for the player class when doing shine
+    /// TODO: only get enemy faction hitboxes
+    /// </summary>
+    public List<Rect> EnemyAttackHitboxes { get
+        {
+            List<Rect> hitboxes = new List<Rect>();
+            Enemy e;
+            for (int i = 0; i < encounterEnemies.Count; ++i)
+            {
+                e = encounterEnemies[i].GetComponent<Enemy>();
+                if (e.isAttacking) 
+                {
+                    hitboxes.Add(e.atHB1);
+                    hitboxes.Add(e.atHB2);
+                    hitboxes.Add(e.atHB3);
+                }
+            }
+            return hitboxes;
+        } }
     #endregion
 
     #region Unity Methods

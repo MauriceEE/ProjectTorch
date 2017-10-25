@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour {
         Dodging,
         SurroundingPlayer,
         ReturningFromAttack,
-        ReturningFromEncounter
+        ReturningFromEncounter,
+        Knockback
     }
     protected enum CombatStates
     {
@@ -213,8 +214,8 @@ public class Enemy : MonoBehaviour {
             damageTimer -= Time.deltaTime;
 
         //Decelerate knockback if being knocked back
-        if (inKnockback)
-            UpdateKnockback();
+        //if (inKnockback)
+            //UpdateKnockback();
 
         // color changing for conveyance
         if(hitFlashTimer > 0)
@@ -234,7 +235,7 @@ public class Enemy : MonoBehaviour {
         }
 
         //Only do the following if not currently stunned...
-        if (stunTime < 0f)
+        //if (stunTime < 0f)
         {
             //Check stun recovery
             if (guardBroken)
@@ -256,6 +257,8 @@ public class Enemy : MonoBehaviour {
                     //Nothing special for now.........
                     isAttacking = false;
                     maxVelocity = ogMaxVelocity;
+                    if (inEncounter)
+                        RequestMoveTarget();//Don't do nothing if you're in an encounter
                     break;
                 case EnemyStates.Attacking:
                     elapsedApproachTime = 0f;
@@ -352,14 +355,15 @@ public class Enemy : MonoBehaviour {
                     else
                     {
                         //Check to see if you're still invincible
-                        if (dashTime > (dashFrames - dashIFrames) * Helper.frame)
-                            invincible = true;
-                        else
-                            invincible = false;
+                        invincible = (dashTime > (dashFrames - dashIFrames) * Helper.frame);
                         //Scale down displacement with dampening
                         //entity.Displacement *= dashFriction;//What the player version uses
                         entity.SpeedModifier *= dashFriction;
                     }
+                    break;
+                case EnemyStates.Knockback:
+                    UpdateKnockback();
+                    Debug.Log("Knockback Displacement = " + entity.Displacement);
                     break;
             }
 
@@ -415,7 +419,7 @@ public class Enemy : MonoBehaviour {
             //Move (even if displacement is zero)
             entity.Move();
         }
-        else
+        //else
             stunTime -= Time.deltaTime;
 	}
     #endregion
@@ -431,6 +435,12 @@ public class Enemy : MonoBehaviour {
         if (guardStacks == 0)
         {
             hp -= damage;
+            //Flag as dead if out of HP
+            if (hp <= 0)
+            {
+                alive = false;
+                return;//Get outta here to avoid wasting time on the other code
+            }
             CancelOrHitStun(true);
             hitFlashTimer = 0.6f;
             damageTimer = 0.2f;
@@ -440,7 +450,7 @@ public class Enemy : MonoBehaviour {
         if (guardBroken)
         {
             stunTime = 0f;
-            Debug.Log("guard breaken @ " + Time.fixedTime);
+            Debug.Log("attack after guard break @ " + Time.fixedTime);
         }
 
         //Flag encounter if not yet flagged
@@ -463,18 +473,10 @@ public class Enemy : MonoBehaviour {
         {
             //If hit by thrust...
             if (attackType == PlayerCombat.Attacks.Thrust)
-            {
                 //Remove stack, and if that was the last one...
                 if (--guardStacks <= 0)
-                {
-                    //Flag guard broken state
-                    guardBroken = true;
-                    //Get stunned
-                    stunTime = guardBreakStunTime;
-                    //Double knockback
-                    knockbackModifier = 2f;
-                }
-            }
+                    //Break their guard
+                    BreakGuard(2f);
             //TODO: If hit by slash, do some reboud fancy thing
             if (attackType == PlayerCombat.Attacks.Slash)
             {
@@ -482,14 +484,35 @@ public class Enemy : MonoBehaviour {
             }
         }
 
-        //kill if dead
-        if (hp <= 0)
-        {
-            alive = false;
-        }
         // if not dead, try a reaction if not already trying one
-        else if (!guarding && !dodging && !counterattacking && !guardBroken)
+        if (!guarding && !dodging && !counterattacking && !guardBroken)
             React();
+    }
+
+    /// <summary>
+    /// This used to be a part of TakeDamage but I found it was useful to reuse it for Shine counters too
+    /// </summary>
+    /// <param name="knockbackMultiplier">How much the next hit of knockback will be multiplied by</param>
+    public void BreakGuard(float knockbackMultiplier)
+    {
+        //Flag guard broken state
+        guardBroken = true;
+        //Get stunned
+        stunTime = guardBreakStunTime;
+        //Double knockback
+        knockbackModifier = knockbackMultiplier;
+    }
+
+    /// <summary>
+    /// Resets some variables to restore the enemy to a neutral state in combat
+    /// </summary>
+    public void ResetCombatStates()
+    {
+        invincible = false;
+        enemyState = EnemyStates.Idle;
+        combatState = CombatStates.None;
+        isAttacking = false;
+        elapsedApproachTime = 0f;
     }
 
     protected void React()
@@ -593,6 +616,8 @@ public class Enemy : MonoBehaviour {
         //reset knockback modifer
         knockbackModifier = 1f;
         inKnockback = true;
+        ResetCombatStates();
+        enemyState = EnemyStates.Knockback;
     }
 
     /// <summary>
@@ -608,7 +633,10 @@ public class Enemy : MonoBehaviour {
             canMove = true;
             entity.Displacement = Vector2.zero;
             inKnockback = false;
+            enemyState = EnemyStates.Idle;
         }
+        else
+            enemyState = EnemyStates.Knockback;
     }
 
     /// <summary>

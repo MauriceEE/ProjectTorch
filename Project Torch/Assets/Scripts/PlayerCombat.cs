@@ -480,9 +480,40 @@ public class PlayerCombat : MonoBehaviour {
     /// <param name="hitbox">Hitbox of the shine to test</param>
     protected void Shine(Rect hitbox)
     {
-        Debug.Log("SHINE!!!!!");
         ///TODO: collision detection for projectiles, once projectiles are implemented
         ///TODO: enemy attack countering, once enemy attacks are implemented
+        ///
+        //Get enemy active hitboxes
+        //List<Rect> enemyHitboxes = enemyMan.EnemyAttackHitboxes;
+        Rect[] hitboxes = new Rect[3];
+        List<Enemy> enemies = new List<Enemy>();
+        for (int i = 0; i < enemyMan.encounterEnemies.Count; ++i)
+            enemies.Add(enemyMan.encounterEnemies[i].GetComponent<Enemy>());
+        //Update hitbox direction
+        Rect newHB = hitbox;
+        if (hitBoxDirectionMove < 0)
+            newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
+        //Loop through 'em
+        for (int i = 0; i < enemies.Count; ++i)
+        {
+            //Check to see if they're attacking
+            if(enemies[i].isAttacking)
+            {
+                //Check for collision
+                hitboxes[0] = enemies[i].atHB1;
+                hitboxes[1] = enemies[i].atHB2;
+                hitboxes[2] = enemies[i].atHB3;
+                for (int j = 0; j < 3; ++j)
+                {
+                    if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), Helper.LocalToWorldRect(hitboxes[j], enemies[i].transform.position)))
+                    {
+                        Debug.Log("Shine connected");
+                        enemies[i].BreakGuard(6f);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     /// <summary>

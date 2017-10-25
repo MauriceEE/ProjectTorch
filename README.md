@@ -67,3 +67,5 @@
 <ul>
 <li>Fixed prefab issues. Kept old enemy prefab in just in case the code references it or something, but nothing in the scene uses it</li>
 </ul>
+<h2>Connor Menard - 10/25/17 - 18:30</h2>
+<ul><li>Finished shine and improved knockback functionality</li></ul>
