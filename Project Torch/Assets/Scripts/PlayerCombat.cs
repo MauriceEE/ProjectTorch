@@ -87,6 +87,8 @@ public class PlayerCombat : MonoBehaviour {
     private int consecSlashCount = 0;
     //List of enemies you can hit this frame
     protected List<GameObject> hittableEnemies;
+    // Post processing changer
+    protected PostProcessChange ppChange;
     #endregion
 
     #region Properties
@@ -102,6 +104,7 @@ public class PlayerCombat : MonoBehaviour {
         entity = this.GetComponent<Entity>();
         movement = this.GetComponent<PlayerMovement>();
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
+        //ppChange = GameObject.Find("MainCamera").GetComponent<PostProcessChange>();
     }
 
     void Update()
@@ -115,8 +118,15 @@ public class PlayerCombat : MonoBehaviour {
         
         attackTime += Time.deltaTime;
 
-        //Cancel attack
-        if (Input.GetKeyDown(KeyCode.Space)) Cancel();
+        //Cancel attack and expand light radius
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Cancel();
+            //ppChange.enhancedRadius = true;
+        }
+
+        // Get frame adjustments, if any
+        ComboFrameAdjust();
 
         //Check to see if the player can attack
         if (canAttack)
@@ -139,6 +149,7 @@ public class PlayerCombat : MonoBehaviour {
 
                         // increment Slash count
                         consecSlashCount++;
+                        ComboFrameAdjust();
                     }
 
                     attackTime = 0f;
@@ -155,6 +166,7 @@ public class PlayerCombat : MonoBehaviour {
                 {
                     // Reset consecutive Slash count since this isn't a Slash attack
                     consecSlashCount = 0;
+                    ComboFrameAdjust();
                     // If in Slash's Recovery frames still, cancel it
                     if (combatState == CombatStates.Recovery)
                     {
@@ -164,6 +176,7 @@ public class PlayerCombat : MonoBehaviour {
 
                         // increment Slash count
                         consecSlashCount++;
+                        ComboFrameAdjust();
                     }
                     attackTime = 0f;
                     //Start attacking
@@ -179,6 +192,7 @@ public class PlayerCombat : MonoBehaviour {
                 {
                     //Reset consecutive slashes
                     consecSlashCount = 0;
+                    ComboFrameAdjust();
                     //Cancel from recovery frames
                     if (combatState == CombatStates.Recovery)
                     {
@@ -187,6 +201,7 @@ public class PlayerCombat : MonoBehaviour {
                         entity.Speed *= 1.5f;
                         //increment slash count
                         ++consecSlashCount;
+                        ComboFrameAdjust();
                     }
                     attackTime = 0f;
                     //Start shining
@@ -301,6 +316,7 @@ public class PlayerCombat : MonoBehaviour {
                         movement.CanDash = true;
                         attackTime = 0f;
                         consecSlashCount = 0;
+                        ComboFrameAdjust();
                     }
                     break;
                 case Attacks.Thrust:
@@ -311,6 +327,8 @@ public class PlayerCombat : MonoBehaviour {
                         entity.CanMove = true;
                         movement.CanDash = true;
                         attackTime = 0f;
+                        consecSlashCount = 0;
+                        ComboFrameAdjust();
                     }
                     break;
                 case Attacks.Shine:
@@ -321,6 +339,8 @@ public class PlayerCombat : MonoBehaviour {
                         entity.CanMove = true;
                         movement.CanDash = true;
                         attackTime = 0f;
+                        consecSlashCount = 0;
+                        ComboFrameAdjust();
                     }
                     break;
                 case Attacks.None:
@@ -329,6 +349,8 @@ public class PlayerCombat : MonoBehaviour {
                     entity.CanMove = true;
                     movement.CanDash = true;
                     attackTime = 0f;
+                    consecSlashCount = 0;
+                    ComboFrameAdjust();
                     break;
             }
         }
@@ -411,6 +433,26 @@ public class PlayerCombat : MonoBehaviour {
 
         // reset time scale to normal
         Time.timeScale = 1f;
+    }
+
+    void ComboFrameAdjust()
+    {
+        // adjust frames for smoother "combos"
+        switch (consecSlashCount)
+        {
+            case 1:
+                slStartup = 5;
+                thStartup = 9;
+                break;
+            case 2:
+                slStartup = 4;
+                thStartup = 9;
+                break;
+            default:
+                slStartup = 6;
+                thStartup = 12;
+                break;
+        }
     }
 
     /// <summary>
