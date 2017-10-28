@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: f0b4d601c1e93df4c8a66c89882ff559
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
-    guid: 4e651d755e1c29a459bd4217ac8e0804
+    guid: a3bceda191925484a8fd823ca892d12e
   - enabled: 1
     path: Assets/Scenes/test_backgrounds_backup.unity
     guid: fdf2c381b53beed4da8a64480ae66ed2
