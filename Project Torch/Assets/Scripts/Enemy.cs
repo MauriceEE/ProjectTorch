@@ -5,8 +5,9 @@ using UnityEngine;
 /// <summary>
 /// Enemy class. Does a lot of stuff
 /// Movement is primarily managed in the enemy manager but the nitty-gritty is executed here
+/// UPDATE: As of 10/27, this is now a base abstract class and each enemy game object will need a subclass script
 /// </summary>
-public class Enemy : MonoBehaviour {
+public abstract class Enemy : MonoBehaviour {
     #region Enums
     protected enum EnemyStates
     {
@@ -240,7 +241,7 @@ public class Enemy : MonoBehaviour {
     #endregion
 
     #region Update Methods (run every frame)
-    protected void UpdateColor()
+    protected virtual void UpdateColor()
     {
         if (hitFlashTimer > 0)
         {
@@ -262,7 +263,7 @@ public class Enemy : MonoBehaviour {
     /// <summary>
     /// Handles combatState, called every frame
     /// </summary>
-    protected void UpdateCombatState()
+    protected virtual void UpdateCombatState()
     {
         //Second big switch handling combat
         switch (combatState)
@@ -321,7 +322,7 @@ public class Enemy : MonoBehaviour {
     /// <summary>
     /// Handles enemyState, called every frame
     /// </summary>
-    protected void UpdateEnemyState()
+    protected virtual void UpdateEnemyState()
     {
         //Big switch over the current state
         switch (enemyState)
@@ -449,7 +450,7 @@ public class Enemy : MonoBehaviour {
     /// Should be called every frame in knockback
     /// Basically just decelerates the knockback and checks to see if the knockback is over
     /// </summary>
-    protected void UpdateKnockback()
+    protected virtual void UpdateKnockback()
     {
         entity.Displacement *= knockbackFriction;
         knockbackTime -= Time.deltaTime;
@@ -469,7 +470,7 @@ public class Enemy : MonoBehaviour {
     /// Deals HP damage to this enemy
     /// </summary>
     /// <param name="damage">Amout of HP damage the enemy will take</param>
-    public void TakeDamage(float damage, PlayerCombat.Attacks attackType)
+    public virtual void TakeDamage(float damage, PlayerCombat.Attacks attackType)
     {
         //Only actually take damage if your guard is down
         if (guardStacks == 0)
@@ -537,7 +538,7 @@ public class Enemy : MonoBehaviour {
     /// This used to be a part of TakeDamage but I found it was useful to reuse it for Shine counters too
     /// </summary>
     /// <param name="knockbackMultiplier">How much the next hit of knockback will be multiplied by</param>
-    public void BreakGuard(float knockbackMultiplier)
+    public virtual void BreakGuard(float knockbackMultiplier)
     {
         //Flag guard broken state
 //        guardBroken = true;
@@ -570,7 +571,7 @@ public class Enemy : MonoBehaviour {
         entity.SpeedModifier = 1f;
     }
 
-    protected void React()
+    protected virtual void React()
     {
         //Generate random chance between 0% and 100% (represented as 0 to 100)
         float rand = Random.Range(0f, 100f);
@@ -655,7 +656,7 @@ public class Enemy : MonoBehaviour {
     /// </summary>
     /// <param name="time">Duration IN SECONDS of the knockback</param>
     /// <param name="speed">Initial velocity of the knockback</param>
-    public void RecieveKnockback(float time, Vector2 speed)
+    public virtual void RecieveKnockback(float time, Vector2 speed)
     {
         canMove = false;
         knockbackTime = time;
@@ -669,7 +670,7 @@ public class Enemy : MonoBehaviour {
 
     // Cancels any and all frames
     /// <param name="hitstun">Whether or not to apply stun with the cancel</param>
-    void CancelOrHitStun(bool hitstun)
+    protected virtual void CancelOrHitStun(bool hitstun)
     {
         // Set combat state to Recovery
         //combatState = CombatStates.Recovery; // causes RunTime error
