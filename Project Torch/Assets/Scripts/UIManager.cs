@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour {
     public void LoadGame() {
         SceneManager.UnloadSceneAsync("Main Menu");
         SceneManager.LoadSceneAsync("Loading");
-        SceneManager.LoadSceneAsync("Test");
+        SceneManager.LoadSceneAsync("Game");
         
     }
 }
