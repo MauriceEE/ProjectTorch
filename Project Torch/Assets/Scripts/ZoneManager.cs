@@ -11,10 +11,13 @@ public class ZoneManager : MonoBehaviour {
     public enum ZoneNames
     {
         Battlefield,
-        SullenVillage,
-        ThrivingVillage,
-        CastleOfMan,
-        FortressOfDark
+        FortressKeep,
+        HumanTerritoryStage1,
+        HumanTerritoryStage2,
+        PrincessRescue,
+        ShadowTerritoryStage1,
+        ShadowTerritoryStage2,
+        ThroneRoom,
     }
     //Used to keep track of how to manipulate the black screen obj
     protected enum TransitionPhase
@@ -49,6 +52,8 @@ public class ZoneManager : MonoBehaviour {
     protected Dictionary<ZoneNames, Zone> zonesSorted;
     //The current zone the player is in
     protected Zone currentZone;
+    //Flag manager
+    protected FlagManager flagMan;
     #endregion
 
     #region Unity Defaults
@@ -61,6 +66,7 @@ public class ZoneManager : MonoBehaviour {
         Color fadeColor = screenFade.color;
         fadeColor.a = 0f;
         screenFade.color = fadeColor;
+        profileChanger.darkness = false;
         //Get all zone scripts on gameobjects
         //zones = GameObject.FindObjectsOfType(typeof(Zone)) as Zone[];
         //zones = GameObject.FindObjectsOfType(typeof(Zone)) as GameObject[];
@@ -77,11 +83,11 @@ public class ZoneManager : MonoBehaviour {
         currentZone = zonesSorted[ZoneNames.Battlefield];
         //Assign camera clamp values
         UpdateCameraClamp();
+        //Get flag manager
+        flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
     }
 	
 	void Update () {
-        //Set darkness to true if in the thriving village or fortress of dark
-        profileChanger.darkness = (currentZone.zone == ZoneNames.ThrivingVillage || currentZone.zone == ZoneNames.FortressOfDark);
         //Keep the camera within the bounds
         ClampCamera();
         //Check to see if within range of a zone end
@@ -169,6 +175,11 @@ public class ZoneManager : MonoBehaviour {
             player.transform.position = new Vector3(0f, player.transform.position.y, player.transform.position.z);
             //Move to fade in phase
             phase = TransitionPhase.FadingIn;
+            //Set darkness to true if in the thriving village or fortress of dark
+            profileChanger.darkness =
+                (currentZone.zone == ZoneNames.ShadowTerritoryStage1 ||
+                currentZone.zone == ZoneNames.ShadowTerritoryStage2 ||
+                currentZone.zone == ZoneNames.FortressKeep);
         }
     }
     /// <summary>
@@ -191,7 +202,33 @@ public class ZoneManager : MonoBehaviour {
     /// <returns>Next zone the player should go to</returns>
     protected Zone GetNextZone()
     {
-        return zonesSorted[ZoneNames.SullenVillage];
+        //Princess Rescue
+        if (currentZone.zone == ZoneNames.ShadowTerritoryStage1)
+        {
+            if (flagMan.PrincessRescue())
+                return zonesSorted[ZoneNames.PrincessRescue];
+            else
+                return zonesSorted[ZoneNames.ShadowTerritoryStage2];
+        }
+            
+        if (currentZone.zone == ZoneNames.Battlefield)
+            return zonesSorted[ZoneNames.ShadowTerritoryStage1];
+
+        if (currentZone.zone == ZoneNames.ShadowTerritoryStage2)
+            return zonesSorted[ZoneNames.FortressKeep];
+
+        if (currentZone.zone == ZoneNames.FortressKeep)
+            return zonesSorted[ZoneNames.HumanTerritoryStage1];
+
+        if (currentZone.zone == ZoneNames.HumanTerritoryStage1)
+            return zonesSorted[ZoneNames.HumanTerritoryStage2];
+
+        if (currentZone.zone == ZoneNames.HumanTerritoryStage2)
+            return zonesSorted[ZoneNames.ThroneRoom];
+
+        //Code shouldn't get here
+        Debug.Break();
+        throw new UnityException();
     }
 #endregion
 }

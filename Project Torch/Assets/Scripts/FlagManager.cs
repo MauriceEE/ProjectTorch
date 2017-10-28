@@ -43,6 +43,12 @@ public class FlagManager : MonoBehaviour {
         EnemyOfShadow,
         DeathOfTheCaptain,
         FearOfFlame,
+
+        //REWORKED FLAGS
+        PrincessRescue,
+        BattlefieldBrazierLit,
+        HumanTerritory1BrazierLit,
+        ShadowTerritory1BrazierLit,
     }
     #endregion
 
@@ -64,7 +70,9 @@ public class FlagManager : MonoBehaviour {
 
     #region Properties
     public Dictionary<FlagNames,bool> FlagList { get { return flags; } set { flags = value; } }
-#endregion
+    public int HumansKilled { get { return humansKilled; } }
+    public int ShadowsKilled { get { return shadowsKilled; } }
+    #endregion
 
     #region Unity Defaults
     void Start () {
@@ -104,6 +112,12 @@ public class FlagManager : MonoBehaviour {
         flags.Add(FlagNames.EnemyOfShadow, false);
         flags.Add(FlagNames.DeathOfTheCaptain, false);
         flags.Add(FlagNames.FearOfFlame, false);
+
+        //REWORK
+        flags.Add(FlagNames.PrincessRescue, false);
+        flags.Add(FlagNames.BattlefieldBrazierLit, false);
+        flags.Add(FlagNames.HumanTerritory1BrazierLit, true);
+        flags.Add(FlagNames.ShadowTerritory1BrazierLit, false);
     }
     #endregion
 
@@ -137,27 +151,38 @@ public class FlagManager : MonoBehaviour {
     public void EnemyKilled(bool human)
     {
         if (human)
-        {
-            if(!flags[FlagNames.EnemyOfMan])
-            {
-                if(++humansKilled > killsToTiggerHostility)
-                {
-                    flags[FlagNames.EnemyOfMan] = true;
-                    GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Human);
-                }
-            }
-        }
+            ++humansKilled;
         else
+            ++shadowsKilled;
+        //Check "EnemyOf" flags
+        if (!flags[FlagNames.EnemyOfMan])
         {
-            if (!flags[FlagNames.EnemyOfShadow])
+            if (humansKilled > killsToTiggerHostility)
             {
-                if (++shadowsKilled > killsToTiggerHostility)
-                {
-                    flags[FlagNames.EnemyOfShadow] = true;
-                    GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Shadow);
-                }
+                flags[FlagNames.EnemyOfMan] = true;
+                GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Human);
             }
         }
+        if (!flags[FlagNames.EnemyOfShadow])
+        {
+            if (shadowsKilled > killsToTiggerHostility)
+            {
+                flags[FlagNames.EnemyOfShadow] = true;
+                GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Shadow);
+            }
+        }
+    }
+    /// <summary>
+    /// Returns whether or not the conditions for the Princess Rescue stage or met
+    /// Called by ZoneManager
+    /// </summary>
+    /// <returns>True if conditions met</returns>
+    public bool PrincessRescue()
+    {
+        return (flags[FlagNames.BattlefieldBrazierLit] &&
+            flags[FlagNames.ShadowTerritory1BrazierLit] &&
+            humansKilled >= 5 &&
+            shadowsKilled < 3);
     }
 #endregion
 }

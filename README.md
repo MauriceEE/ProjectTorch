@@ -69,3 +69,5 @@
 </ul>
 <h2>Connor Menard - 10/25/17 - 18:30</h2>
 <ul><li>Finished shine and improved knockback functionality</li></ul>
+<h2>Connor Menard - 10/28/17 - 18:12</h2>
+<ul><li>Reworked zones and zone transitions</li><li>Rough outline for level blocking in place</li></ul>

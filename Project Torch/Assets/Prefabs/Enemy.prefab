@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1195452643779594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.392858, y: -3.8142853, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 21.03, y: -3.8142853, z: -0.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,58 +88,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195452643779594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e109c484443a1e4188d43e1a09cb36a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
+  hp: 0
   faction: 0
-  knockbackFriction: 0.69
-  guardBreakStunTime: 2.6
-  maxVelocity: 0.05
+  knockbackFriction: 0
+  guardBreakStunTime: 0
+  maxVelocity: 0
   ogMaxVelocity: 0
-  arrivalRadius: 3.6
-  attackRange: 1.8
+  arrivalRadius: 0
+  attackRange: 0
   ogAttackRange: 0
-  awarenessRange: 5
+  awarenessRange: 0
   isAttacking: 0
-  atDamage: 10
-  atStartup: 17
-  atActive: 10
-  atRecovery: 10
+  atDamage: 0
+  atStartup: 0
+  atActive: 0
+  atRecovery: 0
   atKnockbackTime: 0
   atKnockbackSpeed: 0
   atEditorHitboxes: 1
   atHB1:
     serializedVersion: 2
-    x: 0.45
-    y: 0.47
-    width: 1.1
-    height: 0.22
-  atHB2FirstActiveFrame: 4
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  atHB2FirstActiveFrame: 0
   atHB2:
     serializedVersion: 2
-    x: 0.46
-    y: 0.15
-    width: 1.29
-    height: 0.24
-  atHB3FirstActiveFrame: 7
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  atHB3FirstActiveFrame: 0
   atHB3:
     serializedVersion: 2
-    x: 0.42
-    y: -0.18
-    width: 1.26
-    height: 0.21
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   dashIFrames: 6
   dashFrames: 10
-  dashSpeed: 12
-  dashFriction: 0.919
-  guardChance: 15
+  dashSpeed: 0
+  dashFriction: 0
+  guardChance: 0
   counterAttackChance: 0
   dodgeChance: 0
-  tempHitboxObj:
-  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
-  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
-  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  tempHitboxObj: []
 --- !u!212 &212438699154619596
 SpriteRenderer:
   m_ObjectHideFlags: 1
