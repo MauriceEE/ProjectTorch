@@ -1009,7 +1009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 4
-  newXCoordinate: 0
 --- !u!212 &81670685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2202,7 +2201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321621690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157.3, y: -4.34, z: -0.19999999}
+  m_LocalPosition: {x: 15.38, y: -3.8, z: -0.19999999}
   m_LocalScale: {x: 0.7708819, y: 4.536035, z: 0.09999999}
   m_Children: []
   m_Father: {fileID: 1103225843}
@@ -2262,7 +2261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 1
-  newXCoordinate: 0
 --- !u!1 &325906335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3032,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 376737624}
+  - component: {fileID: 376737625}
   m_Layer: 0
   m_Name: Thriving Village
   m_TagString: Untagged
@@ -3056,6 +3055,19 @@ Transform:
   m_Father: {fileID: 1981395766}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376737625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 376737623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b848f9baf4b14fa70380589ee88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: 2
+  endPoint: {fileID: 549097152}
 --- !u!1 &391600660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4454,7 +4466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 3
-  newXCoordinate: 0
 --- !u!212 &549097155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5686,6 +5697,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 647726122}
+  - component: {fileID: 647726123}
   m_Layer: 0
   m_Name: Battlefield
   m_TagString: Untagged
@@ -5709,6 +5721,19 @@ Transform:
   m_Father: {fileID: 1981395766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647726123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647726121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b848f9baf4b14fa70380589ee88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: 0
+  endPoint: {fileID: 321621690}
 --- !u!1 &649163423
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,6 +7122,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 818091452}
+  - component: {fileID: 818091453}
   m_Layer: 0
   m_Name: Throne Room
   m_TagString: Untagged
@@ -7120,6 +7146,19 @@ Transform:
   m_Father: {fileID: 1981395766}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &818091453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818091451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b848f9baf4b14fa70380589ee88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: 3
+  endPoint: {fileID: 1971992311}
 --- !u!1 &827427984
 GameObject:
   m_ObjectHideFlags: 0
@@ -10832,21 +10871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e922ef46cd43e48955eff4046a00ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentZone: 0
   blackScreen: {fileID: 649163423}
-  battlefieldLeftEndPoint: {fileID: 1828096108}
-  battlefieldRightEndPoint: {fileID: 321621690}
-  sullenVillageLeftEndPoint: {fileID: 81670682}
-  sullenVillageRightEndPoint: {fileID: 2005246604}
-  thrivingVillageLeftEndPoint: {fileID: 2055835728}
-  thrivingVillageRightEndPoint: {fileID: 549097152}
-  throneRoomEndPoint: {fileID: 1971992311}
-  fortressKeepEndPoint: {fileID: 1721795248}
-  battlefieldZone: {fileID: 647726121}
-  sullenVillageZone: {fileID: 1759918584}
-  thrivingVillageZone: {fileID: 376737623}
-  throneRoomZone: {fileID: 818091451}
-  fortressKeepZone: {fileID: 1909961561}
+  zones:
+  - {fileID: 647726121}
+  - {fileID: 1759918584}
+  - {fileID: 376737623}
+  - {fileID: 818091451}
+  - {fileID: 1909961561}
+  currentZone: {fileID: 0}
 --- !u!1 &1341004139
 GameObject:
   m_ObjectHideFlags: 0
@@ -13081,7 +13113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 1
-  newXCoordinate: -150
 --- !u!212 &1721795251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13462,6 +13493,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1759918585}
+  - component: {fileID: 1759918586}
   m_Layer: 0
   m_Name: Sullen Village
   m_TagString: Untagged
@@ -13485,6 +13517,19 @@ Transform:
   m_Father: {fileID: 1981395766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1759918586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759918584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b848f9baf4b14fa70380589ee88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: 1
+  endPoint: {fileID: 2005246604}
 --- !u!4 &1762573333
 Transform:
   m_ObjectHideFlags: 0
@@ -14117,7 +14162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 2
-  newXCoordinate: 140
 --- !u!212 &1828096111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14611,6 +14655,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1909961562}
+  - component: {fileID: 1909961563}
   m_Layer: 0
   m_Name: Fortress Keep
   m_TagString: Untagged
@@ -14634,6 +14679,19 @@ Transform:
   m_Father: {fileID: 1981395766}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1909961563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909961561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b848f9baf4b14fa70380589ee88e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: 4
+  endPoint: {fileID: 1721795248}
 --- !u!1 &1910630854
 GameObject:
   m_ObjectHideFlags: 0
@@ -15580,7 +15638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 2
-  newXCoordinate: 155
 --- !u!212 &1971992314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15727,7 +15784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 0
-  newXCoordinate: -150
 --- !u!212 &2005246607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16085,7 +16141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 0
-  newXCoordinate: 140
 --- !u!212 &2055835731
 SpriteRenderer:
   m_ObjectHideFlags: 0

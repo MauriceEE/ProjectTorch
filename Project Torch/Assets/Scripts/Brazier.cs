@@ -9,7 +9,7 @@ public class Brazier : MonoBehaviour {
 
     #region Public Fields
     //Zone this brazier is in
-    public ZoneManager.Zones zone;
+    public ZoneManager.ZoneNames zone;
     //Whether or not the brazier is lit
     public bool lit;
 #endregion
