@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Base level entity class
+/// Base level entity class, should be placed on all moving objects
 /// Stuff to know:
 ///     Properties:
 ///         Vector2 Speed - max speed of the entity, multiply by a direction vector to get displacement

@@ -41,11 +41,10 @@ public class Encounter : MonoBehaviour {
     /// <summary>
     /// Simply starts an encounter
     /// </summary>
-    public void StartEncounter()
+    public void StartEncounter(Enemy.EnemyFaction hitEnemyFaction)
     {
         active = true;
-        EnemyManager enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
-        enemyMan.StartEncounter(this);
+        GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().StartEncounter(this, hitEnemyFaction);
     }
 #endregion
 }

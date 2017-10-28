@@ -131,14 +131,33 @@ public class FlagManager : MonoBehaviour {
     }
     /// <summary>
     /// Adds to the total number of enemies killed and updates "EnemyOf" flags
+    /// Also tells the enemy manager to set global aggression if the hostility limit is reached
     /// </summary>
     /// <param name="human"></param>
     public void EnemyKilled(bool human)
     {
         if (human)
-            flags[FlagNames.EnemyOfMan] = (++humansKilled > killsToTiggerHostility);
+        {
+            if(!flags[FlagNames.EnemyOfMan])
+            {
+                if(++humansKilled > killsToTiggerHostility)
+                {
+                    flags[FlagNames.EnemyOfMan] = true;
+                    GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Human);
+                }
+            }
+        }
         else
-            flags[FlagNames.EnemyOfShadow] = (++shadowsKilled > killsToTiggerHostility);
+        {
+            if (!flags[FlagNames.EnemyOfShadow])
+            {
+                if (++shadowsKilled > killsToTiggerHostility)
+                {
+                    flags[FlagNames.EnemyOfShadow] = true;
+                    GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SetGlobalAggression(Enemy.EnemyFaction.Shadow);
+                }
+            }
+        }
     }
 #endregion
 }

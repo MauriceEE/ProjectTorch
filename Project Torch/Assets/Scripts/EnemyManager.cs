@@ -139,7 +139,7 @@ public class EnemyManager : MonoBehaviour {
     /// Sets up an encounter
     /// CALLED BY ENEMIES
     /// </summary>
-    public void StartEncounter(Encounter enc)
+    public void StartEncounter(Encounter enc, Enemy.EnemyFaction hitEnemyFaction)
     {
         Helper.DebugLogDivider();
         //Set flagged for being in an encounter
@@ -157,7 +157,9 @@ public class EnemyManager : MonoBehaviour {
                 //Try to add enemy to grid cell
                 Enemy e = encounterEnemies[encounterEnemies.Count - 1].GetComponent<Enemy>();
                 e.MoveTarget = SendNewMoveTarget(e);
-                //e.CircleAroundPlayer();
+                //Tell the enemies not to ally the player if they're of an opposing faction
+                if (e.faction == hitEnemyFaction)
+                    e.AlliedWithPlayer = false;
             }
 
             if (encounterEnemies.Count > 6)
@@ -166,10 +168,24 @@ public class EnemyManager : MonoBehaviour {
         Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count);
     }
 
+    /// <summary>
+    /// Sets all enemies of a certain faction to be aggressive
+    /// </summary>
+    /// <param name="faction">Enemy faction to set as hostile</param>
+    public void SetGlobalAggression(Enemy.EnemyFaction faction)
+    {
+        for (int i = 0; i < gameEnemies.Length; ++i)
+        {
+            Enemy e = gameEnemies[i].GetComponent<Enemy>();
+            if (e.faction == faction)
+                e.AlliedWithPlayer = false;
+        }
+    }
+
     public bool CanEnemiesAttack()
     {
         // loop through all enemies, checking to see if anyone is currently attacking
-        for (int i = 0; i < encounterEnemies.Count - 1; i++)
+        for (int i = 0; i < encounterEnemies.Count; i++)
         {
             if (encounterEnemies[i].GetComponent<Enemy>().isAttacking == true) return false;
         }
