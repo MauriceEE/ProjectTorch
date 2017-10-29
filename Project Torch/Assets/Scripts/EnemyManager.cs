@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// Manages all the enemies in the scene
+/// Also acts as the encounter manager
 /// 
-/// Stuff to know:
-///     Right now, it only gathers all enemies in the scene and checks whether or not to destroy them on Update
+/// TODO: Fix bug where enemies take up more than one slot in the occupancy grid
 /// </summary>
 public class EnemyManager : MonoBehaviour {
     #region Private Fields
@@ -81,19 +81,20 @@ public class EnemyManager : MonoBehaviour {
     #endregion
 
     #region Unity Methods
-    void Start () {
+    void Awake () {
         zoneEnemies = new List<GameObject>();
         encounterEnemies = new List<GameObject>();
         gameEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject o in gameEnemies)
-            zoneEnemies.Add(o);
+        //foreach (GameObject o in gameEnemies)
+            //zoneEnemies.Add(o);
         player = GameObject.Find("Player");
         surroundingGridOccupants = new GameObject[6];
-        for (int i = 0; i < surroundingGridOccupants.Length; ++i) 
+        for (int i = 0; i < 6; ++i) 
             surroundingGridOccupants[i] = null;
         gridPositions = new Vector2[6];
         GenerateGridPositions();
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+        //allEnemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
     }
 	
 	void Update () {
@@ -174,9 +175,9 @@ public class EnemyManager : MonoBehaviour {
     /// <param name="faction">Enemy faction to set as hostile</param>
     public void SetGlobalAggression(Enemy.EnemyFaction faction)
     {
-        for (int i = 0; i < gameEnemies.Length; ++i)
+        for (int i = 0; i < zoneEnemies.Count; ++i)
         {
-            Enemy e = gameEnemies[i].GetComponent<Enemy>();
+            Enemy e = zoneEnemies[i].GetComponent<Enemy>();
             if (e.faction == faction)
                 e.AlliedWithPlayer = false;
         }
@@ -392,7 +393,9 @@ public class EnemyManager : MonoBehaviour {
                 return GeneratePositionInGridCircle(5, enemy.transform.position);
             }
         }
-        Debug.Log("SendMoveTarget method broke");
+        Debug.Log("SendMoveTarget method broke... Listing occupants");
+        for (int i = 0; i < 6; ++i)
+            Debug.Log(surroundingGridOccupants[i]);
         Debug.Break();
         throw new UnityException();//Code shouldn't ever reach here
     }
@@ -422,6 +425,26 @@ public class EnemyManager : MonoBehaviour {
         gridPositions[3] = new Vector2(-(surroundingGridRadius * (Mathf.Cos(Mathf.Deg2Rad * surroundingGridAngle))), surroundingGridRadius * (Mathf.Sin(Mathf.Deg2Rad * surroundingGridAngle)));
         gridPositions[4] = new Vector2(-surroundingGridRadius, 0);
         gridPositions[5] = new Vector2(-(surroundingGridRadius * (Mathf.Cos(Mathf.Deg2Rad * surroundingGridAngle))), -(surroundingGridRadius * (Mathf.Sin(Mathf.Deg2Rad * surroundingGridAngle))));
+    }
+    /// <summary>
+    /// Updates enemies in the zoneEnemies list
+    /// Should be called when transitioning to a new zone
+    /// </summary>
+    /// <param name="zone">Current zone the player is in</param>
+    public void GetEnemiesInCurrentZone(ZoneManager.ZoneNames zone)
+    {
+        //First wipe out old enemies
+        zoneEnemies.Clear();
+        //Loop through all enemies to determine whether or not they're in the right zone
+        for (int i = 0; i < gameEnemies.Length; ++i)
+        {
+            //Not sure if there's a more effecient way to do this but
+            //THIS ONLY WORKS IF THE FORMAT IN THE HIERARCHY IS 
+            //  -Zone-,-ActiveArea-,-Enemies-,-Enemy-
+            //So keep it that way when making new levels please
+            if (gameEnemies[i].GetComponent<Enemy>().zone == zone)
+                zoneEnemies.Add(gameEnemies[i]);
+        }
     }
     #endregion
 }

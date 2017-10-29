@@ -29,15 +29,17 @@ public class ZoneManager : MonoBehaviour {
     #endregion
 
     #region Public Fields
+    //Zone the game will begin at
+    public ZoneNames startingZone;
     //Reference to the black screen object for scene transitions
     public GameObject blackScreen;
-    //Array of all possible zones in the game
-    public GameObject[] zones;
     #endregion
 
     #region Private Fields
     //Reference to the camera's post process changer
     protected PostProcessChange profileChanger;
+    //Reference to enemy manager
+    protected EnemyManager enemyMan;
     //The material of the black screen, used for fading
     protected Material screenFade;
     //The current phase of transitioning
@@ -54,10 +56,13 @@ public class ZoneManager : MonoBehaviour {
     protected Zone currentZone;
     //Flag manager
     protected FlagManager flagMan;
+    //Array of all possible zones in the game
+    protected Zone[] zones;
     #endregion
 
     #region Unity Defaults
-    void Start () {
+    void Awake () {
+        enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
         profileChanger = Camera.main.GetComponent<PostProcessChange>();
         screenFade = blackScreen.GetComponent<Renderer>().material;
         player = GameObject.Find("Player");
@@ -68,9 +73,7 @@ public class ZoneManager : MonoBehaviour {
         screenFade.color = fadeColor;
         profileChanger.darkness = false;
         //Get all zone scripts on gameobjects
-        //zones = GameObject.FindObjectsOfType(typeof(Zone)) as Zone[];
-        //zones = GameObject.FindObjectsOfType(typeof(Zone)) as GameObject[];
-        // ^^NOTE: This doesn't work because FindObjectsOfType doesn't get inactive objects
+        zones = GameObject.FindObjectsOfType(typeof(Zone)) as Zone[];
         //Sort by zone name for easy access/lookup
         zonesSorted = new Dictionary<ZoneNames, Zone>();
         Zone z;
@@ -86,8 +89,20 @@ public class ZoneManager : MonoBehaviour {
         //Get flag manager
         flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
     }
-	
-	void Update () {
+
+    void Start()
+    {
+        //Deactivate all background zones the player won't start at
+        foreach(Zone z in zonesSorted.Values)
+        {
+            if (z.zone != startingZone)
+                z.gameObject.SetActive(false);
+        }
+        //Update enemy manager's zone enemies
+        enemyMan.GetEnemiesInCurrentZone(currentZone.zone);
+    }
+
+    void Update () {
         //Keep the camera within the bounds
         ClampCamera();
         //Check to see if within range of a zone end
@@ -180,6 +195,8 @@ public class ZoneManager : MonoBehaviour {
                 (currentZone.zone == ZoneNames.ShadowTerritoryStage1 ||
                 currentZone.zone == ZoneNames.ShadowTerritoryStage2 ||
                 currentZone.zone == ZoneNames.FortressKeep);
+            //Update zone enemies
+            enemyMan.GetEnemiesInCurrentZone(currentZone.zone);
         }
     }
     /// <summary>
@@ -214,7 +231,7 @@ public class ZoneManager : MonoBehaviour {
         if (currentZone.zone == ZoneNames.Battlefield)
             return zonesSorted[ZoneNames.ShadowTerritoryStage1];
 
-        if (currentZone.zone == ZoneNames.ShadowTerritoryStage2)
+        if (currentZone.zone == ZoneNames.ShadowTerritoryStage2 || currentZone.zone == ZoneNames.PrincessRescue) 
             return zonesSorted[ZoneNames.FortressKeep];
 
         if (currentZone.zone == ZoneNames.FortressKeep)

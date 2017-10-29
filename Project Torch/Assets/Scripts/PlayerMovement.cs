@@ -42,16 +42,12 @@ public class PlayerMovement : MonoBehaviour {
     #endregion
 
     #region Unity Methods
-    void Start () {
+    void Awake () {
         canDash = true;
         combat = this.GetComponent<PlayerCombat>();
         playerCollider = this.GetComponent<Collider2D>();
         entity = this.GetComponent<Entity>();
         entity.Speed = moveSpeed;
-        //GameObject[] obstacleGameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
-        //obstacles = new Collider2D[obstacleGameObjects.Length];
-        //for (int i = 0; i < obstacles.Length; ++i)
-            //obstacles[i] = obstacleGameObjects[i].GetComponent<Collider2D>();
 	}
 	
 	void Update () {

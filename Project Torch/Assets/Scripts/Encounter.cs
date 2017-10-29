@@ -25,7 +25,7 @@ public class Encounter : MonoBehaviour {
     #endregion
 
     #region Unity Defaults
-    void Start () {
+    void Awake () {
         active = false;
         //First we gotta make sure that the enemies flagged to be assigned are actually assigned
         for (int i = 0; i < triggerEnemies.Count; ++i)

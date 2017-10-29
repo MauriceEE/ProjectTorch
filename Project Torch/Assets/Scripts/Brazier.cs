@@ -27,12 +27,15 @@ public class Brazier : MonoBehaviour {
     #region Custom Methods
     /// <summary>
     /// Sets brazier as lit or unlight
+    /// Also updates in the flag manager
     /// TODO: animations or something
     /// </summary>
     /// <param name="_lit">Whether or not the brazier should be lit</param>
     public void IgniteBrazier(bool _lit)
     {
         lit = _lit;
+        Debug.Log("Brazier: " + lit);
+        GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().BrazierLit(zone, lit);
     }
 #endregion
 }

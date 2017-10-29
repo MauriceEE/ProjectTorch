@@ -29,7 +29,7 @@ public class TextManager : MonoBehaviour {
     #endregion
 
     #region Unity Defaults
-    void Start () {
+    void Awake () {
         //Grab all entities in the scene
         Entity[] entities = GameObject.FindObjectsOfType(typeof(Entity)) as Entity[];
         //Keep hold of ones that are interactive

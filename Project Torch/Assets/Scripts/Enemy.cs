@@ -110,6 +110,8 @@ public abstract class Enemy : MonoBehaviour {
     public float hp;
     //Faction of this enemy
     public EnemyFaction faction;
+    //Zone the enemy is in
+    public ZoneManager.ZoneNames zone;
     //Used to prevent from sliding too far after taking damage
     [Range(0.50f, 1.00f)]
     public float knockbackFriction;
@@ -184,7 +186,7 @@ public abstract class Enemy : MonoBehaviour {
         }
     }
 
-    void Start () {
+    void Awake () {
         alive = true;
         hitFlashTimer = 0f;
         entity = this.GetComponent<Entity>();
@@ -437,7 +439,6 @@ public abstract class Enemy : MonoBehaviour {
                 break;
             case EnemyStates.Knockback:
                 UpdateKnockback();
-                Debug.Log("Knockback Displacement = " + entity.Displacement);
                 break;
             case EnemyStates.Stunned:
                 if (stunTime < 0f)

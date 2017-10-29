@@ -47,10 +47,11 @@ public class Entity : MonoBehaviour {
     #endregion
 
     #region Unity Methods
-    void Start()
+    void Awake()
     {
-        minY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MinY;
-        maxY = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>().MaxY;
+        ZAxisManager zax = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>();
+        minY = zax.MinY;
+        maxY = zax.MaxY;
         hitBox = this.GetComponent<BoxCollider2D>();
         speedModifier = 1f;//Always start with default speed
     }

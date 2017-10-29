@@ -97,7 +97,7 @@ public class PlayerCombat : MonoBehaviour {
     #endregion
 
     #region Unity Methods
-    void Start()
+    void Awake()
     {
         combatState = CombatStates.None;
         currentAttack = Attacks.None;

@@ -29,7 +29,7 @@ public class InteractionManager : MonoBehaviour
     #endregion
 
     #region Unity Defaults
-    void Start()
+    void Awake()
     {
         inventory = GameObject.Find("InventoryManagerGO").GetComponent<Inventory>();
         dialogue = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
@@ -38,6 +38,9 @@ public class InteractionManager : MonoBehaviour
         player = GameObject.Find("Player");
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
         braziers = GameObject.FindObjectsOfType(typeof(Brazier)) as Brazier[];
+        //braziers = new Brazier[brazierObjs.Length];
+        //for (int i = 0; i < brazierObjs.Length; ++i)
+            //braziers[i] = brazierObjs[i].GetComponent<Brazier>();
     }
 
     void Update()
@@ -49,6 +52,8 @@ public class InteractionManager : MonoBehaviour
             inventory.PickUpNearbyItems();
             //Try to talk to NPCs
             CheckInteractiveNPCs();
+            //Try to interact with braziers
+            CheckBraziers();
         }
     }
     #endregion
@@ -64,7 +69,7 @@ public class InteractionManager : MonoBehaviour
         for (int i = 0; i < text.InteractiveNPCs.Length; ++i) 
         {
             //Only check active NPCs, and check to see if they're within interaction range
-            if (text.InteractiveNPCs[i].gameObject.activeSelf && (text.InteractiveNPCs[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f)) 
+            if (text.InteractiveNPCs[i].gameObject.activeInHierarchy && (text.InteractiveNPCs[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f)) 
             {
                 //Tell the flag manager to look through the flags to determine what line of dialogue to use
                 flags.ActivateNPCDialogue(text.InteractiveNPCs[i].npcID);
@@ -81,7 +86,7 @@ public class InteractionManager : MonoBehaviour
         for (int i = 0; i < braziers.Length; ++i) 
         {
             //Check to see if you're within range (and in the same level)
-            if (braziers[i].gameObject.activeSelf && (braziers[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f))
+            if (braziers[i].gameObject.activeInHierarchy && (braziers[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f))
             {
                 //Light up the brazier
                 braziers[i].IgniteBrazier(true);

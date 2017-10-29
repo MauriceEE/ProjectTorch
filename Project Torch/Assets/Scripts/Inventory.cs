@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour {
         #endregion
 
     #region Unity Defaults
-        void Start () {
+        void Awake () {
             numHeldItems = 0;
             heldItems = new Item[maxItems];
             player = GameObject.Find("Player");

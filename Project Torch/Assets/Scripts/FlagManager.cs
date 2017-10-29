@@ -75,7 +75,7 @@ public class FlagManager : MonoBehaviour {
     #endregion
 
     #region Unity Defaults
-    void Start () {
+    void Awake () {
         dialogue = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         text = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
         flags = new Dictionary<FlagNames, bool>();
@@ -179,10 +179,32 @@ public class FlagManager : MonoBehaviour {
     /// <returns>True if conditions met</returns>
     public bool PrincessRescue()
     {
+        Debug.Log(flags[FlagNames.BattlefieldBrazierLit] + " " + flags[FlagNames.ShadowTerritory1BrazierLit]);
         return (flags[FlagNames.BattlefieldBrazierLit] &&
             flags[FlagNames.ShadowTerritory1BrazierLit] &&
             humansKilled >= 5 &&
             shadowsKilled < 3);
+    }
+    /// <summary>
+    /// Flags whether or not a brazier is lit
+    /// Should be called whenever a breazier is manipulated
+    /// </summary>
+    /// <param name="zone">Zone the brazier is in</param>
+    /// <param name="lit">Whether or not it's lit</param>
+    public void BrazierLit(ZoneManager.ZoneNames zone, bool lit)
+    {
+        switch (zone)
+        {
+            case ZoneManager.ZoneNames.Battlefield:
+                flags[FlagNames.BattlefieldBrazierLit] = lit;
+                break;
+            case ZoneManager.ZoneNames.HumanTerritoryStage1:
+                flags[FlagNames.HumanTerritory1BrazierLit] = lit;
+                break;
+            case ZoneManager.ZoneNames.ShadowTerritoryStage1:
+                flags[FlagNames.ShadowTerritory1BrazierLit] = lit;
+                break;
+        }
     }
 #endregion
 }
