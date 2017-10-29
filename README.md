@@ -71,3 +71,9 @@
 <ul><li>Finished shine and improved knockback functionality</li></ul>
 <h2>Connor Menard - 10/28/17 - 18:12</h2>
 <ul><li>Reworked zones and zone transitions</li><li>Rough outline for level blocking in place</li></ul>
+<h2>Maurice Edwards - 10/29 - 15:16</h2>
+<ul>
+  <li>Fixed darkness. It is now completely automatic. Just tell the profile changer if you want darkness and it will do the rest</li>
+  <li>Consecutive attacks now have less start-up frames</li>
+  <li>Created Shadow Brute, Spearman, and Normal Human prefabs but did not implement any in the levels yet</li>
+</ul>

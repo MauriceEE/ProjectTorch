@@ -520,8 +520,12 @@ public abstract class Enemy : MonoBehaviour {
             if (attackType == PlayerCombat.Attacks.Thrust)
                 //Remove stack, and if that was the last one...
                 if (--guardStacks <= 0)
+                {
                     //Break their guard
                     BreakGuard(2f);
+                    guarding = false;
+                }
+            //Debug.Log(guardStacks);
             //TODO: If hit by slash, do some reboud fancy thing
             if (attackType == PlayerCombat.Attacks.Slash)
             {
