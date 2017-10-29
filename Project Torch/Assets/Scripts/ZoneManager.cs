@@ -190,7 +190,7 @@ public class ZoneManager : MonoBehaviour {
             player.transform.position = new Vector3(0f, player.transform.position.y, player.transform.position.z);
             //Move to fade in phase
             phase = TransitionPhase.FadingIn;
-            //Set darkness to true if in the thriving village or fortress of dark
+            //Set darkness to true if in dark places
             profileChanger.darkness =
                 (currentZone.zone == ZoneNames.ShadowTerritoryStage1 ||
                 currentZone.zone == ZoneNames.ShadowTerritoryStage2 ||

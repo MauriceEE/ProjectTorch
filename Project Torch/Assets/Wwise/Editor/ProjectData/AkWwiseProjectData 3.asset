@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ae107a7916e48588c724e359a740e9, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 3
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

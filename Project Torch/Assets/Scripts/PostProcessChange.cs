@@ -20,13 +20,15 @@ public class PostProcessChange : MonoBehaviour {
     private ChromaticAberrationModel.Settings chromaticAberSettings;
     private GrainModel.Settings grainSettings;
     // copies of starting intensities for reference
-    private float vignetteStartingIntensity; // .55
-    private float chromaticAbStartingIntensity; // .4
-    private float grainStartingIntensity; // .12
+    private float vignetteStartingIntensity; // .6
+    private float chromaticAbStartingIntensity; // .375
+    private float grainStartingIntensity; // .11
     // desired current values
     private float desiredVignetteIntensity;
     private PlayerMovement playerMove;
     private float enhancedRadiusTime;
+    // The camera
+    private Camera gameCam;
     #endregion
 
     // Use this for initialization
@@ -39,9 +41,10 @@ public class PostProcessChange : MonoBehaviour {
         vignetteSettings = profile.vignette.settings;
         chromaticAberSettings = profile.chromaticAberration.settings;
         grainSettings = profile.grain.settings;
+        gameCam = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         // set starting intensities for easier code management
-        vignetteStartingIntensity = vignetteSettings.intensity;
+        vignetteStartingIntensity = .6f;
         chromaticAbStartingIntensity = chromaticAberSettings.intensity;
         grainStartingIntensity = grainSettings.intensity;
     }
@@ -53,31 +56,36 @@ public class PostProcessChange : MonoBehaviour {
         {
             profile.grain.enabled = true;
             profile.chromaticAberration.enabled = true;
-            DarknessCreep(darkness); // adjust darkness
         }
         else
         {
             profile.grain.enabled = false;
             profile.chromaticAberration.enabled = false;
-            DarknessCreep(darkness); // adjust darkness
         }
-	}
+        DarknessCreep(); // adjust darkness
+    }
 
     /// <summary>
     /// Method controlling the visual representation of the darkness
     /// </summary>
-    /// <param name="grow">Whether to grow or shrink the darkness. True for grow. False for shrink.</param>
-    private void DarknessCreep(bool grow)
+    private void DarknessCreep()
     {
         // copy current settings
         vignetteSettings = profile.vignette.settings;
 
-        // adjust vignette center
-        //vignetteSettings.center.y = playerMove.transform.position.y / ???;
+        // adjust vignette center's y position
+        vignetteSettings.center.y = gameCam.WorldToViewportPoint(playerMove.transform.position).y;
 
         // set desired vignette intensity
         if (enhancedRadius) affectRadius();
-        else desiredVignetteIntensity = vignetteStartingIntensity;
+        else
+        {
+            if (darkness) desiredVignetteIntensity = vignetteStartingIntensity;
+            else desiredVignetteIntensity = 0;
+        }
+
+        // determine grow or shrink
+        bool grow = (desiredVignetteIntensity > vignetteSettings.intensity);
 
         // change temporary settings
         switch(grow)
@@ -127,7 +135,7 @@ public class PostProcessChange : MonoBehaviour {
         if(enhancedRadiusTime > 4f)
         {
             desiredVignetteIntensity = 1;
-            if(enhancedRadiusTime > 8f)
+            if(enhancedRadiusTime > 10f)
             {
                 enhancedRadiusTime = 0;
                 enhancedRadius = false;

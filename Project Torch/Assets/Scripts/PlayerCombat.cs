@@ -88,7 +88,7 @@ public class PlayerCombat : MonoBehaviour {
     //List of enemies you can hit this frame
     protected List<GameObject> hittableEnemies;
     // Post processing changer
-    protected PostProcessChange ppChange;
+    private PostProcessChange ppChange;
     #endregion
 
     #region Properties
@@ -104,7 +104,7 @@ public class PlayerCombat : MonoBehaviour {
         entity = this.GetComponent<Entity>();
         movement = this.GetComponent<PlayerMovement>();
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
-        //ppChange = GameObject.Find("MainCamera").GetComponent<PostProcessChange>();
+        ppChange = GameObject.Find("Main Camera").GetComponent<PostProcessChange>();
     }
 
     void Update()
@@ -118,11 +118,12 @@ public class PlayerCombat : MonoBehaviour {
         
         attackTime += Time.deltaTime;
 
+        // TORCH "PLANT" CANCEL
         //Cancel attack and expand light radius
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (ppChange.enhancedRadius != true && Input.GetKeyDown(KeyCode.Space))
         {
             Cancel();
-            //ppChange.enhancedRadius = true;
+            ppChange.enhancedRadius = true;
         }
 
         // Get frame adjustments, if any
