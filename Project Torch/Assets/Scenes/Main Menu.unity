@@ -259,6 +259,8 @@ GameObject:
   - component: {fileID: 1138539928}
   - component: {fileID: 1138539927}
   - component: {fileID: 1138539931}
+  - component: {fileID: 1138539933}
+  - component: {fileID: 1138539932}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -355,6 +357,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c9784aef0f6ed45a0f9459b659af73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1353961046}
+  - {fileID: 1594957727}
+  - {fileID: 1616181874}
+--- !u!114 &1138539932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138539926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0c95200e09c4503a2c1529cd2ed1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  valueGuid: d60a50c59c21b54c8a5c5222a4c4c075
+  eventID: 454121546
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
+--- !u!114 &1138539933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138539926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e2a1a0f972a4b838fd7f9d0659c506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1259846946
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +532,7 @@ GameObject:
   - component: {fileID: 1353961048}
   - component: {fileID: 1353961047}
   - component: {fileID: 1353961046}
+  - component: {fileID: 1353961049}
   m_Layer: 5
   m_Name: Start Game
   m_TagString: Untagged
@@ -593,6 +644,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353961044}
+--- !u!114 &1353961049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353961044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626501d403edaa24f842ae0e4a00c092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404189384
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +742,7 @@ GameObject:
   - component: {fileID: 1594957729}
   - component: {fileID: 1594957728}
   - component: {fileID: 1594957727}
+  - component: {fileID: 1594957730}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -780,6 +843,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594957725}
+--- !u!114 &1594957730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594957725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626501d403edaa24f842ae0e4a00c092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1616181872
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +865,7 @@ GameObject:
   - component: {fileID: 1616181876}
   - component: {fileID: 1616181875}
   - component: {fileID: 1616181874}
+  - component: {fileID: 1616181877}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -902,6 +977,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616181872}
+--- !u!114 &1616181877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616181872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626501d403edaa24f842ae0e4a00c092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947895735
 GameObject:
   m_ObjectHideFlags: 0
