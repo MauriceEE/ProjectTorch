@@ -77,3 +77,5 @@
   <li>Consecutive attacks now have less start-up frames</li>
   <li>Created Shadow Brute, Spearman, and Normal Human prefabs but did not implement any in the levels yet</li>
 </ul>
+<h2>Steven Ma - 10/30/17 - 2:31</h2>
+<ul><li>Made all the backgrounds close to what they should be</li></ul>
