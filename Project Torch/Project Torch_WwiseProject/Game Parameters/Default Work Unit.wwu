@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{12081575-47C9-473E-A190-14C230AB9725}" SchemaVersion="80">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{12081575-47C9-473E-A190-14C230AB9725}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{12081575-47C9-473E-A190-14C230AB9725}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="PlayerHealth" ID="{2D050138-7EEE-4804-9E68-E5B2B6F466D8}"/>
+				<GameParameter Name="TimeRemaining" ID="{FB9D4776-BDF5-4AFF-99C2-C99013A6CCA0}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

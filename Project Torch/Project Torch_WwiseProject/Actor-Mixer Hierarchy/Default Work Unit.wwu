@@ -1,6 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}" SchemaVersion="80">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="UI" ID="{939813FE-93A1-4302-B73E-EFB7FFD46170}" ShortID="794737046">
+					<ChildrenList>
+						<Sound Name="ButtonPress" ID="{B35158C5-FE00-4D34-8F50-9FA23F0C6DF1}" ShortID="869308072">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Thick Plastic Hits 32" ID="{CB4B465D-1C82-4F3B-A0DD-BC835D08DD2C}" ShortID="1023094648">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0513119696292988"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00620254577936579"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.0813849188625875"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Thick Plastic Hits 32.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Thick Plastic Hits 32" ID="{CB4B465D-1C82-4F3B-A0DD-BC835D08DD2C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scroll" ID="{E9DE3243-3961-477C-874D-5AA715276A60}" ShortID="547278621">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{56D3A5B4-3E03-44C2-ABA5-28B747E22A0E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="15"/>
+													<Property Name="Min" Type="Real64" Value="-15"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Thick Plastic Hits 05" ID="{E2707B2C-B6DA-410A-B34D-F0317C97EF59}" ShortID="252553299">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0541920221080839"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0452571367425934"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.0994491588506773"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Thick Plastic Hits 05.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Thick Plastic Hits 05" ID="{E2707B2C-B6DA-410A-B34D-F0317C97EF59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pause" ID="{816FEDE0-84BB-49BF-8932-339C2FD0BA1F}" ShortID="882961809">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Thick Plastic Hits 36" ID="{36BC003B-3C7D-47C9-979D-21F997F84D8F}" ShortID="871341411">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0583593866309365"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00512133392883728"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.0920649099300283"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+									</ReferenceList>
+									<Language>SFX</Language>
+									<AudioFile>Thick Plastic Hits 36.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Thick Plastic Hits 36" ID="{36BC003B-3C7D-47C9-979D-21F997F84D8F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Resume" ID="{54060526-1D8D-4432-9A19-840436EC78C8}" ShortID="1060162701">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Air Burst Short 01" ID="{6D6E0D9C-253B-4DA3-A843-D81E69870D49}" ShortID="186580846">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Air Burst Short 01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Air Burst Short 01" ID="{6D6E0D9C-253B-4DA3-A843-D81E69870D49}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Adjudicator" ID="{1BB50FD0-F07A-4CAF-A1E8-798E27A27B0D}" ShortID="741823652">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Slash" ID="{2C5D5241-9619-4D8E-A8FA-E4CD483475C4}" ShortID="750633475">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

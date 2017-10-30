@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Attacks and Abilities" ID="{CC9B6AD0-A1BE-4848-B983-A6C92F19A48E}" ShortID="445742286">
+					<ChildrenList>
+						<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}"/>
+						<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}"/>
+						<Event Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}"/>
+						<Event Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}"/>
+						<Event Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{6288F1F1-19D9-4F1A-A122-F6836F28DDB6}" ShortID="568601353">
+					<ChildrenList>
+						<Event Name="Attack1" ID="{8C312131-3AB9-474D-9EE7-473711B04DE1}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{2D8A632B-B382-4092-8855-7C0D9B2EC292}" ShortID="1069001943">
+					<ChildrenList>
+						<Event Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}">
+							<ChildrenList>
+								<Action Name="" ID="{3806BD60-44A1-4ADC-8823-2BB0CB9BE03E}" ShortID="792560120">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pause" ID="{816FEDE0-84BB-49BF-8932-339C2FD0BA1F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5244C5F2-FB0B-4C89-9BBE-94744D18BB70}" ShortID="672969618">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pause" ID="{B3196C30-E3E3-4B81-9619-B26B912D7829}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Resume" ID="{6D0C8E99-260A-43EB-A8F7-5BE239E8654F}">
+							<ChildrenList>
+								<Action Name="" ID="{62F28C7F-2F47-4764-BAF1-C806EC6D5753}" ShortID="520780523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Resume" ID="{54060526-1D8D-4432-9A19-840436EC78C8}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{34655FB6-6DA2-4EB6-A072-5AFFAB19C40E}" ShortID="364423808">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}">
+							<ChildrenList>
+								<Action Name="" ID="{606C8B2D-86F5-4C6B-9111-4E78AA9B60EE}" ShortID="888694031">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Scroll" ID="{E9DE3243-3961-477C-874D-5AA715276A60}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}">
+							<ChildrenList>
+								<Action Name="" ID="{FC92B974-DC1F-4915-8185-A4467E8BCE6C}" ShortID="847647624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ButtonPress" ID="{B35158C5-FE00-4D34-8F50-9FA23F0C6DF1}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
