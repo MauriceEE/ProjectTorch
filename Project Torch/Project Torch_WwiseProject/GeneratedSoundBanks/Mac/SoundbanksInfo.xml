@@ -16,16 +16,16 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\Default Work Unit\Enemies\Attack1"/>
+				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\Default Work Unit\Enemies\Attack1" MaxAttenuation="0.000000"/>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash" MaxAttenuation="0.000000"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
-				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine"/>
-				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash"/>
-				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust"/>
-				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant"/>
+				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine" MaxAttenuation="0.000000"/>
+				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash" MaxAttenuation="0.000000"/>
+				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust" MaxAttenuation="0.000000"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="186580846" Language="SFX">
