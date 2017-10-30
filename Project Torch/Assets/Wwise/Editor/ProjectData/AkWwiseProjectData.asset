@@ -271,7 +271,11 @@ MonoBehaviour:
   - /Project Torch_WwiseProject
   - /Project Torch_WwiseProject/Events
   - /Project Torch_WwiseProject/Events/Default Work Unit
+  - /Project Torch_WwiseProject/Events/Default Work Unit/Attacks and Abilities
   - /Project Torch_WwiseProject/Events/Default Work Unit/UI
+  - /Project Torch_WwiseProject/SoundBanks
+  - /Project Torch_WwiseProject/SoundBanks/Default Work Unit
+  - /Project Torch_WwiseProject/States
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

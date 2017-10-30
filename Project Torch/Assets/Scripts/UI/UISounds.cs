@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UISounds : MonoBehaviour, IPointerEnterHandler {
+public class UISounds : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler{
+    public void OnPointerClick(PointerEventData eventData) {
+        AkSoundEngine.PostEvent("ButtonPress", gameObject);
+    }
+
     public void OnPointerEnter(PointerEventData eventData) {
         AkSoundEngine.PostEvent("Pause", gameObject);
-        Debug.Log("Sound");
     }
 
     // Use this for initialization
