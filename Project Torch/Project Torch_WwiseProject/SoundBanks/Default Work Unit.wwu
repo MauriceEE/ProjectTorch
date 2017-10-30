@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A16D6668-519C-48B3-9FE3-35CA4D73DF52}" SchemaVersion="80">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{A16D6668-519C-48B3-9FE3-35CA4D73DF52}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A16D6668-519C-48B3-9FE3-35CA4D73DF52}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="SFX" ID="{990AEA80-CF37-4F7C-8D0B-838EA225ACFD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Resume" ID="{6D0C8E99-260A-43EB-A8F7-5BE239E8654F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Attack1" ID="{8C312131-3AB9-474D-9EE7-473711B04DE1}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Music" ID="{23529EC4-5195-442A-AE72-5086CD10CDDF}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

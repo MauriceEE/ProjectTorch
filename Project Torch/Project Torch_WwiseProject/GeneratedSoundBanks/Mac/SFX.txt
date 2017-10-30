@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	317641954	ButtonPress			\Default Work Unit\UI\ButtonPress	
+	454121546	Scroll			\Default Work Unit\UI\Scroll	
+	953277036	Resume			\Default Work Unit\UI\Resume	
+	1942692385	Dash			\Default Work Unit\Attacks and Abilities\Dash	
+	2197345151	Thrust			\Default Work Unit\Attacks and Abilities\Thrust	
+	2547765723	Torch_Plant			\Default Work Unit\Attacks and Abilities\Torch_Plant	
+	3055381918	Shine			\Default Work Unit\Attacks and Abilities\Shine	
+	3092587493	Pause			\Default Work Unit\UI\Pause	
+	3768540966	Attack1			\Default Work Unit\Enemies\Attack1	
+	4107276880	Slash			\Default Work Unit\Attacks and Abilities\Slash	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	186580846	Resume	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Resume		26994
+	252553299	Scroll	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 05_5332F36D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll		5268
+	871341411	Pause	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 36_945CC07C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pause		8410
+	1023094648	ButtonPress	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 32_DC8A1A17.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress		7280
+

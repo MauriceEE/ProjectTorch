@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\Default Work Unit\Enemies\Attack1"/>
+				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash"/>
+				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
+				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
+				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
+				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine"/>
+				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash"/>
+				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="186580846" Language="SFX">
+					<ShortName>Air Burst Short 01.wav</ShortName>
+					<Path>SFX/Air Burst Short 01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="252553299" Language="SFX">
+					<ShortName>Thick Plastic Hits 05.wav</ShortName>
+					<Path>SFX/Thick Plastic Hits 05_5332F36D.wem</Path>
+				</File>
+				<File Id="871341411" Language="SFX">
+					<ShortName>Thick Plastic Hits 36.wav</ShortName>
+					<Path>SFX/Thick Plastic Hits 36_945CC07C.wem</Path>
+				</File>
+				<File Id="1023094648" Language="SFX">
+					<ShortName>Thick Plastic Hits 32.wav</ShortName>
+					<Path>SFX/Thick Plastic Hits 32_DC8A1A17.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
