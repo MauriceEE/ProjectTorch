@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -724,6 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -1009,7 +1011,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 4
-  newXCoordinate: 0
 --- !u!212 &81670685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1166,6 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -1370,6 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -1883,6 +1886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -2262,7 +2266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 1
-  newXCoordinate: 0
 --- !u!1 &325906335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -2711,6 +2715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -2956,6 +2961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -3947,6 +3953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -4121,6 +4128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -4423,6 +4431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -4606,7 +4615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 3
-  newXCoordinate: 0
 --- !u!212 &549097155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4753,6 +4761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -4927,6 +4936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -5109,8 +5119,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1696500714}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5223,6 +5232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -5476,6 +5486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -5721,6 +5732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -6107,6 +6119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -6177,6 +6190,74 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8151405}
   m_EdgeRadius: 0
+--- !u!1 &711161885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 711161886}
+  - component: {fileID: 711161888}
+  - component: {fileID: 711161887}
+  m_Layer: 0
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &711161886
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711161885}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1046331465}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -365.9, y: 176.4}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &711161887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711161885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
+  m_Color: {r: 0.38985792, g: 1, b: 0.30882353, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &711161888
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711161885}
 --- !u!1 &715481208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6281,6 +6362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -6455,6 +6537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -6760,6 +6843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -7406,6 +7490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -7580,6 +7665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -7830,6 +7916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -8116,6 +8203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -8454,6 +8542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -8580,6 +8669,101 @@ Transform:
   m_Father: {fileID: 628192371}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &975315748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 975315749}
+  - component: {fileID: 975315752}
+  - component: {fileID: 975315751}
+  - component: {fileID: 975315750}
+  m_Layer: 0
+  m_Name: HUDCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &975315749
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975315748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1696500714}
+  - {fileID: 1046331465}
+  m_Father: {fileID: 1910313593}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &975315750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975315748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &975315751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975315748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &975315752
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975315748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &982735051
 GameObject:
   m_ObjectHideFlags: 0
@@ -8684,6 +8868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -8858,6 +9043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -9392,6 +9578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -9584,6 +9771,41 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038739829}
+--- !u!1 &1046331464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1046331465}
+  m_Layer: 0
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1046331465
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046331464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1090040319}
+  - {fileID: 711161886}
+  m_Father: {fileID: 975315749}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1049430447
 GameObject:
   m_ObjectHideFlags: 0
@@ -9794,6 +10016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -9864,6 +10087,74 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8151405}
   m_EdgeRadius: 0
+--- !u!1 &1090040318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1090040319}
+  - component: {fileID: 1090040321}
+  - component: {fileID: 1090040320}
+  m_Layer: 0
+  m_Name: Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1090040319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090040318}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1046331465}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -365.9, y: 176.40001}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1090040320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090040318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
+  m_Color: {r: 0.58823526, g: 0.20761243, b: 0.20761243, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1090040321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090040318}
 --- !u!1 &1097571731
 GameObject:
   m_ObjectHideFlags: 0
@@ -10157,6 +10448,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: hp
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 463392aad12d7e745864467aac870e50, type: 2}
   m_IsPrefabParent: 0
@@ -10304,6 +10600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -10604,6 +10901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -10778,6 +11076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -11305,6 +11604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -11415,21 +11715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e922ef46cd43e48955eff4046a00ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentZone: 0
+  startingZone: 0
   blackScreen: {fileID: 649163423}
-  battlefieldLeftEndPoint: {fileID: 1828096108}
-  battlefieldRightEndPoint: {fileID: 321621690}
-  sullenVillageLeftEndPoint: {fileID: 81670682}
-  sullenVillageRightEndPoint: {fileID: 2005246604}
-  thrivingVillageLeftEndPoint: {fileID: 2055835728}
-  thrivingVillageRightEndPoint: {fileID: 549097152}
-  throneRoomEndPoint: {fileID: 1971992311}
-  fortressKeepEndPoint: {fileID: 1721795248}
-  battlefieldZone: {fileID: 647726121}
-  sullenVillageZone: {fileID: 1759918584}
-  thrivingVillageZone: {fileID: 376737623}
-  throneRoomZone: {fileID: 818091451}
-  fortressKeepZone: {fileID: 1909961561}
 --- !u!1 &1341004139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11605,6 +11892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -11770,6 +12058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -12691,6 +12980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -13252,6 +13542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -13426,6 +13717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -13519,11 +13811,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696500713}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 590272609}
+  m_Father: {fileID: 975315749}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -13543,7 +13835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13660,6 +13952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -13786,7 +14079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 1
-  newXCoordinate: -150
 --- !u!212 &1721795251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13933,6 +14225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -14294,6 +14587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -14822,7 +15116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 2
-  newXCoordinate: 140
 --- !u!212 &1828096111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14969,6 +15262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 1
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -15366,6 +15660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c9784aef0f6ed45a0f9459b659af73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!4 &1910313593
 Transform:
   m_ObjectHideFlags: 0
@@ -15377,6 +15672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2082153444}
+  - {fileID: 975315749}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15690,6 +15986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -15878,6 +16175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -16326,7 +16624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 2
-  newXCoordinate: 155
 --- !u!212 &1971992314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16473,7 +16770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 0
-  newXCoordinate: -150
 --- !u!212 &2005246607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16795,6 +17091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   faction: 0
+  zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
@@ -16907,7 +17204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextZone: 0
-  newXCoordinate: 140
 --- !u!212 &2055835731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17173,7 +17469,7 @@ GameObject:
   - component: {fileID: 2082153442}
   - component: {fileID: 2082153441}
   m_Layer: 5
-  m_Name: UICanvas
+  m_Name: MenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
