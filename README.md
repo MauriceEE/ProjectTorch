@@ -79,3 +79,5 @@
 </ul>
 <h2>Steven Ma - 10/30/17 - 2:31</h2>
 <ul><li>Made all the backgrounds close to what they should be</li></ul>
+<h2>Connor Menard - 11/1/17 - 5:00</h2>
+<ul><li>More Aggression stuff (not done yet though)</li><li>Shine hitbox visible in-game</li></ul>
