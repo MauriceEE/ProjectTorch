@@ -79,3 +79,5 @@
 </ul>
 <h2>Steven Ma - 10/30/17 - 2:31</h2>
 <ul><li>Made all the backgrounds close to what they should be</li></ul>
+<h2>Steven Ma - 11/1/17 - 2:41</h2>
+<ul><li>Added the War Zone level and added a trigger for them in the FlagManager</li></ul>

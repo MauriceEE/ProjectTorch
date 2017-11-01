@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F625D043-55B3-4F69-A4F1-FC06A818FF00}'
-    m_lastTimePsrt1: 1780664232
-    m_lastTimePart2: -1999298587
+    m_lastTimePsrt1: -1611241670
+    m_lastTimePart2: -1999298362
     List:
     - Name: Attack1
       Path: Default Work Unit\Enemies\Attack1
@@ -143,15 +143,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{42834CBF-5E75-4807-89CA-1BF2ABCC967E}'
-    m_lastTimePsrt1: 1112577823
-    m_lastTimePart2: -1999301635
+    m_lastTimePsrt1: -1353864618
+    m_lastTimePart2: -1999298740
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1C6F15B7-5082-4AA6-809E-55AE31210F8C}'
-    m_lastTimePsrt1: 1780764503
-    m_lastTimePart2: -1999298587
+    m_lastTimePsrt1: -1611046142
+    m_lastTimePart2: -1999298362
     List:
     - Name: GameState
       Path: Default Work Unit\GameState
@@ -207,15 +207,15 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{957109A5-E41F-4B9F-A5A3-2341E8B43C94}'
-    m_lastTimePsrt1: 1112653024
-    m_lastTimePart2: -1999301635
+    m_lastTimePsrt1: -1353794430
+    m_lastTimePart2: -1999298740
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A16D6668-519C-48B3-9FE3-35CA4D73DF52}'
-    m_lastTimePsrt1: -501734627
-    m_lastTimePart2: -1999298585
+    m_lastTimePsrt1: -1611056175
+    m_lastTimePart2: -1999298362
     List:
     - Name: Music
       Path: Default Work Unit\Music
@@ -239,8 +239,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{12081575-47C9-473E-A190-14C230AB9725}'
-    m_lastTimePsrt1: 1780669234
-    m_lastTimePart2: -1999298587
+    m_lastTimePsrt1: -1611231642
+    m_lastTimePart2: -1999298362
     List:
     - Name: PlayerHealth
       Path: Default Work Unit\PlayerHealth
@@ -264,8 +264,8 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F8532ED5-CD91-4CD4-B9AA-298B16E0D638}'
-    m_lastTimePsrt1: 1112658036
-    m_lastTimePart2: -1999301635
+    m_lastTimePsrt1: -1353789271
+    m_lastTimePart2: -1999298740
     List: []
   ExpandedItems:
   - /Project Torch_WwiseProject
