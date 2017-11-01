@@ -173,7 +173,7 @@ public class FlagManager : MonoBehaviour {
         }
     }
     /// <summary>
-    /// Returns whether or not the conditions for the Princess Rescue stage or met
+    /// Returns whether or not the conditions for the Princess Rescue stage are met
     /// Called by ZoneManager
     /// </summary>
     /// <returns>True if conditions met</returns>
@@ -184,6 +184,17 @@ public class FlagManager : MonoBehaviour {
             flags[FlagNames.ShadowTerritory1BrazierLit] &&
             humansKilled >= 5 &&
             shadowsKilled < 3);
+    }
+    /// <summary>
+    /// Returns whether or not the conditions for the War Zone stage are met
+    /// Called by ZoneManager
+    /// </summary>
+    /// <returns>True if conditions met</returns>
+    public bool WarZone()
+    {
+        //Debug.Log(flags[FlagNames.BattlefieldBrazierLit] + " " + flags[FlagNames.ShadowTerritory1BrazierLit]);
+        return (humansKilled >= 5 &&
+            shadowsKilled >= 4);
     }
     /// <summary>
     /// Flags whether or not a brazier is lit
