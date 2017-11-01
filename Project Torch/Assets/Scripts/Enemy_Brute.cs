@@ -36,7 +36,7 @@ public class Enemy_Brute : Enemy
         else if (rand < guardChance + counterAttackChance)
         {
             // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttackPlayer())
             {
                 //Enter counterattack state
                 counterattacking = true;

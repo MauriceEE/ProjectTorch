@@ -83,7 +83,7 @@ public class ZoneManager : MonoBehaviour {
             zonesSorted.Add(z.zone, z);
         }
         //Set current zone
-        currentZone = zonesSorted[ZoneNames.Battlefield];
+        currentZone = zonesSorted[startingZone];
         //Assign camera clamp values
         UpdateCameraClamp();
         //Get flag manager

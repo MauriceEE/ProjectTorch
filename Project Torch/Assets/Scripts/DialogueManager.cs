@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour {
             c = new Color(c.r, c.b, c.g, .5f);
             dialogueBox.transform.parent.Find("arrow").GetComponent<Image>().color = c;
         }
-        if (bufferText.Count <= 0 && (Input.GetKeyDown(KeyCode.Mouse0)|| Input.touchCount > 0) && isClicked) {
+        if (bufferText.Count <= 0 && (Input.GetKeyDown(KeyCode.Mouse0)|| Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1)) && isClicked) {
             if(Input.touchCount > 0) {
                 for (int i = 0; i < Input.touchCount; i++) {
                     if (Input.GetTouch(i).phase == TouchPhase.Began) {
@@ -101,7 +101,7 @@ public class DialogueManager : MonoBehaviour {
             }
         }
          //Display all text on left click
-         else if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0) && isClicked) {//&& dialogueBox.transform.parent.GetComponent<DialogueBox>().isClicked()) {
+         else if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1)) && isClicked) {//&& dialogueBox.transform.parent.GetComponent<DialogueBox>().isClicked()) {
             StringBuilder stringBuilder = new StringBuilder("", bufferText.Count);
             while (bufferText.Count > 0) {
                 stringBuilder.Append(bufferText.Dequeue());

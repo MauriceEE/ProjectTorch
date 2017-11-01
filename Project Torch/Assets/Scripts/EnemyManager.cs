@@ -85,8 +85,6 @@ public class EnemyManager : MonoBehaviour {
         zoneEnemies = new List<GameObject>();
         encounterEnemies = new List<GameObject>();
         gameEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        //foreach (GameObject o in gameEnemies)
-            //zoneEnemies.Add(o);
         player = GameObject.Find("Player");
         surroundingGridOccupants = new GameObject[6];
         for (int i = 0; i < 6; ++i) 
@@ -94,45 +92,17 @@ public class EnemyManager : MonoBehaviour {
         gridPositions = new Vector2[6];
         GenerateGridPositions();
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
-        //allEnemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
     }
 	
 	void Update () {
         CleanupEnemies();
-        //MoveEnemies();
         if (encounterActive)
             ManageEncounter();
 	}
     #endregion
 
     #region Custom Methods
-    /// <summary>
-    /// Removes any enemies that have been flagged as not alive
-    /// </summary>
-    void CleanupEnemies()
-    {
-        for(int i=0; i< gameEnemies.Length; ++i)
-        {
-            if (gameEnemies[i] != null && !gameEnemies[i].GetComponent<Enemy>().Alive)
-            {
-                //Remove enemy from big list of enemies
-                zoneEnemies.Remove(gameEnemies[i]);
-                //Remove enemy from list of encounter enemies if it's there
-                if (encounterEnemies.Contains(gameEnemies[i]))
-                    encounterEnemies.Remove(gameEnemies[i]);
-                //Remove enemy from array of enemies surrounding the player if it's there
-                for (int j = 0; j < 6; ++j) 
-                    if (surroundingGridOccupants[j] == gameEnemies[i])
-                        surroundingGridOccupants[j] = null;
-                //Destroy gameobject
-                Destroy(gameEnemies[i]);
-                //Tell the flag manager whether or not the enemy was a human
-                flags.EnemyKilled(gameEnemies[i].GetComponent<Enemy>().faction == Enemy.EnemyFaction.Human);
-                //Set to null
-                gameEnemies[i] = null; 
-            }
-        }
-    }
+    // N/A
     #endregion
 
     #region Encounter Methods
@@ -155,18 +125,94 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterEnemies.Add(zoneEnemies[i]);
                 zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
-                //Try to add enemy to grid cell
-                Enemy e = encounterEnemies[encounterEnemies.Count - 1].GetComponent<Enemy>();
-                e.MoveTarget = SendNewMoveTarget(e);
-                //Tell the enemies not to ally the player if they're of an opposing faction
-                if (e.faction == hitEnemyFaction)
-                    e.AlliedWithPlayer = false;
             }
-
             if (encounterEnemies.Count > 6)
                 throw new UnityException();//Don't allow more than 6 enemies in an encounter... if this line of code triggers then we need to fix something
         }
-        Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count);
+        Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count + ", now assigning attack targets...");
+        //Now that we have all the encounter enemies setup, we can assign attack targets
+        for (int i = 0; i < encounterEnemies.Count; ++i)
+        {
+            Enemy e = encounterEnemies[i].GetComponent<Enemy>();
+            //Tell the enemies not to ally the player if they're of an opposing faction
+            if (e.faction == hitEnemyFaction)
+            {
+                e.AlliedWithPlayer = false;
+                //Try to add enemy to grid cell if they're not allied with the player
+                e.MoveTarget = SendNewMoveTarget(e);
+            }
+            else
+            {
+                e.AlliedWithPlayer = true;
+                e.AttackTarget = GetNewAttackTarget(e.faction);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Removes any enemies that have been flagged as not alive
+    /// </summary>
+    void CleanupEnemies()
+    {
+        for (int i = 0; i < gameEnemies.Length; ++i)
+        {
+            if (gameEnemies[i] != null && !gameEnemies[i].GetComponent<Enemy>().Alive)
+            {
+                //Remove enemy from big list of enemies
+                zoneEnemies.Remove(gameEnemies[i]);
+                //Remove enemy from list of encounter enemies if it's there
+                if (encounterEnemies.Contains(gameEnemies[i]))
+                    encounterEnemies.Remove(gameEnemies[i]);
+                //Remove enemy from array of enemies surrounding the player if it's there
+                for (int j = 0; j < 6; ++j)
+                    if (surroundingGridOccupants[j] == gameEnemies[i])
+                        surroundingGridOccupants[j] = null;
+                //Check to see if any encounter enemies had it as their attack target
+                Enemy e;
+                for (int j = 0; j < encounterEnemies.Count; ++j)
+                {
+                    e = encounterEnemies[j].GetComponent<Enemy>();
+                    if (e.AttackTarget == gameEnemies[i])
+                    {
+                        e.AttackTarget = null;
+                        e.AttackTarget = GetNewAttackTarget(e.faction);
+                    }
+                }
+                //Destroy gameobject
+                Destroy(gameEnemies[i]);
+                //Tell the flag manager whether or not the enemy was a human
+                flags.EnemyKilled(gameEnemies[i].GetComponent<Enemy>().faction == Enemy.EnemyFaction.Human);
+                //Set to null
+                gameEnemies[i] = null;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Returns an enemy of a certain faction that's in the encounter
+    /// </summary>
+    /// <param name="allyFaction">Faction of the enemy requesting the target</param>
+    /// <returns>An enemy that can be set as the attack target</returns>
+    protected GameObject GetNewAttackTarget(Enemy.EnemyFaction allyFaction)
+    {
+        int rando = Random.Range(0, encounterEnemies.Count);
+        int ogRando = rando;
+        while (encounterEnemies[rando].GetComponent<Enemy>().faction == allyFaction)
+        {
+            //Look for next enemy
+            ++rando;
+            //Make sure we're not out of bounds
+            if (rando >= encounterEnemies.Count)
+                rando = 0;
+            //If we looped through all possible other enemies...
+            if (rando == ogRando)
+            {
+                encounterActive = false;
+                Debug.Log("No more enemies of opposing faction, encounter ending...");
+                return null;
+            }
+        }
+        return encounterEnemies[rando];
     }
 
     /// <summary>
@@ -183,12 +229,14 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
-    public bool CanEnemiesAttack()
+    public bool CanEnemiesAttackPlayer()
     {
+        Enemy e;
         // loop through all enemies, checking to see if anyone is currently attacking
         for (int i = 0; i < encounterEnemies.Count; i++)
         {
-            if (encounterEnemies[i].GetComponent<Enemy>().isAttacking == true) return false;
+            e = encounterEnemies[i].GetComponent<Enemy>();
+            if (e.isAttacking && !e.AlliedWithPlayer) return false;
         }
         return true;
     }
@@ -202,7 +250,8 @@ public class EnemyManager : MonoBehaviour {
         if (encounterActive)
         {
             UpdateEnemiesInGrid();
-            MoveToAttack();
+            UpdateEnemiesAlliedWithPlayer();
+            MoveToAttackPlayer();
         }
         else
         {
@@ -214,14 +263,34 @@ public class EnemyManager : MonoBehaviour {
                 surroundingGridOccupants[i] = null;
         }
     }
+    /// <summary>
+    /// This method goes through all the enemies that are allied with the player and updates them
+    /// </summary>
+    protected void UpdateEnemiesAlliedWithPlayer()
+    {
+        Enemy e;
+        for (int i = 0; i < encounterEnemies.Count; ++i)
+        {
+            e = encounterEnemies[i].GetComponent<Enemy>();
+            if (e.AlliedWithPlayer)
+            {
+                //Make sure they have a target to attack
+                if (e.AttackTarget == null)
+                    e.MoveToAttack(GetNewAttackTarget(e.faction));
+                else if (e.EnemyState == Enemy.EnemyStates.ReturningFromAttack)//Make them attack again after they attack
+                    e.MoveToAttack(e.AttackTarget);
+
+            }
+        }
+    }
 
     /// <summary>
     /// Tells an enemy to move in to position and attack
     /// </summary>
-    protected void MoveToAttack()
+    protected void MoveToAttackPlayer()
     {
         //If ready to attack, attack
-        if (CanEnemiesAttack() && timeBeforeNextAttack <= 0) 
+        if (CanEnemiesAttackPlayer() && timeBeforeNextAttack <= 0) 
         {
             //Make random enemy attack
             //This little bit here finds a random enemy among the ones circling the player in the grid cells
@@ -231,6 +300,11 @@ public class EnemyManager : MonoBehaviour {
                 ++randIndex;
                 if (randIndex >= 6)
                     randIndex = 0;
+            }
+            if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().AlliedWithPlayer)
+            {
+                Debug.Log("fugggggg");
+                Debug.Break();
             }
             //Tell the enemy we found to attack
             surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);

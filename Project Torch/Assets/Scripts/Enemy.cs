@@ -9,7 +9,7 @@ using UnityEngine;
 /// </summary>
 public abstract class Enemy : MonoBehaviour {
     #region Enums
-    protected enum EnemyStates
+    public enum EnemyStates
     {
         Idle,
         ApproachingToAttack,
@@ -21,7 +21,7 @@ public abstract class Enemy : MonoBehaviour {
         Knockback,
         Stunned
     }
-    protected enum CombatStates
+    public enum CombatStates
     {
         None,
         Startup,
@@ -93,6 +93,8 @@ public abstract class Enemy : MonoBehaviour {
     protected float knockbackModifier;
     //Whether or not this enemy is allied with the player, will start as true
     protected bool alliedWithPlayer;
+    //Whether or not this enemy is being attacked by another
+    //protected bool targetedByEnemy;
     // Base color
     protected Color baseColor;
     // reaction variables
@@ -173,6 +175,9 @@ public abstract class Enemy : MonoBehaviour {
     public bool GuardBroken { get { return guardBroken; } set { guardBroken = value; } }
     public float KnockbackModifier { get { return knockbackModifier; } }
     public bool AlliedWithPlayer { get { return alliedWithPlayer; } set { alliedWithPlayer = value; } }
+    public GameObject AttackTarget { get { return attackTarget; } set { attackTarget = value; } }
+    public EnemyStates EnemyState { get { return enemyState; } }
+    public CombatStates CombatState { get { return combatState; } }
     #endregion
 
     #region Unity Methods
@@ -347,7 +352,8 @@ public abstract class Enemy : MonoBehaviour {
                 isAttacking = false; // might change this if it proves cheap
 
                 // increase movement speed
-                if (maxVelocity <= (3 * ogMaxVelocity)) maxVelocity += (Time.deltaTime / 15);
+                if (maxVelocity <= (3 * ogMaxVelocity))
+                    maxVelocity += (Time.deltaTime / 15);
                 elapsedApproachTime += Time.deltaTime;
 
                 // adjust attack range to increase likelihood of a chasing attack landing
@@ -444,6 +450,11 @@ public abstract class Enemy : MonoBehaviour {
                 if (stunTime < 0f)
                     ResetCombatStates();
                 break;
+        }
+        if (alliedWithPlayer && attackTarget == player)
+        {
+            Debug.Log("oh sheeeeeet");
+            Debug.Break();
         }
     }
 
@@ -594,12 +605,12 @@ public abstract class Enemy : MonoBehaviour {
         else if (rand < guardChance + counterAttackChance)
         {
             // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttackPlayer())
             {
                 //Enter counterattack state
                 counterattacking = true;
                 //Attack the player
-                MoveToAttack(player);
+                MoveToAttack(attackTarget);
             }
         }
         else if (rand < guardChance + counterAttackChance + dodgeChance)
@@ -639,7 +650,7 @@ public abstract class Enemy : MonoBehaviour {
         else if (num > guardChance && num <= (counterAttackChance + guardChance))
         {
             // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttackPlayer())
             {
                 counterattacking = true;
                 MoveToAttack(player);
