@@ -451,11 +451,6 @@ public abstract class Enemy : MonoBehaviour {
                     ResetCombatStates();
                 break;
         }
-        if (alliedWithPlayer && attackTarget == player)
-        {
-            Debug.Log("oh sheeeeeet");
-            Debug.Break();
-        }
     }
 
     /// <summary>

@@ -303,8 +303,8 @@ public class EnemyManager : MonoBehaviour {
             }
             if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().AlliedWithPlayer)
             {
-                Debug.Log("fugggggg");
-                Debug.Break();
+                Debug.Log("player ally is attacking the player, fix me plz");
+                //Debug.Break();
             }
             //Tell the enemy we found to attack
             surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);

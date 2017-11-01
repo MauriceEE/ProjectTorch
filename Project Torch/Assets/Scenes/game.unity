@@ -7714,6 +7714,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: tempHitboxObj.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4075762233248524, guid: 463392aad12d7e745864467aac870e50, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7746,6 +7751,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: tempHitboxObj.Array.data[6]
+      value: 
+      objectReference: {fileID: 1805514888748696, guid: c28e100a0158a834f94d934a8945a422,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 463392aad12d7e745864467aac870e50, type: 2}
   m_IsPrefabParent: 0
