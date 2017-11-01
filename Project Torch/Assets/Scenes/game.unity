@@ -890,7 +890,8 @@ Prefab:
       propertyPath: zone
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &96212364 stripped
@@ -903,6 +904,69 @@ GameObject:
   m_PrefabParentObject: {fileID: 1195452643779594, guid: 0c19d236e088dd94e96ca3b4b85647de,
     type: 2}
   m_PrefabInternal: {fileID: 96212363}
+--- !u!114 &96212366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96212365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 1
+  zone: 4
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  type: 0
+  escortingSpeedMultiplier: 0.1
 --- !u!1 &115410136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,7 +4715,8 @@ Prefab:
       propertyPath: zone
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &706689869 stripped
@@ -4664,6 +4729,69 @@ GameObject:
   m_PrefabParentObject: {fileID: 1195452643779594, guid: 0c19d236e088dd94e96ca3b4b85647de,
     type: 2}
   m_PrefabInternal: {fileID: 706689868}
+--- !u!114 &706689871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706689870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 1
+  zone: 4
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  type: 0
+  escortingSpeedMultiplier: 0.1
 --- !u!1001 &747442889
 Prefab:
   m_ObjectHideFlags: 0
@@ -8772,7 +8900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e922ef46cd43e48955eff4046a00ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingZone: 0
+  startingZone: 4
   blackScreen: {fileID: 649163423}
 --- !u!1 &1327791921
 GameObject:
@@ -8860,7 +8988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1338713670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8971,7 +9099,8 @@ Prefab:
       propertyPath: zone
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1340765130 stripped
@@ -8984,6 +9113,69 @@ Transform:
   m_PrefabParentObject: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de,
     type: 2}
   m_PrefabInternal: {fileID: 1340765129}
+--- !u!114 &1340765132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340765130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 1
+  zone: 4
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  type: 0
+  escortingSpeedMultiplier: 0.1
 --- !u!1001 &1381706813
 Prefab:
   m_ObjectHideFlags: 0
@@ -10370,7 +10562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1642552739
 Transform:
   m_ObjectHideFlags: 0
@@ -10540,7 +10732,8 @@ Prefab:
       propertyPath: zone
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1657894357 stripped
@@ -10553,6 +10746,69 @@ GameObject:
   m_PrefabParentObject: {fileID: 1195452643779594, guid: 0c19d236e088dd94e96ca3b4b85647de,
     type: 2}
   m_PrefabInternal: {fileID: 1657894356}
+--- !u!114 &1657894359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657894358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 1
+  zone: 4
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  type: 0
+  escortingSpeedMultiplier: 0.1
 --- !u!1 &1665370124
 GameObject:
   m_ObjectHideFlags: 0
@@ -14826,7 +15082,8 @@ Prefab:
       propertyPath: zone
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2119605930 stripped
@@ -14839,6 +15096,69 @@ GameObject:
   m_PrefabParentObject: {fileID: 1195452643779594, guid: 0c19d236e088dd94e96ca3b4b85647de,
     type: 2}
   m_PrefabInternal: {fileID: 2119605929}
+--- !u!114 &2119605932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119605931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  faction: 1
+  zone: 4
+  knockbackFriction: 0.69
+  guardBreakStunTime: 2.6
+  maxVelocity: 0.05
+  ogMaxVelocity: 0
+  arrivalRadius: 3
+  attackRange: 1.8
+  ogAttackRange: 0
+  awarenessRange: 5
+  isAttacking: 0
+  atDamage: 10
+  atStartup: 17
+  atActive: 10
+  atRecovery: 10
+  atKnockbackTime: 0
+  atKnockbackSpeed: 0
+  atEditorHitboxes: 1
+  atHB1:
+    serializedVersion: 2
+    x: 0.45
+    y: 0.47
+    width: 1.1
+    height: 0.22
+  atHB2FirstActiveFrame: 4
+  atHB2:
+    serializedVersion: 2
+    x: 0.46
+    y: 0.15
+    width: 1.29
+    height: 0.24
+  atHB3FirstActiveFrame: 7
+  atHB3:
+    serializedVersion: 2
+    x: 0.42
+    y: -0.18
+    width: 1.26
+    height: 0.21
+  dashIFrames: 6
+  dashFrames: 10
+  dashSpeed: 12
+  dashFriction: 0.919
+  guardChance: 15
+  counterAttackChance: 0
+  dodgeChance: 0
+  tempHitboxObj:
+  - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
+  - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
+  - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
+  type: 1
+  escortingSpeedMultiplier: 0.1
 --- !u!1001 &2134948702
 Prefab:
   m_ObjectHideFlags: 0

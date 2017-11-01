@@ -383,6 +383,8 @@ public class EnemyManager : MonoBehaviour {
     /// <returns>Position for the enemy to move to</returns>
     public Vector3 SendNewMoveTarget(Enemy enemy)
     {
+        //FIND A BETTER SOLUTION
+        CheckSurroundingGridDuplicates();
         //If the enemy is already to the left, try to assign them to a left spot
         if (enemy.transform.position.x < player.transform.position.x)
         {
@@ -472,6 +474,25 @@ public class EnemyManager : MonoBehaviour {
             Debug.Log(surroundingGridOccupants[i]);
         Debug.Break();
         throw new UnityException();//Code shouldn't ever reach here
+    }
+
+    /// <summary>
+    /// Temporary solution to prevent the game-breaking bug that happens in the SendNewMoveTarget method
+    /// TODO: Find the actual source of the problem
+    ///     i.e. why enemies are being added to the grid twice
+    ///         Perhaps not removed properly?
+    ///         Perhaps check to see if they already exist when adding them?
+    /// </summary>
+    protected void CheckSurroundingGridDuplicates()
+    {
+        for (int i = 0; i < surroundingGridOccupants.Length; ++i)
+        {
+            for (int j = i + 1; j < surroundingGridOccupants.Length; ++j) 
+            {
+                if (surroundingGridOccupants[i] == surroundingGridOccupants[j])
+                    surroundingGridOccupants[j] = null;
+            }
+        }
     }
 
     /// <summary>

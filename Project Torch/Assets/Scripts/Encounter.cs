@@ -21,7 +21,7 @@ public class Encounter : MonoBehaviour {
 
     #region Properties
     public List<GameObject> TriggerEnemies { get { return triggerEnemies; } }
-    public float Range { get { return range; } }
+    public float Range { get { return range; } set { range = value; } }
     #endregion
 
     #region Unity Defaults
