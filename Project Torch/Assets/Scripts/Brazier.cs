@@ -12,16 +12,6 @@ public class Brazier : MonoBehaviour {
     public ZoneManager.ZoneNames zone;
     //Whether or not the brazier is lit
     public bool lit;
-#endregion
-
-    #region Unity Defaults
-    void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
     #endregion
 
     #region Custom Methods
@@ -37,5 +27,5 @@ public class Brazier : MonoBehaviour {
         Debug.Log("Brazier: " + lit);
         GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().BrazierLit(zone, lit);
     }
-#endregion
+    #endregion
 }

@@ -49,6 +49,7 @@ public class FlagManager : MonoBehaviour {
         BattlefieldBrazierLit,
         HumanTerritory1BrazierLit,
         ShadowTerritory1BrazierLit,
+        InteractedWithKingOfMan
     }
     #endregion
 
@@ -118,6 +119,7 @@ public class FlagManager : MonoBehaviour {
         flags.Add(FlagNames.BattlefieldBrazierLit, false);
         flags.Add(FlagNames.HumanTerritory1BrazierLit, true);
         flags.Add(FlagNames.ShadowTerritory1BrazierLit, false);
+        flags.Add(FlagNames.InteractedWithKingOfMan, false);
     }
     #endregion
 
@@ -125,6 +127,7 @@ public class FlagManager : MonoBehaviour {
     /// <summary>
     /// This function will make an NPC talk based on their current flags
     /// Gets called by the interaction manager
+    /// -Connor Menard
     /// </summary>
     /// <param name="npcName">Name of the NPC to check flags for</param>
     public void ActivateNPCDialogue(TextManager.InteractiveNPCNames npcName)
@@ -132,20 +135,42 @@ public class FlagManager : MonoBehaviour {
         switch (npcName)
         {
             case TextManager.InteractiveNPCNames.KingOfMan:
-                if (flags[FlagNames.DefaultKingOfManDialogue]) 
-                    dialogue.AddDialogueSequence(text.Lines["King of Man - Default"]);
+                if (flags[FlagNames.DefaultKingOfManDialogue])
+                {
+                    dialogue.AddDialogueSequence(text.Lines["King of Man - Default"], "King of Man - Default");
+                    dialogue.SetTextAndShowImmediately();
+                    flags[FlagNames.InteractedWithKingOfMan] = true;
+                }
                 break;
             case TextManager.InteractiveNPCNames.KingOfDark:
                 if (flags[FlagNames.EnemyOfShadow])
-                    dialogue.AddDialogueSequence(text.Lines["King of the Dark - Downed"]);
+                {
+                    if (flags[FlagNames.InteractedWithKingOfMan])
+                    {
+
+                    }
+                    dialogue.AddDialogueSequence(text.Lines["King of the Dark - Downed"], "King of the Dark - Downed");
+                    dialogue.SetTextAndShowImmediately();
+                }
                 break;
             case TextManager.InteractiveNPCNames.CaptainOfTheGuard:
                 break;
         }
     }
     /// <summary>
+    /// Invokes any arbitrary line of dialogue, based on the name parameter
+    /// -Connor Menard
+    /// </summary>
+    /// <param name="name">Name of the NPC and its dialogue line</param>
+    public void ActivateDialogueLines(string name)
+    {
+        dialogue.AddDialogueSequence(text.Lines[name], name);
+        dialogue.SetTextAndShowImmediately();
+    }
+    /// <summary>
     /// Adds to the total number of enemies killed and updates "EnemyOf" flags
     /// Also tells the enemy manager to set global aggression if the hostility limit is reached
+    /// -Connor Menard
     /// </summary>
     /// <param name="human"></param>
     public void EnemyKilled(bool human)
@@ -175,6 +200,7 @@ public class FlagManager : MonoBehaviour {
     /// <summary>
     /// Returns whether or not the conditions for the Princess Rescue stage are met
     /// Called by ZoneManager
+    /// -Connor Menard
     /// </summary>
     /// <returns>True if conditions met</returns>
     public bool PrincessRescue()
@@ -199,6 +225,7 @@ public class FlagManager : MonoBehaviour {
     /// <summary>
     /// Flags whether or not a brazier is lit
     /// Should be called whenever a breazier is manipulated
+    /// -Connor Menard
     /// </summary>
     /// <param name="zone">Zone the brazier is in</param>
     /// <param name="lit">Whether or not it's lit</param>
@@ -215,6 +242,14 @@ public class FlagManager : MonoBehaviour {
             case ZoneManager.ZoneNames.ShadowTerritoryStage1:
                 flags[FlagNames.ShadowTerritory1BrazierLit] = lit;
                 break;
+        }
+    }
+
+    public void DialogueEnded(string sequenceName)
+    {
+        if (sequenceName == "Princess - Saved") 
+        {
+            GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.Fleeing;
         }
     }
 #endregion

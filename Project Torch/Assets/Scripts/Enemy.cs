@@ -191,7 +191,7 @@ public abstract class Enemy : MonoBehaviour {
         }
     }
 
-    void Awake () {
+    protected virtual void Awake () {
         alive = true;
         hitFlashTimer = 0f;
         entity = this.GetComponent<Entity>();
@@ -210,7 +210,7 @@ public abstract class Enemy : MonoBehaviour {
         //dodgeChance = 0;
     }
 	
-	void Update () {
+	protected virtual void Update () {
         //Temp scalar which will affect hitboxes on left/right side
         if (entity.FacingRight)
             hitBoxDirectionMove = 1;
@@ -758,7 +758,7 @@ public abstract class Enemy : MonoBehaviour {
     /// Sets up stuff necessary for encounters
     /// Should be called if in an encounter but not called yet
     /// </summary>
-    public void StartEncounter()
+    public virtual void StartEncounter()
     {
         //Remember position so you can go back later
         this.returnPosition = this.transform.position;

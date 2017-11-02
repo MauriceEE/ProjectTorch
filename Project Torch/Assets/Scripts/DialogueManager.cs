@@ -37,20 +37,30 @@ public class DialogueManager : MonoBehaviour {
     float textScrollTimer;
 
     float scrollSpeed = .1f;
-
+    bool finishedDialogueSequence;
     //test dialogue array
     Queue<string> dialogue;
 
+    //NOTE: I put this here to manage the container being active/inactive
+    //  -Connor @ 11/1 18:29
+    public GameObject dialogueContainer;
+    //  Also put this here to help with flags and triggers and stuff
+    string currentSequenceName;
+    FlagManager flagMan;
+
     //USE THIS METHOD TO ADD A DIALOGUE SEQUENCE TO THE TEXT BOX. 
-    public void AddDialogueSequence(string[] dialogue) {
+    public void AddDialogueSequence(string[] dialogue, string sequenceName) {
+        if (!dialogueContainer.activeInHierarchy)
+            dialogueContainer.SetActive(true);
         this.dialogue = new Queue<string>(dialogue);
+        this.currentSequenceName = sequenceName;
     }
     
     // Use this for initialization
     void Start() {
-        string[] temp = { "Joey:\n Yo", "Dude:\n Ayy lmao", "Joey:\n SHIT IT'S DA FUZZ" };
-        AddDialogueSequence(temp);
-       
+        //string[] temp = { "Joey:\n Yo", "Dude:\n Ayy lmao", "Joey:\n SHIT IT'S DA FUZZ" };
+        //AddDialogueSequence(temp);
+        finishedDialogueSequence = false;
         //Debug.Log("----------Execute----------");
         //SetText(currentText);
         letterTimer = letterPause * scrollSpeed;
@@ -65,6 +75,7 @@ public class DialogueManager : MonoBehaviour {
         rectTransform.offsetMin = new Vector2(width * PercentageMargin, width * PercentageMargin);*/
 
         tManager = new TextManager();
+        flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
     }
 
     // Update is called once per frame
@@ -79,29 +90,17 @@ public class DialogueManager : MonoBehaviour {
             c = new Color(c.r, c.b, c.g, .5f);
             dialogueBox.transform.parent.Find("arrow").GetComponent<Image>().color = c;
         }
-        if (bufferText.Count <= 0 && (Input.GetKeyDown(KeyCode.Mouse0)|| Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1)) && isClicked) {
-            if(Input.touchCount > 0) {
-                for (int i = 0; i < Input.touchCount; i++) {
-                    if (Input.GetTouch(i).phase == TouchPhase.Began) {
-                        ClearText();
-                        if(dialogue.Count > 0) {
-                            SetText(dialogue.Dequeue());
-                        }
-                        letterTimer = letterPause * scrollSpeed;
-                        isClicked = false;
-                    }
-                }
-            }else {
-                ClearText();
-                if (dialogue.Count > 0) {
-                    SetText(dialogue.Dequeue());
-                }
-                letterTimer = letterPause * scrollSpeed;
-                isClicked = false;
+        if (bufferText.Count <= 0 && (Input.GetKeyDown(KeyCode.Mouse0)|| Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1))) {
+            ClearText();
+            if (dialogue.Count > 0) {
+                SetText(dialogue.Dequeue());
             }
+            letterTimer = letterPause * scrollSpeed;
+            isClicked = false;
+            
         }
          //Display all text on left click
-         else if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1)) && isClicked) {//&& dialogueBox.transform.parent.GetComponent<DialogueBox>().isClicked()) {
+         else if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1))) {//&& dialogueBox.transform.parent.GetComponent<DialogueBox>().isClicked()) {
             StringBuilder stringBuilder = new StringBuilder("", bufferText.Count);
             while (bufferText.Count > 0) {
                 stringBuilder.Append(bufferText.Dequeue());
@@ -123,11 +122,23 @@ public class DialogueManager : MonoBehaviour {
         }
 
         textScrollTimer -= Time.deltaTime;
-        if (bufferText.Count > 0 && textScrollTimer <= 0 && bufferText.Peek() != ' ') {
+        if (bufferText.Count > 0 && textScrollTimer <= 0 && bufferText.Peek() != ' ')
+        {
             //play sound for text scrolling
             //AudioManager.GetComponent<AudioManager>().PlayTextScroll();
             textScrollTimer = textScrollPause * scrollSpeed;
         }
+        if (finishedDialogueSequence && dialogue.Count == 0 && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1)))
+        {
+            finishedDialogueSequence = false;
+            dialogueContainer.SetActive(false);
+            flagMan.DialogueEnded(currentSequenceName);//Tell the flagmanager
+        }
+        if(dialogue.Count == 0)
+        {
+            finishedDialogueSequence = true;
+        }
+
 
         dialogueBox.text.Replace("<br>", "\n");
     }
@@ -160,6 +171,12 @@ public class DialogueManager : MonoBehaviour {
         bufferText = new Queue<char>(text.ToCharArray());
         DisplayText(name);
     }
+
+    public void SetTextAndShowImmediately()
+    {
+        SetText(dialogue.Dequeue());
+    }
+
     //Add text to the end of the current active text
     void AppendText(string s) {
         char[] newChars = bufferText.ToArray().Concat(s.ToCharArray()).ToArray();

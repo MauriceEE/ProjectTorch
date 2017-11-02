@@ -23,6 +23,8 @@ public class EnemyManager : MonoBehaviour {
     protected Vector2[] gridPositions;
     //Flag manager
     protected FlagManager flags;
+    //Encounter type
+    protected Encounter.SpecialEncounters currentEncounterType;
     #endregion
 
     #region Public Fields
@@ -110,11 +112,15 @@ public class EnemyManager : MonoBehaviour {
     /// Sets up an encounter
     /// CALLED BY ENEMIES
     /// </summary>
-    public void StartEncounter(Encounter enc, Enemy.EnemyFaction hitEnemyFaction)
+    public void StartEncounter(Encounter enc, Enemy.EnemyFaction hitEnemyFaction, Encounter.SpecialEncounters encounterType)
     {
+        if (encounterActive)
+            MergeEncounters();
         Helper.DebugLogDivider();
         //Set flagged for being in an encounter
         encounterActive = true;
+        //Set encounter type
+        currentEncounterType = encounterType;
         //Update position of the encounter (which will simply be used as this object's location for debug purposes)
         this.transform.position = enc.transform.position;
         //Grab enemies within range and add them to the encounter
@@ -150,16 +156,36 @@ public class EnemyManager : MonoBehaviour {
     }
 
     /// <summary>
+    /// Handles what should happen if an encounter starts while another one is active
+    /// Basically moves all enemies from the previous one into the new one
+    /// NOTE: This shouldn't really happen. Pretty much reserved for edge cases (like scripted events)
+    /// </summary>
+    protected void MergeEncounters()
+    {
+
+    }
+
+    /// <summary>
     /// Removes any enemies that have been flagged as not alive
     /// </summary>
     void CleanupEnemies()
     {
+        TextManager textMan = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
         for (int i = 0; i < gameEnemies.Length; ++i)
         {
             if (gameEnemies[i] != null && !gameEnemies[i].GetComponent<Enemy>().Alive)
             {
                 //Remove enemy from big list of enemies
                 zoneEnemies.Remove(gameEnemies[i]);
+                if (currentEncounterType == Encounter.SpecialEncounters.PrincessRescue && zoneEnemies.Count == 0)
+                {
+                    //Tell the princess that she's saved
+                    GameObject.Find("Princess").GetComponent<Princess>().SavePrincess();
+                }
+                //Remove from list of interactive NPCs
+                for (int j = 0; j < textMan.InteractiveNPCs.Length; ++j)
+                    if (textMan.InteractiveNPCs[j] == gameEnemies[i])
+                        textMan.InteractiveNPCs[j] = null;
                 //Remove enemy from list of encounter enemies if it's there
                 if (encounterEnemies.Contains(gameEnemies[i]))
                     encounterEnemies.Remove(gameEnemies[i]);
@@ -537,7 +563,7 @@ public class EnemyManager : MonoBehaviour {
             //THIS ONLY WORKS IF THE FORMAT IN THE HIERARCHY IS 
             //  -Zone-,-ActiveArea-,-Enemies-,-Enemy-
             //So keep it that way when making new levels please
-            if (gameEnemies[i].GetComponent<Enemy>().zone == zone)
+            if (gameEnemies[i] != null && gameEnemies[i].GetComponent<Enemy>().zone == zone) 
                 zoneEnemies.Add(gameEnemies[i]);
         }
     }

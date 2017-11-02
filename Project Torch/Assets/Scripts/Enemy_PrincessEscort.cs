@@ -15,13 +15,41 @@ public class Enemy_PrincessEscort : Enemy {
     }
     #endregion
 
-    #region Private Fields
+    #region Fields
+    protected FlagManager flagMan;
     [Header("ENEMY_PRINCESSESCORT")]
     public EscortType type;
     public float escortingSpeedMultiplier;
+    public float playerAggroDist;
     #endregion
 
     #region Override Methods
+    protected override void Awake()
+    {
+        base.Awake();
+        flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+    }
+    protected void Start()
+    {
+        if (type == EscortType.Captain)
+            flagMan.ActivateDialogueLines("Princess Escort - Temp");
+    }
+    protected override void Update()
+    {
+        base.Update();
+        //Automatically start an encounter if within range of the player
+        if (!inEncounter)
+        {
+            if ((this.transform.position - player.transform.position).sqrMagnitude <= playerAggroDist * playerAggroDist)
+            {
+                encounter.GetComponent<Encounter>().StartEncounter(this.faction);
+                //Also prevents the player from fleeing
+                //  This line should stay after so that the encounter only gathers enemies within its range,
+                //  but then gets its range multiplied so the player can't escape
+                encounter.GetComponent<Encounter>().Range *= 10f;
+            }
+        }   
+    }
     public override void BreakGuard(float knockbackMultiplier)
     {
         base.BreakGuard(knockbackMultiplier);
@@ -40,54 +68,7 @@ public class Enemy_PrincessEscort : Enemy {
     }
     public override void TakeDamage(float damage, PlayerCombat.Attacks attackType)
     {
-        /*
-        if (guardStacks == 0)
-        {
-            hp -= damage;
-            if (hp <= 0)
-            {
-                alive = false;
-                return;
-            }
-            CancelOrHitStun(true);
-            hitFlashTimer = 0.6f;
-            damageTimer = 0.2f;
-        }
-        if (enemyState == EnemyStates.Stunned || enemyState == EnemyStates.Knockback)
-        {
-            stunTime = 0f;
-            ResetCombatStates();
-            Debug.Log("attack after guard break @ " + Time.fixedTime);
-        }
-        if (!inEncounter)
-        {
-            if (encounter)
-            {
-                encounter.GetComponent<Encounter>().StartEncounter(this.faction);
-            }
-            else
-            {
-                Debug.Log("Encounter object not yet assigned to this enemy!");
-            }
-        }
-        if (guardStacks > 0)
-        {
-            if (attackType == PlayerCombat.Attacks.Thrust)
-                if (--guardStacks <= 0)
-                {
-                    BreakGuard(2f);
-                    guarding = false;
-                }
-            if (attackType == PlayerCombat.Attacks.Slash)
-            {
-                Debug.Log("TODO: REBOUND THINGEY");
-            }
-        }
-        if (!guarding && !dodging && !counterattacking && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.Knockback)
-            React();
-            */
         base.TakeDamage(damage, attackType);
-        encounter.GetComponent<Encounter>().Range *= 100f;
     }
     protected override void UpdateCombatState()
     {
@@ -177,6 +158,14 @@ public class Enemy_PrincessEscort : Enemy {
                     ResetCombatStates();
                 break;
         }
+    }
+    public override void StartEncounter()
+    {
+        base.StartEncounter();
+        //Because they were moving slower before the encounter (if they were the captain)
+        entity.SpeedModifier = 1f;
+        //Make the princess scared
+        GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.CoweringInFear;
     }
     #endregion
 }

@@ -12,7 +12,7 @@ public class TextManager : MonoBehaviour {
         NONE,
         KingOfMan,
         KingOfDark,
-        CaptainOfTheGuard
+        CaptainOfTheGuard,
     }
     #endregion
 
@@ -89,6 +89,20 @@ public class TextManager : MonoBehaviour {
                 "Captain of the Gaurd:\nWhen the gate opens, you, the strongest of us all, should bring a close to this war.",
                 "Captain of the Gaurd:\nWe will hold the line here as you battle their King.",
                 "Captain of the Gaurd:\nHerald us all to the Serpents’ Promised Flame!"
+            });
+        //TEMP - THe dude escorting the princess
+        lines.Add("Princess Escort - Temp",
+            new string[]
+            {
+                "Super Mario:\nNice of the princess to invite us over for a picnic, eh Luigi?",
+                "Mama Luigi:\nI hope she made lotsa spaghetti!"
+            });
+        //TEMP - The princess when she's saved
+        lines.Add("Princess - Saved",
+            new string[]
+            {
+                "Oh HELL yeah, you saved me man!",
+                "I'm gonna go chill with my dad now"
             });
     }
 #endregion

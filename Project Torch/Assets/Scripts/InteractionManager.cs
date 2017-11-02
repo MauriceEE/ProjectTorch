@@ -69,7 +69,7 @@ public class InteractionManager : MonoBehaviour
         for (int i = 0; i < text.InteractiveNPCs.Length; ++i) 
         {
             //Only check active NPCs, and check to see if they're within interaction range
-            if (text.InteractiveNPCs[i].gameObject.activeInHierarchy && (text.InteractiveNPCs[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f)) 
+            if (text.InteractiveNPCs[i] != null && text.InteractiveNPCs[i].gameObject.activeInHierarchy && (text.InteractiveNPCs[i].transform.position - player.transform.position).sqrMagnitude <= Mathf.Pow(interactRange, 2f)) 
             {
                 //Tell the flag manager to look through the flags to determine what line of dialogue to use
                 flags.ActivateNPCDialogue(text.InteractiveNPCs[i].npcID);

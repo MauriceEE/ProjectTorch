@@ -818,11 +818,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20.279999
+      value: 19.35
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.82
+      value: -5.31
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.z
@@ -967,6 +967,7 @@ MonoBehaviour:
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
   type: 0
   escortingSpeedMultiplier: 0.1
+  playerAggroDist: 3.33
 --- !u!1 &115410136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,11 +4287,11 @@ Prefab:
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: triggerEnemies.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.11
+      value: 5.35
       objectReference: {fileID: 0}
     - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4323,7 +4324,7 @@ Prefab:
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: range
-      value: 9.64
+      value: 4.88
       objectReference: {fileID: 0}
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
@@ -4334,17 +4335,17 @@ Prefab:
         type: 2}
       propertyPath: triggerEnemies.Array.data[1]
       value: 
-      objectReference: {fileID: 2119605931}
+      objectReference: {fileID: 96212365}
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: triggerEnemies.Array.data[2]
       value: 
-      objectReference: {fileID: 1657894358}
+      objectReference: {fileID: 0}
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: triggerEnemies.Array.data[3]
       value: 
-      objectReference: {fileID: 96212365}
+      objectReference: {fileID: 0}
     - target: {fileID: 1227834527764558, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
       propertyPath: m_Name
       value: Encounter (2)
@@ -4365,7 +4366,7 @@ Prefab:
         type: 2}
       propertyPath: triggerEnemies.Array.data[4]
       value: 
-      objectReference: {fileID: 1340765130}
+      objectReference: {fileID: 0}
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: triggerEnemies.Array.data[5]
@@ -4483,10 +4484,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666256748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.375199, y: -5.7134533, z: 10.130335}
+  m_LocalPosition: {x: 11.375199, y: -5.7134533, z: 0}
   m_LocalScale: {x: 1.4958893, y: 1.4958893, z: 1.4958893}
   m_Children:
   - {fileID: 654102582}
+  - {fileID: 734149284}
   m_Father: {fileID: 1642552739}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4643,11 +4645,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 19.87
+      value: 19.32
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.03
+      value: -2.59
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4792,6 +4794,110 @@ MonoBehaviour:
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
   type: 0
   escortingSpeedMultiplier: 0.1
+  playerAggroDist: 3.33
+--- !u!1001 &734149283
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 666256749}
+    m_Modifications:
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.5000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: range
+      value: 4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1657894358}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1340765130}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 2119605931}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227834527764558, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_Name
+      value: Encounter (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.6399988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6399988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.6399988
+      objectReference: {fileID: 0}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
+        type: 2}
+      propertyPath: triggerEnemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &734149284 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4698393631457684, guid: 84db7083cb316554e99788d8924c6c73,
+    type: 2}
+  m_PrefabInternal: {fileID: 734149283}
 --- !u!1001 &747442889
 Prefab:
   m_ObjectHideFlags: 0
@@ -9027,7 +9133,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.779999
+      value: 39.470005
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9176,6 +9282,7 @@ MonoBehaviour:
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
   type: 0
   escortingSpeedMultiplier: 0.1
+  playerAggroDist: 3.33
 --- !u!1001 &1381706813
 Prefab:
   m_ObjectHideFlags: 0
@@ -9423,6 +9530,7 @@ GameObject:
   - component: {fileID: 1454479046}
   - component: {fileID: 1454479045}
   - component: {fileID: 1454479044}
+  - component: {fileID: 1454479047}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Untagged
@@ -9522,6 +9630,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1454479047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454479042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3ad520dc695a34aae5a8fb2ea10275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escortee: {fileID: 2119605932}
+  maxVelocity: 0.05
+  arrivalRadius: 1
+  escortedSpeedModifier: 0.1
+  fleeingSpeedModifier: 2
 --- !u!1 &1461166982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10660,7 +10784,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.46
+      value: 39.15
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10731,6 +10855,11 @@ Prefab:
         type: 2}
       propertyPath: zone
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952855302397394, guid: 0c19d236e088dd94e96ca3b4b85647de,
+        type: 2}
+      propertyPath: npcID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
@@ -10809,6 +10938,7 @@ MonoBehaviour:
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
   type: 0
   escortingSpeedMultiplier: 0.1
+  playerAggroDist: 3.33
 --- !u!1 &1665370124
 GameObject:
   m_ObjectHideFlags: 0
@@ -14755,6 +14885,7 @@ MonoBehaviour:
   currentText: 
   letterPause: 0.2
   textScrollPause: 0.07
+  dialogueContainer: {fileID: 1003907999}
 --- !u!1 &2090401834
 GameObject:
   m_ObjectHideFlags: 0
@@ -15005,7 +15136,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23.4
+      value: 24.66
       objectReference: {fileID: 0}
     - target: {fileID: 4726291926951550, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_LocalPosition.y
@@ -15070,7 +15201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1195452643779594, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
       propertyPath: m_Name
-      value: Enemy (8)
+      value: Enemy Captain
       objectReference: {fileID: 0}
     - target: {fileID: 114952855302397394, guid: 0c19d236e088dd94e96ca3b4b85647de,
         type: 2}
@@ -15159,6 +15290,7 @@ MonoBehaviour:
   - {fileID: 1923651030342930, guid: 4d44fd370cc057d47ae9b30ebbc57274, type: 2}
   type: 1
   escortingSpeedMultiplier: 0.1
+  playerAggroDist: 3.33
 --- !u!1001 &2134948702
 Prefab:
   m_ObjectHideFlags: 0

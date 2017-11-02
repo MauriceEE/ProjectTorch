@@ -6,8 +6,16 @@ using UnityEngine;
 /// Manages a single encounter object
 /// </summary>
 public class Encounter : MonoBehaviour {
+    #region Enums
+    public enum SpecialEncounters
+    {
+        NONE,
+        PrincessRescue
+    }
+    #endregion
 
     #region Public Fields
+    public SpecialEncounters specialEncounterType;
     public List<GameObject> triggerEnemies;
     //public SpawnedEnemy[] spawnedEnemies;
     //Number of enemies in category x (array number) to spawn
@@ -17,7 +25,7 @@ public class Encounter : MonoBehaviour {
 
     #region Private Fields
     protected bool active;
-#endregion
+    #endregion
 
     #region Properties
     public List<GameObject> TriggerEnemies { get { return triggerEnemies; } }
@@ -31,10 +39,6 @@ public class Encounter : MonoBehaviour {
         for (int i = 0; i < triggerEnemies.Count; ++i)
             triggerEnemies[i].GetComponent<Enemy>().Encounter = this.gameObject;
 	}
-	
-	void Update () {
-		
-	}
     #endregion
 
     #region Custom Methods
@@ -44,7 +48,7 @@ public class Encounter : MonoBehaviour {
     public void StartEncounter(Enemy.EnemyFaction hitEnemyFaction)
     {
         active = true;
-        GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().StartEncounter(this, hitEnemyFaction);
+        GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().StartEncounter(this, hitEnemyFaction, specialEncounterType);
     }
 #endregion
 }
