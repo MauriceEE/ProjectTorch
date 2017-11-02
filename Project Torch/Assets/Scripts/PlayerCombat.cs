@@ -219,6 +219,7 @@ public class PlayerCombat : MonoBehaviour {
         if (combatState == CombatStates.Startup)
         {
             movement.CanDash = false;
+            shRecovery = 17;
             switch (currentAttack)
             {
                 //Check to move to active frames
@@ -353,6 +354,7 @@ public class PlayerCombat : MonoBehaviour {
                     movement.CanDash = true;
                     attackTime = 0f;
                     consecSlashCount = 0;
+                    shRecovery = 17;
                     ComboFrameAdjust();
                     break;
             }
@@ -551,6 +553,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Debug.Log("Shine connected");
                         enemies[i].BreakGuard(6f);
+                        shRecovery = 1;
                         break;
                     }
                 }

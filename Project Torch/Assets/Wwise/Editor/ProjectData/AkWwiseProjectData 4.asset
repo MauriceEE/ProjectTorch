@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ae107a7916e48588c724e359a740e9, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 4
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -267,19 +267,11 @@ MonoBehaviour:
     m_lastTimePsrt1: -168007952
     m_lastTimePart2: -1999298031
     List: []
-  ExpandedItems:
-  - /Project Torch_WwiseProject
-  - /Project Torch_WwiseProject/Events
-  - /Project Torch_WwiseProject/Events/Default Work Unit
-  - /Project Torch_WwiseProject/Events/Default Work Unit/Attacks and Abilities
-  - /Project Torch_WwiseProject/Events/Default Work Unit/UI
-  - /Project Torch_WwiseProject/SoundBanks
-  - /Project Torch_WwiseProject/SoundBanks/Default Work Unit
-  - /Project Torch_WwiseProject/States
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

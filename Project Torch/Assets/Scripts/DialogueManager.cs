@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour {
         rectTransform.offsetMax = new Vector2(width * -PercentageMargin, width * -PercentageMargin);
         rectTransform.offsetMin = new Vector2(width * PercentageMargin, width * PercentageMargin);*/
 
-        tManager = new TextManager();
+        //tManager = new TextManager();
         flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
     }
 
@@ -92,7 +92,7 @@ public class DialogueManager : MonoBehaviour {
         }
         if (bufferText.Count <= 0 && (Input.GetKeyDown(KeyCode.Mouse0)|| Input.touchCount > 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton1))) {
             ClearText();
-            if (dialogue.Count > 0) {
+            if (dialogue != null && dialogue.Count > 0) {
                 SetText(dialogue.Dequeue());
             }
             letterTimer = letterPause * scrollSpeed;
@@ -134,7 +134,7 @@ public class DialogueManager : MonoBehaviour {
             dialogueContainer.SetActive(false);
             flagMan.DialogueEnded(currentSequenceName);//Tell the flagmanager
         }
-        if(dialogue.Count == 0)
+        if(dialogue != null && dialogue.Count == 0)
         {
             finishedDialogueSequence = true;
         }

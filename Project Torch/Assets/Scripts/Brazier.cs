@@ -23,9 +23,13 @@ public class Brazier : MonoBehaviour {
     /// <param name="_lit">Whether or not the brazier should be lit</param>
     public void IgniteBrazier(bool _lit)
     {
-        lit = _lit;
+        //lit = _lit;
+        lit = !lit;
         Debug.Log("Brazier: " + lit);
         GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().BrazierLit(zone, lit);
+
+        if(lit) GetComponent<SpriteRenderer>().color = new Color((255f/255f), (184f/255f), (184f/255f));
+        else GetComponent<SpriteRenderer>().color = Color.white;
     }
     #endregion
 }

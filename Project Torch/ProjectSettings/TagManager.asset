@@ -7,6 +7,11 @@ TagManager:
   - Item
   - Obstacle
   - Enemy
+  - Slash
+  - Move
+  - Thrust
+  - Shine
+  - Brazier
   layers:
   - Default
   - TransparentFX

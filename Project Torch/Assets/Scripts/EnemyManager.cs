@@ -235,6 +235,7 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterActive = false;
                 Debug.Log("No more enemies of opposing faction, encounter ending...");
+                // might need to add here the line to give the player the end-of-encounter 30hp for winning
                 return null;
             }
         }
@@ -363,8 +364,11 @@ public class EnemyManager : MonoBehaviour {
         //Check to see if there are no enemies remaining in the encounter
         if (encounterEnemies.Count == 0)
         {
+            float playerHP = player.GetComponent<PlayerCombat>().hp;
             encounterActive = false;
             Debug.Log("No enemies remaining: encounter ending...");
+            playerHP += 30;
+            if (playerHP > 100) playerHP = 100;
             return;
         }
             
