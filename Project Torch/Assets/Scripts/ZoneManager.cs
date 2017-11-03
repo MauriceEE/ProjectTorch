@@ -19,6 +19,8 @@ public class ZoneManager : MonoBehaviour {
         ShadowTerritoryStage2,
         ThroneRoom,
         WarZone,
+        WarZoneStage2,
+        TrueHumanStage1,
     }
     //Used to keep track of how to manipulate the black screen obj
     protected enum TransitionPhase
@@ -229,11 +231,13 @@ public class ZoneManager : MonoBehaviour {
                 return zonesSorted[ZoneNames.ShadowTerritoryStage2];
         }
 
-        //War Zone
+        //War Zone and True Human Stage 1
         if (currentZone.zone == ZoneNames.Battlefield)
         {
             if (flagMan.WarZone())
                 return zonesSorted[ZoneNames.WarZone];
+            else if (flagMan.TrueHumanStage1())
+                return zonesSorted[ZoneNames.TrueHumanStage1];
             else
                 return zonesSorted[ZoneNames.ShadowTerritoryStage1];
         }
@@ -249,6 +253,15 @@ public class ZoneManager : MonoBehaviour {
 
         if (currentZone.zone == ZoneNames.HumanTerritoryStage2)
             return zonesSorted[ZoneNames.ThroneRoom];
+
+        if (currentZone.zone == ZoneNames.WarZone)
+            return zonesSorted[ZoneNames.WarZoneStage2];
+
+        if (currentZone.zone == ZoneNames.WarZoneStage2)
+            return zonesSorted[ZoneNames.FortressKeep]; //Temporary, will change later
+
+        if (currentZone.zone == ZoneNames.TrueHumanStage1)
+            return zonesSorted[ZoneNames.HumanTerritoryStage2]; //Temporary, will change later
 
         //Code shouldn't get here
         Debug.Break();

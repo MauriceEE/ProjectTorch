@@ -223,6 +223,18 @@ public class FlagManager : MonoBehaviour {
             shadowsKilled >= 4);
     }
     /// <summary>
+    /// Returns whether or not the conditions for the True Human Stage 1 are met
+    /// Called by ZoneManager
+    /// </summary>
+    /// <returns>True if conditions met</returns>
+    public bool TrueHumanStage1()
+    {
+        //Debug.Log(flags[FlagNames.BattlefieldBrazierLit] + " " + flags[FlagNames.ShadowTerritory1BrazierLit]);
+        return (flags[FlagNames.BattlefieldBrazierLit] && //Battlefield Brazier must be lit
+            humansKilled >= 5 && //Kill all humans without killing any shadows
+            shadowsKilled == 0);
+    }
+    /// <summary>
     /// Flags whether or not a brazier is lit
     /// Should be called whenever a breazier is manipulated
     /// -Connor Menard

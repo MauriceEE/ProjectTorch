@@ -93,3 +93,5 @@
   <li>Deleted depricated OldReact method in Enemy class</li>
   <li>Added brute human prefab</li>
 </ul>
+<h2>Steven Ma - 11/3/17 - 4:26</h2>
+<ul><li>Added in the WarZoneStage2 and TrueHumanStage1 levels</li></ul>
