@@ -6,10 +6,62 @@
 				<Folder Name="Attacks and Abilities" ID="{CC9B6AD0-A1BE-4848-B983-A6C92F19A48E}" ShortID="445742286">
 					<ChildrenList>
 						<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}"/>
-						<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}"/>
-						<Event Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}"/>
-						<Event Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}"/>
-						<Event Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}"/>
+						<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}">
+							<ChildrenList>
+								<Action Name="" ID="{BC97997C-732A-4D5A-BFA0-E4203BB56A8F}" ShortID="922581134">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Slash" ID="{2C5D5241-9619-4D8E-A8FA-E4CD483475C4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}">
+							<ChildrenList>
+								<Action Name="" ID="{507ABE95-B8D5-4E31-9D84-AFF51F543825}" ShortID="522362115">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dash" ID="{D459339A-DEA8-440A-BE3B-2972E6F016F3}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}">
+							<ChildrenList>
+								<Action Name="" ID="{03972DC8-5215-4176-81D7-3858DC1B25E2}" ShortID="275488959">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Thrust" ID="{C2259986-4BEF-4B3C-807F-0CE0348CDD26}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}">
+							<ChildrenList>
+								<Action Name="" ID="{5414C15E-055B-4167-AA30-15B6CBFD7336}" ShortID="263308013">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shine" ID="{D6224F3A-C6BD-4BC0-B38D-DAF01AA740B8}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{6288F1F1-19D9-4F1A-A122-F6836F28DDB6}" ShortID="568601353">

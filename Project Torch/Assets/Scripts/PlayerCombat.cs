@@ -219,6 +219,7 @@ public class PlayerCombat : MonoBehaviour {
         if (combatState == CombatStates.Startup)
         {
             movement.CanDash = false;
+            shRecovery = 17;
             switch (currentAttack)
             {
                 //Check to move to active frames
@@ -295,9 +296,11 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Shine:
                     //Test shine method for each hitbox in the shine
                     for (int i = 0; i < shHB.Length; ++i) 
-                    {
                         Shine(shHB[i]);
-                    }
+                    //Spawn temp thingey
+                    GameObject tempObjBox = Instantiate(tempHitboxObj[6] as GameObject, this.transform);
+                    tempObjBox.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
+                    //Check going to recovery
                     if (attackTime > (shStartup + shActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
                     break;
@@ -351,6 +354,7 @@ public class PlayerCombat : MonoBehaviour {
                     movement.CanDash = true;
                     attackTime = 0f;
                     consecSlashCount = 0;
+                    shRecovery = 17;
                     ComboFrameAdjust();
                     break;
             }
@@ -524,10 +528,7 @@ public class PlayerCombat : MonoBehaviour {
     protected void Shine(Rect hitbox)
     {
         ///TODO: collision detection for projectiles, once projectiles are implemented
-        ///TODO: enemy attack countering, once enemy attacks are implemented
-        ///
         //Get enemy active hitboxes
-        //List<Rect> enemyHitboxes = enemyMan.EnemyAttackHitboxes;
         Rect[] hitboxes = new Rect[3];
         List<Enemy> enemies = new List<Enemy>();
         for (int i = 0; i < enemyMan.encounterEnemies.Count; ++i)
@@ -552,6 +553,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Debug.Log("Shine connected");
                         enemies[i].BreakGuard(6f);
+                        shRecovery = 1;
                         break;
                     }
                 }

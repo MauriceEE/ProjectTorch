@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Interactive Music" ID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Music_Start" ID="{A93330B6-2F58-4005-A77A-B711A2C9853E}">
+					<ChildrenList>
+						<Action Name="" ID="{1C3258A1-23A3-4371-81AD-B53E1A37666A}" ShortID="16336568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Player" ID="{B723E128-7E4B-47C8-BA13-9C7EA1EF2879}" WorkUnitID="{037CA0F4-684A-4455-BEED-45EC366C29E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}">
+					<ChildrenList>
+						<Action Name="" ID="{E5B3872B-8A96-4B5B-A171-30DF9E1563F4}" ShortID="621284398">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}">
+					<ChildrenList>
+						<Action Name="" ID="{BEC240A5-0131-4B4A-827F-81A429DA025D}" ShortID="510471894">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -16,6 +16,9 @@ namespace AK
         static const AkUniqueID ATTACK1 = 3768540966U;
         static const AkUniqueID BUTTONPRESS = 317641954U;
         static const AkUniqueID DASH = 1942692385U;
+        static const AkUniqueID MUSIC_AMBIENT = 3611180283U;
+        static const AkUniqueID MUSIC_COMBAT = 3944980085U;
+        static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID SCROLL = 454121546U;
@@ -37,6 +40,17 @@ namespace AK
                 static const AkUniqueID PAUSE = 3092587493U;
             } // namespace STATE
         } // namespace GAMESTATE
+
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace STATE
+            {
+                static const AkUniqueID AMBIENT = 77978275U;
+                static const AkUniqueID COMBAT = 2764240573U;
+            } // namespace STATE
+        } // namespace MUSIC
 
         namespace PLAYERLIFE
         {

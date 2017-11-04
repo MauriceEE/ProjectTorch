@@ -79,3 +79,19 @@
 </ul>
 <h2>Steven Ma - 10/30/17 - 2:31</h2>
 <ul><li>Made all the backgrounds close to what they should be</li></ul>
+<h2>Connor Menard - 11/1/17 - 5:00</h2>
+<ul><li>More Aggression stuff (not done yet though)</li><li>Shine hitbox visible in-game</li></ul>
+<h2>Maurice Edwards - 11/2/17 - 19:24</h2>
+<ul>
+  <li>Increased player hitbox size</li>
+  <li>Increased Shine hitbox and increased Shine recovery frames from 10 to 17</li>
+  <li>Successful counter hits with Shine reduce its recovery frames to 1 frame</li>
+  <li>Player should now be granted 30 HP upon killing all enemies in an encounter. This is inconsistent however</li>
+  <li>Added instructions UI element and functionality. Check the InstructionManager script to see how to add and use them</li>
+  <li>Added null reference checks for the dialogue queue in DialogueManager</li>
+  <li>Adjusted encounter spacing and enemy contents in every level</li>
+  <li>Deleted depricated OldReact method in Enemy class</li>
+  <li>Added brute human prefab</li>
+</ul>
+<h2>Steven Ma - 11/3/17 - 4:26</h2>
+<ul><li>Added in the WarZoneStage2 and TrueHumanStage1 levels</li></ul>

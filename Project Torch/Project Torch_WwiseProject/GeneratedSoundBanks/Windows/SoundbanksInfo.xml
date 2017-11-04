@@ -28,21 +28,57 @@
 				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="28478523" Language="SFX">
+					<ShortName>Close_1.WAV</ShortName>
+					<Path>SFX/Close_1_19CB6D2F.wem</Path>
+				</File>
+				<File Id="92716449" Language="SFX">
+					<ShortName>pie_pan- 06.wav</ShortName>
+					<Path>SFX/pie_pan- 06_14320D65.wem</Path>
+				</File>
+				<File Id="100672609" Language="SFX">
+					<ShortName>Air Burst Short 12.wav</ShortName>
+					<Path>SFX/Air Burst Short 12_1C9C67B2.wem</Path>
+				</File>
 				<File Id="186580846" Language="SFX">
 					<ShortName>Air Burst Short 01.wav</ShortName>
 					<Path>SFX/Air Burst Short 01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="252553299" Language="SFX">
 					<ShortName>Thick Plastic Hits 05.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 05_5332F36D.wem</Path>
+					<Path>SFX/Thick Plastic Hits 05_A466DBBC.wem</Path>
+				</File>
+				<File Id="304949470" Language="SFX">
+					<ShortName>Air Burst Short 11.wav</ShortName>
+					<Path>SFX/Air Burst Short 11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="553166943" Language="SFX">
+					<ShortName>Air Burst Short 10.wav</ShortName>
+					<Path>SFX/Air Burst Short 10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="824997395" Language="SFX">
+					<ShortName>Construction01_denoise.wav</ShortName>
+					<Path>SFX/Construction01_denoise_C6C010F5.wem</Path>
+				</File>
+				<File Id="844726469" Language="SFX">
+					<ShortName>Large knife swings_2.WAV</ShortName>
+					<Path>SFX/Large knife swings_2_A1EC02FB.wem</Path>
 				</File>
 				<File Id="871341411" Language="SFX">
 					<ShortName>Thick Plastic Hits 36.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 36_945CC07C.wem</Path>
+					<Path>SFX/Thick Plastic Hits 36_4DEC759B.wem</Path>
+				</File>
+				<File Id="918874852" Language="SFX">
+					<ShortName>Air Burst Short 09.wav</ShortName>
+					<Path>SFX/Air Burst Short 09_1C9C67B2.wem</Path>
+				</File>
+				<File Id="939083768" Language="SFX">
+					<ShortName>Close_1.WAV</ShortName>
+					<Path>SFX/Close_1_5E93CFD1.wem</Path>
 				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 32_DC8A1A17.wem</Path>
+					<Path>SFX/Thick Plastic Hits 32_3B402278.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -55,6 +91,33 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient"/>
+				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat"/>
+				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="263453692" Language="SFX">
+					<ShortName>Bass Drum_revswell_01.wav</ShortName>
+					<Path>SFX/Bass Drum_revswell_01_F17FB28C.wem</Path>
+				</File>
+				<File Id="411247084" Language="SFX">
+					<ShortName>Temp_Ambient01.wav</ShortName>
+					<Path>SFX/Temp_Ambient01_F17FB28C.wem</Path>
+				</File>
+				<File Id="416137440" Language="SFX">
+					<ShortName>Ambient_demo_01.wav</ShortName>
+					<Path>SFX/Ambient_demo_01_F17FB28C.wem</Path>
+				</File>
+				<File Id="611871978" Language="SFX">
+					<ShortName>Temp_Combat.wav</ShortName>
+					<Path>SFX/Temp_Combat_F17FB28C.wem</Path>
+				</File>
+				<File Id="724764778" Language="SFX">
+					<ShortName>Temp_Combat02.wav</ShortName>
+					<Path>SFX/Temp_Combat02_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

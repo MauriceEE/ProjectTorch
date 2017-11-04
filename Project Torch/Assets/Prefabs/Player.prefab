@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945604058392810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.54, z: -0.5}
+  m_LocalPosition: {x: -3.4, y: -3.54, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113142439676138}
@@ -87,7 +87,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.63}
+  m_Offset: {x: 0, y: -0.29128307}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -98,7 +98,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.16667366}
+  m_Size: {x: 1, y: 0.8441075}
   m_EdgeRadius: 0
 --- !u!108 &108784112885680568
 Light:
@@ -245,7 +245,7 @@ MonoBehaviour:
     height: 0.47
   shStartup: 12
   shActive: 7
-  shRecovery: 10
+  shRecovery: 17
   shEditorHitboxes: 1
   shHB:
   - serializedVersion: 2
@@ -271,7 +271,7 @@ MonoBehaviour:
   - serializedVersion: 2
     x: 1.9
     y: -0.81
-    width: 0.24
+    width: 0.5
     height: 1.61
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
@@ -280,6 +280,7 @@ MonoBehaviour:
   - {fileID: 1137715606811254, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
   - {fileID: 1513927004183044, guid: 470ea5397e419b7489f3eb6cd6a63524, type: 2}
   - {fileID: 1116876888763320, guid: 83b69fe2fe3a38a45aef3df242900145, type: 2}
+  - {fileID: 1805514888748696, guid: c28e100a0158a834f94d934a8945a422, type: 2}
 --- !u!212 &212442816226677262
 SpriteRenderer:
   m_ObjectHideFlags: 1

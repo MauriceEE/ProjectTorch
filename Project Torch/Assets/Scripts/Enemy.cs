@@ -9,7 +9,7 @@ using UnityEngine;
 /// </summary>
 public abstract class Enemy : MonoBehaviour {
     #region Enums
-    protected enum EnemyStates
+    public enum EnemyStates
     {
         Idle,
         ApproachingToAttack,
@@ -21,7 +21,7 @@ public abstract class Enemy : MonoBehaviour {
         Knockback,
         Stunned
     }
-    protected enum CombatStates
+    public enum CombatStates
     {
         None,
         Startup,
@@ -93,6 +93,8 @@ public abstract class Enemy : MonoBehaviour {
     protected float knockbackModifier;
     //Whether or not this enemy is allied with the player, will start as true
     protected bool alliedWithPlayer;
+    //Whether or not this enemy is being attacked by another
+    //protected bool targetedByEnemy;
     // Base color
     protected Color baseColor;
     // reaction variables
@@ -103,6 +105,8 @@ public abstract class Enemy : MonoBehaviour {
     protected bool dodging; // probably will need to be an enum state
     protected float elapsedApproachTime;
     ///List<Rect> hitboxesCollidedWith  //I'll make a better hitbox function if I have time someday
+                                        // I gotchu, fam
+    protected bool hitPlayer;
     #endregion
 
     #region Public Fields
@@ -173,6 +177,9 @@ public abstract class Enemy : MonoBehaviour {
     public bool GuardBroken { get { return guardBroken; } set { guardBroken = value; } }
     public float KnockbackModifier { get { return knockbackModifier; } }
     public bool AlliedWithPlayer { get { return alliedWithPlayer; } set { alliedWithPlayer = value; } }
+    public GameObject AttackTarget { get { return attackTarget; } set { attackTarget = value; } }
+    public EnemyStates EnemyState { get { return enemyState; } }
+    public CombatStates CombatState { get { return combatState; } }
     #endregion
 
     #region Unity Methods
@@ -186,7 +193,7 @@ public abstract class Enemy : MonoBehaviour {
         }
     }
 
-    void Awake () {
+    protected virtual void Awake () {
         alive = true;
         hitFlashTimer = 0f;
         entity = this.GetComponent<Entity>();
@@ -203,9 +210,10 @@ public abstract class Enemy : MonoBehaviour {
         //guardChance = 15;
         //counterAttackChance = 0;
         //dodgeChance = 0;
+        hitPlayer = false;
     }
 	
-	void Update () {
+	protected virtual void Update () {
         //Temp scalar which will affect hitboxes on left/right side
         if (entity.FacingRight)
             hitBoxDirectionMove = 1;
@@ -303,6 +311,7 @@ public abstract class Enemy : MonoBehaviour {
                     entity.CanMove = true;
                     //entity.Speed *= 1.5f;
                     attackTime = 0f;
+                    hitPlayer = false;
                 }
                 break;
             case CombatStates.Startup:
@@ -347,7 +356,8 @@ public abstract class Enemy : MonoBehaviour {
                 isAttacking = false; // might change this if it proves cheap
 
                 // increase movement speed
-                if (maxVelocity <= (3 * ogMaxVelocity)) maxVelocity += (Time.deltaTime / 15);
+                if (maxVelocity <= (3 * ogMaxVelocity))
+                    maxVelocity += (Time.deltaTime / 15);
                 elapsedApproachTime += Time.deltaTime;
 
                 // adjust attack range to increase likelihood of a chasing attack landing
@@ -574,6 +584,7 @@ public abstract class Enemy : MonoBehaviour {
         dodging = false;
         counterattacking = false;
         entity.SpeedModifier = 1f;
+        hitPlayer = false;
     }
 
     protected virtual void React()
@@ -594,12 +605,12 @@ public abstract class Enemy : MonoBehaviour {
         else if (rand < guardChance + counterAttackChance)
         {
             // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
+            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttackPlayer())
             {
                 //Enter counterattack state
                 counterattacking = true;
                 //Attack the player
-                MoveToAttack(player);
+                MoveToAttack(attackTarget);
             }
         }
         else if (rand < guardChance + counterAttackChance + dodgeChance)
@@ -619,42 +630,6 @@ public abstract class Enemy : MonoBehaviour {
         }
     }
 
-    private void OldReact()
-    {
-        // this method will generate a random number between 1 and 100 and check to see if it falls within the ranges of chance for the reactions
-        System.Random rand1 = new System.Random();
-        int num = (rand1.Next(0, 100)) + 1; // roll to see what number they get
-
-        if (num > 0 && num <= guardChance) // if greater than zero (impossible to be false unless an error), and less than guard chance, it is a guard
-        {
-            // set guarding to true, increment the stacks, halve the movement speed
-            guarding = true;
-            if (guardStacks < maxGuardStacks) guardStacks++;
-            float oldMaxVelocity = maxVelocity;
-            float newMaxVelocity = maxVelocity / 2;
-            maxVelocity = newMaxVelocity; // CAN'T RESET
-            //Debug.Log("Guard Reaction");
-        }
-        // create and check next threshold, defined as the numbers between the previous reaction chance(s) and the sum of the next reaction chance added to the previous one(s)
-        else if (num > guardChance && num <= (counterAttackChance + guardChance))
-        {
-            // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttack())
-            {
-                counterattacking = true;
-                MoveToAttack(player);
-                //Debug.Log("CounterAttack Reaction");
-            }
-            else return;
-
-        }
-        // create and check next threshold
-        else if (num > (guardChance + counterAttackChance) && num <= (dodgeChance + counterAttackChance + guardChance))
-        {
-            dodging = true;
-            //Debug.Log("Dodge Reaction");
-        }
-    }
 
     /// <summary>
     /// Call this to make the enemy take knockback
@@ -702,7 +677,11 @@ public abstract class Enemy : MonoBehaviour {
         Rect newHB = hitbox;
         if (hitBoxDirectionMove < 0)
             newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
-        return (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), player.GetComponent<PlayerCombat>().HitBoxRect));
+        // check if the enemy has hit the player before the hitPlayer variable was returned to false.
+        // IF THIS METHOD IS EVER USED TO CHECK COLLISIONS WITH ANYTHING BESIDES THE PLAYER, ENSURE THE CHECK ONLY HAPPENS IF THE TARGET IS THE PLAYER
+        bool hit = (hitPlayer == false && (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), player.GetComponent<PlayerCombat>().HitBoxRect)));
+        if (hit == true) hitPlayer = true; // set hitPlayer to true so this attack can't hit more than once
+        return hit;
     }
 
     /// <summary>
@@ -752,7 +731,7 @@ public abstract class Enemy : MonoBehaviour {
     /// Sets up stuff necessary for encounters
     /// Should be called if in an encounter but not called yet
     /// </summary>
-    public void StartEncounter()
+    public virtual void StartEncounter()
     {
         //Remember position so you can go back later
         this.returnPosition = this.transform.position;
