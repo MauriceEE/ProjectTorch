@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UISounds : MonoBehaviour, ISelectHandler, IPointerEnterHandler, IPointerClickHandler{
+public class UISounds : MonoBehaviour,ISubmitHandler, ISelectHandler, IPointerEnterHandler, IPointerClickHandler{
     public void OnPointerClick(PointerEventData eventData) {
         AkSoundEngine.PostEvent("ButtonPress", gameObject);
     }
@@ -24,5 +24,9 @@ public class UISounds : MonoBehaviour, ISelectHandler, IPointerEnterHandler, IPo
 
     void ISelectHandler.OnSelect(BaseEventData eventData) {
         AkSoundEngine.PostEvent("Scroll", gameObject);
+    }
+
+    public void OnSubmit(BaseEventData eventData) {
+        AkSoundEngine.PostEvent("ButtonPress", gameObject);
     }
 }
