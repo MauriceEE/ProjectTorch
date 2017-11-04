@@ -563,6 +563,7 @@ public class PlayerCombat : MonoBehaviour {
 
     /// <summary>
     /// Makes the player lose HP
+    /// Restarts the current level if they die
     /// </summary>
     /// <param name="damage">Damage (Positive; this method will subtract)</param>
     public void TakeDamage(float damage)
@@ -572,6 +573,20 @@ public class PlayerCombat : MonoBehaviour {
         {
             Debug.Log("Player died");
             //TODO: Death stuff
+            //Flag as not in encounter to fix that up
+            enemyMan.EncounterActive = false;
+            ZoneManager zoneMan = GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>();
+            switch (zoneMan.CurrentZone.zone)
+            {
+                case ZoneManager.ZoneNames.PrincessRescue:
+                    zoneMan.ChangeZone(zoneMan.GetNextZone());
+                    break;
+                default:
+                    zoneMan.ChangeZone(zoneMan.CurrentZone);
+                    break;
+            }
+            hp = 100;
+            entity.FacingRight = true;
         }
     }
 #endregion

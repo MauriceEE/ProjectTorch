@@ -63,6 +63,11 @@ public class ZoneManager : MonoBehaviour {
     protected Zone[] zones;
     #endregion
 
+    #region Properties
+    public Zone CurrentZone { get { return currentZone; } }
+    public Dictionary<ZoneNames,Zone> ZonesSorted { get { return zonesSorted; } }
+    #endregion
+
     #region Unity Defaults
     void Awake () {
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
@@ -135,7 +140,7 @@ public class ZoneManager : MonoBehaviour {
     /// </summary>
     /// <param name="_nextZone">The next zone to move to</param>
     /// <param name="newXCoordinate">Where to move the player to</param>
-    protected void ChangeZone(Zone _nextZone)
+    public void ChangeZone(Zone _nextZone)
     {
         phase = TransitionPhase.FadingOut;
         nextZone = _nextZone;
@@ -220,7 +225,7 @@ public class ZoneManager : MonoBehaviour {
     /// TODO: Figure out this algorithm based on flags
     /// </summary>
     /// <returns>Next zone the player should go to</returns>
-    protected Zone GetNextZone()
+    public Zone GetNextZone()
     {
         //Princess Rescue
         if (currentZone.zone == ZoneNames.ShadowTerritoryStage1)

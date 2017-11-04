@@ -45,6 +45,8 @@ public abstract class Enemy : MonoBehaviour {
     #endregion
 
     #region Private Fields
+    //Max HP of the enemy, merely set to current HP at start of game
+    protected float maxHP;
     //When set to false the enemy manager will destroy&remove the object
     protected bool alive;
     //For the hit response visual... still a temporary solution???
@@ -93,6 +95,8 @@ public abstract class Enemy : MonoBehaviour {
     protected float knockbackModifier;
     //Whether or not this enemy is allied with the player, will start as true
     protected bool alliedWithPlayer;
+    //Used for resetting
+    protected Vector3 startingPosition;
     //Whether or not this enemy is being attacked by another
     //protected bool targetedByEnemy;
     // Base color
@@ -165,7 +169,8 @@ public abstract class Enemy : MonoBehaviour {
     #endregion
 
     #region Properties
-    public bool Alive { get { return alive; } }
+    public bool Alive { get { return alive; } set { alive = value; } }
+    public float MaxHP { get { return maxHP; } }
     public bool CanTakeDamage { get { return (damageTimer <= 0f && !invincible); } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool CanKnockback { get { return !inKnockback; } }
@@ -180,6 +185,7 @@ public abstract class Enemy : MonoBehaviour {
     public GameObject AttackTarget { get { return attackTarget; } set { attackTarget = value; } }
     public EnemyStates EnemyState { get { return enemyState; } }
     public CombatStates CombatState { get { return combatState; } }
+    public Vector3 StartingPosition { get { return startingPosition; } }
     #endregion
 
     #region Unity Methods
@@ -211,6 +217,8 @@ public abstract class Enemy : MonoBehaviour {
         //counterAttackChance = 0;
         //dodgeChance = 0;
         hitPlayer = false;
+        maxHP = hp;
+        startingPosition = this.transform.position;
     }
 	
 	protected virtual void Update () {

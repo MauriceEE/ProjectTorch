@@ -10,9 +10,9 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
     #region Private Fields
     //List of all enemies in the current level... used for other classes
-    protected List<GameObject> zoneEnemies;
+    public List<GameObject> zoneEnemies;
     //Initial array of enemies gathered from the FindGameObjectsWithTag function
-    protected GameObject[] gameEnemies;
+    public GameObject[] gameEnemies;
     //Reference to the player
     protected GameObject player;
     //Time currently waiting between attacks
@@ -25,6 +25,8 @@ public class EnemyManager : MonoBehaviour {
     protected FlagManager flags;
     //Encounter type
     protected Encounter.SpecialEncounters currentEncounterType;
+    //Text manager
+    TextManager textMan;
     #endregion
 
     #region Public Fields
@@ -59,6 +61,7 @@ public class EnemyManager : MonoBehaviour {
     public List<GameObject> Enemies { get { return zoneEnemies; } }
     public GameObject[] HumanEnemyCategories { get { return humanEnemyCategories; } }
     public GameObject[] ShadowEnemyCategories { get { return shadowEnemyCategories; } }
+    public bool EncounterActive { get { return encounterActive; } set { encounterActive = value; } }
     /// <summary>
     /// Returns a list of all enemy hitboxes that are currently active
     /// Used for the player class when doing shine
@@ -94,6 +97,7 @@ public class EnemyManager : MonoBehaviour {
         gridPositions = new Vector2[6];
         GenerateGridPositions();
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+        textMan = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
     }
 	
 	void Update () {
@@ -170,11 +174,11 @@ public class EnemyManager : MonoBehaviour {
     /// </summary>
     void CleanupEnemies()
     {
-        TextManager textMan = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
         for (int i = 0; i < gameEnemies.Length; ++i)
         {
-            if (gameEnemies[i] != null && !gameEnemies[i].GetComponent<Enemy>().Alive)
+            if (gameEnemies[i].activeInHierarchy && !gameEnemies[i].GetComponent<Enemy>().Alive)
             {
+                Debug.Log("REMOVING ENEMY " + gameEnemies[i] + " FROM GAME @ " + Time.fixedTime);
                 //Remove enemy from big list of enemies
                 zoneEnemies.Remove(gameEnemies[i]);
                 if (currentEncounterType == Encounter.SpecialEncounters.PrincessRescue && zoneEnemies.Count == 0)
@@ -205,11 +209,14 @@ public class EnemyManager : MonoBehaviour {
                     }
                 }
                 //Destroy gameobject
-                Destroy(gameEnemies[i]);
+                //Destroy(gameEnemies[i]);//DEPRECATED -- Now we're just setting to inactive so that the enemy can respawn on death
+                
                 //Tell the flag manager whether or not the enemy was a human
                 flags.EnemyKilled(gameEnemies[i].GetComponent<Enemy>().faction == Enemy.EnemyFaction.Human);
                 //Set to null
-                gameEnemies[i] = null;
+                //gameEnemies[i] = null;//Again, only doing inactive stuff now
+                gameEnemies[i].SetActive(false);
+                Debug.Log("SET TO INACTIVE @ " + Time.fixedTime);
             }
         }
     }
@@ -558,6 +565,7 @@ public class EnemyManager : MonoBehaviour {
     /// <param name="zone">Current zone the player is in</param>
     public void GetEnemiesInCurrentZone(ZoneManager.ZoneNames zone)
     {
+        Enemy e;
         //First wipe out old enemies
         zoneEnemies.Clear();
         //Loop through all enemies to determine whether or not they're in the right zone
@@ -567,8 +575,25 @@ public class EnemyManager : MonoBehaviour {
             //THIS ONLY WORKS IF THE FORMAT IN THE HIERARCHY IS 
             //  -Zone-,-ActiveArea-,-Enemies-,-Enemy-
             //So keep it that way when making new levels please
+
+            /*
             if (gameEnemies[i] != null && gameEnemies[i].GetComponent<Enemy>().zone == zone) 
                 zoneEnemies.Add(gameEnemies[i]);
+                */
+            e = gameEnemies[i].GetComponent<Enemy>();
+            if (e.zone == zone)
+            {
+                //Reset the enemy back to normal
+                zoneEnemies.Add(gameEnemies[i]);
+                gameEnemies[i].SetActive(true);
+                e.Alive = true;
+                e.hp = e.MaxHP;
+                e.transform.position = e.StartingPosition;
+                e.EndEncounter();
+                e.MoveTarget = e.StartingPosition;
+            }
+            ///TODO:
+            ///Alternate option, try FindObjectsOfType, since it only grabs active objects. Might be more efficient, might not
         }
     }
     #endregion
