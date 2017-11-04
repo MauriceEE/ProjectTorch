@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour {
     public PlayerCombat player;
     public RectTransform health;
     public RectTransform bar;
+    public int maxHP = 100;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,7 +15,7 @@ public class HealthBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        health.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, player.hp);
+        health.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, player.hp * (bar.rect.width/maxHP));
             
 	}
 }

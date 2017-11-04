@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
+            Time.timeScale = 0f;
         }
         if (SceneManager.sceneCount > 1 && SceneManager.GetSceneAt(1).isLoaded) {
             SceneManager.UnloadSceneAsync("Loading");
@@ -30,7 +31,8 @@ public class UIManager : MonoBehaviour {
         }*/
     }
     public void Resume() {
-        menuCanvas.SetActive(true);
+        menuCanvas.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void ExitGame() {
         Application.Quit();
