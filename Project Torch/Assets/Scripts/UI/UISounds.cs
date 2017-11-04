@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UISounds : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler{
+public class UISounds : MonoBehaviour, ISelectHandler, IPointerEnterHandler, IPointerClickHandler{
     public void OnPointerClick(PointerEventData eventData) {
         AkSoundEngine.PostEvent("ButtonPress", gameObject);
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        AkSoundEngine.PostEvent("Pause", gameObject);
+        AkSoundEngine.PostEvent("Scroll", gameObject);
     }
-
     // Use this for initialization
     void Start () {
 		
@@ -22,4 +21,8 @@ public class UISounds : MonoBehaviour, IPointerEnterHandler, IPointerClickHandle
 	void Update () {
 		
 	}
+
+    void ISelectHandler.OnSelect(BaseEventData eventData) {
+        AkSoundEngine.PostEvent("Scroll", gameObject);
+    }
 }

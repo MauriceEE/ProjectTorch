@@ -17,7 +17,7 @@ public class SplashScreen : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         } else if (fadeText) {
             timer -= Time.deltaTime;
             if (timer <= 0f) {
@@ -34,7 +34,7 @@ public class SplashScreen : MonoBehaviour {
                 text.color = new Vector4(text.color.r, text.color.g, text.color.b, (maxTime - timer)/(maxTime/5));
             }
             if (timer >= maxTime) {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

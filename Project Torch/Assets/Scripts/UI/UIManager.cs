@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour {
+    public EventSystem es;
     GameObject menuCanvas;
     public List<Button> buttons;
+    public Button resume;
     // Use this for initialization
     void Start () {
         menuCanvas = gameObject.transform.GetChild(0).gameObject;
@@ -17,7 +19,9 @@ public class UIManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
-            Time.timeScale = 0f;
+            if (Time.timeScale != 0f) { Time.timeScale = 0f; } 
+            else { Time.timeScale = 1f; }
+            es.SetSelectedGameObject(resume.gameObject);
         }
         if (SceneManager.sceneCount > 1 && SceneManager.GetSceneAt(1).isLoaded) {
             SceneManager.UnloadSceneAsync("Loading");
@@ -32,6 +36,7 @@ public class UIManager : MonoBehaviour {
     }
     public void Resume() {
         menuCanvas.SetActive(false);
+        es.SetSelectedGameObject(null);
         Time.timeScale = 1f;
     }
     public void ExitGame() {
@@ -48,5 +53,8 @@ public class UIManager : MonoBehaviour {
         SceneManager.LoadSceneAsync("Loading");
         SceneManager.LoadSceneAsync("Game");
         
+    }
+    public void LoadCredits() {
+        SceneManager.LoadSceneAsync("Credits");
     }
 }

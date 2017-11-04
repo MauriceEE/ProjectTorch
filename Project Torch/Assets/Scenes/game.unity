@@ -9604,7 +9604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c9784aef0f6ed45a0f9459b659af73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  es: {fileID: 36066029}
   buttons: []
+  resume: {fileID: 1196966438}
 --- !u!4 &994007246
 Transform:
   m_ObjectHideFlags: 0
@@ -9639,7 +9641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1003908000
 MonoBehaviour:
   m_ObjectHideFlags: 0
