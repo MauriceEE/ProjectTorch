@@ -412,6 +412,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.4958863
       objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
   m_IsPrefabParent: 0
@@ -1194,6 +1199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
+  combatState: 0
   hp: 50
   faction: 1
   zone: 4
@@ -2608,10 +2615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d35e5fbb0d4c8448410e5935c46872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneEnemies: []
-  gameEnemies: []
   encounterEnemies: []
   surroundingGridOccupants: []
+  allySpeedMultiplier: 0.1
+  encounterAggressionLimit: 30
+  encounterAggressionLossPerSecond: 2
   encounterRadius: 12
   surroundingGridAngle: 22.2
   surroundingGridRadius: 4.8
@@ -3316,6 +3324,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.9446522
       objectReference: {fileID: 0}
+    - target: {fileID: 114548477448959748, guid: 38748f2d8769cbd4f88c982e4ab0befe,
+        type: 2}
+      propertyPath: zone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38748f2d8769cbd4f88c982e4ab0befe, type: 2}
   m_IsPrefabParent: 0
@@ -3379,6 +3392,11 @@ Prefab:
     - target: {fileID: 4972537893376162, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.6092433
+      objectReference: {fileID: 0}
+    - target: {fileID: 114750510894282836, guid: 0eba00d40852bf3468cd761950fa610c,
+        type: 2}
+      propertyPath: zone
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
@@ -4441,6 +4459,11 @@ Prefab:
     - target: {fileID: 4972537893376162, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.6092433
+      objectReference: {fileID: 0}
+    - target: {fileID: 114750510894282836, guid: 0eba00d40852bf3468cd761950fa610c,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
@@ -5626,6 +5649,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.4958863
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de,
+        type: 2}
+      propertyPath: zone
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
@@ -6720,6 +6748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
+  combatState: 0
   hp: 50
   faction: 1
   zone: 4
@@ -7392,6 +7422,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.4958863
       objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
   m_IsPrefabParent: 0
@@ -7530,6 +7565,11 @@ Prefab:
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4958893
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
@@ -7841,6 +7881,11 @@ Prefab:
     - target: {fileID: 4431358786704952, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.9446522
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754306234051228, guid: 711eeed3bcec1fc47a4a39018d827268,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
@@ -8200,6 +8245,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.4958893
       objectReference: {fileID: 0}
+    - target: {fileID: 114988248729391038, guid: 0c19d236e088dd94e96ca3b4b85647de,
+        type: 2}
+      propertyPath: zone
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c19d236e088dd94e96ca3b4b85647de, type: 2}
   m_IsPrefabParent: 0
@@ -8263,6 +8313,11 @@ Prefab:
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4958893
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
@@ -8512,6 +8567,11 @@ Prefab:
     - target: {fileID: 4972537893376162, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.6092464
+      objectReference: {fileID: 0}
+    - target: {fileID: 114750510894282836, guid: 0eba00d40852bf3468cd761950fa610c,
+        type: 2}
+      propertyPath: zone
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
@@ -9890,7 +9950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -10316,6 +10376,11 @@ Prefab:
     - target: {fileID: 4431358786704952, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.9446522
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754306234051228, guid: 711eeed3bcec1fc47a4a39018d827268,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
@@ -10998,6 +11063,11 @@ Prefab:
     - target: {fileID: 4431358786704952, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.9446522
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754306234051228, guid: 711eeed3bcec1fc47a4a39018d827268,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
@@ -12371,6 +12441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
+  combatState: 0
   hp: 50
   faction: 1
   zone: 4
@@ -12542,6 +12614,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.9446522
       objectReference: {fileID: 0}
+    - target: {fileID: 114548477448959748, guid: 38748f2d8769cbd4f88c982e4ab0befe,
+        type: 2}
+      propertyPath: zone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38748f2d8769cbd4f88c982e4ab0befe, type: 2}
   m_IsPrefabParent: 0
@@ -12605,6 +12682,11 @@ Prefab:
     - target: {fileID: 4431358786704952, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4958893
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754306234051228, guid: 711eeed3bcec1fc47a4a39018d827268,
+        type: 2}
+      propertyPath: zone
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
@@ -12802,6 +12884,11 @@ Prefab:
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4958863
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
@@ -13425,6 +13512,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114754306234051228, guid: 711eeed3bcec1fc47a4a39018d827268,
+        type: 2}
+      propertyPath: zone
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 711eeed3bcec1fc47a4a39018d827268, type: 2}
   m_IsPrefabParent: 0
@@ -13855,6 +13947,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.6092433
       objectReference: {fileID: 0}
+    - target: {fileID: 114750510894282836, guid: 0eba00d40852bf3468cd761950fa610c,
+        type: 2}
+      propertyPath: zone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
   m_IsPrefabParent: 0
@@ -13918,6 +14015,11 @@ Prefab:
     - target: {fileID: 4209255999271292, guid: 38748f2d8769cbd4f88c982e4ab0befe, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.9446522
+      objectReference: {fileID: 0}
+    - target: {fileID: 114548477448959748, guid: 38748f2d8769cbd4f88c982e4ab0befe,
+        type: 2}
+      propertyPath: zone
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38748f2d8769cbd4f88c982e4ab0befe, type: 2}
@@ -14555,6 +14657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
+  combatState: 0
   hp: 50
   faction: 1
   zone: 4
@@ -16674,6 +16778,11 @@ Prefab:
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4958893
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894761997979908, guid: 61ac124ad8fef794e81a21824dccb648,
+        type: 2}
+      propertyPath: zone
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
@@ -19461,6 +19570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyState: 0
+  combatState: 0
   hp: 50
   faction: 1
   zone: 4

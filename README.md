@@ -97,3 +97,5 @@
 <ul><li>Added in the WarZoneStage2 and TrueHumanStage1 levels</li></ul>
 <h2>Connor Menard - 11/4/17 - 18:55</h2>
 <ul><li>Implemented respawning</li></ul>
+<h2>Connor Menard - 11/4/17 - 20:07</h2>
+<ul><li>Implemented aggression</li><li>NOTE: There's currently a game breaking bug when an enemy goes to attack the player... sometimes. Haven't squashed it yet</li></ul>

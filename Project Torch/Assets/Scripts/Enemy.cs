@@ -70,9 +70,9 @@ public abstract class Enemy : MonoBehaviour {
     //Whether or not this enemy is in a combat encounter
     protected bool inEncounter = false;
     //Current state of the enemy
-    protected EnemyStates enemyState;
+    public EnemyStates enemyState;
     //Current attack state
-    protected CombatStates combatState;
+    public CombatStates combatState;
     //Current reaction state
     protected ReactionStates reactionState;
     //Amount of time spent attacking
@@ -83,6 +83,8 @@ public abstract class Enemy : MonoBehaviour {
     protected GameObject player;
     //Reference to the connected encounter
     protected GameObject encounter;
+    //Enemymanager reference
+    protected EnemyManager enemyMan;
     //Time left for the enemy to dash
     protected float dashTime = 0f;
     //Whether the enemy can take damage
@@ -219,6 +221,7 @@ public abstract class Enemy : MonoBehaviour {
         hitPlayer = false;
         maxHP = hp;
         startingPosition = this.transform.position;
+        enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
     }
 	
 	protected virtual void Update () {
@@ -289,20 +292,29 @@ public abstract class Enemy : MonoBehaviour {
             case CombatStates.Active:
                 entity.CanMove = false;
                 // --do AABB for box 1--
-                AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
+                if (!alliedWithPlayer)
+                    AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
+                else
+                    CheckCollisionsWithEnemies(atHB1);
                 GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
                 tempObjBox1.transform.localPosition = new Vector3(atHB1.center.x * hitBoxDirectionMove, atHB1.center.y, 0);
                 if (attackTime > (atStartup + atHB2FirstActiveFrame) * Helper.frame)
                 {
                     // --do AABB for box 2--
-                    AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    if (!alliedWithPlayer)
+                        AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    else
+                        CheckCollisionsWithEnemies(atHB2);
                     GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
                     tempObjBox2.transform.localPosition = new Vector3(atHB2.center.x * hitBoxDirectionMove, atHB2.center.y, 0);
                 }
                 if (attackTime > (atStartup + atHB3FirstActiveFrame) * Helper.frame)
                 {
                     // --do AABB for box 3--
-                    AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    if (!alliedWithPlayer)
+                        AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
+                    else
+                        CheckCollisionsWithEnemies(atHB3);
                     GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
                     tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
                 }
@@ -350,8 +362,15 @@ public abstract class Enemy : MonoBehaviour {
                 //Nothing special for now.........
                 isAttacking = false;
                 maxVelocity = ogMaxVelocity;
+                //Don't do nothing if you're in an encounter
                 if (inEncounter)
-                    RequestMoveTarget();//Don't do nothing if you're in an encounter
+                {
+                    if (!alliedWithPlayer)
+                        RequestMoveTarget();
+                    else
+                        enemyMan.SendAllyAttackOrder(this);
+                }
+                    
                 break;
             case EnemyStates.Attacking:
                 elapsedApproachTime = 0f;
@@ -370,11 +389,10 @@ public abstract class Enemy : MonoBehaviour {
 
                 // adjust attack range to increase likelihood of a chasing attack landing
                 if (elapsedApproachTime >= 1) attackRange = .8f;
-
+                
                 // if elapsed time is greater than 3 seconds, just cancel their attack and return them to their old location
                 if (elapsedApproachTime > 3)
                 {
-
                     CancelOrHitStun(false);
                     enemyState = EnemyStates.ReturningFromAttack;
 
@@ -387,16 +405,6 @@ public abstract class Enemy : MonoBehaviour {
                     Debug.Log("Chase slash attempt");
                     */
                 }
-
-                /*
-                // if outside of encounter radius, have them return
-                if ((this.transform.position - Helper.Vec2ToVec3(returnPosition)).sqrMagnitude > 11.55) // hard coded encounter radius
-                {
-                    CancelOrHitStun(false);
-                    enemyState = EnemyStates.ReturningFromEncounter;
-                }
-                */
-
                 //Update move target
                 moveTarget = attackTarget.transform.position;
                 //Move towards target
@@ -422,6 +430,8 @@ public abstract class Enemy : MonoBehaviour {
                 //Merely move back to the return position and wait
                 //TODO: stuff after returning to the return position?
                 SeekTarget();
+                if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
+                    enemyState = EnemyStates.Idle;
                 break;
             case EnemyStates.SurroundingPlayer:
                 //Merely follow the enemy manager's orders (it handles updating move target automatically)
@@ -530,6 +540,14 @@ public abstract class Enemy : MonoBehaviour {
                 Debug.Log("Encounter object not yet assigned to this enemy!");
             }
         }
+        else
+        {
+            if (alliedWithPlayer)
+            {
+                //Add to current aggression if allied with the player
+                enemyMan.EncounterAggressionCurrent += damage;
+            }
+        }
 
         //If guard up...
         if (guardStacks > 0) 
@@ -613,7 +631,7 @@ public abstract class Enemy : MonoBehaviour {
         else if (rand < guardChance + counterAttackChance)
         {
             // Ask Encounter Manager if it can attack
-            if (GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().CanEnemiesAttackPlayer())
+            if (enemyMan.CanEnemiesAttackPlayer())
             {
                 //Enter counterattack state
                 counterattacking = true;
@@ -693,6 +711,42 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     /// <summary>
+    /// Checks hitbox collisions with enemies 
+    /// ***AND applies damage***
+    /// </summary>
+    /// <param name="hitbox">Hitbox to check</param>
+    /// <param name="enemies">List of enemies to attack</param>
+    /// <returns>Whether or not they hit</returns>
+    protected bool CheckCollisionsWithEnemies(Rect hitbox)
+    {
+        //Don't bother with any of this if we hit an enemy this attack
+        if(!hitPlayer)
+        {
+            Rect newHB = hitbox;
+            Enemy e;
+            if (hitBoxDirectionMove < 0)
+                newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
+            //Loop through all enemies
+            for (int i = 0; i < enemyMan.encounterEnemies.Count; ++i)
+            {
+                e = enemyMan.encounterEnemies[i].GetComponent<Enemy>();
+                //Only bother with ones that aren't allied with the player
+                if (!e.alliedWithPlayer)
+                {
+                    //See if our hitbox hit them
+                    if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), e.HitBoxRect)) 
+                    {
+                        hitPlayer = true;
+                        e.TakeDamage(atDamage, PlayerCombat.Attacks.Slash);
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
     /// Handles all the necessary attacking methods
     /// TODO: Check whether or not allied with player
     /// TODO: Damage other enemies of opposing factions
@@ -715,7 +769,7 @@ public abstract class Enemy : MonoBehaviour {
     /// </summary>
     protected void RequestRemoveFromEncounterGrid()
     {
-        GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().RemoveEnemyFromOccupancyGrid(this);
+        enemyMan.RemoveEnemyFromOccupancyGrid(this);
     }
 
     /// <summary>
@@ -800,7 +854,7 @@ public abstract class Enemy : MonoBehaviour {
     /// </summary>
     protected void RequestMoveTarget()
     {
-        moveTarget = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>().SendNewMoveTarget(this);
+        moveTarget = enemyMan.SendNewMoveTarget(this);
     }
     #endregion
 }

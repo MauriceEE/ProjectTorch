@@ -4,15 +4,13 @@ using UnityEngine;
 /// <summary>
 /// Manages all the enemies in the scene
 /// Also acts as the encounter manager
-/// 
-/// TODO: Fix bug where enemies take up more than one slot in the occupancy grid
 /// </summary>
 public class EnemyManager : MonoBehaviour {
     #region Private Fields
     //List of all enemies in the current level... used for other classes
-    public List<GameObject> zoneEnemies;
+    protected List<GameObject> zoneEnemies;
     //Initial array of enemies gathered from the FindGameObjectsWithTag function
-    public GameObject[] gameEnemies;
+    protected GameObject[] gameEnemies;
     //Reference to the player
     protected GameObject player;
     //Time currently waiting between attacks
@@ -25,6 +23,8 @@ public class EnemyManager : MonoBehaviour {
     protected FlagManager flags;
     //Encounter type
     protected Encounter.SpecialEncounters currentEncounterType;
+    //Aggression for the current encounter
+    protected float encounterAggressionCurrent;
     //Text manager
     TextManager textMan;
     #endregion
@@ -37,6 +37,12 @@ public class EnemyManager : MonoBehaviour {
     //    4      P      1
     //      5         2
     public GameObject[] surroundingGridOccupants;
+    //Movement speed modifier for allies
+    public float allySpeedMultiplier;
+    //Max amount of HP enemies can take
+    public float encounterAggressionLimit;
+    //Amount of aggression lost per second
+    public float encounterAggressionLossPerSecond;
     //Range of encounters
     public float encounterRadius;
     //Angle of the enemies above/below the player (as opposed to directly in front)
@@ -62,6 +68,7 @@ public class EnemyManager : MonoBehaviour {
     public GameObject[] HumanEnemyCategories { get { return humanEnemyCategories; } }
     public GameObject[] ShadowEnemyCategories { get { return shadowEnemyCategories; } }
     public bool EncounterActive { get { return encounterActive; } set { encounterActive = value; } }
+    public float EncounterAggressionCurrent { get { return encounterAggressionCurrent; } set { encounterAggressionCurrent = value; } }
     /// <summary>
     /// Returns a list of all enemy hitboxes that are currently active
     /// Used for the player class when doing shine
@@ -121,6 +128,8 @@ public class EnemyManager : MonoBehaviour {
         if (encounterActive)
             MergeEncounters();
         Helper.DebugLogDivider();
+        //Reset aggression
+        encounterAggressionCurrent = 0f;
         //Set flagged for being in an encounter
         encounterActive = true;
         //Set encounter type
@@ -137,9 +146,12 @@ public class EnemyManager : MonoBehaviour {
                 zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
             }
             if (encounterEnemies.Count > 6)
+            {
+                Debug.Break();
                 throw new UnityException();//Don't allow more than 6 enemies in an encounter... if this line of code triggers then we need to fix something
+            }
         }
-        Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count + ", now assigning attack targets...");
+        Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count + ", now assigning attack targets... @ " + Time.fixedTime);
         //Now that we have all the encounter enemies setup, we can assign attack targets
         for (int i = 0; i < encounterEnemies.Count; ++i)
         {
@@ -154,6 +166,7 @@ public class EnemyManager : MonoBehaviour {
             else
             {
                 e.AlliedWithPlayer = true;
+                e.gameObject.GetComponent<Entity>().SpeedModifier = allySpeedMultiplier;
                 e.AttackTarget = GetNewAttackTarget(e.faction);
             }
         }
@@ -178,7 +191,6 @@ public class EnemyManager : MonoBehaviour {
         {
             if (gameEnemies[i].activeInHierarchy && !gameEnemies[i].GetComponent<Enemy>().Alive)
             {
-                Debug.Log("REMOVING ENEMY " + gameEnemies[i] + " FROM GAME @ " + Time.fixedTime);
                 //Remove enemy from big list of enemies
                 zoneEnemies.Remove(gameEnemies[i]);
                 if (currentEncounterType == Encounter.SpecialEncounters.PrincessRescue && zoneEnemies.Count == 0)
@@ -210,13 +222,11 @@ public class EnemyManager : MonoBehaviour {
                 }
                 //Destroy gameobject
                 //Destroy(gameEnemies[i]);//DEPRECATED -- Now we're just setting to inactive so that the enemy can respawn on death
-                
                 //Tell the flag manager whether or not the enemy was a human
                 flags.EnemyKilled(gameEnemies[i].GetComponent<Enemy>().faction == Enemy.EnemyFaction.Human);
                 //Set to null
                 //gameEnemies[i] = null;//Again, only doing inactive stuff now
                 gameEnemies[i].SetActive(false);
-                Debug.Log("SET TO INACTIVE @ " + Time.fixedTime);
             }
         }
     }
@@ -286,6 +296,19 @@ public class EnemyManager : MonoBehaviour {
             UpdateEnemiesInGrid();
             UpdateEnemiesAlliedWithPlayer();
             MoveToAttackPlayer();
+            //Reduce current aggression, but keep above zero
+            encounterAggressionCurrent -= encounterAggressionLossPerSecond * Time.deltaTime;
+            if (encounterAggressionCurrent < 0)
+                encounterAggressionCurrent = 0f;
+            //Check if aggression is above limit and set aggression if true
+            if (encounterAggressionCurrent >= encounterAggressionLimit)
+            {
+                for (int i = 0; i < encounterEnemies.Count; ++i)
+                {
+                    encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer = false;
+                    encounterEnemies[i].GetComponent<Entity>().SpeedModifier = 1f;
+                }
+            }
         }
         else
         {
@@ -313,7 +336,6 @@ public class EnemyManager : MonoBehaviour {
                     e.MoveToAttack(GetNewAttackTarget(e.faction));
                 else if (e.EnemyState == Enemy.EnemyStates.ReturningFromAttack)//Make them attack again after they attack
                     e.MoveToAttack(e.AttackTarget);
-
             }
         }
     }
@@ -511,6 +533,16 @@ public class EnemyManager : MonoBehaviour {
             Debug.Log(surroundingGridOccupants[i]);
         Debug.Break();
         throw new UnityException();//Code shouldn't ever reach here
+    }
+
+    /// <summary>
+    /// Makes an ally attack an enemy
+    /// Should be called in the enemy class when the enemy is allied with the player
+    /// </summary>
+    /// <param name="e">The enemy script object</param>
+    public void SendAllyAttackOrder(Enemy e)
+    {
+        e.MoveToAttack(GetNewAttackTarget(e.faction));
     }
 
     /// <summary>
