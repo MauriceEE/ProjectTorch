@@ -63,6 +63,7 @@ public class PlayerCombat : MonoBehaviour {
     #endregion
 
     #region Private Fields
+    public Animator animator;
     //Time spent since attack began
     protected float attackTime = 0f;
     //Whether or not the player can attack, can be accessed and modified by other scripts
@@ -99,6 +100,7 @@ public class PlayerCombat : MonoBehaviour {
     #region Unity Methods
     void Awake()
     {
+        animator = gameObject.GetComponent<Animator>();
         combatState = CombatStates.None;
         currentAttack = Attacks.None;
         entity = this.GetComponent<Entity>();
@@ -111,9 +113,9 @@ public class PlayerCombat : MonoBehaviour {
     {
         //Temp scalar which will affect hitboxes on left/right side
         if (entity.FacingRight)
-            hitBoxDirectionMove = 1;
-        else
             hitBoxDirectionMove = -1;
+        else
+            hitBoxDirectionMove = 1;
 
         
         attackTime += Time.deltaTime;
@@ -152,6 +154,7 @@ public class PlayerCombat : MonoBehaviour {
                         consecSlashCount++;
                         ComboFrameAdjust();
                     }
+                    animator.Play("Slash");
 
                     attackTime = 0f;
                     //Start attacking
@@ -179,6 +182,7 @@ public class PlayerCombat : MonoBehaviour {
                         consecSlashCount++;
                         ComboFrameAdjust();
                     }
+                    animator.Play("Thrust");
                     attackTime = 0f;
                     //Start attacking
                     combatState = CombatStates.Startup;
@@ -204,6 +208,7 @@ public class PlayerCombat : MonoBehaviour {
                         ++consecSlashCount;
                         ComboFrameAdjust();
                     }
+                    animator.Play("Shine");
                     attackTime = 0f;
                     //Start shining
                     combatState = CombatStates.Startup;

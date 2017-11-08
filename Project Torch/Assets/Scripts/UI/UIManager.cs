@@ -9,15 +9,21 @@ public class UIManager : MonoBehaviour {
     GameObject menuCanvas;
     public List<Button> buttons;
     public Button resume;
+    bool isMenu = false;
     // Use this for initialization
     void Start () {
-        menuCanvas = gameObject.transform.GetChild(0).gameObject;
+        
         buttons = new List<Button>();
+        if (SceneManager.GetActiveScene().name == "Main Menu") {
+            isMenu = true;
+        } else {
+            menuCanvas = gameObject.transform.GetChild(0).gameObject;
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu) {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             if (Time.timeScale != 0f) { Time.timeScale = 0f; } 
             else { Time.timeScale = 1f; }
@@ -42,7 +48,7 @@ public class UIManager : MonoBehaviour {
     public void ExitGame() {
         Application.Quit();
         //temp code for editor
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
     public void LoadMainMenu() {
         SceneManager.LoadScene("Main Menu");
