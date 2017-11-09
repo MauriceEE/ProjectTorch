@@ -12,13 +12,322 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 122
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
-  EventWwu: []
-  AuxBusWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  BankWwu: []
-  RtpcWwu: []
-  TriggerWwu: []
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{F625D043-55B3-4F69-A4F1-FC06A818FF00}'
+    m_lastTimePsrt1: 1438279808
+    m_lastTimePart2: -1999297546
+    List:
+    - Name: Attack1
+      Path: Default Work Unit/Enemies/Attack1
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Attack1
+        ObjectType: 3
+      ID: -526426330
+      Guid: 3121318cb93a4d479ee7473711b04de1
+      maxAttenuation: 0
+    - Name: ButtonPress
+      Path: Default Work Unit/UI/ButtonPress
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: ButtonPress
+        ObjectType: 3
+      ID: 317641954
+      Guid: ee5447cd34e91544b678e26f74e3a53d
+      maxAttenuation: 0
+    - Name: Dash
+      Path: Default Work Unit/Attacks and Abilities/Dash
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks and Abilities
+        ObjectType: 4
+      - ElementName: Dash
+        ObjectType: 3
+      ID: 1942692385
+      Guid: 14c0fb65dc57bc4384181512c28a2908
+      maxAttenuation: 0
+    - Name: Pause
+      Path: Default Work Unit/UI/Pause
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Pause
+        ObjectType: 3
+      ID: -1202379803
+      Guid: 808e918052d9c749bc00d89cd555693b
+      maxAttenuation: 0
+    - Name: Resume
+      Path: Default Work Unit/UI/Resume
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Resume
+        ObjectType: 3
+      ID: 953277036
+      Guid: 998e0c6d0a26eb43a8f75be239e8654f
+      maxAttenuation: 0
+    - Name: Scroll
+      Path: Default Work Unit/UI/Scroll
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Scroll
+        ObjectType: 3
+      ID: 454121546
+      Guid: d60a50c59c21b54c8a5c5222a4c4c075
+      maxAttenuation: 0
+    - Name: Shine
+      Path: Default Work Unit/Attacks and Abilities/Shine
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks and Abilities
+        ObjectType: 4
+      - ElementName: Shine
+        ObjectType: 3
+      ID: -1239585378
+      Guid: 50d8ce2d1b3a7a4bbc76a1f4309cdad7
+      maxAttenuation: 0
+    - Name: Slash
+      Path: Default Work Unit/Attacks and Abilities/Slash
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks and Abilities
+        ObjectType: 4
+      - ElementName: Slash
+        ObjectType: 3
+      ID: -187690416
+      Guid: 18af0016050318409cd850c8903a9663
+      maxAttenuation: 0
+    - Name: Thrust
+      Path: Default Work Unit/Attacks and Abilities/Thrust
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks and Abilities
+        ObjectType: 4
+      - ElementName: Thrust
+        ObjectType: 3
+      ID: -2097622145
+      Guid: 7207f7190c915b4ebd61cc211fa3a50a
+      maxAttenuation: 0
+    - Name: Torch_Plant
+      Path: Default Work Unit/Attacks and Abilities/Torch_Plant
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks and Abilities
+        ObjectType: 4
+      - ElementName: Torch_Plant
+        ObjectType: 3
+      ID: -1747201573
+      Guid: 8234759ede0d6542bdce95a7669c4992
+      maxAttenuation: 0
+  - PhysicalPath: Events/Interactive Music.wwu
+    ParentPhysicalPath: 
+    Guid: '{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}'
+    m_lastTimePsrt1: -1128061056
+    m_lastTimePart2: -1999297588
+    List:
+    - Name: Music_Ambient
+      Path: Interactive Music/Music_Ambient
+      PathAndIcons:
+      - ElementName: Interactive Music
+        ObjectType: 12
+      - ElementName: Music_Ambient
+        ObjectType: 3
+      ID: -683787013
+      Guid: 4177b4e70b1a3041b48c93861ecf4243
+      maxAttenuation: 0
+    - Name: Music_Combat
+      Path: Interactive Music/Music_Combat
+      PathAndIcons:
+      - ElementName: Interactive Music
+        ObjectType: 12
+      - ElementName: Music_Combat
+        ObjectType: 3
+      ID: -349987211
+      Guid: b1d99ba0851cf24ba43c2334e45fa87f
+      maxAttenuation: 0
+    - Name: Music_Start
+      Path: Interactive Music/Music_Start
+      PathAndIcons:
+      - ElementName: Interactive Music
+        ObjectType: 12
+      - ElementName: Music_Start
+        ObjectType: 3
+      ID: -569063489
+      Guid: b63033a9582f0540a77ab711a2c9853e
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{42834CBF-5E75-4807-89CA-1BF2ABCC967E}'
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{1C6F15B7-5082-4AA6-809E-55AE31210F8C}'
+    m_lastTimePsrt1: -1128061056
+    m_lastTimePart2: -1999297588
+    List:
+    - Name: GameState
+      Path: Default Work Unit/GameState
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameState
+        ObjectType: 9
+      ID: -203310782
+      Guid: 8d7602d36fc1fa429e39e925ae261915
+      values:
+      - InGame
+      - None
+      - Pause
+      ValueIcons:
+      - ElementName: InGame
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Pause
+        ObjectType: 8
+      valueIDs: ba33b13adb3ba32ce52355b8
+      ValueGuids:
+      - bytes: f492c476e4eb844994c94972872be370
+      - bytes: d1bf40a439c03f4ca421b6a5e8704dbe
+      - bytes: 306c19b3e3e3814b9619b26b912d7829
+    - Name: Music
+      Path: Default Work Unit/Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 9
+      ID: -303024426
+      Guid: ed1c692c738bae4380b1f065f6451da3
+      values:
+      - Ambient
+      - Combat
+      - None
+      ValueIcons:
+      - ElementName: Ambient
+        ObjectType: 8
+      - ElementName: Combat
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: a3daa504bdf6c2a4db3ba32c
+      ValueGuids:
+      - bytes: e09851082aefd74280cd08c856370c3c
+      - bytes: 2a2c0063aaa89340af46b3a8a9c1d864
+      - bytes: f36346799029cd48bdd30936f1eb7fcc
+    - Name: PlayerLife
+      Path: Default Work Unit/PlayerLife
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerLife
+        ObjectType: 9
+      ID: 444815956
+      Guid: 296bdd12f23daf4790160cb620a814c4
+      values:
+      - Alive
+      - Dead
+      - None
+      ValueIcons:
+      - ElementName: Alive
+        ObjectType: 8
+      - ElementName: Dead
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 608f0e2773b9d579db3ba32c
+      ValueGuids:
+      - bytes: 535be02922d6f945a74fd1af5c91d200
+      - bytes: f214be5e01ebc44ea70c574d77ea418b
+      - bytes: 6c8f7a2d4a8b304d93b5225bd27d4241
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{957109A5-E41F-4B9F-A5A3-2341E8B43C94}'
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{A16D6668-519C-48B3-9FE3-35CA4D73DF52}'
+    m_lastTimePsrt1: 1438279808
+    m_lastTimePart2: -1999297546
+    List:
+    - Name: Music
+      Path: Default Work Unit/Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 7
+      ID: -303024426
+      Guid: c49e522395512a44ae725086cd10cddf
+    - Name: SFX
+      Path: Default Work Unit/SFX
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 7
+      ID: 393239870
+      Guid: 80ea0a9937cf7c4f8d0b838ea225acfd
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{12081575-47C9-473E-A190-14C230AB9725}'
+    m_lastTimePsrt1: 228973312
+    m_lastTimePart2: -1999298595
+    List:
+    - Name: PlayerHealth
+      Path: Default Work Unit/PlayerHealth
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerHealth
+        ObjectType: 13
+      ID: 151362964
+      Guid: 3801052dee7e04489e68e5b2b6f466d8
+    - Name: TimeRemaining
+      Path: Default Work Unit/TimeRemaining
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TimeRemaining
+        ObjectType: 13
+      ID: 1691631674
+      Guid: 76479dfbf5bdff4a99c2c99013a6cca0
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{F8532ED5-CD91-4CD4-B9AA-298B16E0D638}'
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
+    List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
