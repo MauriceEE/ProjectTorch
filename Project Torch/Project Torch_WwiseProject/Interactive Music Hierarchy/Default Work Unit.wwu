@@ -651,6 +651,14 @@
 								<AudioNodeRef Name="Combat" ID="{DFF0DA09-77B6-4799-8B7C-A9788C62EB6D}" WorkUnitID="{037CA0F4-684A-4455-BEED-45EC366C29E9}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Music" ID="{2C691CED-8B73-43AE-80B1-F065F6451DA3}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Ambient" ID="{29EBD6C1-301C-4DC7-A5F2-7683876177EC}" WorkUnitID="{037CA0F4-684A-4455-BEED-45EC366C29E9}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
 				<Folder Name="Transitions" ID="{19490368-6222-4941-81B3-22FF8CA9D184}" ShortID="12546340">

@@ -11,8 +11,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	4107276880	Slash			\Default Work Unit\Attacks and Abilities\Slash	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	92716449	pie_pan- 06	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\pie_pan- 06_03F4CA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Shine\pie_pan- 06		58440
+	100672609	Air Burst Short 12	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Slash\Air Burst Short 12		10794
 	186580846	Resume	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Resume		26994
-	252553299	Scroll	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 05_5332F36D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll		5268
-	871341411	Pause	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 36_945CC07C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pause		8410
-	1023094648	ButtonPress	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 32_DC8A1A17.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress		7280
+	252553299	Scroll	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 05_A466DBBC.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll		5268
+	304949470	Air Burst Short 11	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 11_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Slash\Air Burst Short 11		22594
+	553166943	Air Burst Short 10	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 10_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Slash\Air Burst Short 10		19144
+	824997395	Construction01_denoise	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Construction01_denoise_862FFF28.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Thrust\Construction01_denoise		61468
+	844726469	Dash	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Large knife swings_2_51D510BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Dash		25784
+	871341411	Pause	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 36_4DEC759B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pause		8410
+	918874852	Air Burst Short 09	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 09_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Slash\Air Burst Short 09		19594
+	1023094648	ButtonPress	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 32_3B402278.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress		7280
 

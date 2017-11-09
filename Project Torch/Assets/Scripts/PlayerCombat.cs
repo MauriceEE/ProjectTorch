@@ -160,6 +160,8 @@ public class PlayerCombat : MonoBehaviour {
                     //Start attacking
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Slash;
+					//play Slash sound
+					AkSoundEngine.PostEvent ("Slash", gameObject);
                     if (consecSlashCount == 2) canAttack = false;
                     //entity.CanMove = false;
                     entity.Speed /= 1.5f;
@@ -187,6 +189,8 @@ public class PlayerCombat : MonoBehaviour {
                     //Start attacking
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Thrust;
+					//play Thrust sound
+					AkSoundEngine.PostEvent ("Thrust", gameObject);
                     canAttack = false;
                     entity.CanMove = false;
                     movement.CanDash = false;
@@ -213,6 +217,8 @@ public class PlayerCombat : MonoBehaviour {
                     //Start shining
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Shine;
+					//play Shine sound
+					AkSoundEngine.PostEvent ("Shine", gameObject);
                     canAttack = false;
                     entity.CanMove = false;
                     movement.CanDash = false;
@@ -251,11 +257,11 @@ public class PlayerCombat : MonoBehaviour {
             //Check to see if we need to activate another hitbox
             switch (currentAttack)
             {
-                case Attacks.Slash:
+			case Attacks.Slash:
                     // --do AABB for box 1--
-                    AttackRoutine(slHB1, slDamage, slKnockbackTime, slKnockbackSpeed);
-                    GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
-                    tempObjBox1.transform.localPosition = new Vector3(slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
+				AttackRoutine (slHB1, slDamage, slKnockbackTime, slKnockbackSpeed);
+				GameObject tempObjBox1 = Instantiate (tempHitboxObj [0] as GameObject, this.transform);
+				tempObjBox1.transform.localPosition = new Vector3 (slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
                     if (attackTime > (slStartup + slHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
