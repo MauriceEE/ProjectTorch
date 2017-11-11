@@ -29,7 +29,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
+						<CurrentStateRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

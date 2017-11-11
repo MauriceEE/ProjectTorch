@@ -16,12 +16,15 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\Default Work Unit\Enemies\Attack1"/>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
 				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash"/>
+				<Event Id="3244706930" Name="Human_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Basic_Attack"/>
+				<Event Id="3823776748" Name="Human_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Brute_Attack"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
+				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
+				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
 				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine"/>
 				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash"/>
 				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust"/>
@@ -30,11 +33,11 @@
 			<IncludedMemoryFiles>
 				<File Id="28478523" Language="SFX">
 					<ShortName>Close_1.WAV</ShortName>
-					<Path>SFX/Close_1_19CB6D2F.wem</Path>
+					<Path>SFX/Close_1_E7AACAE6.wem</Path>
 				</File>
 				<File Id="92716449" Language="SFX">
 					<ShortName>pie_pan- 06.wav</ShortName>
-					<Path>SFX/pie_pan- 06_14320D65.wem</Path>
+					<Path>SFX/pie_pan- 06_03F4CA90.wem</Path>
 				</File>
 				<File Id="100672609" Language="SFX">
 					<ShortName>Air Burst Short 12.wav</ShortName>
@@ -58,11 +61,11 @@
 				</File>
 				<File Id="824997395" Language="SFX">
 					<ShortName>Construction01_denoise.wav</ShortName>
-					<Path>SFX/Construction01_denoise_C6C010F5.wem</Path>
+					<Path>SFX/Construction01_denoise_862FFF28.wem</Path>
 				</File>
 				<File Id="844726469" Language="SFX">
 					<ShortName>Large knife swings_2.WAV</ShortName>
-					<Path>SFX/Large knife swings_2_A1EC02FB.wem</Path>
+					<Path>SFX/Large knife swings_2_51D510BC.wem</Path>
 				</File>
 				<File Id="871341411" Language="SFX">
 					<ShortName>Thick Plastic Hits 36.wav</ShortName>
@@ -74,7 +77,7 @@
 				</File>
 				<File Id="939083768" Language="SFX">
 					<ShortName>Close_1.WAV</ShortName>
-					<Path>SFX/Close_1_5E93CFD1.wem</Path>
+					<Path>SFX/Close_1_4A651F1D.wem</Path>
 				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
@@ -92,8 +95,8 @@
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient"/>
-				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat"/>
+				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient" MaxAttenuation="0.000000"/>
+				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat" MaxAttenuation="0.000000"/>
 				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

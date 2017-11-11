@@ -5,7 +5,20 @@
 			<ChildrenList>
 				<Folder Name="Attacks and Abilities" ID="{CC9B6AD0-A1BE-4848-B983-A6C92F19A48E}" ShortID="445742286">
 					<ChildrenList>
-						<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}"/>
+						<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}">
+							<ChildrenList>
+								<Action Name="" ID="{67EB144A-615E-4417-8F61-13E5A9350F19}" ShortID="1001414498">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Torch_Plant" ID="{22D19688-87BA-414D-8F78-1EA48B42F8D4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}">
 							<ChildrenList>
 								<Action Name="" ID="{BC97997C-732A-4D5A-BFA0-E4203BB56A8F}" ShortID="922581134">
@@ -66,7 +79,70 @@
 				</Folder>
 				<Folder Name="Enemies" ID="{6288F1F1-19D9-4F1A-A122-F6836F28DDB6}" ShortID="568601353">
 					<ChildrenList>
-						<Event Name="Attack1" ID="{8C312131-3AB9-474D-9EE7-473711B04DE1}"/>
+						<Event Name="Shadow_Basic_Attack" ID="{925F175B-2656-4349-9502-D88C9EF8FADE}">
+							<ChildrenList>
+								<Action Name="" ID="{7612CD83-D360-4EB7-84A4-17085F3BAF5B}" ShortID="506365042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack1" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Shadow_Brute_Attack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}">
+							<ChildrenList>
+								<Action Name="" ID="{4C4B1852-4793-4916-80FD-09D94E109D05}" ShortID="55074562">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack2" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Shadow_PrincessEscort_Attack" ID="{ACA937EF-7F7C-4C52-A595-DB5D5B2E4B46}"/>
+						<Event Name="Human_Basic_Attack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}">
+							<ChildrenList>
+								<Action Name="" ID="{F22A14B0-E80A-487D-A7BA-8A7B04E52017}" ShortID="993420245">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack1" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Human_Brute_Attack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}">
+							<ChildrenList>
+								<Action Name="" ID="{79493DFB-2A8D-4EE7-B9FA-DEF419B0D704}" ShortID="607745136">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack2" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Shadow_Spearman_Attack" ID="{47555BB4-99AD-47FB-897B-AFC2D59DA2B4}"/>
+						<Event Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}"/>
+						<Event Name="Human_PrincessEscort_Attack" ID="{E4357F6E-A6DD-43FB-AA7E-1C97962A2CA9}"/>
+						<Event Name="Shadow_Glower_Attack" ID="{D80CCBEB-125B-431A-9042-86BF3858674F}"/>
+						<Event Name="Human_Glower_Attack" ID="{19CD930B-AAD7-4E95-84B7-A09CAA683BCA}"/>
+						<Event Name="Human_Charger_Attack" ID="{3CB6463D-BA2E-4F64-8F66-4A246007388B}"/>
+						<Event Name="Shadow_Charger" ID="{E2D046BA-2904-4BC5-8447-4F3219F05E06}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{2D8A632B-B382-4092-8855-7C0D9B2EC292}" ShortID="1069001943">

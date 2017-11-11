@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour {
             //Check to see if you're still invincible
             if (dashTime > (dashFrames - dashIFrames) * Helper.frame)
                 invincible = true;
+
             else
                 invincible = false;
 
@@ -92,6 +93,9 @@ public class PlayerMovement : MonoBehaviour {
 
             //Move the player
             entity.Move();
+
+			//play Dash sound
+			AkSoundEngine.PostEvent ("Dash", gameObject);
 
             //Reduce dash time remaining
             dashTime -= Time.deltaTime;

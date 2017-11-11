@@ -7,12 +7,15 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Shadow_Basic_Attack" ID="{925F175B-2656-4349-9502-D88C9EF8FADE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Resume" ID="{6D0C8E99-260A-43EB-A8F7-5BE239E8654F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Attack1" ID="{8C312131-3AB9-474D-9EE7-473711B04DE1}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Shadow_Brute_Attack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Human_Basic_Attack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Human_Brute_Attack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
@@ -20,7 +23,11 @@
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Music" ID="{23529EC4-5195-442A-AE72-5086CD10CDDF}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Music_Start" ID="{A93330B6-2F58-4005-A77A-B711A2C9853E}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

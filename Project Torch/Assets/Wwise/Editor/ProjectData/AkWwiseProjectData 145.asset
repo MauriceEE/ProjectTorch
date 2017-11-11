@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F625D043-55B3-4F69-A4F1-FC06A818FF00}'
-    m_lastTimePsrt1: -1503251324
-    m_lastTimePart2: -1999297569
+    m_lastTimePsrt1: 1438279808
+    m_lastTimePart2: -1999297546
     List:
     - Name: Attack1
-      Path: Default Work Unit\Enemies\Attack1
+      Path: Default Work Unit/Enemies/Attack1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -32,7 +32,7 @@ MonoBehaviour:
       Guid: 3121318cb93a4d479ee7473711b04de1
       maxAttenuation: 0
     - Name: ButtonPress
-      Path: Default Work Unit\UI\ButtonPress
+      Path: Default Work Unit/UI/ButtonPress
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -44,7 +44,7 @@ MonoBehaviour:
       Guid: ee5447cd34e91544b678e26f74e3a53d
       maxAttenuation: 0
     - Name: Dash
-      Path: Default Work Unit\Attacks and Abilities\Dash
+      Path: Default Work Unit/Attacks and Abilities/Dash
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -56,7 +56,7 @@ MonoBehaviour:
       Guid: 14c0fb65dc57bc4384181512c28a2908
       maxAttenuation: 0
     - Name: Pause
-      Path: Default Work Unit\UI\Pause
+      Path: Default Work Unit/UI/Pause
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -68,7 +68,7 @@ MonoBehaviour:
       Guid: 808e918052d9c749bc00d89cd555693b
       maxAttenuation: 0
     - Name: Resume
-      Path: Default Work Unit\UI\Resume
+      Path: Default Work Unit/UI/Resume
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -80,7 +80,7 @@ MonoBehaviour:
       Guid: 998e0c6d0a26eb43a8f75be239e8654f
       maxAttenuation: 0
     - Name: Scroll
-      Path: Default Work Unit\UI\Scroll
+      Path: Default Work Unit/UI/Scroll
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -92,7 +92,7 @@ MonoBehaviour:
       Guid: d60a50c59c21b54c8a5c5222a4c4c075
       maxAttenuation: 0
     - Name: Shine
-      Path: Default Work Unit\Attacks and Abilities\Shine
+      Path: Default Work Unit/Attacks and Abilities/Shine
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -104,7 +104,7 @@ MonoBehaviour:
       Guid: 50d8ce2d1b3a7a4bbc76a1f4309cdad7
       maxAttenuation: 0
     - Name: Slash
-      Path: Default Work Unit\Attacks and Abilities\Slash
+      Path: Default Work Unit/Attacks and Abilities/Slash
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -116,7 +116,7 @@ MonoBehaviour:
       Guid: 18af0016050318409cd850c8903a9663
       maxAttenuation: 0
     - Name: Thrust
-      Path: Default Work Unit\Attacks and Abilities\Thrust
+      Path: Default Work Unit/Attacks and Abilities/Thrust
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -128,7 +128,7 @@ MonoBehaviour:
       Guid: 7207f7190c915b4ebd61cc211fa3a50a
       maxAttenuation: 0
     - Name: Torch_Plant
-      Path: Default Work Unit\Attacks and Abilities\Torch_Plant
+      Path: Default Work Unit/Attacks and Abilities/Torch_Plant
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -139,14 +139,14 @@ MonoBehaviour:
       ID: -1747201573
       Guid: 8234759ede0d6542bdce95a7669c4992
       maxAttenuation: 0
-  - PhysicalPath: Events\Interactive Music.wwu
+  - PhysicalPath: Events/Interactive Music.wwu
     ParentPhysicalPath: 
     Guid: '{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}'
-    m_lastTimePsrt1: -1503251324
-    m_lastTimePart2: -1999297569
+    m_lastTimePsrt1: -1128061056
+    m_lastTimePart2: -1999297588
     List:
     - Name: Music_Ambient
-      Path: Interactive Music\Music_Ambient
+      Path: Interactive Music/Music_Ambient
       PathAndIcons:
       - ElementName: Interactive Music
         ObjectType: 12
@@ -156,7 +156,7 @@ MonoBehaviour:
       Guid: 4177b4e70b1a3041b48c93861ecf4243
       maxAttenuation: 0
     - Name: Music_Combat
-      Path: Interactive Music\Music_Combat
+      Path: Interactive Music/Music_Combat
       PathAndIcons:
       - ElementName: Interactive Music
         ObjectType: 12
@@ -166,7 +166,7 @@ MonoBehaviour:
       Guid: b1d99ba0851cf24ba43c2334e45fa87f
       maxAttenuation: 0
     - Name: Music_Start
-      Path: Interactive Music\Music_Start
+      Path: Interactive Music/Music_Start
       PathAndIcons:
       - ElementName: Interactive Music
         ObjectType: 12
@@ -176,21 +176,21 @@ MonoBehaviour:
       Guid: b63033a9582f0540a77ab711a2c9853e
       maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{42834CBF-5E75-4807-89CA-1BF2ABCC967E}'
-    m_lastTimePsrt1: 1579740673
-    m_lastTimePart2: -1999301008
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1C6F15B7-5082-4AA6-809E-55AE31210F8C}'
-    m_lastTimePsrt1: -1490617780
-    m_lastTimePart2: -1999297569
+    m_lastTimePsrt1: -1128061056
+    m_lastTimePart2: -1999297588
     List:
     - Name: GameState
-      Path: Default Work Unit\GameState
+      Path: Default Work Unit/GameState
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -215,7 +215,7 @@ MonoBehaviour:
       - bytes: d1bf40a439c03f4ca421b6a5e8704dbe
       - bytes: 306c19b3e3e3814b9619b26b912d7829
     - Name: Music
-      Path: Default Work Unit\Music
+      Path: Default Work Unit/Music
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -240,7 +240,7 @@ MonoBehaviour:
       - bytes: 2a2c0063aaa89340af46b3a8a9c1d864
       - bytes: f36346799029cd48bdd30936f1eb7fcc
     - Name: PlayerLife
-      Path: Default Work Unit\PlayerLife
+      Path: Default Work Unit/PlayerLife
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -265,21 +265,21 @@ MonoBehaviour:
       - bytes: f214be5e01ebc44ea70c574d77ea418b
       - bytes: 6c8f7a2d4a8b304d93b5225bd27d4241
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{957109A5-E41F-4B9F-A5A3-2341E8B43C94}'
-    m_lastTimePsrt1: 1579790799
-    m_lastTimePart2: -1999301008
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A16D6668-519C-48B3-9FE3-35CA4D73DF52}'
-    m_lastTimePsrt1: 1114714361
-    m_lastTimePart2: -1999298423
+    m_lastTimePsrt1: 1033465600
+    m_lastTimePart2: -1999296623
     List:
     - Name: Music
-      Path: Default Work Unit\Music
+      Path: Default Work Unit/Music
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -288,7 +288,7 @@ MonoBehaviour:
       ID: -303024426
       Guid: c49e522395512a44ae725086cd10cddf
     - Name: SFX
-      Path: Default Work Unit\SFX
+      Path: Default Work Unit/SFX
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -297,14 +297,14 @@ MonoBehaviour:
       ID: 393239870
       Guid: 80ea0a9937cf7c4f8d0b838ea225acfd
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{12081575-47C9-473E-A190-14C230AB9725}'
-    m_lastTimePsrt1: 1113270843
-    m_lastTimePart2: -1999298423
+    m_lastTimePsrt1: 228973312
+    m_lastTimePart2: -1999298595
     List:
     - Name: PlayerHealth
-      Path: Default Work Unit\PlayerHealth
+      Path: Default Work Unit/PlayerHealth
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -313,7 +313,7 @@ MonoBehaviour:
       ID: 151362964
       Guid: 3801052dee7e04489e68e5b2b6f466d8
     - Name: TimeRemaining
-      Path: Default Work Unit\TimeRemaining
+      Path: Default Work Unit/TimeRemaining
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -322,17 +322,17 @@ MonoBehaviour:
       ID: 1691631674
       Guid: 76479dfbf5bdff4a99c2c99013a6cca0
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F8532ED5-CD91-4CD4-B9AA-298B16E0D638}'
-    m_lastTimePsrt1: 1579790799
-    m_lastTimePart2: -1999301008
+    m_lastTimePsrt1: 1634716672
+    m_lastTimePart2: -1999301630
     List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
-  basePath: Audio\GeneratedSoundBanks
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

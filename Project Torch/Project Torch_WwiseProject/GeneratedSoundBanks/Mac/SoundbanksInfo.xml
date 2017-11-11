@@ -16,33 +16,72 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\Default Work Unit\Enemies\Attack1" MaxAttenuation="0.000000"/>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash" MaxAttenuation="0.000000"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash"/>
+				<Event Id="3244706930" Name="Human_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Basic_Attack"/>
+				<Event Id="3823776748" Name="Human_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Brute_Attack"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
-				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine" MaxAttenuation="0.000000"/>
-				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash" MaxAttenuation="0.000000"/>
-				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust" MaxAttenuation="0.000000"/>
-				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant" MaxAttenuation="0.000000"/>
+				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
+				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
+				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine"/>
+				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash"/>
+				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="28478523" Language="SFX">
+					<ShortName>Close_1.WAV</ShortName>
+					<Path>SFX/Close_1_E7AACAE6.wem</Path>
+				</File>
+				<File Id="92716449" Language="SFX">
+					<ShortName>pie_pan- 06.wav</ShortName>
+					<Path>SFX/pie_pan- 06_03F4CA90.wem</Path>
+				</File>
+				<File Id="100672609" Language="SFX">
+					<ShortName>Air Burst Short 12.wav</ShortName>
+					<Path>SFX/Air Burst Short 12_1C9C67B2.wem</Path>
+				</File>
 				<File Id="186580846" Language="SFX">
 					<ShortName>Air Burst Short 01.wav</ShortName>
 					<Path>SFX/Air Burst Short 01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="252553299" Language="SFX">
 					<ShortName>Thick Plastic Hits 05.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 05_5332F36D.wem</Path>
+					<Path>SFX/Thick Plastic Hits 05_A466DBBC.wem</Path>
+				</File>
+				<File Id="304949470" Language="SFX">
+					<ShortName>Air Burst Short 11.wav</ShortName>
+					<Path>SFX/Air Burst Short 11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="553166943" Language="SFX">
+					<ShortName>Air Burst Short 10.wav</ShortName>
+					<Path>SFX/Air Burst Short 10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="824997395" Language="SFX">
+					<ShortName>Construction01_denoise.wav</ShortName>
+					<Path>SFX/Construction01_denoise_862FFF28.wem</Path>
+				</File>
+				<File Id="844726469" Language="SFX">
+					<ShortName>Large knife swings_2.WAV</ShortName>
+					<Path>SFX/Large knife swings_2_51D510BC.wem</Path>
 				</File>
 				<File Id="871341411" Language="SFX">
 					<ShortName>Thick Plastic Hits 36.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 36_945CC07C.wem</Path>
+					<Path>SFX/Thick Plastic Hits 36_4DEC759B.wem</Path>
+				</File>
+				<File Id="918874852" Language="SFX">
+					<ShortName>Air Burst Short 09.wav</ShortName>
+					<Path>SFX/Air Burst Short 09_1C9C67B2.wem</Path>
+				</File>
+				<File Id="939083768" Language="SFX">
+					<ShortName>Close_1.WAV</ShortName>
+					<Path>SFX/Close_1_4A651F1D.wem</Path>
 				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 32_DC8A1A17.wem</Path>
+					<Path>SFX/Thick Plastic Hits 32_3B402278.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -55,6 +94,33 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient" MaxAttenuation="0.000000"/>
+				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat" MaxAttenuation="0.000000"/>
+				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="263453692" Language="SFX">
+					<ShortName>Bass Drum_revswell_01.wav</ShortName>
+					<Path>SFX/Bass Drum_revswell_01_F17FB28C.wem</Path>
+				</File>
+				<File Id="411247084" Language="SFX">
+					<ShortName>Temp_Ambient01.wav</ShortName>
+					<Path>SFX/Temp_Ambient01_F17FB28C.wem</Path>
+				</File>
+				<File Id="416137440" Language="SFX">
+					<ShortName>Ambient_demo_01.wav</ShortName>
+					<Path>SFX/Ambient_demo_01_F17FB28C.wem</Path>
+				</File>
+				<File Id="611871978" Language="SFX">
+					<ShortName>Temp_Combat.wav</ShortName>
+					<Path>SFX/Temp_Combat_F17FB28C.wem</Path>
+				</File>
+				<File Id="724764778" Language="SFX">
+					<ShortName>Temp_Combat02.wav</ShortName>
+					<Path>SFX/Temp_Combat02_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

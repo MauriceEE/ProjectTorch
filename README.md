@@ -99,3 +99,10 @@
 <ul><li>Implemented respawning</li></ul>
 <h2>Connor Menard - 11/4/17 - 20:07</h2>
 <ul><li>Implemented aggression</li><li>NOTE: There's currently a game breaking bug when an enemy goes to attack the player... sometimes. Haven't squashed it yet</li></ul>
+<h2>Garret Reynolds - 11/9/17 - 12:15PM</h2>
+<ul>
+  <li>Added music hooks to enemy manager and temp sound</li>
+  <li>added SFX hooks for Shine, Thrust, and Slash in PlayerCombat</li>
+  <li>added SoundBank loader and Music_Start event to WwiseGlobal object in Unity</li>
+  <li>moved GeneratedSoundBanks to StreamingAssets for ease of adding to build </li>
+</ul>
