@@ -73,8 +73,7 @@ public class Enemy_PrincessEscort : Enemy {
     protected override void UpdateCombatState()
     {
         base.UpdateCombatState();
-
-		//play attack sound if attacking
+        //play attack sound if attacking
 		if (combatState == CombatStates.Active) {
 			if (faction == Enemy.EnemyFaction.Human)
 				AkSoundEngine.PostEvent ("Human_PrincessEscort_Attack", gameObject);
