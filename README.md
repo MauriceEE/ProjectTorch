@@ -106,3 +106,8 @@
   <li>added SoundBank loader and Music_Start event to WwiseGlobal object in Unity</li>
   <li>moved GeneratedSoundBanks to StreamingAssets for ease of adding to build </li>
 </ul>
+<h2>Connor Menard - 11/11/17 - 4:19PM</h2>
+<ul>
+  <li>Added glower and status effects</li>
+  <li>Encounter manager related bug fixes</li>
+</ul>

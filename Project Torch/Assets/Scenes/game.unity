@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.57482487, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1199,20 +1199,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  combatState: 0
   hp: 50
   faction: 1
   zone: 4
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
-  attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 10
   atStartup: 17
   atActive: 10
@@ -5775,6 +5769,7 @@ Transform:
   - {fileID: 1811835848}
   - {fileID: 894176362}
   - {fileID: 378951446}
+  - {fileID: 1586602482}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6748,20 +6743,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  combatState: 0
   hp: 50
   faction: 1
   zone: 4
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
-  attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 10
   atStartup: 17
   atActive: 10
@@ -9954,7 +9943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -12563,20 +12552,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  combatState: 0
   hp: 50
   faction: 1
   zone: 4
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
-  attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 10
   atStartup: 17
   atActive: 10
@@ -14156,6 +14139,48 @@ GameObject:
   m_PrefabParentObject: {fileID: 1675995863440800, guid: 38748f2d8769cbd4f88c982e4ab0befe,
     type: 2}
   m_PrefabInternal: {fileID: 1580589049}
+--- !u!1 &1586602481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1586602482}
+  - component: {fileID: 1586602483}
+  m_Layer: 0
+  m_Name: StatusEffectManagerGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586602482
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586602481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 628192371}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1586602483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586602481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ff4abc6a00e8040a2d97b1beed1cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowerSpeedModifierStart: 0.2
+  glowerSpeedModifierEnd: 0.8
 --- !u!1 &1588505987
 GameObject:
   m_ObjectHideFlags: 0
@@ -14779,20 +14804,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  combatState: 0
   hp: 50
   faction: 1
   zone: 4
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
-  attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 10
   atStartup: 17
   atActive: 10
@@ -19692,20 +19711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316b2ea3f42962e49bbf8d0afdd3107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyState: 0
-  combatState: 0
   hp: 50
   faction: 1
   zone: 4
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
-  attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 10
   atStartup: 17
   atActive: 10
