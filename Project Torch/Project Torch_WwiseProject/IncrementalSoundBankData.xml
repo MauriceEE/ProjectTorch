@@ -3,14 +3,14 @@
 	<Platform GUID="{0E7D73A2-4014-4871-91B1-AA993215B9C2}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2014490479" Timestamp="131547219090000000"/>
-				<File Name="Music" Hash="3841245854" Timestamp="131547219090000000"/>
-				<File Name="SFX" Hash="2371187414" Timestamp="131547219080000000"/>
+				<File Name="Init" Hash="2014490479" Timestamp="131548982670000000"/>
+				<File Name="Music" Hash="3841245854" Timestamp="131548982670000000"/>
+				<File Name="SFX" Hash="1068495063" Timestamp="131548982670000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1450920010" Timestamp="131547219090000000"/>
+				<File Name="" Hash="2003745397" Timestamp="131548982670000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -19,12 +19,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="3081338517" Timestamp="131547219080000000"/>
 				<File Name="Music" Hash="3841245854" Timestamp="131547219080000000"/>
-				<File Name="SFX" Hash="2371187414" Timestamp="131547219080000000"/>
+				<File Name="SFX" Hash="1068495063" Timestamp="131548982670000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3826018756" Timestamp="131547219080000000"/>
+				<File Name="" Hash="1332025143" Timestamp="131548982670000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

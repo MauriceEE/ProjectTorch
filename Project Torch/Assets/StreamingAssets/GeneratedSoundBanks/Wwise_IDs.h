@@ -13,15 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID ATTACK1 = 3768540966U;
         static const AkUniqueID BUTTONPRESS = 317641954U;
         static const AkUniqueID DASH = 1942692385U;
+        static const AkUniqueID HUMAN_BASIC_ATTACK = 3244706930U;
+        static const AkUniqueID HUMAN_BRUTE_ATTACK = 3823776748U;
         static const AkUniqueID MUSIC_AMBIENT = 3611180283U;
         static const AkUniqueID MUSIC_COMBAT = 3944980085U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID SCROLL = 454121546U;
+        static const AkUniqueID SHADOW_BASIC_ATTACK = 3817024617U;
+        static const AkUniqueID SHADOW_BRUTE_ATTACK = 3498381063U;
         static const AkUniqueID SHINE = 3055381918U;
         static const AkUniqueID SLASH = 4107276880U;
         static const AkUniqueID THRUST = 2197345151U;

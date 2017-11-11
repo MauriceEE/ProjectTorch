@@ -18,6 +18,7 @@ public class Enemy_Basic : Enemy {
     protected override void React()
     {
         base.React();
+
     }
     protected override void CancelOrHitStun(bool hitstun)
     {
@@ -38,6 +39,15 @@ public class Enemy_Basic : Enemy {
     protected override void UpdateCombatState()
     {
         base.UpdateCombatState();
+
+		//play attack sound if attacking
+		if (combatState == CombatStates.Active) {
+			if (faction == Enemy.EnemyFaction.Human)
+				AkSoundEngine.PostEvent ("Human_Basic_Attack", gameObject);
+
+			if (faction == Enemy.EnemyFaction.Shadow)
+				AkSoundEngine.PostEvent ("Shadow_Basic_Attack", gameObject);
+		}
     }
     protected override void UpdateEnemyState()
     {

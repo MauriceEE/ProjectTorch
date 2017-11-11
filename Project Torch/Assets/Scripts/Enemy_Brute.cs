@@ -79,6 +79,15 @@ public class Enemy_Brute : Enemy
     protected override void UpdateCombatState()
     {
         base.UpdateCombatState();
+
+		//play attack sound if attacking
+		if (combatState == CombatStates.Active) {
+			if (faction == Enemy.EnemyFaction.Human)
+				AkSoundEngine.PostEvent ("Human_Brute_Attack", gameObject);
+
+			if (faction == Enemy.EnemyFaction.Shadow)
+				AkSoundEngine.PostEvent ("Shadow_Brute_Attack", gameObject);
+		}
     }
     protected override void UpdateEnemyState()
     {
