@@ -410,7 +410,10 @@ public abstract class Enemy : MonoBehaviour {
                     */
                 }
                 //Update move target
-                moveTarget = attackTarget.transform.position;
+                if (attackTarget)
+                    moveTarget = attackTarget.transform.position;
+                else
+                    Debug.Log("No attack target!");
                 //Move towards target
                 SeekTarget();
                 //See if you're within range

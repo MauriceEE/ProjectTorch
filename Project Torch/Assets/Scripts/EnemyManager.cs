@@ -252,9 +252,7 @@ public class EnemyManager : MonoBehaviour {
             //If we looped through all possible other enemies...
             if (rando == ogRando)
             {
-                encounterActive = false;
-                Debug.Log("No more enemies of opposing faction, encounter ending...");
-                // might need to add here the line to give the player the end-of-encounter 30hp for winning
+                Debug.Log("No more enemies of opposing faction! Can't get new attack target");
                 return null;
             }
         }
@@ -402,6 +400,23 @@ public class EnemyManager : MonoBehaviour {
             Debug.Log("No enemies remaining: encounter ending...");
             playerHP += 30;
             if (playerHP > 100) playerHP = 100;
+            return;
+        }
+
+        //Check to see if there are no enemies of the opposing faction
+        bool enemyRemains = false;
+        for (int i = 0; i < encounterEnemies.Count; ++i)
+        {
+            if (!encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer)
+            {
+                enemyRemains = true;
+                break;
+            }
+        }
+        if (!enemyRemains)
+        {
+            encounterActive = false;
+            Debug.Log("No more enemies of opposing faction, encounter ending...");
             return;
         }
             
