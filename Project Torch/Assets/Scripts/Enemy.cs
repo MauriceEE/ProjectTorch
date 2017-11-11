@@ -70,9 +70,9 @@ public abstract class Enemy : MonoBehaviour {
     //Whether or not this enemy is in a combat encounter
     protected bool inEncounter = false;
     //Current state of the enemy
-    public EnemyStates enemyState;
+    protected EnemyStates enemyState;
     //Current attack state
-    public CombatStates combatState;
+    protected CombatStates combatState;
     //Current reaction state
     protected ReactionStates reactionState;
     //Amount of time spent attacking
@@ -130,17 +130,17 @@ public abstract class Enemy : MonoBehaviour {
     //Max movement speed
     public float maxVelocity;
     //The original max velocity
-    public float ogMaxVelocity;
+    protected float ogMaxVelocity;
     //How far away the enemy will be when it slows down
     public float arrivalRadius;
     //When the enemy will start attacking
-    public float attackRange;
+    protected float attackRange;
     //The original attackRange
-    public float ogAttackRange;
+    protected float ogAttackRange;
     //If the player stays out of this, the encounter will end
     public float awarenessRange;
     // If enemy is currently attacking
-    public bool isAttacking;
+    protected bool isAttacking;
     [Header("Attack data")]
     public float atDamage;
     public float atStartup;
@@ -173,6 +173,7 @@ public abstract class Enemy : MonoBehaviour {
     #region Properties
     public bool Alive { get { return alive; } set { alive = value; } }
     public float MaxHP { get { return maxHP; } }
+    public bool IsAttacking { get { return isAttacking; } }
     public bool CanTakeDamage { get { return (damageTimer <= 0f && !invincible); } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool CanKnockback { get { return !inKnockback; } }
@@ -237,6 +238,9 @@ public abstract class Enemy : MonoBehaviour {
 
         // color changing for conveyance
         UpdateColor();
+
+        //Apply status effects
+        entity.UpdateStatusEffects();
 
         //Check stun recovery
         if (guardBroken)
@@ -626,7 +630,7 @@ public abstract class Enemy : MonoBehaviour {
             if (++guardStacks > maxGuardStacks)
                 guardStacks = maxGuardStacks;
             //Halve speed
-            this.entity.SpeedModifier = 0.5f;
+            this.entity.SpeedModifier *= 0.5f;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
         }
         else if (rand < guardChance + counterAttackChance)
         {
@@ -650,7 +654,7 @@ public abstract class Enemy : MonoBehaviour {
             //Set duration of dash
             dashTime = dashFrames * Helper.frame;
             //Modify speed
-            entity.SpeedModifier = dashSpeed;
+            entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
             //Remove from occupancy grid
             RequestRemoveFromEncounterGrid();
         }

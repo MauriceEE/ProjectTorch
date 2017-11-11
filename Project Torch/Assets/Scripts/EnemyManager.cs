@@ -81,7 +81,7 @@ public class EnemyManager : MonoBehaviour {
             for (int i = 0; i < encounterEnemies.Count; ++i)
             {
                 e = encounterEnemies[i].GetComponent<Enemy>();
-                if (e.isAttacking) 
+                if (e.IsAttacking) 
                 {
                     hitboxes.Add(e.atHB1);
                     hitboxes.Add(e.atHB2);
@@ -166,7 +166,7 @@ public class EnemyManager : MonoBehaviour {
             else
             {
                 e.AlliedWithPlayer = true;
-                e.gameObject.GetComponent<Entity>().SpeedModifier = allySpeedMultiplier;
+                e.gameObject.GetComponent<Entity>().SpeedModifier *= allySpeedMultiplier;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
                 e.AttackTarget = GetNewAttackTarget(e.faction);
             }
         }
@@ -236,7 +236,7 @@ public class EnemyManager : MonoBehaviour {
     /// </summary>
     /// <param name="allyFaction">Faction of the enemy requesting the target</param>
     /// <returns>An enemy that can be set as the attack target</returns>
-    protected GameObject GetNewAttackTarget(Enemy.EnemyFaction allyFaction)
+    public GameObject GetNewAttackTarget(Enemy.EnemyFaction allyFaction)
     {
         int rando = Random.Range(0, encounterEnemies.Count);
         int ogRando = rando;
@@ -280,7 +280,7 @@ public class EnemyManager : MonoBehaviour {
         for (int i = 0; i < encounterEnemies.Count; i++)
         {
             e = encounterEnemies[i].GetComponent<Enemy>();
-            if (e.isAttacking && !e.AlliedWithPlayer) return false;
+            if (e.IsAttacking && !e.AlliedWithPlayer) return false;
         }
         return true;
     }
@@ -306,7 +306,7 @@ public class EnemyManager : MonoBehaviour {
                 for (int i = 0; i < encounterEnemies.Count; ++i)
                 {
                     encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer = false;
-                    encounterEnemies[i].GetComponent<Entity>().SpeedModifier = 1f;
+                    encounterEnemies[i].GetComponent<Entity>().SpeedModifier *= 1f;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
                 }
             }
         }

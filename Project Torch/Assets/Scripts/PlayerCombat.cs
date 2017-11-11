@@ -94,6 +94,7 @@ public class PlayerCombat : MonoBehaviour {
 
     #region Properties
     public bool CanAttack { get { return canAttack; } set { canAttack = value; } }
+    public Attacks CurrentAttack { get { return currentAttack; } }
     public Rect HitBoxRect { get { return entity.HitBoxRect; } }
     #endregion
 
@@ -113,12 +114,15 @@ public class PlayerCombat : MonoBehaviour {
     {
         //Temp scalar which will affect hitboxes on left/right side
         if (entity.FacingRight)
-            hitBoxDirectionMove = -1;
-        else
             hitBoxDirectionMove = 1;
+        else
+            hitBoxDirectionMove = -1;
 
-        
+        //Update time spent attacking
         attackTime += Time.deltaTime;
+
+        //Apply buffs/debuffs
+        entity.UpdateStatusEffects();
 
         // TORCH "PLANT" CANCEL
         //Cancel attack and expand light radius
@@ -367,7 +371,7 @@ public class PlayerCombat : MonoBehaviour {
     }
 
     /// <summary>
-    /// Used to render hitboxes in the editor, remove when game is published
+    /// Used to render hitboxes in the editor, when Gizmos are enabled
     /// </summary>
     void OnDrawGizmos()
     {
@@ -398,8 +402,6 @@ public class PlayerCombat : MonoBehaviour {
             }
         }
     }
-
-    
     #endregion
 
     #region Custom Methods
@@ -485,9 +487,7 @@ public class PlayerCombat : MonoBehaviour {
     protected List<Enemy> CheckCollisions(Rect hitbox)
     {
         List<Enemy> hit = new List<Enemy>();
-        Rect newHB = hitbox;
-        if (hitBoxDirectionMove < 0)
-            newHB = new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
+        Rect newHB = GetHitboxSided(hitbox);
         for (int i = 0; i < hittableEnemies.Count; ++i)
         {
             Enemy e = hittableEnemies[i].GetComponent<Enemy>();
@@ -501,6 +501,54 @@ public class PlayerCombat : MonoBehaviour {
             }
         }
         return hit;
+    }
+
+    /// <summary>
+    /// Updates the given hitbox to be on the left or right side
+    /// </summary>
+    /// <param name="hitbox">Hitbox to test</param>
+    /// <returns>Updated hitbox, whether it be on the left or right side of the player</returns>
+    protected Rect GetHitboxSided(Rect hitbox)
+    {
+        if (hitBoxDirectionMove < 0)
+            return new Rect((hitbox.x + hitbox.width) * -1, hitbox.y, hitbox.width, hitbox.height);
+        else return hitbox;
+    }
+
+    /// <summary>
+    /// Gets all the attack hitboxes that are currently active
+    /// </summary>
+    /// <returns>A list of active attack hitboxes</returns>
+    public List<Rect> GetActiveAttackHitboxes()
+    {
+        List<Rect> activeHitboxes = new List<Rect>();
+        if(combatState==CombatStates.Active)
+        {
+            switch (currentAttack)
+            {
+                case Attacks.Shine:
+                    for (int i = 0; i < shHB.Length; ++i)
+                        activeHitboxes.Add(GetHitboxSided(shHB[i]));
+                    break;
+                case Attacks.Slash:
+                    activeHitboxes.Add(GetHitboxSided(slHB1));
+                    if (attackTime > (slStartup + slHB2FirstActiveFrame) * Helper.frame)
+                        activeHitboxes.Add(GetHitboxSided(slHB2));
+                    if (attackTime > (slStartup + slHB3FirstActiveFrame) * Helper.frame)
+                        activeHitboxes.Add(slHB3);
+                    break;
+                case Attacks.Thrust:
+                    activeHitboxes.Add(GetHitboxSided(thHB1));
+                    if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
+                        activeHitboxes.Add(GetHitboxSided(thHB2));
+                    if (attackTime > (thStartup + thHB3FirstActiveFrame) * Helper.frame)
+                        activeHitboxes.Add(GetHitboxSided(thHB3));
+                    break;
+                case Attacks.None:
+                    break;
+            }
+        }
+        return activeHitboxes;
     }
 
     /// <summary>
@@ -546,7 +594,7 @@ public class PlayerCombat : MonoBehaviour {
         for (int i = 0; i < enemies.Count; ++i)
         {
             //Check to see if they're attacking
-            if(enemies[i].isAttacking)
+            if(enemies[i].IsAttacking)
             {
                 //Check for collision
                 hitboxes[0] = enemies[i].atHB1;

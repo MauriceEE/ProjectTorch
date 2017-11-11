@@ -31,7 +31,7 @@ public class Enemy_Brute : Enemy
             if (guardStacks > maxGuardStacks)
                 guardStacks = maxGuardStacks;
             //Halve speed
-            this.entity.SpeedModifier = 0.5f;
+            this.entity.SpeedModifier *= 0.5f;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
         }
         else if (rand < guardChance + counterAttackChance)
         {
@@ -55,7 +55,7 @@ public class Enemy_Brute : Enemy
             //Set duration of dash
             dashTime = dashFrames * Helper.frame;
             //Modify speed
-            entity.SpeedModifier = dashSpeed;
+            entity.SpeedModifier *= dashSpeed;
             //Remove from occupancy grid
             RequestRemoveFromEncounterGrid();
         }

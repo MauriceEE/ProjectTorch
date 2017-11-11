@@ -86,7 +86,7 @@ public class Enemy_PrincessEscort : Enemy {
                     moveTarget = new Vector2(10000f, this.transform.position.y);
                     SeekTarget();
                     //Move slower so it's fair
-                    entity.SpeedModifier = escortingSpeedMultiplier;
+                    entity.SpeedModifier *= escortingSpeedMultiplier;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
                 }
                 if (inEncounter)
                     RequestMoveTarget();//Don't do nothing if you're in an encounter
@@ -141,7 +141,7 @@ public class Enemy_PrincessEscort : Enemy {
                 {
                     dodging = false;
                     enemyState = EnemyStates.ReturningFromAttack;
-                    entity.SpeedModifier = 1f;
+                    entity.SpeedModifier *= 1f;//NOTE: This was changed from "= 1f" to "*= 1f" to test the new speed system @ 11/8
                     invincible = false;
                 }
                 else
@@ -163,7 +163,7 @@ public class Enemy_PrincessEscort : Enemy {
     {
         base.StartEncounter();
         //Because they were moving slower before the encounter (if they were the captain)
-        entity.SpeedModifier = 1f;
+        entity.SpeedModifier *= 1f;//NOTE: This was changed from "= 1f" to "*= 1f" to test the new speed system @ 11/8
         //Make the princess scared
         GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.CoweringInFear;
     }

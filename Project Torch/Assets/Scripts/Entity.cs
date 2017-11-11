@@ -30,6 +30,10 @@ public class Entity : MonoBehaviour {
     protected BoxCollider2D hitBox;
     //Scale to apply to speed, use with slows and whatnot
     protected float speedModifier;
+    //List of status effects
+    protected List<StatusEffect> statusEffects;
+    //For applying buffs/debuffs
+    protected StatusEffectManager statusEffectMan;
     #endregion
 
     #region Public Fields
@@ -43,6 +47,7 @@ public class Entity : MonoBehaviour {
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool FacingRight { get { return right; } set { right = value; } }
     public float SpeedModifier { get { return speedModifier; } set { speedModifier = value; } }
+    public List<StatusEffect> StatusEffects { get { return statusEffects; } }
     public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     #endregion
 
@@ -50,6 +55,8 @@ public class Entity : MonoBehaviour {
     void Awake()
     {
         ZAxisManager zax = GameObject.Find("ZAxisManagerGO").GetComponent<ZAxisManager>();
+        statusEffectMan = GameObject.Find("StatusEffectManagerGO").GetComponent<StatusEffectManager>();
+        statusEffects = new List<StatusEffect>(); 
         minY = zax.MinY;
         maxY = zax.MaxY;
         hitBox = this.GetComponent<BoxCollider2D>();
@@ -62,12 +69,14 @@ public class Entity : MonoBehaviour {
     {
         //Attempt to move
         this.transform.position += Helper.Vec2ToVec3(displacement * speedModifier);
+        //Reset speed modifier for next frame (it must be recalculated)
+        speedModifier = 1f;
         //Check to see if we've changed direction
         if (displacement.x != 0) 
         {
             //Update right
             right = (displacement.x > 0);
-            //Update sprite if flipping is necessary
+            //Update sprite if flipping if necessary
             this.GetComponent<SpriteRenderer>().flipX = right;
         }
         //Keep within bounds of level
@@ -75,6 +84,66 @@ public class Entity : MonoBehaviour {
             this.transform.position = new Vector3(this.transform.position.x, maxY, this.transform.position.z);
         else if (this.transform.position.y < minY)
             this.transform.position = new Vector3(this.transform.position.x, minY, this.transform.position.z);
+    }
+
+    /// <summary>
+    /// Updates buffs/debuffs on this entity
+    /// Should be called every frame
+    /// </summary>
+    public void UpdateStatusEffects()
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+        {
+            //Apply the effect
+            statusEffectMan.ApplyStatusEffects(statusEffects[i], this.gameObject);
+            //Update its time
+            statusEffects[i].Update();
+            //Check to remove it
+            if (!statusEffects[i].Alive)
+                statusEffects.RemoveAt(i--);
+        }
+    }
+
+    /// <summary>
+    /// Gives this entity a new status effect
+    /// </summary>
+    /// <param name="se">StatusEffect to be applied</param>
+    public void ApplyNewStatusEffect(StatusEffect se)
+    {
+        statusEffects.Add(se);
+    }
+
+    /// <summary>
+    /// These three methods return true if this entity contains the specified status effect
+    /// </summary>
+    /// <param name="buffName">Name of the buff</param>
+    /// <returns>True if contains</returns>
+    public bool ContainsStatusEffect(StatusEffectManager.Buffs buffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+        {
+            if (statusEffects[i].Buff == buffName)
+                return true;
+        }
+        return false;
+    }
+    public bool ContainsStatusEffect(StatusEffectManager.Debuffs debuffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+        {
+            if (statusEffects[i].Debuff == debuffName)
+                return true;
+        }
+        return false;
+    }
+    public bool ContainsStatusEffect(StatusEffectManager.StatusEffects effectName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+        {
+            if (statusEffects[i].Effect == effectName)
+                return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -96,5 +165,5 @@ public class Entity : MonoBehaviour {
             }
         }
     }*/
-#endregion
+    #endregion
 }
