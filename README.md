@@ -121,3 +121,8 @@
   <li>Added in dialogue for braziers.</li>
   <li>Removed all level end points from view.</li>
 </ul>
+<h2>Garret Reynolds - 11/9/17 - 12:15PM</h2>
+<ul>
+  <li>Added events for spearman attacks and non-integrated death music</li>
+</ul>
+
