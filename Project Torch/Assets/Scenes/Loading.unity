@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

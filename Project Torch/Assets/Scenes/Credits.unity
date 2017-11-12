@@ -509,8 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fed1b6e2762420448e60cc872011c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 50
-  scrollSpeed: 150
+  maxTime: 35
+  scrollSpeed: 190
 --- !u!1 &2105452055
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

@@ -6,10 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour {
     public EventSystem es;
-    GameObject menuCanvas;
+    public GameObject menuCanvas;
     public List<Button> buttons;
     public Button resume;
     bool isMenu = false;
+    public GameObject optionsCanvas;
     // Use this for initialization
     void Start () {
         
@@ -17,17 +18,20 @@ public class UIManager : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "Main Menu") {
             isMenu = true;
         } else {
-            menuCanvas = gameObject.transform.GetChild(0).gameObject;
+           // menuCanvas = gameObject.transform.GetChild(0).gameObject;
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu && !optionsCanvas.activeSelf) {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             if (Time.timeScale != 0f) { Time.timeScale = 0f; } 
             else { Time.timeScale = 1f; }
             es.SetSelectedGameObject(resume.gameObject);
+        }else if(Input.GetKeyDown(KeyCode.Escape) && optionsCanvas.activeSelf) {
+            HideOptions();
+            ShowMenu();
         }
         if (SceneManager.sceneCount > 1 && SceneManager.GetSceneAt(1).isLoaded) {
             SceneManager.UnloadSceneAsync("Loading");
@@ -39,6 +43,19 @@ public class UIManager : MonoBehaviour {
                 Debug.Log("Sound");
             }
         }*/
+    }
+    public void HideMenu() {
+        menuCanvas.SetActive(false);
+    }
+    public void ShowMenu() {
+        menuCanvas.SetActive(true);
+    }
+    public void ShowOptions() {
+        optionsCanvas.SetActive(true);
+        Debug.Log(optionsCanvas.activeSelf);
+    }
+    public void HideOptions() {
+        optionsCanvas.SetActive(false);
     }
     public void Resume() {
         menuCanvas.SetActive(false);
