@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1564,6 +1564,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 8
   endPoint: {fileID: 671897484}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &121402734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +3877,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 5
   endPoint: {fileID: 704147691}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1001 &378250806
 Prefab:
   m_ObjectHideFlags: 0
@@ -4238,6 +4246,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 10
   endPoint: {fileID: 1018495575}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &436190624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,6 +5029,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 9
   endPoint: {fileID: 1640464475}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &571406276
 GameObject:
   m_ObjectHideFlags: 0
@@ -7390,6 +7406,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 6
   endPoint: {fileID: 1313523579}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1001 &776782528
 Prefab:
   m_ObjectHideFlags: 0
@@ -8103,6 +8123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 7
   endPoint: {fileID: 1971992311}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1001 &822023580
 Prefab:
   m_ObjectHideFlags: 0
@@ -9568,6 +9592,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 3
   endPoint: {fileID: 1880159783}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &952001805
 GameObject:
   m_ObjectHideFlags: 0
@@ -11435,7 +11463,7 @@ GameObject:
   - component: {fileID: 1098353169}
   - component: {fileID: 1098353170}
   m_Layer: 0
-  m_Name: ZAxisManagerGO
+  m_Name: AxisConstraintsManagerGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11467,8 +11495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZ: 10
   maxZ: 0
-  minY: -5
-  maxY: -0.75
   objs:
   - {fileID: 1145523780}
 --- !u!1 &1102579043
@@ -13072,6 +13098,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 0
   endPoint: {fileID: 779851896}
+  minX: -6.52
+  maxX: 79.12
+  minY: -6.12
+  maxY: -3
 --- !u!4 &1338713671
 Transform:
   m_ObjectHideFlags: 0
@@ -15197,6 +15227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 4
   endPoint: {fileID: 535327889}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1001 &1644698264
 Prefab:
   m_ObjectHideFlags: 0
@@ -16316,6 +16350,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 2
   endPoint: {fileID: 82968528}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1775033818
 GameObject:
   m_ObjectHideFlags: 0
@@ -18144,6 +18182,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zone: 1
   endPoint: {fileID: 1721795248}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1910630854
 GameObject:
   m_ObjectHideFlags: 0
