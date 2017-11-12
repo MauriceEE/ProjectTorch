@@ -17,14 +17,17 @@ namespace AK
         static const AkUniqueID DASH = 1942692385U;
         static const AkUniqueID HUMAN_BASIC_ATTACK = 3244706930U;
         static const AkUniqueID HUMAN_BRUTE_ATTACK = 3823776748U;
+        static const AkUniqueID HUMAN_SPEARMAN_ATTACK = 892714673U;
         static const AkUniqueID MUSIC_AMBIENT = 3611180283U;
         static const AkUniqueID MUSIC_COMBAT = 3944980085U;
+        static const AkUniqueID MUSIC_DEATH = 3678931145U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID SCROLL = 454121546U;
         static const AkUniqueID SHADOW_BASIC_ATTACK = 3817024617U;
         static const AkUniqueID SHADOW_BRUTE_ATTACK = 3498381063U;
+        static const AkUniqueID SHADOW_SPEARMAN_ATTACK = 2435824224U;
         static const AkUniqueID SHINE = 3055381918U;
         static const AkUniqueID SLASH = 4107276880U;
         static const AkUniqueID THRUST = 2197345151U;
@@ -52,6 +55,7 @@ namespace AK
             {
                 static const AkUniqueID AMBIENT = 77978275U;
                 static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID DEATH = 779278001U;
             } // namespace STATE
         } // namespace MUSIC
 
@@ -71,6 +75,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYERHEALTH = 151362964U;
+        static const AkUniqueID PLAYERMOVEMENTSPEED = 2557281390U;
         static const AkUniqueID TIMEREMAINING = 1691631674U;
     } // namespace GAME_PARAMETERS
 

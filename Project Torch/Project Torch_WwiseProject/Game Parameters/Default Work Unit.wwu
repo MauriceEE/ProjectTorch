@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<GameParameter Name="PlayerHealth" ID="{2D050138-7EEE-4804-9E68-E5B2B6F466D8}"/>
 				<GameParameter Name="TimeRemaining" ID="{FB9D4776-BDF5-4AFF-99C2-C99013A6CCA0}"/>
+				<GameParameter Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

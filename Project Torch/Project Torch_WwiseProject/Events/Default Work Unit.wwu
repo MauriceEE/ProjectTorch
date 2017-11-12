@@ -3,80 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Attacks and Abilities" ID="{CC9B6AD0-A1BE-4848-B983-A6C92F19A48E}" ShortID="445742286">
-					<ChildrenList>
-						<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}">
-							<ChildrenList>
-								<Action Name="" ID="{67EB144A-615E-4417-8F61-13E5A9350F19}" ShortID="1001414498">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Torch_Plant" ID="{22D19688-87BA-414D-8F78-1EA48B42F8D4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}">
-							<ChildrenList>
-								<Action Name="" ID="{BC97997C-732A-4D5A-BFA0-E4203BB56A8F}" ShortID="922581134">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Slash" ID="{2C5D5241-9619-4D8E-A8FA-E4CD483475C4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}">
-							<ChildrenList>
-								<Action Name="" ID="{507ABE95-B8D5-4E31-9D84-AFF51F543825}" ShortID="522362115">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Dash" ID="{D459339A-DEA8-440A-BE3B-2972E6F016F3}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}">
-							<ChildrenList>
-								<Action Name="" ID="{03972DC8-5215-4176-81D7-3858DC1B25E2}" ShortID="275488959">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Thrust" ID="{C2259986-4BEF-4B3C-807F-0CE0348CDD26}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}">
-							<ChildrenList>
-								<Action Name="" ID="{5414C15E-055B-4167-AA30-15B6CBFD7336}" ShortID="263308013">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Shine" ID="{D6224F3A-C6BD-4BC0-B38D-DAF01AA740B8}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="Enemies" ID="{6288F1F1-19D9-4F1A-A122-F6836F28DDB6}" ShortID="568601353">
 					<ChildrenList>
 						<Event Name="Shadow_Basic_Attack" ID="{925F175B-2656-4349-9502-D88C9EF8FADE}">
@@ -87,7 +13,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Attack1" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+											<ObjectRef Name="Basic Attack" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -101,7 +27,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Attack2" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+											<ObjectRef Name="Brute Attack" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -116,7 +42,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Attack1" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+											<ObjectRef Name="Basic Attack" ID="{1255630A-8C11-40BC-9377-167984441CDC}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -130,14 +56,40 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Attack2" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+											<ObjectRef Name="Brute Attack" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Shadow_Spearman_Attack" ID="{47555BB4-99AD-47FB-897B-AFC2D59DA2B4}"/>
-						<Event Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}"/>
+						<Event Name="Shadow_Spearman_Attack" ID="{47555BB4-99AD-47FB-897B-AFC2D59DA2B4}">
+							<ChildrenList>
+								<Action Name="" ID="{43BE1443-F2C0-4ECD-81DD-74A1497546FB}" ShortID="715563616">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}">
+							<ChildrenList>
+								<Action Name="" ID="{C0FA3919-C440-43E0-A529-1B606C9C1A2E}" ShortID="561339993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Human_PrincessEscort_Attack" ID="{E4357F6E-A6DD-43FB-AA7E-1C97962A2CA9}"/>
 						<Event Name="Shadow_Glower_Attack" ID="{D80CCBEB-125B-431A-9042-86BF3858674F}"/>
 						<Event Name="Human_Glower_Attack" ID="{19CD930B-AAD7-4E95-84B7-A09CAA683BCA}"/>
@@ -218,6 +170,98 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ButtonPress" ID="{B35158C5-FE00-4D34-8F50-9FA23F0C6DF1}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Adjudicator" ID="{F87208D3-B576-4C62-AF68-9E68C7E5C5F4}" ShortID="111385858">
+					<ChildrenList>
+						<Folder Name="Attacks and Abilities" ID="{CC9B6AD0-A1BE-4848-B983-A6C92F19A48E}" ShortID="445742286">
+							<ChildrenList>
+								<Event Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}">
+									<ChildrenList>
+										<Action Name="" ID="{67EB144A-615E-4417-8F61-13E5A9350F19}" ShortID="1001414498">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Torch_Plant" ID="{22D19688-87BA-414D-8F78-1EA48B42F8D4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}">
+									<ChildrenList>
+										<Action Name="" ID="{BC97997C-732A-4D5A-BFA0-E4203BB56A8F}" ShortID="922581134">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Slash" ID="{2C5D5241-9619-4D8E-A8FA-E4CD483475C4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}">
+									<ChildrenList>
+										<Action Name="" ID="{507ABE95-B8D5-4E31-9D84-AFF51F543825}" ShortID="522362115">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Dash" ID="{D459339A-DEA8-440A-BE3B-2972E6F016F3}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}">
+									<ChildrenList>
+										<Action Name="" ID="{03972DC8-5215-4176-81D7-3858DC1B25E2}" ShortID="275488959">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Thrust" ID="{C2259986-4BEF-4B3C-807F-0CE0348CDD26}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}">
+									<ChildrenList>
+										<Action Name="" ID="{5414C15E-055B-4167-AA30-15B6CBFD7336}" ShortID="263308013">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shine" ID="{D6224F3A-C6BD-4BC0-B38D-DAF01AA740B8}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="Footstep" ID="{8BFBAB13-8AB1-4009-B6D6-836B387288AE}">
+							<ChildrenList>
+								<Action Name="" ID="{3AA36C0B-C061-44A6-844C-4E8D80E927A5}" ShortID="374541096">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{4436F7DF-7FF2-4790-8F4E-0CD6F9629557}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

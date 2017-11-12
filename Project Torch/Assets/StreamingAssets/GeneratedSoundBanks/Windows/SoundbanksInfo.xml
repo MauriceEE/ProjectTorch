@@ -17,18 +17,20 @@
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Dash"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Dash"/>
 				<Event Id="3244706930" Name="Human_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Basic_Attack"/>
 				<Event Id="3823776748" Name="Human_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Brute_Attack"/>
+				<Event Id="892714673" Name="Human_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Spearman_Attack"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
 				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
 				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
-				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Shine"/>
-				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Slash"/>
-				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Thrust"/>
-				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Attacks and Abilities\Torch_Plant"/>
+				<Event Id="2435824224" Name="Shadow_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Spearman_Attack"/>
+				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Shine"/>
+				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Slash"/>
+				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="28478523" Language="SFX">
@@ -97,12 +99,17 @@
 			<IncludedEvents>
 				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient"/>
 				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat"/>
+				<Event Id="3678931145" Name="Music_Death" ObjectPath="\Events\Interactive Music\Music_Death"/>
 				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="263453692" Language="SFX">
 					<ShortName>Bass Drum_revswell_01.wav</ShortName>
 					<Path>SFX/Bass Drum_revswell_01_F17FB28C.wem</Path>
+				</File>
+				<File Id="295159468" Language="SFX">
+					<ShortName>Death_01.wav</ShortName>
+					<Path>SFX/Death_01_F17FB28C.wem</Path>
 				</File>
 				<File Id="411247084" Language="SFX">
 					<ShortName>Temp_Ambient01.wav</ShortName>

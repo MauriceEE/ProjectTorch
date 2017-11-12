@@ -25,6 +25,7 @@
 						<State Name="None" ID="{794663F3-2990-48CD-BDD3-0936F1EB7FCC}"/>
 						<State Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 						<State Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
+						<State Name="Death" ID="{2367E19C-961E-4E12-8951-F49ABC8F9752}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

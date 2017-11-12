@@ -1,20 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
 	317641954	ButtonPress			\Default Work Unit\UI\ButtonPress	
 	454121546	Scroll			\Default Work Unit\UI\Scroll	
+	892714673	Human_Spearman_Attack			\Default Work Unit\Enemies\Human_Spearman_Attack	
 	953277036	Resume			\Default Work Unit\UI\Resume	
-	1942692385	Dash			\Default Work Unit\Attacks and Abilities\Dash	
-	2197345151	Thrust			\Default Work Unit\Attacks and Abilities\Thrust	
-	2547765723	Torch_Plant			\Default Work Unit\Attacks and Abilities\Torch_Plant	
-	3055381918	Shine			\Default Work Unit\Attacks and Abilities\Shine	
+	1942692385	Dash			\Default Work Unit\Adjudicator\Attacks and Abilities\Dash	
+	2197345151	Thrust			\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust	
+	2435824224	Shadow_Spearman_Attack			\Default Work Unit\Enemies\Shadow_Spearman_Attack	
+	2547765723	Torch_Plant			\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant	
+	3055381918	Shine			\Default Work Unit\Adjudicator\Attacks and Abilities\Shine	
 	3092587493	Pause			\Default Work Unit\UI\Pause	
 	3244706930	Human_Basic_Attack			\Default Work Unit\Enemies\Human_Basic_Attack	
 	3498381063	Shadow_Brute_Attack			\Default Work Unit\Enemies\Shadow_Brute_Attack	
 	3817024617	Shadow_Basic_Attack			\Default Work Unit\Enemies\Shadow_Basic_Attack	
 	3823776748	Human_Brute_Attack			\Default Work Unit\Enemies\Human_Brute_Attack	
-	4107276880	Slash			\Default Work Unit\Attacks and Abilities\Slash	
+	4107276880	Slash			\Default Work Unit\Adjudicator\Attacks and Abilities\Slash	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	28478523	Torch_Plant_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Close_1_E7AACAE6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Attack1\Torch_Plant_01		52304
+	28478523	Torch_Plant_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Close_1_E7AACAE6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Basic Attack\Torch_Plant_01		52304
 	92716449	pie_pan- 06	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\pie_pan- 06_03F4CA90.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Shine\pie_pan- 06		58440
 	100672609	Air Burst Short 12	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Air Burst Short 12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Adjudicator\Slash\Air Burst Short 12		10794
 	186580846	Resume	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Air Burst Short 01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Resume		26994

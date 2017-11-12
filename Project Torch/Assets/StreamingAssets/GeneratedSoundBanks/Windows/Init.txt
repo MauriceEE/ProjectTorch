@@ -9,6 +9,7 @@ State	ID	Name	State Group			Notes
 	2044049779	Dead	PlayerLife			
 	77978275	Ambient	Music			
 	748895195	None	Music			
+	779278001	Death	Music			
 	2764240573	Combat	Music			
 	748895195	None	GameState			
 	984691642	InGame	GameState			

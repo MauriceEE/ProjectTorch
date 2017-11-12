@@ -455,11 +455,226 @@
 								<ActiveSource Name="Close_1" ID="{1D88AAAB-7435-47A9-9C11-05B886145BCE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Footsteps" ID="{4436F7DF-7FF2-4790-8F4E-0CD6F9629557}" ShortID="292772911">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>37</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CB30F14A-ADD8-42B6-BCD8-72B0D6ACACEA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="60"/>
+													<Property Name="Min" Type="Real64" Value="-60"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+									<RTPCList>
+										<RTPC Name="" ID="{28B8E8AD-B6E9-4F6B-9283-47DFC191E08C}" ShortID="723246599">
+											<ReferenceList/>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{1F580968-2BC6-4FD2-947E-E1A1B2A98766}" ShortID="1024144488">
+											<ReferenceList/>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Step_01" ID="{CF81018D-9D35-438D-907E-64FABF610827}" ShortID="899236779">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{13CC8E30-B266-4042-8644-8E78A78FD318}" ShortID="23049634">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="2.9825815096025"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.25480125055828"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{13CC8E30-B266-4042-8644-8E78A78FD318}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_02" ID="{A8B8E6EC-E0EF-4C1D-AB26-E65A392C3D68}" ShortID="473701654">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{DAF6D0B5-0CC3-4DFC-912A-4BD26230E8DF}" ShortID="766090638">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.95913354175972"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.2905314872711"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{DAF6D0B5-0CC3-4DFC-912A-4BD26230E8DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_03" ID="{465C46C2-55A7-40F4-85D8-8EE7057B6A64}" ShortID="182698718">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{8BC759AD-49DA-4794-AFFB-665CBC3D413B}" ShortID="125608771">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.1900401965163"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.52143814202769"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{8BC759AD-49DA-4794-AFFB-665CBC3D413B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_04" ID="{F239F44D-CD1B-4A39-9575-60092DBF6C53}" ShortID="274445443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{2C9F9096-1C8A-45CE-AC54-978FF5511D9F}" ShortID="197084422">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="12.3445734702992"/>
+												<Property Name="TrimEnd" Type="Real64" Value="12.5812862885217"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{2C9F9096-1C8A-45CE-AC54-978FF5511D9F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_05" ID="{9DABF202-3B35-4B5A-AAB5-6C8185D39D95}" ShortID="822485683">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{297740E7-74E9-40B9-814E-97E762E4B6E8}" ShortID="382153868">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="15.7650736936132"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.0846359982135"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{297740E7-74E9-40B9-814E-97E762E4B6E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_06" ID="{DEB34C34-9891-47D8-B0E8-536BC9B16BE5}" ShortID="732145894">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{658ED79C-1A1A-488C-A4A8-9E44932848BC}" ShortID="560638947">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="16.0728003573024"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.2740062527914"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{658ED79C-1A1A-488C-A4A8-9E44932848BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step_07" ID="{B1A9C088-0694-4324-BD7F-6007E15F12F7}" ShortID="156270225">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="gravel sounds#03" ID="{2375A6A5-273B-4414-B23A-C2E8E63B4BD1}" ShortID="573867769">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
+												<Property Name="TrimBegin" Type="Real64" Value="16.3923626619026"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.6172398392139"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>gravel sounds#03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="gravel sounds#03" ID="{2375A6A5-273B-4414-B23A-C2E8E63B4BD1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{B4006014-4D27-42DC-A5EA-13271E9B0813}" ShortID="1072743668">
 					<ChildrenList>
-						<RandomSequenceContainer Name="Attack1" ID="{1255630A-8C11-40BC-9377-167984441CDC}" ShortID="706547509">
+						<RandomSequenceContainer Name="Basic Attack" ID="{1255630A-8C11-40BC-9377-167984441CDC}" ShortID="706547509">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
@@ -522,7 +737,7 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Attack2" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" ShortID="428484990">
+						<RandomSequenceContainer Name="Brute Attack" ID="{5E8D0ADA-C852-44B2-8697-9778B5B9A80F}" ShortID="428484990">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -582,6 +797,72 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Close_1" ID="{148843F7-408D-4765-B93F-50A7DBD962B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Spearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" ShortID="543232634">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>780</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Torch_Plant_01" ID="{C37C4A63-E7E0-4749-9F82-BD76FD8A2D5A}" ShortID="419248414">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{81EFADD1-BECD-408B-BDFA-B4EE44CBED6C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="60"/>
+															<Property Name="Min" Type="Real64" Value="-60"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Close_1" ID="{ACEDB4CF-1394-4E1A-B7E7-9DAAA318FB6C}" ShortID="226666135">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20166897727659"/>
+												<Property Name="TrimBegin" Type="Real64" Value="10.01030768122"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.3064649402401"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Close_1.WAV</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="28478523"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Close_1" ID="{ACEDB4CF-1394-4E1A-B7E7-9DAAA318FB6C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
