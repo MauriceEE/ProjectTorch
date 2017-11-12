@@ -101,29 +101,29 @@ public class TextManager : MonoBehaviour {
         lines.Add("Princess - Saved",
             new string[]
             {
-                "Oh HELL yeah, you saved me man!",
-                "I'm gonna go chill with my dad now"
+                "\nOh HELL yeah, you saved me man!",
+                "\nI'm gonna go chill with my dad now"
             });
         //Battlefield Brazier
         lines.Add("Brazier - Battlefield",
             new string[]
             {
-                "The path ahead. Illuminated by dragon’s fire,",
-                "cradled in a serpent’s pyre. How rare."
+                "\nThe path ahead. Illuminated by dragon’s fire,",
+                "\ncradled in a serpent’s pyre. How rare."
             });
         //HumanTerritoryStage1 Brazier
         lines.Add("Brazier - HumanTerritoryStage1",
             new string[]
             {
-                "Left behind to wallow in the waters, the serpents gazed at the sky.",
-                "Looking on as the Dragons forged their domain: The Sky."
+                "\nLeft behind to wallow in the waters, the serpents gazed at the sky.",
+                "\nLooking on as the Dragons forged their domain: The Sky."
             });
         //ShadowTerritoryStage1 Brazier
         lines.Add("Brazier - ShadowTerritoryStage1",
             new string[]
             {
-                "In the beginning, where the depths housed the world, there were only two kinds to speak of.",
-                "Those with wings; those without. Dragons and serpents."
+                "\nIn the beginning, where the depths housed the world, there were only two kinds to speak of.",
+                "\nThose with wings; those without. Dragons and serpents."
             });
     }
 #endregion
