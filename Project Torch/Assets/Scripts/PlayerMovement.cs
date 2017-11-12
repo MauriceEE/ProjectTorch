@@ -64,6 +64,9 @@ public class PlayerMovement : MonoBehaviour {
             //Check to see if they want to dash
             if (canDash && (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))) 
             {
+                //play Dash sound
+                AkSoundEngine.PostEvent("Dash", gameObject);
+
                 //Start the dash timer
                 dashTime = dashFrames * Helper.frame;
 
@@ -103,9 +106,6 @@ public class PlayerMovement : MonoBehaviour {
 
             //Reduce dash time remaining
             dashTime -= Time.deltaTime;
-            
-            //play Dash sound
-			AkSoundEngine.PostEvent ("Dash", gameObject);
 
             //Check if you can now move and attack
             if (dashTime <= 0f) 

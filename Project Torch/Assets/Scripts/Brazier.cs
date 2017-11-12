@@ -42,6 +42,10 @@ public class Brazier : MonoBehaviour {
             case ZoneManager.ZoneNames.ShadowTerritoryStage1:
                 GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - ShadowTerritoryStage1");
                 break;
+            default:
+                Debug.Log("Brazier switch broke");
+                Debug.Break();
+                break;
         }
     }
     #endregion
