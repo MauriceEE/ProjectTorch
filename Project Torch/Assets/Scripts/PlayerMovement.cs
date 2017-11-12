@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
     #region Public Fields
     public Vector2 moveSpeed;
+    public float attackForwardMomentum;
     [Header("Dash data")]
     public float dashIFrames = 6;
     public float dashFrames = 10;
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 
                 //Can't move or attack while dashing, gotta commit
                 entity.CanMove = false;
-                combat.CanAttack = false;
+                //combat.CanAttack = false;
             }
         }
         //If DASHING
@@ -83,6 +84,13 @@ public class PlayerMovement : MonoBehaviour {
                 invincible = true;
             else
                 invincible = false;
+
+            // check for dash cancel
+            if (combat.CurrentAttack != PlayerCombat.Attacks.None)
+            {
+                dashTime = 0;
+                invincible = false;
+            }
 
             //Scale down displacement with dampening
             entity.Displacement *= dashFriction;
@@ -105,6 +113,7 @@ public class PlayerMovement : MonoBehaviour {
                 entity.CanMove = true;
                 combat.CanAttack = true;
                 invincible = false; // sets to false here to ensure that this is turned off in case the player cancels the dash during the invincibility period
+                entity.Displacement = Vector2.zero;
                 return;//don't fall through into the normal movement stuff
             }
         }
@@ -119,6 +128,9 @@ public class PlayerMovement : MonoBehaviour {
                 entity.FacingRight = true;
             else if (entity.Displacement.x < -0.001f)
                 entity.FacingRight = false;
+
+            if (combat.CurrentAttack != PlayerCombat.Attacks.None && entity.FacingRight) entity.Displacement += new Vector2(attackForwardMomentum,0);
+            if (combat.CurrentAttack != PlayerCombat.Attacks.None && !entity.FacingRight) entity.Displacement -= new Vector2(attackForwardMomentum, 0);
 
             //Make sure you won't run into an obstacle
             //this.CheckCollisions();

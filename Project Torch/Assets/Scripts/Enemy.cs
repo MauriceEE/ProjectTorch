@@ -113,6 +113,8 @@ public abstract class Enemy : MonoBehaviour {
     ///List<Rect> hitboxesCollidedWith  //I'll make a better hitbox function if I have time someday
                                         // I gotchu, fam
     protected bool hitPlayer;
+    // bool for if the attack sound has played already
+    protected bool attackAudioPlayed;
     #endregion
 
     #region Public Fields
@@ -134,7 +136,7 @@ public abstract class Enemy : MonoBehaviour {
     //How far away the enemy will be when it slows down
     public float arrivalRadius;
     //When the enemy will start attacking
-    protected float attackRange;
+    public float attackRange;
     //The original attackRange
     protected float ogAttackRange;
     //If the player stays out of this, the encounter will end
@@ -223,6 +225,7 @@ public abstract class Enemy : MonoBehaviour {
         maxHP = hp;
         startingPosition = this.transform.position;
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
+        attackAudioPlayed = false;
     }
 	
 	protected virtual void Update () {
@@ -646,23 +649,27 @@ public abstract class Enemy : MonoBehaviour {
                 MoveToAttack(attackTarget);
             }
         }
-        else if (rand < guardChance + counterAttackChance + dodgeChance)
+        else if (rand < guardChance + counterAttackChance + dodgeChance + ((maxHP - hp) / 2)) // increase chance to dodge based on inherent chance and how much health has been lost
         {
-            //Flag as dodging
-            dodging = true;
-            //Enter dodging state
-            enemyState = EnemyStates.Dodging;
-            //Set new move target away from player
-            moveTarget = this.transform.position + (this.transform.position - player.transform.position) * 2;
-            //Set duration of dash
-            dashTime = dashFrames * Helper.frame;
-            //Modify speed
-            entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
-            //Remove from occupancy grid
-            RequestRemoveFromEncounterGrid();
+            Dodge();
         }
     }
 
+    public void Dodge()
+    {
+        //Flag as dodging
+        dodging = true;
+        //Enter dodging state
+        enemyState = EnemyStates.Dodging;
+        //Set new move target away from player
+        moveTarget = this.transform.position + (this.transform.position - player.transform.position) * 2;
+        //Set duration of dash
+        dashTime = dashFrames * Helper.frame;
+        //Modify speed
+        entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
+                                          //Remove from occupancy grid
+        RequestRemoveFromEncounterGrid();
+    }
 
     /// <summary>
     /// Call this to make the enemy take knockback

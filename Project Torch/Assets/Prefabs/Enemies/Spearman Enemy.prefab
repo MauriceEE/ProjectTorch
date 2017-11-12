@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4148001922548174}
   - component: {fileID: 61199249563167260}
-  - component: {fileID: 114894761997979908}
   - component: {fileID: 114055291264961766}
   - component: {fileID: 212551500580737772}
+  - component: {fileID: 114869559778802184}
   m_Layer: 0
   m_Name: Spearman Enemy
   m_TagString: Enemy
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 0
---- !u!114 &114894761997979908
+--- !u!114 &114869559778802184
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747437310846360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
+  m_Script: {fileID: 11500000, guid: 07ce61bd903da2140a6ef004209d4946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 40
@@ -97,12 +97,9 @@ MonoBehaviour:
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
-  ogMaxVelocity: 0
   arrivalRadius: 3
   attackRange: 2.5
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 8
   atStartup: 17
   atActive: 10
@@ -136,7 +133,7 @@ MonoBehaviour:
   dashFriction: 0.919
   guardChance: 0
   counterAttackChance: 33
-  dodgeChance: 10
+  dodgeChance: 0
   tempHitboxObj:
   - {fileID: 1137715606811254, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
   - {fileID: 1513927004183044, guid: 470ea5397e419b7489f3eb6cd6a63524, type: 2}
@@ -154,7 +151,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
+  - {fileID: 2100000, guid: 5ed2672493add4c4d80215c165ab6faf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

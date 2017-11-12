@@ -39,13 +39,14 @@ public class Enemy_Basic : Enemy {
     {
         base.UpdateCombatState();
         //play attack sound if attacking
-		if (combatState == CombatStates.Active) {
-			if (faction == Enemy.EnemyFaction.Human)
-				AkSoundEngine.PostEvent ("Human_Basic_Attack", gameObject);
+		if (!attackAudioPlayed && combatState == CombatStates.Active) {
+			if (faction == Enemy.EnemyFaction.Human) AkSoundEngine.PostEvent ("Human_Basic_Attack", gameObject);
 
-			if (faction == Enemy.EnemyFaction.Shadow)
-				AkSoundEngine.PostEvent ("Shadow_Basic_Attack", gameObject);
+			if (faction == Enemy.EnemyFaction.Shadow) AkSoundEngine.PostEvent ("Shadow_Basic_Attack", gameObject);
+
+            attackAudioPlayed = true;
 		}
+        if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;
     }
     protected override void UpdateEnemyState()
     {

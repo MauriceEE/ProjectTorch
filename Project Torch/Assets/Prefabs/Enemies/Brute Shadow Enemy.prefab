@@ -97,12 +97,9 @@ MonoBehaviour:
   knockbackFriction: 0.89
   guardBreakStunTime: 2.6
   maxVelocity: 0.04
-  ogMaxVelocity: 0
   arrivalRadius: 3
   attackRange: 1.8
-  ogAttackRange: 0
   awarenessRange: 5
-  isAttacking: 0
   atDamage: 15
   atStartup: 20
   atActive: 14
@@ -135,8 +132,8 @@ MonoBehaviour:
   dashSpeed: 0
   dashFriction: 0
   guardChance: 20
-  counterAttackChance: 10
-  dodgeChance: 0
+  counterAttackChance: 0
+  dodgeChance: 10
   tempHitboxObj:
   - {fileID: 1137715606811254, guid: 30785f15797baa444b60cfaf001a5bb0, type: 2}
   - {fileID: 1513927004183044, guid: 470ea5397e419b7489f3eb6cd6a63524, type: 2}
@@ -154,7 +151,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
+  - {fileID: 2100000, guid: 5ed2672493add4c4d80215c165ab6faf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

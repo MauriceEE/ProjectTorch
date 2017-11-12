@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29f4f76857fa134a9a3544d820a5af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
+  hp: 30
   faction: 0
   zone: 0
   knockbackFriction: 0.69
@@ -118,9 +118,9 @@ MonoBehaviour:
   dashFrames: 10
   dashSpeed: 12
   dashFriction: 0.919
-  guardChance: 15
+  guardChance: 0
   counterAttackChance: 0
-  dodgeChance: 0
+  dodgeChance: 80
   tempHitboxObj: []
   projectile: {fileID: 1522969088252640, guid: bbf87504e0b6b1e4098f502913de47aa, type: 2}
   projectileMaxSpeed: 0.032
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9212f9a422883374c8b0fed26bf05b7b, type: 2}
+  - {fileID: 2100000, guid: 5ed2672493add4c4d80215c165ab6faf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

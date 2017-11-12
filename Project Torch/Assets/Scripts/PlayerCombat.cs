@@ -90,6 +90,7 @@ public class PlayerCombat : MonoBehaviour {
     protected List<GameObject> hittableEnemies;
     // Post processing changer
     private PostProcessChange ppChange;
+    private float hitFlashTimer;
     #endregion
 
     #region Properties
@@ -108,6 +109,7 @@ public class PlayerCombat : MonoBehaviour {
         movement = this.GetComponent<PlayerMovement>();
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
         ppChange = GameObject.Find("Main Camera").GetComponent<PostProcessChange>();
+        hitFlashTimer = 0;
     }
 
     void Update()
@@ -117,6 +119,19 @@ public class PlayerCombat : MonoBehaviour {
             hitBoxDirectionMove = 1;
         else
             hitBoxDirectionMove = -1;
+
+        // update hitFlashTimer
+        if (hitFlashTimer > 0)
+        {
+            hitFlashTimer -= Time.deltaTime;
+            this.GetComponent<SpriteRenderer>().color = Color.red;
+            ppChange.profile.colorGrading.enabled = true;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+            ppChange.profile.colorGrading.enabled = false;
+        }
 
         //Update time spent attacking
         attackTime += Time.deltaTime;
@@ -152,7 +167,7 @@ public class PlayerCombat : MonoBehaviour {
                         // Go through Slash's pertinent recovery code
                         canAttack = true;
                         entity.CanMove = true;
-                        entity.Speed *= 1.5f;
+                        //entity.Speed *= 1.5f;
 
                         // increment Slash count
                         consecSlashCount++;
@@ -168,7 +183,7 @@ public class PlayerCombat : MonoBehaviour {
 					AkSoundEngine.PostEvent ("Slash", gameObject);
                     if (consecSlashCount == 2) canAttack = false;
                     //entity.CanMove = false;
-                    entity.Speed /= 1.5f;
+                    //entity.Speed /= 1.5f;
                     movement.CanDash = false;
                 }
 
@@ -182,7 +197,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Cancel();
                         // Reset player speed from the slow movement from Slash's start-up
-                        entity.Speed *= 1.5f;
+                        //entity.Speed *= 1.5f;
 
                         // increment Slash count
                         consecSlashCount++;
@@ -211,7 +226,7 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         Cancel();
                         //Reset speed from slash's startup
-                        entity.Speed *= 1.5f;
+                        //entity.Speed *= 1.5f;
                         //increment slash count
                         ++consecSlashCount;
                         ComboFrameAdjust();
@@ -329,9 +344,10 @@ public class PlayerCombat : MonoBehaviour {
                     if (attackTime > (slStartup + slActive + slRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
+                        currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
-                        entity.Speed *= 1.5f;
+                        //entity.Speed *= 1.5f;
                         movement.CanDash = true;
                         attackTime = 0f;
                         consecSlashCount = 0;
@@ -342,6 +358,7 @@ public class PlayerCombat : MonoBehaviour {
                     if (attackTime > (thStartup + thActive + thRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
+                        currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
                         movement.CanDash = true;
@@ -354,6 +371,7 @@ public class PlayerCombat : MonoBehaviour {
                     if (attackTime > (shStartup + shActive + shRecovery) * Helper.frame)
                     {
                         combatState = CombatStates.None;
+                        currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
                         movement.CanDash = true;
@@ -364,6 +382,7 @@ public class PlayerCombat : MonoBehaviour {
                     break;
                 case Attacks.None:
                     combatState = CombatStates.None;
+                    currentAttack = Attacks.None;
                     canAttack = true;
                     entity.CanMove = true;
                     movement.CanDash = true;
@@ -427,7 +446,7 @@ public class PlayerCombat : MonoBehaviour {
     /// <summary>
     /// Used to Cancel any ongoing attack and dash frames
     /// </summary>
-    void Cancel()
+    public void Cancel()
     {
         // Set combat state to Recovery
         combatState = CombatStates.Recovery;
@@ -459,16 +478,16 @@ public class PlayerCombat : MonoBehaviour {
         switch (consecSlashCount)
         {
             case 1:
-                slStartup = 5;
-                thStartup = 9;
+                slStartup = 9;
+                thStartup = 11;
                 break;
             case 2:
-                slStartup = 4;
-                thStartup = 9;
+                slStartup = 8;
+                thStartup = 11;
                 break;
             default:
-                slStartup = 6;
-                thStartup = 12;
+                slStartup = 10;
+                thStartup = 14;
                 break;
         }
     }
@@ -628,6 +647,9 @@ public class PlayerCombat : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         hp -= damage;
+        hitFlashTimer = 10 * Helper.frame;
+        Cancel();
+
         if (hp <= 0)
         {
             Debug.Log("Player died");

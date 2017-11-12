@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114932952136386398}
   - component: {fileID: 114911502257054008}
   - component: {fileID: 212442816226677262}
+  - component: {fileID: 95410372744014996}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1945604058392810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.4, y: -3.54, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113142439676138}
   m_Father: {fileID: 0}
@@ -90,7 +91,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.29128307}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.3, y: 0.5}
     oldSize: {x: 1.075, y: 1.475}
     newSize: {x: 0.43, y: 0.59}
     adaptiveTilingThreshold: 0.5
@@ -100,6 +101,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8441075}
   m_EdgeRadius: 0
+--- !u!95 &95410372744014996
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945604058392810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5dc37e7e8e671fb419033922b76c6db3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108784112885680568
 Light:
   m_ObjectHideFlags: 1
@@ -160,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {x: 0.04, y: 0.04}
+  attackForwardMomentum: 0.03
   dashIFrames: 6
   dashFrames: 30
   dashSpeed: {x: 0.2, y: 0.25}
@@ -190,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   slDamage: 10
-  slStartup: 6
+  slStartup: 10
   slActive: 10
   slRecovery: 10
   slKnockbackTime: 0.2
@@ -216,7 +235,7 @@ MonoBehaviour:
     y: -0.69
     width: 1.83
     height: 0.53
-  thDamage: 18
+  thDamage: 15
   thStartup: 14
   thActive: 7
   thRecovery: 12
@@ -243,7 +262,7 @@ MonoBehaviour:
     y: -0.21
     width: 0.72
     height: 0.47
-  shStartup: 12
+  shStartup: 5
   shActive: 7
   shRecovery: 17
   shEditorHitboxes: 1
@@ -281,6 +300,7 @@ MonoBehaviour:
   - {fileID: 1513927004183044, guid: 470ea5397e419b7489f3eb6cd6a63524, type: 2}
   - {fileID: 1116876888763320, guid: 83b69fe2fe3a38a45aef3df242900145, type: 2}
   - {fileID: 1805514888748696, guid: c28e100a0158a834f94d934a8945a422, type: 2}
+  animator: {fileID: 0}
 --- !u!212 &212442816226677262
 SpriteRenderer:
   m_ObjectHideFlags: 1

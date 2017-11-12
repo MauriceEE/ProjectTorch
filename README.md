@@ -111,3 +111,7 @@
   <li>Added glower and status effects</li>
   <li>Encounter manager related bug fixes</li>
 </ul>
+<h2>Maurice Edwards - 11/12/17 - 0:55 </h2>
+<ul>
+  <li>I did a lot of combat changes. Read the build notes on the google doc in the Feedback folder.</li>
+</ul>
