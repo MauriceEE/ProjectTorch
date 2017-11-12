@@ -9,4 +9,6 @@ public class Zone : MonoBehaviour {
     public ZoneManager.ZoneNames zone;
     //The endpoint object of this zone (to manage screen transitions)
     public GameObject endPoint;
+    //Level constraints
+    public float minX, maxX, minY, maxY;
 }

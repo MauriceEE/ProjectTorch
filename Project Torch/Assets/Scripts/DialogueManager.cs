@@ -133,6 +133,7 @@ public class DialogueManager : MonoBehaviour {
             finishedDialogueSequence = false;
             dialogueContainer.SetActive(false);
             flagMan.DialogueEnded(currentSequenceName);//Tell the flagmanager
+            GameObject.Find("InteractionManagerGO").GetComponent<InteractionManager>().DialogueActive = false;//Tell the interaction manager
         }
         if(dialogue != null && dialogue.Count == 0)
         {

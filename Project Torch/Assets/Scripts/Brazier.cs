@@ -19,11 +19,11 @@ public class Brazier : MonoBehaviour {
     /// Sets brazier as lit or unlight
     /// Also updates in the flag manager
     /// TODO: animations or something
+    /// 
+    /// Returns dialogue name, or null if 
     /// </summary>
-    /// <param name="_lit">Whether or not the brazier should be lit</param>
-    public void IgniteBrazier(bool _lit)
+    public string IgniteBrazier()
     {
-        //lit = _lit;
         lit = !lit;
         Debug.Log("Brazier: " + lit);
         GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().BrazierLit(zone, lit);
@@ -34,18 +34,13 @@ public class Brazier : MonoBehaviour {
         switch (zone)
         {
             case ZoneManager.ZoneNames.Battlefield:
-                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - Battlefield");
-                break;
+                return "Brazier - Battlefield";
             case ZoneManager.ZoneNames.HumanTerritoryStage1:
-                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - HumanTerritoryStage1");
-                break;
+                return "Brazier - HumanTerritoryStage1";
             case ZoneManager.ZoneNames.ShadowTerritoryStage1:
-                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - ShadowTerritoryStage1");
-                break;
+                return "Brazier - ShadowTerritoryStage1";
             default:
-                Debug.Log("Brazier switch broke");
-                Debug.Break();
-                break;
+                return null;
         }
     }
     #endregion
