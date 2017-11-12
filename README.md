@@ -115,3 +115,9 @@
 <ul>
   <li>I did a lot of combat changes. Read the build notes on the google doc in the Feedback folder.</li>
 </ul>
+<h2>Steven Ma - 11/12/17 - 8:14 </h2>
+<ul>
+  <li>Replaced enemy prefabs with correct prefabs.</li>
+  <li>Added in dialogue for braziers.</li>
+  <li>Removed all level end points from view.</li>
+</ul>

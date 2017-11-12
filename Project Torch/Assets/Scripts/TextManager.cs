@@ -90,7 +90,7 @@ public class TextManager : MonoBehaviour {
                 "Captain of the Gaurd:\nWe will hold the line here as you battle their King.",
                 "Captain of the Gaurd:\nHerald us all to the Serpents’ Promised Flame!"
             });
-        //TEMP - THe dude escorting the princess
+        //TEMP - The dude escorting the princess
         lines.Add("Princess Escort - Temp",
             new string[]
             {
@@ -103,6 +103,27 @@ public class TextManager : MonoBehaviour {
             {
                 "Oh HELL yeah, you saved me man!",
                 "I'm gonna go chill with my dad now"
+            });
+        //Battlefield Brazier
+        lines.Add("Brazier - Battlefield",
+            new string[]
+            {
+                "The path ahead. Illuminated by dragon’s fire,",
+                "cradled in a serpent’s pyre. How rare."
+            });
+        //HumanTerritoryStage1 Brazier
+        lines.Add("Brazier - HumanTerritoryStage1",
+            new string[]
+            {
+                "Left behind to wallow in the waters, the serpents gazed at the sky.",
+                "Looking on as the Dragons forged their domain: The Sky."
+            });
+        //ShadowTerritoryStage1 Brazier
+        lines.Add("Brazier - ShadowTerritoryStage1",
+            new string[]
+            {
+                "In the beginning, where the depths housed the world, there were only two kinds to speak of.",
+                "Those with wings; those without. Dragons and serpents."
             });
     }
 #endregion

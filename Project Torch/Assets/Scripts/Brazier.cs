@@ -30,6 +30,19 @@ public class Brazier : MonoBehaviour {
 
         if(lit) GetComponent<SpriteRenderer>().color = new Color((255f/255f), (184f/255f), (184f/255f));
         else GetComponent<SpriteRenderer>().color = Color.white;
+
+        switch (zone)
+        {
+            case ZoneManager.ZoneNames.Battlefield:
+                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - Battlefield");
+                break;
+            case ZoneManager.ZoneNames.HumanTerritoryStage1:
+                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - HumanTerritoryStage1");
+                break;
+            case ZoneManager.ZoneNames.ShadowTerritoryStage1:
+                GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().ActivateDialogueLines("Brazier - ShadowTerritoryStage1");
+                break;
+        }
     }
     #endregion
 }
