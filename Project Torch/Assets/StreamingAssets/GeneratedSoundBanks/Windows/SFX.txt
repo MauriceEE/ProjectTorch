@@ -5,7 +5,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	953277036	Resume			\Default Work Unit\UI\Resume	
 	1942692385	Dash			\Default Work Unit\Adjudicator\Attacks and Abilities\Dash	
 	2197345151	Thrust			\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust	
-	2435824224	Shadow_Spearman_Attack			\Default Work Unit\Enemies\Shadow_Spearman_Attack	
 	2547765723	Torch_Plant			\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant	
 	3055381918	Shine			\Default Work Unit\Adjudicator\Attacks and Abilities\Shine	
 	3092587493	Pause			\Default Work Unit\UI\Pause	

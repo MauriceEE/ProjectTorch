@@ -12,7 +12,6 @@
 						<ObjectRef Name="Resume" ID="{6D0C8E99-260A-43EB-A8F7-5BE239E8654F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Shadow_Spearman_Attack" ID="{47555BB4-99AD-47FB-897B-AFC2D59DA2B4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Shadow_Brute_Attack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>

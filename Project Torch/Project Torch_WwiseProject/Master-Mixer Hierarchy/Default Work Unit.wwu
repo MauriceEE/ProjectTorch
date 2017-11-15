@@ -3,7 +3,83 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{2C0023E4-E53C-4CA4-8217-D99FAB14D667}" ShortID="26982769">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Master_Volume" ID="{55E5C7AB-7DA4-460B-B6E6-33894DE14BA4}" WorkUnitID="{12081575-47C9-473E-A190-14C230AB9725}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{31A114DC-C302-4199-BF5E-4FF53598B9A1}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Bus Name="Music" ID="{033F88DD-0936-4E81-B1C5-AC59B6217F99}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{9CA5F3F5-8848-45E2-B01E-BCEF9B3BADE3}" ShortID="98727012">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Music_Volume" ID="{89B2DF1F-8EA0-4C5A-A8A1-FFCFF1DE453D}" WorkUnitID="{12081575-47C9-473E-A190-14C230AB9725}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{730DE6EA-A7B1-4F67-8CF0-4A24A7EB4A3A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}">
+							<ChildrenList>
+								<AuxBus Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
 				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
 			</ChildrenList>

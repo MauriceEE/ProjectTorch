@@ -27,7 +27,6 @@ namespace AK
         static const AkUniqueID SCROLL = 454121546U;
         static const AkUniqueID SHADOW_BASIC_ATTACK = 3817024617U;
         static const AkUniqueID SHADOW_BRUTE_ATTACK = 3498381063U;
-        static const AkUniqueID SHADOW_SPEARMAN_ATTACK = 2435824224U;
         static const AkUniqueID SHINE = 3055381918U;
         static const AkUniqueID SLASH = 4107276880U;
         static const AkUniqueID THRUST = 2197345151U;
@@ -74,8 +73,11 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MASTER_VOLUME = 4179668880U;
+        static const AkUniqueID MUSIC_VOLUME = 1006694123U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;
         static const AkUniqueID PLAYERMOVEMENTSPEED = 2557281390U;
+        static const AkUniqueID SFX_VOLUME = 1564184899U;
         static const AkUniqueID TIMEREMAINING = 1691631674U;
     } // namespace GAME_PARAMETERS
 
@@ -90,7 +92,14 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID OUTSIDE_VERB = 3695620394U;
+    } // namespace AUX_BUSSES
 
 }// namespace AK
 

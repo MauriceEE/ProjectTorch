@@ -26,7 +26,6 @@
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
 				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
 				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
-				<Event Id="2435824224" Name="Shadow_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Spearman_Attack"/>
 				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Shine"/>
 				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Slash"/>
 				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust"/>
