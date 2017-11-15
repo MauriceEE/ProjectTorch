@@ -8,6 +8,7 @@
 				<GameParameter Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
 				<Folder Name="UI Volume Parameters" ID="{086528E4-2D3D-415E-8E75-82B2EB94CBE4}" ShortID="633372808">
