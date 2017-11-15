@@ -111,7 +111,7 @@ public class EnemyManager : MonoBehaviour {
         CleanupEnemies();
         if (encounterActive)
             ManageEncounter();
-	}
+    }
     #endregion
 
     #region Custom Methods
@@ -149,6 +149,7 @@ public class EnemyManager : MonoBehaviour {
             }
             if (encounterEnemies.Count > 6)
             {
+                Debug.Log("More than 6 enemies in encounter!");
                 Debug.Break();
                 throw new UnityException();//Don't allow more than 6 enemies in an encounter... if this line of code triggers then we need to fix something
             }

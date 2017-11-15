@@ -303,9 +303,6 @@ public class PlayerCombat : MonoBehaviour {
                     AttackRoutine(thHB1, thDamage, thKnockbackTime, thKnockbackSpeed);
                     GameObject tempObjBox1th = Instantiate(tempHitboxObj[3] as GameObject, this.transform);
                     tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);//original
-                    //tempObjBox1th.transform.localPosition = new Vector3((thHB1.x - (thHB1.width / 2f)) * hitBoxDirectionMove, thHB1.y - (thHB1.height / 2f), 0);
-                    //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(Helper.Midpoint(thHB1.min, thHB1.max));
-                    //tempObjBox1th.transform.localPosition = Helper.Vec2ToVec3(thHB1.min);
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--

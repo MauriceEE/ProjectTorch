@@ -16,8 +16,6 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Entity : MonoBehaviour {
     #region Private Fields
-    //Movement speed of the entity
-    protected Vector2 speed;
     //Speed this current frame - add to this before calling Move
     protected Vector2 displacement = Vector2.zero;
     //Whether or not the entity can move
@@ -32,6 +30,8 @@ public class Entity : MonoBehaviour {
     protected List<StatusEffect> statusEffects;
     //For applying buffs/debuffs
     protected StatusEffectManager statusEffectMan;
+    //Should be calculated by other classes (player/enemy/etc), used for footstep sfx
+    protected float speed;
     #endregion
 
     #region Public Fields
@@ -40,12 +40,16 @@ public class Entity : MonoBehaviour {
     #endregion
 
     #region Properties
-    public Vector2 Speed { get { return speed; } set { speed = value; } }
     public Vector2 Displacement { get { return displacement; } set { displacement = value; } }
     public bool CanMove { get { return canMove; } set { canMove = value; } }
     public bool FacingRight { get { return right; } set { right = value; } }
     public float SpeedModifier { get { return speedModifier; } set { speedModifier = value; } }
     public List<StatusEffect> StatusEffects { get { return statusEffects; } }
+    /// <summary>
+    /// Should be set every frame by other classes (player/enemy/etc)
+    /// MUST BE BETWEEN ZERO AND ONE
+    /// </summary>
+    public float Speed { get { return speed; } set { speed = value; } }
     public Rect HitBoxRect { get { return new Rect(new Vector2(hitBox.bounds.center.x, hitBox.bounds.center.y), new Vector2(hitBox.bounds.extents.x, hitBox.bounds.extents.y)); } }
     #endregion
 
@@ -65,7 +69,7 @@ public class Entity : MonoBehaviour {
         //Attempt to move
         this.transform.position += Helper.Vec2ToVec3(displacement * speedModifier);
         //Footstep sound
-        //AkSoundEngine.SetRTPCValue("name", displacement.magnitude);
+        AkSoundEngine.SetRTPCValue("name", speed);
         //Reset speed modifier for next frame (it must be recalculated)
         speedModifier = 1f;
         //Check to see if we've changed direction

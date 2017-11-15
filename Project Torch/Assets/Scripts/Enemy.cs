@@ -262,10 +262,15 @@ public abstract class Enemy : MonoBehaviour {
         UpdateEnemyState();
         UpdateCombatState();
         stunTime -= Time.deltaTime;
+        if (stunTime < 0f)
+            stunTime = 0f;
+
+        //Update speed in entity
+        entity.Speed = Helper.Map(entity.Displacement.sqrMagnitude, 0f, maxVelocity * maxVelocity, 0f, 1f);
 
         //Move (even if displacement is zero)
         entity.Move();
-	}
+    }
     #endregion
 
     #region Update Methods (run every frame)
@@ -377,7 +382,8 @@ public abstract class Enemy : MonoBehaviour {
                     else
                         enemyMan.SendAllyAttackOrder(this);
                 }
-                    
+                else
+                    this.moveTarget = this.transform.position;
                 break;
             case EnemyStates.Attacking:
                 elapsedApproachTime = 0f;
@@ -388,20 +394,18 @@ public abstract class Enemy : MonoBehaviour {
                 break;
             case EnemyStates.ApproachingToAttack:
                 isAttacking = false; // might change this if it proves cheap
-
                 // increase movement speed
                 if (maxVelocity <= (3 * ogMaxVelocity))
                     maxVelocity += (Time.deltaTime / 15);
                 elapsedApproachTime += Time.deltaTime;
-
                 // adjust attack range to increase likelihood of a chasing attack landing
                 if (elapsedApproachTime >= 1) attackRange = .8f;
-                
                 // if elapsed time is greater than 3 seconds, just cancel their attack and return them to their old location
                 if (elapsedApproachTime > 3)
                 {
                     CancelOrHitStun(false);
                     enemyState = EnemyStates.ReturningFromAttack;
+                    elapsedApproachTime = 0f;
 
                     // alternative: enemies attempt to attack after approaching for 3 seconds
                     /*
@@ -441,7 +445,11 @@ public abstract class Enemy : MonoBehaviour {
                 //TODO: stuff after returning to the return position?
                 SeekTarget();
                 if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
+                {
                     enemyState = EnemyStates.Idle;
+                    //Prevent the enemy from continuously moving 
+                    this.moveTarget = this.transform.position;
+                }
                 break;
             case EnemyStates.SurroundingPlayer:
                 //Merely follow the enemy manager's orders (it handles updating move target automatically)
@@ -481,6 +489,9 @@ public abstract class Enemy : MonoBehaviour {
             case EnemyStates.Stunned:
                 if (stunTime < 0f)
                     ResetCombatStates();
+                break;
+            default:
+                Debug.Log("ENEMY DOES NOT HAVE A STATE!!!");
                 break;
         }
     }
@@ -614,6 +625,7 @@ public abstract class Enemy : MonoBehaviour {
         enemyState = EnemyStates.Idle;
         combatState = CombatStates.None;
         isAttacking = false;
+        attackTime = 0f;
         elapsedApproachTime = 0f;
         knockbackModifier = 1f;
         guarding = false;
@@ -667,7 +679,7 @@ public abstract class Enemy : MonoBehaviour {
         dashTime = dashFrames * Helper.frame;
         //Modify speed
         entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
-                                          //Remove from occupancy grid
+        //Remove from occupancy grid
         RequestRemoveFromEncounterGrid();
     }
 
@@ -822,8 +834,10 @@ public abstract class Enemy : MonoBehaviour {
     {
         //No longer in an encounter
         inEncounter = false;
+        //Fix abnormal states
+        ResetCombatStates();
         //Set move target to the return position
-        this.moveTarget = returnPosition;
+        this.moveTarget = startingPosition;
         //Set state to returning to said position
         this.enemyState = EnemyStates.ReturningFromEncounter;
     }
