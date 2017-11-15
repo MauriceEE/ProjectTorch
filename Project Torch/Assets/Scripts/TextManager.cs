@@ -13,6 +13,7 @@ public class TextManager : MonoBehaviour {
         KingOfMan,
         KingOfDark,
         CaptainOfTheGuard,
+        Altar,
     }
     #endregion
 
@@ -50,6 +51,17 @@ public class TextManager : MonoBehaviour {
         //Instantiate the lines dictionary
         lines = new Dictionary<string, string[]>();
         //Here we will add all possible lines of dialogue in the game to the dictionary
+
+        //The lines the Altar says
+        lines.Add("Altar - Default",
+            new string[]
+            {
+                "Altar:\nGood traveler, I know not of your origin, be it the Serpent’s Earth or Dragon’s sky, but I beg of you to aid us in our time of need.",
+                "King of Man:\nAid us as we repel the invaders from the shadows so that we may retake our place in this world!",
+                "King of Man:\nTheir King’s fortress lies to the west.",
+                "King of Man:\nLead the charge as I fulfill the last wish of the Serpents."
+            });
+
         //The basic lines the King will say to you with no other triggers
         lines.Add("King of Man - Default",
             new string[]
