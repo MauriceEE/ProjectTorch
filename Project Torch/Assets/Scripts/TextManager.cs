@@ -13,6 +13,9 @@ public class TextManager : MonoBehaviour {
         KingOfMan,
         KingOfDark,
         CaptainOfTheGuard,
+        Altar,
+        ST1Grave1,
+        ST1Grave2,
     }
     #endregion
 
@@ -50,6 +53,15 @@ public class TextManager : MonoBehaviour {
         //Instantiate the lines dictionary
         lines = new Dictionary<string, string[]>();
         //Here we will add all possible lines of dialogue in the game to the dictionary
+
+        //The first lines the Altar says
+        lines.Add("Altar - Default",
+            new string[]
+            {
+                "Altar:\nThe cold stone calls back to a time buried in death.",
+                "Altar:\nThe time of your birth, when fire devoured fire."
+            });
+
         //The basic lines the King will say to you with no other triggers
         lines.Add("King of Man - Default",
             new string[]
@@ -101,29 +113,62 @@ public class TextManager : MonoBehaviour {
         lines.Add("Princess - Saved",
             new string[]
             {
-                "\nOh HELL yeah, you saved me man!",
-                "\nI'm gonna go chill with my dad now"
+                "Princess:\nOh HELL yeah, you saved me man!",
+                "Princess:\nI'm gonna go chill with my dad now"
             });
         //Battlefield Brazier
         lines.Add("Brazier - Battlefield",
             new string[]
             {
-                "\nThe path ahead. Illuminated by dragon’s fire,",
-                "\ncradled in a serpent’s pyre. How rare."
+                "Brazier:\nThe path ahead. Illuminated by dragon’s fire,",
+                "Brazier:\ncradled in a serpent’s pyre. How rare."
             });
         //HumanTerritoryStage1 Brazier
         lines.Add("Brazier - HumanTerritoryStage1",
             new string[]
             {
-                "\nLeft behind to wallow in the waters, the serpents gazed at the sky.",
-                "\nLooking on as the Dragons forged their domain: The Sky."
+                "Brazier:\nLeft behind to wallow in the waters, the serpents gazed at the sky.",
+                "Brazier:\nLooking on as the Dragons forged their domain: The Sky."
+            });
+        //HumanTerritoryStage2 Brazier
+        lines.Add("Brazier - HumanTerritoryStage2",
+            new string[]
+            {
+                "Brazier:\nEver watching, the World Serpent lay in wait.",
+                "Brazier:\nA day came where a dragon drew near to the world below.",
+                "Brazier:\nAnd he was devoured by the World Serpent.",
+                "Brazier:\nThe first murder."
             });
         //ShadowTerritoryStage1 Brazier
         lines.Add("Brazier - ShadowTerritoryStage1",
             new string[]
             {
-                "\nIn the beginning, where the depths housed the world, there were only two kinds to speak of.",
-                "\nThose with wings; those without. Dragons and serpents."
+                "Brazier:\nIn the beginning, where the depths housed the world, there were only two kinds to speak of.",
+                "Brazier:\nThose with wings; those without. Dragons and serpents."
+            });
+        //WarZone Brazier
+        lines.Add("Brazier - WarZone",
+            new string[]
+            {
+                "Brazier:\nBorn from nothing, the soul of a dragon took the shape of man.",
+                "Brazier:\nIn disgust, it was cast out in a Dragon's Exile.",
+                "Brazier:\nAn impossible creature, tasked with an impossibility."
+            });
+        //ShadowTerritoryStage1 Grave1
+        lines.Add("ST1Grave1 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nThe cry of a princess, drowned by the will of man.",
+                "Makeshift Grave:\nTheir King’s decree and prophet’s suggestion, so is the power in words.",
+                "Makeshift Grave:\nWords which weigh heavier than my life."
+            });
+        //ShadowTerritoryStage1 Grave2
+        lines.Add("ST1Grave2 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nWhen the plague spread over us, it took with it our pride.",
+                "Makeshift Grave:\nThe pride of man was broken.",
+                "Makeshift Grave:\nPerhaps, it is the great serpents calling for us to join them in death?"
             });
     }
 #endregion

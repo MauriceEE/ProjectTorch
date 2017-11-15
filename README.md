@@ -125,4 +125,9 @@
 <ul>
   <li>Added events for spearman attacks and non-integrated death music</li>
 </ul>
+<h2>Steven Ma - 11/15/17 - 17:22PM</h2>
+<ul>
+  <li>Defined active areas.</li>
+  <li>Fixed level assignment issues with human soldiers.</li>
+</ul>
 

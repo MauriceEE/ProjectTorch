@@ -5,7 +5,31 @@
 			<ChildrenList>
 				<GameParameter Name="PlayerHealth" ID="{2D050138-7EEE-4804-9E68-E5B2B6F466D8}"/>
 				<GameParameter Name="TimeRemaining" ID="{FB9D4776-BDF5-4AFF-99C2-C99013A6CCA0}"/>
-				<GameParameter Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
+				<GameParameter Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<Folder Name="UI Volume Parameters" ID="{086528E4-2D3D-415E-8E75-82B2EB94CBE4}" ShortID="633372808">
+					<ChildrenList>
+						<GameParameter Name="Music_Volume" ID="{89B2DF1F-8EA0-4C5A-A8A1-FFCFF1DE453D}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="SFX_Volume" ID="{B8611B32-0789-4A8D-A51E-D7D905D81E5F}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Master_Volume" ID="{55E5C7AB-7DA4-460B-B6E6-33894DE14BA4}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

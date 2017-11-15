@@ -15,7 +15,19 @@ State	ID	Name	State Group			Notes
 	984691642	InGame	GameState			
 	3092587493	Pause	GameState			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	Music_Volume			\Default Work Unit\UI Volume Parameters\Music_Volume	
+	4179668880	Master_Volume			\Default Work Unit\UI Volume Parameters\Master_Volume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	3695620394	Outside_Verb			\Default Work Unit\Master Audio Bus\SFX\Outside_Verb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 

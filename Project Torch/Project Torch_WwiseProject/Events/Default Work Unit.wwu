@@ -62,20 +62,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Shadow_Spearman_Attack" ID="{47555BB4-99AD-47FB-897B-AFC2D59DA2B4}">
-							<ChildrenList>
-								<Action Name="" ID="{43BE1443-F2C0-4ECD-81DD-74A1497546FB}" ShortID="715563616">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Spearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}">
 							<ChildrenList>
 								<Action Name="" ID="{C0FA3919-C440-43E0-A529-1B606C9C1A2E}" ShortID="561339993">
@@ -92,9 +78,6 @@
 						</Event>
 						<Event Name="Human_PrincessEscort_Attack" ID="{E4357F6E-A6DD-43FB-AA7E-1C97962A2CA9}"/>
 						<Event Name="Shadow_Glower_Attack" ID="{D80CCBEB-125B-431A-9042-86BF3858674F}"/>
-						<Event Name="Human_Glower_Attack" ID="{19CD930B-AAD7-4E95-84B7-A09CAA683BCA}"/>
-						<Event Name="Human_Charger_Attack" ID="{3CB6463D-BA2E-4F64-8F66-4A246007388B}"/>
-						<Event Name="Shadow_Charger" ID="{E2D046BA-2904-4BC5-8447-4F3219F05E06}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{2D8A632B-B382-4092-8855-7C0D9B2EC292}" ShortID="1069001943">
@@ -253,20 +236,6 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Event Name="Footstep" ID="{8BFBAB13-8AB1-4009-B6D6-836B387288AE}">
-							<ChildrenList>
-								<Action Name="" ID="{3AA36C0B-C061-44A6-844C-4E8D80E927A5}" ShortID="374541096">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Footsteps" ID="{4436F7DF-7FF2-4790-8F4E-0CD6F9629557}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

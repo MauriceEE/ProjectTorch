@@ -137,23 +137,24 @@ public class FlagManager : MonoBehaviour {
             case TextManager.InteractiveNPCNames.KingOfMan:
                 if (flags[FlagNames.DefaultKingOfManDialogue])
                 {
-                    dialogue.AddDialogueSequence(text.Lines["King of Man - Default"], "King of Man - Default");
-                    dialogue.SetTextAndShowImmediately();
+                    ActivateDialogueLines("King of Man - Default");
                     flags[FlagNames.InteractedWithKingOfMan] = true;
                 }
                 break;
             case TextManager.InteractiveNPCNames.KingOfDark:
                 if (flags[FlagNames.EnemyOfShadow])
                 {
-                    if (flags[FlagNames.InteractedWithKingOfMan])
-                    {
-
-                    }
-                    dialogue.AddDialogueSequence(text.Lines["King of the Dark - Downed"], "King of the Dark - Downed");
-                    dialogue.SetTextAndShowImmediately();
+                    ActivateDialogueLines("King of the Dark - Downed");
                 }
                 break;
-            case TextManager.InteractiveNPCNames.CaptainOfTheGuard:
+            case TextManager.InteractiveNPCNames.Altar:
+                ActivateDialogueLines("Altar - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST1Grave1:
+                ActivateDialogueLines("ST1Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST1Grave2:
+                ActivateDialogueLines("ST1Grave2 - Default");
                 break;
         }
     }
