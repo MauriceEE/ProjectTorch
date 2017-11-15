@@ -37,8 +37,17 @@ public class Brazier : MonoBehaviour {
                 return "Brazier - Battlefield";
             case ZoneManager.ZoneNames.HumanTerritoryStage1:
                 return "Brazier - HumanTerritoryStage1";
+            case ZoneManager.ZoneNames.HumanTerritoryStage2:
+                return "Brazier - HumanTerritoryStage2";
             case ZoneManager.ZoneNames.ShadowTerritoryStage1:
                 return "Brazier - ShadowTerritoryStage1";
+            case ZoneManager.ZoneNames.WarZone:
+                return "Brazier - WarZone";
+            case ZoneManager.ZoneNames.WarZoneStage2:
+                return "Brazier - WarZoneStage2";
+            case ZoneManager.ZoneNames.TrueHumanStage1:
+                return "Brazier - TrueHumanStage1";
+
             default:
                 return null;
         }
