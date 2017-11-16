@@ -20,20 +20,32 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="Master_Volume" ID="{55E5C7AB-7DA4-460B-B6E6-33894DE14BA4}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="PlayerHealth" ID="{2D050138-7EEE-4804-9E68-E5B2B6F466D8}"/>
 							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Volume" ID="{B8611B32-0789-4A8D-A51E-D7D905D81E5F}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TimeRemaining" ID="{FB9D4776-BDF5-4AFF-99C2-C99013A6CCA0}"/>
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Music_Volume" ID="{89B2DF1F-8EA0-4C5A-A8A1-FFCFF1DE453D}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
-							<Value>50</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
+						<CurrentStateRef Name="None" ID="{794663F3-2990-48CD-BDD3-0936F1EB7FCC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

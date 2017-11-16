@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3611180283	Music_Ambient			\Interactive Music\Music_Ambient	
+	3678931145	Music_Death			\Interactive Music\Music_Death	
+	3725903807	Music_Start			\Interactive Music\Music_Start	
+	3944980085	Music_Combat			\Interactive Music\Music_Combat	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	77978275	Ambient	Music			
+	748895195	None	Music			
+	779278001	Death	Music			
+	2764240573	Combat	Music			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	263453692	Bass Drum_revswell_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bass Drum_revswell_01_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Bass Drum_revswell_01\Bass Drum_revswell_01		1048720
+	295159468	Death_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Death_01_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Death_01\Death_01		4980880
+	411247084	Temp_Ambient01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Temp_Ambient01_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Ambient\Temp_Ambient01\Temp_Ambient01		11523568
+	416137440	Ambient_demo_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Ambient_demo_01_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Ambient\Temp_Ambient02\Ambient_demo_01		3397072
+	611871978	Temp_Combat	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Temp_Combat_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\Temp_Combat\Temp_Combat		9950752
+	724764778	Temp_Combat02	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Temp_Combat02_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\Temp_Combat02\Temp_Combat02		8902176
+

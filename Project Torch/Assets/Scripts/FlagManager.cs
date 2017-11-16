@@ -147,7 +147,14 @@ public class FlagManager : MonoBehaviour {
                     ActivateDialogueLines("King of the Dark - Downed");
                 }
                 break;
-            case TextManager.InteractiveNPCNames.CaptainOfTheGuard:
+            case TextManager.InteractiveNPCNames.Altar:
+                ActivateDialogueLines("Altar - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST1Grave1:
+                ActivateDialogueLines("ST1Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST1Grave2:
+                ActivateDialogueLines("ST1Grave2 - Default");
                 break;
         }
     }
