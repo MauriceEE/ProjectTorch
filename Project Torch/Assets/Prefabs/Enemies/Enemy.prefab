@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114988248729391038}
   - component: {fileID: 114952855302397394}
   - component: {fileID: 212438699154619596}
-  - component: {fileID: 108592681778675102}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -69,42 +68,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8151405}
   m_EdgeRadius: 0
---- !u!108 &108592681778675102
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1195452643779594}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.66531444, b: 0.44852942, a: 1}
-  m_Intensity: 12
-  m_Range: 3.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!114 &114952855302397394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,7 +101,7 @@ MonoBehaviour:
   attackRange: 1.8
   awarenessRange: 5
   atDamage: 10
-  atStartup: 17
+  atStartup: 27
   atActive: 10
   atRecovery: 10
   atKnockbackTime: 0.2
@@ -165,7 +128,7 @@ MonoBehaviour:
     width: 1.26
     height: 0.21
   dashIFrames: 6
-  dashFrames: 10
+  dashFrames: 15
   dashSpeed: 12
   dashFriction: 0.919
   guardChance: 15

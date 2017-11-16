@@ -94,14 +94,14 @@ MonoBehaviour:
   hp: 70
   faction: 0
   zone: 0
-  knockbackFriction: 0.89
+  knockbackFriction: 0.5
   guardBreakStunTime: 2.6
   maxVelocity: 0.04
   arrivalRadius: 3
   attackRange: 1.8
   awarenessRange: 5
   atDamage: 15
-  atStartup: 20
+  atStartup: 30
   atActive: 14
   atRecovery: 12
   atKnockbackTime: 0
@@ -129,8 +129,8 @@ MonoBehaviour:
     height: 0.47
   dashIFrames: 6
   dashFrames: 10
-  dashSpeed: 0
-  dashFriction: 0
+  dashSpeed: 12
+  dashFriction: 0.919
   guardChance: 20
   counterAttackChance: 0
   dodgeChance: 10

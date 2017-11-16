@@ -213,7 +213,7 @@ MonoBehaviour:
   slActive: 10
   slRecovery: 10
   slKnockbackTime: 0.2
-  slKnockbackSpeed: 0.06
+  slKnockbackSpeed: 0.09
   slEditorHitboxes: 0
   slHB1:
     serializedVersion: 2
@@ -290,7 +290,7 @@ MonoBehaviour:
   - serializedVersion: 2
     x: 1.9
     y: -0.81
-    width: 0.5
+    width: 4
     height: 1.61
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
