@@ -1539,7 +1539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &115410137
 Transform:
   m_ObjectHideFlags: 0
@@ -4231,7 +4231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &418123460
 Transform:
   m_ObjectHideFlags: 0
@@ -5014,7 +5014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &554558474
 Transform:
   m_ObjectHideFlags: 0
@@ -7401,7 +7401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &762948938
 Transform:
   m_ObjectHideFlags: 0
@@ -8119,7 +8119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &818091452
 Transform:
   m_ObjectHideFlags: 0
@@ -9597,7 +9597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &949225080
 Transform:
   m_ObjectHideFlags: 0
@@ -11569,8 +11569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZ: 10
   maxZ: 0
-  objs:
-  - {fileID: 1145523780}
 --- !u!1 &1102579043
 GameObject:
   m_ObjectHideFlags: 0
@@ -13168,7 +13166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1338713670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15335,7 +15333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1642552739
 Transform:
   m_ObjectHideFlags: 0
@@ -16502,7 +16500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1759918585
 Transform:
   m_ObjectHideFlags: 0
@@ -18348,7 +18346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1909961562
 Transform:
   m_ObjectHideFlags: 0

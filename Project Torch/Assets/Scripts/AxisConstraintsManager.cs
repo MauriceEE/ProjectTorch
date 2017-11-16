@@ -8,9 +8,10 @@ using UnityEngine;
 public class AxisConstraintsManager : MonoBehaviour {
     #region Public Fields
     public int minZ, maxZ;
-    public GameObject[] objs;
     #endregion
     #region Private Fields
+    protected GameObject[] objectsToMove;
+    protected GameObject player;
     protected EnemyManager enemyMan;
     protected ZoneManager zoneMan;
     #endregion
@@ -18,13 +19,32 @@ public class AxisConstraintsManager : MonoBehaviour {
     void Awake () {
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
         zoneMan = GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>();
-	}
+        //Grab the player
+        player = GameObject.Find("Player");
+        //Grab all braziers
+        Brazier[] braziers = FindObjectsOfType(typeof(Brazier)) as Brazier[];
+        //After grabbing all objects necessary, add them to the array
+        //First we gotta determine the proper size
+        //Right now just braziers, modify size accordingly if you add things later
+        objectsToMove = new GameObject[braziers.Length];
+        //Add braziers
+        for (int i = 0; i < braziers.Length; ++i)
+            objectsToMove[i] = braziers[i].gameObject;
+    }
 	void Update () {
-        for (int i = 0; i < objs.Length; ++i)
+        //Player
+        UpdateZAxis(player);
+        KeepWithinBounds(player);
+        //Objects
+        for (int i = 0; i < objectsToMove.Length; ++i)
         {
-            UpdateZAxis(objs[i]);
-            KeepWithinBounds(objs[i]);
+            if (objectsToMove[i].activeInHierarchy)
+            {
+                UpdateZAxis(objectsToMove[i]);
+                KeepWithinBounds(objectsToMove[i]);
+            }
         }
+        //Enemies
         for (int i = 0; i < enemyMan.Enemies.Count; ++i)
         {
             UpdateZAxis(enemyMan.Enemies[i]);
