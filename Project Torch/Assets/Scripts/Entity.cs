@@ -68,8 +68,6 @@ public class Entity : MonoBehaviour {
     {
         //Attempt to move
         this.transform.position += Helper.Vec2ToVec3(displacement * speedModifier);
-        //Footstep sound
-        AkSoundEngine.SetRTPCValue("name", speed);
         //Reset speed modifier for next frame (it must be recalculated)
         speedModifier = 1f;
         //Check to see if we've changed direction

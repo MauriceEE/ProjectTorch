@@ -134,6 +134,9 @@ public class PlayerMovement : MonoBehaviour {
             //Update speed in entity
             entity.Speed = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).magnitude;
 
+            //Play footstep sound
+            AkSoundEngine.SetRTPCValue("PlayerMovementSpeed", entity.Speed);
+
             //Move the player
             entity.Move();
         }
