@@ -139,5 +139,53 @@ public class Entity : MonoBehaviour {
         }
         return false;
     }
+    /// <summary>
+    /// These three methods remove a specific status effect
+    /// </summary>
+    /// <param name="buffName">Name of the buff</param>
+    public void RemoveStatusEffect(StatusEffectManager.Buffs buffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Buff == buffName)
+                statusEffects.RemoveAt(i);
+    }
+    public void RemoveStatusEffect(StatusEffectManager.Debuffs debuffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Debuff == debuffName)
+                statusEffects.RemoveAt(i);
+    }
+    public void RemoveStatusEffect(StatusEffectManager.StatusEffects effectName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Effect == effectName)
+                statusEffects.RemoveAt(i);
+    }
+    /// <summary>
+    /// These three methods return a status effect of the specific type
+    /// </summary>
+    /// <param name="buffName">Name of the buff</param>
+    /// <returns>The status effect object</returns>
+    public StatusEffect GetStatusEffect(StatusEffectManager.Buffs buffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Buff == buffName)
+                return statusEffects[i];
+        return null;
+    }
+    public StatusEffect GetStatusEffect(StatusEffectManager.Debuffs debuffName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Debuff == debuffName)
+                return statusEffects[i];
+        return null;
+    }
+    public StatusEffect GetStatusEffect(StatusEffectManager.StatusEffects effectName)
+    {
+        for (int i = 0; i < statusEffects.Count; ++i)
+            if (statusEffects[i].Effect == effectName)
+                return statusEffects[i];
+        return null;
+    }
     #endregion
 }

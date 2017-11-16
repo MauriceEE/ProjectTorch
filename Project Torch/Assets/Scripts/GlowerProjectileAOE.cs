@@ -51,13 +51,19 @@ public class GlowerProjectileAOE : MonoBehaviour {
     protected void CheckCollisionWithPlayer()
     {
         //Check dist to player... need to also consider the player's hitbox
-        if ((this.transform.position - player.transform.position).sqrMagnitude < (radius * radius) + (player.HitBoxRect.width * player.HitBoxRect.width)
-            && !player.GetComponent<Entity>().ContainsStatusEffect(StatusEffectManager.Debuffs.GlowerSlow))
-            player.GetComponent<Entity>().ApplyNewStatusEffect(new StatusEffect(
-                slowDuration,
-                StatusEffectManager.Buffs.NONE,
-                StatusEffectManager.Debuffs.GlowerSlow,
-                StatusEffectManager.StatusEffects.NONE));
+        if ((this.transform.position - player.transform.position).sqrMagnitude < (radius * radius) + (player.HitBoxRect.width * player.HitBoxRect.width))
+        {
+            if (!player.GetComponent<Entity>().ContainsStatusEffect(StatusEffectManager.Debuffs.GlowerSlow))
+                player.GetComponent<Entity>().ApplyNewStatusEffect(new StatusEffect(
+                    slowDuration,
+                    StatusEffectManager.Buffs.NONE,
+                    StatusEffectManager.Debuffs.GlowerSlow,
+                    StatusEffectManager.StatusEffects.NONE));
+            else
+                //Refresh the slow time on the current debuff
+                player.GetComponent<Entity>().GetStatusEffect(StatusEffectManager.Debuffs.GlowerSlow).TimeActive = 0f;
+        }
+            
     }
     /// <summary>
     /// Applies status effects to enemies within range
@@ -70,13 +76,18 @@ public class GlowerProjectileAOE : MonoBehaviour {
             //Maybe take out the top line here? Currently it prevents enemies allied with you from getting slowed but it might look better if they do
             if (!enemyMan.encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer &&
                 (this.transform.position - enemyMan.encounterEnemies[i].transform.position).sqrMagnitude < 
-                (radius * radius) + (enemyMan.encounterEnemies[i].GetComponent<Entity>().HitBoxRect.width * enemyMan.encounterEnemies[i].GetComponent<Entity>().HitBoxRect.width)
-            && !enemyMan.encounterEnemies[i].GetComponent<Entity>().ContainsStatusEffect(StatusEffectManager.Debuffs.GlowerSlow))
-                enemyMan.encounterEnemies[i].GetComponent<Entity>().ApplyNewStatusEffect(new StatusEffect(
-                    slowDuration,
-                    StatusEffectManager.Buffs.NONE,
-                    StatusEffectManager.Debuffs.GlowerSlow,
-                    StatusEffectManager.StatusEffects.NONE));
+                (radius * radius) + (enemyMan.encounterEnemies[i].GetComponent<Entity>().HitBoxRect.width * enemyMan.encounterEnemies[i].GetComponent<Entity>().HitBoxRect.width))
+                {
+                if (!enemyMan.encounterEnemies[i].GetComponent<Entity>().ContainsStatusEffect(StatusEffectManager.Debuffs.GlowerSlow))
+                    enemyMan.encounterEnemies[i].GetComponent<Entity>().ApplyNewStatusEffect(new StatusEffect(
+                        slowDuration,
+                        StatusEffectManager.Buffs.NONE,
+                        StatusEffectManager.Debuffs.GlowerSlow,
+                        StatusEffectManager.StatusEffects.NONE));
+                else
+                    //Refresh duration of slow debuff
+                    enemyMan.encounterEnemies[i].GetComponent<Entity>().GetStatusEffect(StatusEffectManager.Debuffs.GlowerSlow).TimeActive = 0f;
+            }
         }
     }
     #endregion
