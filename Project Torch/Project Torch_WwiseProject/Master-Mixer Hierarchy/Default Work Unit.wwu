@@ -66,6 +66,12 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<AuxBus Name="Reverb" ID="{B8DF1C50-7295-48C8-B79D-D2A43014E742}">
+									<ReferenceList/>
+								</AuxBus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}">
 							<ChildrenList>

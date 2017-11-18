@@ -238,7 +238,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Thrust
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101124304377560554}
@@ -313,7 +313,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Shine
-  m_Speed: 1
+  m_Speed: 3.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101155457856013002}

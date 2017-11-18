@@ -56,6 +56,7 @@ public class PlayerCombat : MonoBehaviour {
     public float shStartup = 12;
     public float shActive = 7;
     public float shRecovery = 10;
+    public float shIntensity = 30;
     public bool shEditorHitboxes = true;//DEBUG//
     public Rect[] shHB;
     [Header("Debug")]
@@ -91,6 +92,8 @@ public class PlayerCombat : MonoBehaviour {
     // Post processing changer
     private PostProcessChange ppChange;
     private float hitFlashTimer;
+    // spotlights for shine
+    private Light shineLight;
     #endregion
 
     #region Properties
@@ -116,9 +119,15 @@ public class PlayerCombat : MonoBehaviour {
     {
         //Temp scalar which will affect hitboxes on left/right side
         if (entity.FacingRight)
+        {
             hitBoxDirectionMove = 1;
+            shineLight = GameObject.Find("SpotlightLeft").GetComponent<Light>(); // Super confusing, but ok
+        }
         else
+        {
             hitBoxDirectionMove = -1;
+            shineLight = GameObject.Find("SpotlightRight").GetComponent<Light>(); // Super confusing, but ok
+        }
 
         // update hitFlashTimer
         if (hitFlashTimer > 0)
@@ -321,6 +330,8 @@ public class PlayerCombat : MonoBehaviour {
                         combatState = CombatStates.Recovery;
                     break;
                 case Attacks.Shine:
+                    // turn on spotlight
+                    shineLight.intensity = shIntensity;
                     //Test shine method for each hitbox in the shine
                     for (int i = 0; i < shHB.Length; ++i) 
                         Shine(shHB[i]);
@@ -367,6 +378,8 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Shine:
                     if (attackTime > (shStartup + shActive + shRecovery) * Helper.frame)
                     {
+                        // turn off spotlight
+                        shineLight.intensity = 0;
                         combatState = CombatStates.None;
                         currentAttack = Attacks.None;
                         canAttack = true;
@@ -615,21 +628,26 @@ public class PlayerCombat : MonoBehaviour {
         //Loop through 'em
         for (int i = 0; i < enemies.Count; ++i)
         {
-            //Check to see if they're attacking
-            if(enemies[i].IsAttacking)
+            //Check for collision
+            hitboxes[0] = enemies[i].atHB1;
+            hitboxes[1] = enemies[i].atHB2;
+            hitboxes[2] = enemies[i].atHB3;
+            for (int j = 0; j < 3; ++j)
             {
-                //Check for collision
-                hitboxes[0] = enemies[i].atHB1;
-                hitboxes[1] = enemies[i].atHB2;
-                hitboxes[2] = enemies[i].atHB3;
-                for (int j = 0; j < 3; ++j)
+                if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), Helper.LocalToWorldRect(hitboxes[j], enemies[i].transform.position)))
                 {
-                    if (Helper.AABB(Helper.LocalToWorldRect(newHB, this.transform.position), Helper.LocalToWorldRect(hitboxes[j], enemies[i].transform.position)))
+                    //Check to see if they're attacking to determine if hit is a counter or not
+                    if (enemies[i].IsAttacking)
                     {
-                        Debug.Log("Shine connected");
+                        Debug.Log("Shine counter");
                         enemies[i].BreakGuard(6f);
+                        enemies[i].SetLightTime(5);
                         shRecovery = 1;
                         break;
+                    }
+                    else // hit is not a counter
+                    {
+                        enemies[i].SetLightTime(1.5f);
                     }
                 }
             }

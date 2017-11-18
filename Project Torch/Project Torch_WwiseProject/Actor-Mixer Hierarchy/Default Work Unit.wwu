@@ -260,7 +260,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -457,7 +457,23 @@
 						</Sound>
 						<RandomSequenceContainer Name="Footsteps" ID="{DE3068B1-20E7-41A8-AE29-FE31EBB21A2D}" ShortID="659470041">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>31</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0EE5FFC9-55AF-4FE4-A8F7-E0BD051F55D0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="25"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 									<RTPCList>
 										<RTPC Name="" ID="{99DB58DB-1D02-4F3B-ADB1-50F7D8C0924F}" ShortID="477875395">
 											<ReferenceList>
@@ -472,12 +488,12 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-802</YPos>
+														<YPos>-675</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>
 														<XPos>1</XPos>
-														<YPos>54</YPos>
+														<YPos>-536</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -486,15 +502,18 @@
 									</RTPCList>
 								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-13</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{0AC905C3-B94D-43D4-8ACD-13EE33915E4E}" ShortID="177370753">
@@ -541,11 +560,33 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Step_01" ID="{CF81018D-9D35-438D-907E-64FABF610827}" ShortID="899236779">
+								<Sound Name="Bootsteps on wood" ID="{4C34A017-B2E7-441A-9520-A28EE9CCF87C}" ShortID="250626796">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bootsteps on wood" ID="{219E0621-84C1-4E92-B523-46F6010A6380}" ShortID="309056163">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.292038375570564"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bootsteps on wood" ID="{219E0621-84C1-4E92-B523-46F6010A6380}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bootsteps on wood_01" ID="{49F216EA-9D3B-42FD-8798-9BE90B5DA137}" ShortID="356204412">
 									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
+										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
-												<Value>False</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -556,22 +597,33 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{13CC8E30-B266-4042-8644-8E78A78FD318}" ShortID="23049634">
+										<AudioFileSource Name="Bootsteps on wood" ID="{855B9B2D-BD54-46B5-82B3-5873BD20142A}" ShortID="128772641">
 											<PropertyList>
-												<Property Name="TrimBegin" Type="Real64" Value="2.9825815096025"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.25480125055828"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.978328558161392"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.29592029159438"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{13CC8E30-B266-4042-8644-8E78A78FD318}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{855B9B2D-BD54-46B5-82B3-5873BD20142A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Step_02" ID="{A8B8E6EC-E0EF-4C1D-AB26-E65A392C3D68}" ShortID="473701654">
+								<Sound Name="Bootsteps on wood_02" ID="{A577D061-C71B-4E26-91CA-FABDD573540A}" ShortID="893509731">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -579,23 +631,33 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{DAF6D0B5-0CC3-4DFC-912A-4BD26230E8DF}" ShortID="766090638">
+										<AudioFileSource Name="Bootsteps on wood" ID="{93CEE558-DC63-4871-B609-8113ECB3CE37}" ShortID="205875646">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0600549186971688"/>
-												<Property Name="TrimBegin" Type="Real64" Value="4.99464046449308"/>
-												<Property Name="TrimEnd" Type="Real64" Value="5.1818189337171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.3801127609001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.69040353494383"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{DAF6D0B5-0CC3-4DFC-912A-4BD26230E8DF}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{93CEE558-DC63-4871-B609-8113ECB3CE37}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Step_03" ID="{465C46C2-55A7-40F4-85D8-8EE7057B6A64}" ShortID="182698718">
+								<Sound Name="Bootsteps on wood_03" ID="{40CC0FE2-B9BF-4572-8100-781A34D1A829}" ShortID="843990158">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -603,23 +665,33 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{8BC759AD-49DA-4794-AFFB-665CBC3D413B}" ShortID="125608771">
+										<AudioFileSource Name="Bootsteps on wood" ID="{29047F85-D1B2-4D60-9EC0-551113A231DB}" ShortID="861456897">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0670686318296869"/>
-												<Property Name="TrimBegin" Type="Real64" Value="6.24790332985956"/>
-												<Property Name="TrimEnd" Type="Real64" Value="6.51091757232892"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.74904264638712"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.06663437982011"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{8BC759AD-49DA-4794-AFFB-665CBC3D413B}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{29047F85-D1B2-4D60-9EC0-551113A231DB}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Step_04" ID="{F239F44D-CD1B-4A39-9575-60092DBF6C53}" ShortID="274445443">
+								<Sound Name="Bootsteps on wood_04" ID="{1D9BE0B8-5E27-400E-BF2D-FCCBC561BC50}" ShortID="439220620">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -627,23 +699,33 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{2C9F9096-1C8A-45CE-AC54-978FF5511D9F}" ShortID="197084422">
+										<AudioFileSource Name="Bootsteps on wood" ID="{BDE94126-38A9-492E-8F4F-A6E8AEFA0FF0}" ShortID="78114416">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
-												<Property Name="TrimBegin" Type="Real64" Value="12.3871752834004"/>
-												<Property Name="TrimEnd" Type="Real64" Value="12.5812862885217"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.7602255218002"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.0668658161493"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{2C9F9096-1C8A-45CE-AC54-978FF5511D9F}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{BDE94126-38A9-492E-8F4F-A6E8AEFA0FF0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Step_05" ID="{9DABF202-3B35-4B5A-AAB5-6C8185D39D95}" ShortID="822485683">
+								<Sound Name="Bootsteps on wood_05" ID="{696021D4-5D7C-4C5C-BE2C-3E9CDFB0F093}" ShortID="62781647">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -651,23 +733,32 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{297740E7-74E9-40B9-814E-97E762E4B6E8}" ShortID="382153868">
+										<AudioFileSource Name="Bootsteps on wood" ID="{5ABD6D9C-1573-4EA5-9B27-FF5134D0A916}" ShortID="145434304">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
-												<Property Name="TrimBegin" Type="Real64" Value="15.7650736936132"/>
-												<Property Name="TrimEnd" Type="Real64" Value="16.0846359982135"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.70204928301528"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.98313621950194"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{297740E7-74E9-40B9-814E-97E762E4B6E8}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{5ABD6D9C-1573-4EA5-9B27-FF5134D0A916}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Step_06" ID="{DEB34C34-9891-47D8-B0E8-536BC9B16BE5}" ShortID="732145894">
+								<Sound Name="Bootsteps on wood_06" ID="{85FCB24A-2D4A-46D7-8937-3E234E67BC5C}" ShortID="481654796">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -675,44 +766,22 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{658ED79C-1A1A-488C-A4A8-9E44932848BC}" ShortID="560638947">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
-												<Property Name="TrimBegin" Type="Real64" Value="16.0728003573024"/>
-												<Property Name="TrimEnd" Type="Real64" Value="16.2740062527914"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{658ED79C-1A1A-488C-A4A8-9E44932848BC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Step_07" ID="{B1A9C088-0694-4324-BD7F-6007E15F12F7}" ShortID="156270225">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="gravel sounds#03" ID="{2375A6A5-273B-4414-B23A-C2E8E63B4BD1}" ShortID="573867769">
+										<AudioFileSource Name="Bootsteps on wood" ID="{9F53983B-90D4-40D4-A971-1E3000BF4C1C}" ShortID="855263217">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.130192050022331"/>
-												<Property Name="TrimBegin" Type="Real64" Value="16.3923626619026"/>
-												<Property Name="TrimEnd" Type="Real64" Value="16.6172398392139"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.70228071934446"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.99796957460966"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>gravel sounds#03.wav</AudioFile>
+											<AudioFile>Bootsteps on wood.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="gravel sounds#03" ID="{2375A6A5-273B-4414-B23A-C2E8E63B4BD1}" Platform="Linked"/>
+										<ActiveSource Name="Bootsteps on wood" ID="{9F53983B-90D4-40D4-A971-1E3000BF4C1C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -730,7 +799,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

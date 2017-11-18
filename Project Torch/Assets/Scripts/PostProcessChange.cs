@@ -44,7 +44,7 @@ public class PostProcessChange : MonoBehaviour {
         gameCam = GameObject.Find("Main Camera").GetComponent<Camera>();
 
         // set starting intensities for easier code management
-        vignetteStartingIntensity = .6f;
+        vignetteStartingIntensity = .8f;
         chromaticAbStartingIntensity = chromaticAberSettings.intensity;
         grainStartingIntensity = grainSettings.intensity;
     }

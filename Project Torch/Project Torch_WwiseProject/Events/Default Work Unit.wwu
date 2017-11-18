@@ -236,6 +236,20 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Prepare_Footsteps" ID="{82EF69E2-3F9C-4B43-9DED-B6DB4C6D81D4}">
+							<ChildrenList>
+								<Action Name="" ID="{4AEB95A3-C995-4984-9D96-1B761F8D0A5A}" ShortID="985339922">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{DE3068B1-20E7-41A8-AE29-FE31EBB21A2D}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

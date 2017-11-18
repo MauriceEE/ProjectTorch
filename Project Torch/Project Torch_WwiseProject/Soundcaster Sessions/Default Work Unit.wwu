@@ -45,9 +45,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{794663F3-2990-48CD-BDD3-0936F1EB7FCC}"/>
+						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

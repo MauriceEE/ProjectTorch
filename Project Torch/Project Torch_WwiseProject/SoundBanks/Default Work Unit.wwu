@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{A16D6668-519C-48B3-9FE3-35CA4D73DF52}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="SFX" ID="{990AEA80-CF37-4F7C-8D0B-838EA225ACFD}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>104857600</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
@@ -14,6 +21,7 @@
 						<ObjectRef Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Shadow_Brute_Attack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Prepare_Footsteps" ID="{82EF69E2-3F9C-4B43-9DED-B6DB4C6D81D4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Human_Basic_Attack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Human_Brute_Attack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
@@ -24,6 +32,13 @@
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Music" ID="{23529EC4-5195-442A-AE72-5086CD10CDDF}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>104857600</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Music_Start" ID="{A93330B6-2F58-4005-A77A-B711A2C9853E}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>

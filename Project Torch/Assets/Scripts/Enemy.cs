@@ -123,6 +123,10 @@ public abstract class Enemy : MonoBehaviour {
     protected int irwCounterAttackChance;
     protected string irwType;
     protected float ogAtStartup;
+    // light reference
+    protected Light enemyLight;
+    // light timer
+    protected float lightTimer;
     // bool for if the attack sound has played already
     protected bool attackAudioPlayed;
     #endregion
@@ -245,6 +249,7 @@ public abstract class Enemy : MonoBehaviour {
         irwCounterAttackChance = 0;
         irwType = "dodge";
         ogAtStartup = atStartup;
+        enemyLight = null;
     }
 	
 	protected virtual void Update () {
@@ -257,6 +262,14 @@ public abstract class Enemy : MonoBehaviour {
         //Damage time limiter
         if (damageTimer > 0f)
             damageTimer -= Time.deltaTime;
+
+        // update light timer
+        if (lightTimer > 0)
+        {
+            lightTimer -= Time.deltaTime;
+            maxVelocity = ogMaxVelocity / 3;
+        }
+        else RemoveLight();
 
         // check if the enemy has taken hits recently
         if(hitsTakenRecently > 0)
@@ -642,6 +655,26 @@ public abstract class Enemy : MonoBehaviour {
         //        if (!guarding && !dodging && !counterattacking && !guardBroken)
         if (!guarding && !dodging && !counterattacking && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.Knockback)
             React();
+    }
+
+    private void CreateLight()
+    {
+        enemyLight = gameObject.AddComponent<Light>();
+        enemyLight.range = 3.5f;
+        enemyLight.intensity = 12;
+        enemyLight.color = new Color((255 / 255), (200 / 255), (144 / 255));
+    }
+
+    private void RemoveLight()
+    {
+        Destroy(enemyLight);
+        enemyLight = null;
+    }
+
+    public void SetLightTime(float timeLit)
+    {
+        lightTimer = timeLit;
+        if (enemyLight == null) CreateLight();
     }
 
     /// <summary>
