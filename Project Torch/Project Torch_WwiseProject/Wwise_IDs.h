@@ -56,6 +56,7 @@ namespace AK
                 static const AkUniqueID AMBIENT = 77978275U;
                 static const AkUniqueID COMBAT = 2764240573U;
                 static const AkUniqueID DEATH = 779278001U;
+                static const AkUniqueID MENU = 2607556080U;
             } // namespace STATE
         } // namespace MUSIC
 

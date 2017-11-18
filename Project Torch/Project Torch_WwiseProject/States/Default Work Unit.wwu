@@ -26,6 +26,7 @@
 						<State Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 						<State Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
 						<State Name="Death" ID="{2367E19C-961E-4E12-8951-F49ABC8F9752}"/>
+						<State Name="Menu" ID="{23073EF2-001F-4715-B8DD-3E685984CC70}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

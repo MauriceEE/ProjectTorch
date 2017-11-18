@@ -125,7 +125,7 @@
 <ul>
   <li>Added events for spearman attacks and non-integrated death music</li>
 </ul>
-<h2>Steven Ma - 11/15/17 - 17:22PM</h2>
+<h2>Steven Ma - 11/15/17 - 17:22</h2>
 <ul>
   <li>Defined active areas.</li>
   <li>Fixed level assignment issues with human soldiers.</li>
@@ -146,4 +146,18 @@
   <li>Increased animation speeds for Shine and Thrust</li>
   <li>Increased base darkness vignette size to .8 from .6</li>
 </ul>
-
+<h2>Steven Ma - 11/18/17 - 15:58</h2>
+<ul>
+  <li>Made all graves and grave dialogue.</li>
+  <li>Finished Princess Rescue dialogue.</li>
+  <li>Changed level layouts for many levels.</li>
+</ul>
+<h2>Garret Reynolds - 11/18/17 - 1:00AM</h2>
+<ul>
+  <li>Added new combat and ambient music</li>
+  <li>compressed audio to .vorbis</li>
+</ul>
+<h2>Garret Reynolds - 11/18/17 - 4:00PM</h2>
+<ul>  
+  <li>added menu music</li>
+</ul>

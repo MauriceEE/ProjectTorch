@@ -45,7 +45,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
+						<CurrentStateRef Name="Menu" ID="{23073EF2-001F-4715-B8DD-3E685984CC70}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
