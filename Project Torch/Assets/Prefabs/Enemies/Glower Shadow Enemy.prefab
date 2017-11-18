@@ -79,13 +79,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29f4f76857fa134a9a3544d820a5af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 30
+  hp: 45
   faction: 0
   zone: 0
   knockbackFriction: 0.69
   guardBreakStunTime: 2.6
   maxVelocity: 0.05
   arrivalRadius: 3
+  attackRange: 0
   awarenessRange: 5
   atDamage: 10
   atStartup: 17

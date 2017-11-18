@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour {
         combat = this.GetComponent<PlayerCombat>();
         playerCollider = this.GetComponent<Collider2D>();
         entity = this.GetComponent<Entity>();
-        entity.Speed = moveSpeed;
 	}
 	
 	void Update () {
@@ -59,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
             entity.Displacement = Vector2.zero;
 
             //Move with controller
-            inputDisplacement = new Vector2(Input.GetAxis("Horizontal") * entity.Speed.x, Input.GetAxis("Vertical") * entity.Speed.y);
+            inputDisplacement = new Vector2(Input.GetAxis("Horizontal") * moveSpeed.x, Input.GetAxis("Vertical") * moveSpeed.y);
 
             //Check to see if they want to dash
             if (canDash && (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))) 
@@ -98,8 +97,8 @@ public class PlayerMovement : MonoBehaviour {
             //Scale down displacement with dampening
             entity.Displacement *= dashFriction;
 
-            //Check for collisions
-            //this.CheckCollisions();
+            //Bit of a hacky solution but this will prevent footstep sounds when dashing
+            entity.Speed = 0f;
 
             //Move the player
             entity.Move();
@@ -132,8 +131,11 @@ public class PlayerMovement : MonoBehaviour {
             if (combat.CurrentAttack != PlayerCombat.Attacks.None && entity.FacingRight) entity.Displacement += new Vector2(attackForwardMomentum,0);
             if (combat.CurrentAttack != PlayerCombat.Attacks.None && !entity.FacingRight) entity.Displacement -= new Vector2(attackForwardMomentum, 0);
 
-            //Make sure you won't run into an obstacle
-            //this.CheckCollisions();
+            //Update speed in entity
+            entity.Speed = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).magnitude;
+
+            //Play footstep sound
+            AkSoundEngine.SetRTPCValue("PlayerMovementSpeed", entity.Speed);
 
             //Move the player
             entity.Move();

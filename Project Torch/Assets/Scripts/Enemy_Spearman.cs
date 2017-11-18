@@ -19,6 +19,7 @@ public class Enemy_Spearman: Enemy {
     }
     protected override void React()
     {
+        irwType = "counterattack";
         base.React();
     }
     protected override void CancelOrHitStun(bool hitstun)
@@ -52,9 +53,9 @@ public class Enemy_Spearman: Enemy {
 
         if(!triedToDash && combatState == CombatStates.Recovery)
         {
-            int dashTryResult = Random.Range(0, 4);
+            int dashTryResult = Random.Range(1, 4);
             triedToDash = true;
-            Debug.Log("Dash try result: " + dashTryResult);
+            //Debug.Log("Dash try result: " + dashTryResult);
             if (dashTryResult != 0) Dodge();
         }
         if (combatState == CombatStates.None) triedToDash = false;

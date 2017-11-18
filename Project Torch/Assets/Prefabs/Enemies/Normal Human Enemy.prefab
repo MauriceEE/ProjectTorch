@@ -101,7 +101,7 @@ MonoBehaviour:
   attackRange: 1.8
   awarenessRange: 5
   atDamage: 10
-  atStartup: 17
+  atStartup: 27
   atActive: 10
   atRecovery: 10
   atKnockbackTime: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
     width: 1.26
     height: 0.21
   dashIFrames: 6
-  dashFrames: 10
+  dashFrames: 15
   dashSpeed: 12
   dashFriction: 0.919
   guardChance: 15

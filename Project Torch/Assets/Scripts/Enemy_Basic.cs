@@ -17,6 +17,7 @@ public class Enemy_Basic : Enemy {
     }
     protected override void React()
     {
+        irwType = "dodge";
         base.React();
     }
     protected override void CancelOrHitStun(bool hitstun)

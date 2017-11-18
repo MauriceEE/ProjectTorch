@@ -165,6 +165,7 @@ public class FlagManager : MonoBehaviour {
     /// <param name="name">Name of the NPC and its dialogue line</param>
     public void ActivateDialogueLines(string name)
     {
+        Debug.Log("Dialogue called");
         dialogue.AddDialogueSequence(text.Lines[name], name);
         dialogue.SetTextAndShowImmediately();
     }

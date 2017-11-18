@@ -113,6 +113,20 @@ public abstract class Enemy : MonoBehaviour {
     ///List<Rect> hitboxesCollidedWith  //I'll make a better hitbox function if I have time someday
                                         // I gotchu, fam
     protected bool hitPlayer;
+    // hits taken recently
+    protected int hitsTakenRecently;
+    protected float increasedReactionWindowTimer;
+    protected float initialIRWT;
+    protected int irwtChance;
+    protected int irwGuardChance;
+    protected int irwDodgeChance;
+    protected int irwCounterAttackChance;
+    protected string irwType;
+    protected float ogAtStartup;
+    // light reference
+    protected Light enemyLight;
+    // light timer
+    protected float lightTimer;
     // bool for if the attack sound has played already
     protected bool attackAudioPlayed;
     #endregion
@@ -226,6 +240,16 @@ public abstract class Enemy : MonoBehaviour {
         startingPosition = this.transform.position;
         enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
         attackAudioPlayed = false;
+        hitsTakenRecently = 0;
+        increasedReactionWindowTimer = 1.5f;
+        initialIRWT = increasedReactionWindowTimer;
+        irwtChance = 0;
+        irwGuardChance = 0;
+        irwDodgeChance = 0;
+        irwCounterAttackChance = 0;
+        irwType = "dodge";
+        ogAtStartup = atStartup;
+        enemyLight = null;
     }
 	
 	protected virtual void Update () {
@@ -238,6 +262,29 @@ public abstract class Enemy : MonoBehaviour {
         //Damage time limiter
         if (damageTimer > 0f)
             damageTimer -= Time.deltaTime;
+
+        // update light timer
+        if (lightTimer > 0)
+        {
+            lightTimer -= Time.deltaTime;
+            maxVelocity = ogMaxVelocity / 3;
+        }
+        else RemoveLight();
+
+        // check if the enemy has taken hits recently
+        if(hitsTakenRecently > 0)
+        {
+            // decrease timer determining window of time
+            increasedReactionWindowTimer -= Time.deltaTime;
+
+            // if window has closed, reset values
+            if (increasedReactionWindowTimer <= 0)
+            {
+                hitsTakenRecently = 0;
+                increasedReactionWindowTimer = initialIRWT;
+                //Debug.Log("Reset IRWT");
+            }
+        }
 
         // color changing for conveyance
         UpdateColor();
@@ -262,10 +309,15 @@ public abstract class Enemy : MonoBehaviour {
         UpdateEnemyState();
         UpdateCombatState();
         stunTime -= Time.deltaTime;
+        if (stunTime < 0f)
+            stunTime = 0f;
+
+        //Update speed in entity
+        entity.Speed = Helper.Map(entity.Displacement.sqrMagnitude, 0f, maxVelocity * maxVelocity, 0f, 1f);
 
         //Move (even if displacement is zero)
         entity.Move();
-	}
+    }
     #endregion
 
     #region Update Methods (run every frame)
@@ -362,6 +414,13 @@ public abstract class Enemy : MonoBehaviour {
     /// </summary>
     protected virtual void UpdateEnemyState()
     {
+        // stop being invincible, ya butt
+        if(enemyState != EnemyStates.Dodging)
+        {
+            dodging = false;
+            invincible = false;
+        }
+
         //Big switch over the current state
         switch (enemyState)
         {
@@ -377,7 +436,8 @@ public abstract class Enemy : MonoBehaviour {
                     else
                         enemyMan.SendAllyAttackOrder(this);
                 }
-                    
+                else
+                    this.moveTarget = this.transform.position;
                 break;
             case EnemyStates.Attacking:
                 elapsedApproachTime = 0f;
@@ -388,20 +448,22 @@ public abstract class Enemy : MonoBehaviour {
                 break;
             case EnemyStates.ApproachingToAttack:
                 isAttacking = false; // might change this if it proves cheap
-
                 // increase movement speed
                 if (maxVelocity <= (3 * ogMaxVelocity))
                     maxVelocity += (Time.deltaTime / 15);
                 elapsedApproachTime += Time.deltaTime;
-
                 // adjust attack range to increase likelihood of a chasing attack landing
-                if (elapsedApproachTime >= 1) attackRange = .8f;
-                
+                if (elapsedApproachTime >= 1)
+                {
+                    attackRange = .8f;
+                    //atStartup = ogAtStartup - 10;
+                }
                 // if elapsed time is greater than 3 seconds, just cancel their attack and return them to their old location
                 if (elapsedApproachTime > 3)
                 {
                     CancelOrHitStun(false);
                     enemyState = EnemyStates.ReturningFromAttack;
+                    elapsedApproachTime = 0f;
 
                     // alternative: enemies attempt to attack after approaching for 3 seconds
                     /*
@@ -428,6 +490,7 @@ public abstract class Enemy : MonoBehaviour {
                     attackTime = 0f;
                 }
                 attackRange = ogAttackRange;
+                //atStartup = ogAtStartup;
                 break;
             case EnemyStates.ReturningFromAttack:
                 isAttacking = false;
@@ -441,7 +504,11 @@ public abstract class Enemy : MonoBehaviour {
                 //TODO: stuff after returning to the return position?
                 SeekTarget();
                 if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
+                {
                     enemyState = EnemyStates.Idle;
+                    //Prevent the enemy from continuously moving 
+                    this.moveTarget = this.transform.position;
+                }
                 break;
             case EnemyStates.SurroundingPlayer:
                 //Merely follow the enemy manager's orders (it handles updating move target automatically)
@@ -482,6 +549,9 @@ public abstract class Enemy : MonoBehaviour {
                 if (stunTime < 0f)
                     ResetCombatStates();
                 break;
+            default:
+                Debug.Log("ENEMY DOES NOT HAVE A STATE!!!");
+                break;
         }
     }
 
@@ -521,6 +591,8 @@ public abstract class Enemy : MonoBehaviour {
                 alive = false;
                 return;//Get outta here to avoid wasting time on the other code
             }
+            hitsTakenRecently++; // increment number of recent hits taken
+            increasedReactionWindowTimer = initialIRWT; // reset IRWT
             CancelOrHitStun(true);
             hitFlashTimer = 0.6f;
             damageTimer = 0.2f;
@@ -585,6 +657,26 @@ public abstract class Enemy : MonoBehaviour {
             React();
     }
 
+    private void CreateLight()
+    {
+        enemyLight = gameObject.AddComponent<Light>();
+        enemyLight.range = 3.5f;
+        enemyLight.intensity = 12;
+        enemyLight.color = new Color((255 / 255), (200 / 255), (144 / 255));
+    }
+
+    private void RemoveLight()
+    {
+        Destroy(enemyLight);
+        enemyLight = null;
+    }
+
+    public void SetLightTime(float timeLit)
+    {
+        lightTimer = timeLit;
+        if (enemyLight == null) CreateLight();
+    }
+
     /// <summary>
     /// This used to be a part of TakeDamage but I found it was useful to reuse it for Shine counters too
     /// </summary>
@@ -614,6 +706,7 @@ public abstract class Enemy : MonoBehaviour {
         enemyState = EnemyStates.Idle;
         combatState = CombatStates.None;
         isAttacking = false;
+        attackTime = 0f;
         elapsedApproachTime = 0f;
         knockbackModifier = 1f;
         guarding = false;
@@ -627,8 +720,29 @@ public abstract class Enemy : MonoBehaviour {
     {
         //Generate random chance between 0% and 100% (represented as 0 to 100)
         float rand = Random.Range(0f, 100f);
+
+        // Set irw chance
+        irwtChance = (hitsTakenRecently - 1) * 40;
+        irwtChance = Mathf.Clamp(irwtChance, 0, 100);
+        //Debug.Log(irwtChance);
+
+        // get irw type and set values
+        switch(irwType.ToLower())
+        {
+            case "dodge":
+                irwDodgeChance = irwtChance;
+                //if (irwGuardChance > 0) Debug.Log("Chance up");
+                break;
+            case "counterattack":
+                irwCounterAttackChance = irwtChance / 2;
+                break;
+            case "guard":
+                irwGuardChance = irwtChance;
+                break;
+        }
+
         //Check to see if we fell within guard's percent chance
-        if (rand < guardChance)
+        if (rand < guardChance + irwGuardChance)
         {
             //Enter guarding state
             guarding = true;
@@ -638,7 +752,7 @@ public abstract class Enemy : MonoBehaviour {
             //Halve speed
             this.entity.SpeedModifier *= 0.5f;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
         }
-        else if (rand < guardChance + counterAttackChance)
+        else if (rand < guardChance + counterAttackChance + irwCounterAttackChance)
         {
             // Ask Encounter Manager if it can attack
             if (enemyMan.CanEnemiesAttackPlayer())
@@ -649,7 +763,7 @@ public abstract class Enemy : MonoBehaviour {
                 MoveToAttack(attackTarget);
             }
         }
-        else if (rand < guardChance + counterAttackChance + dodgeChance + ((maxHP - hp) / 2)) // increase chance to dodge based on inherent chance and how much health has been lost
+        else if (rand < guardChance + counterAttackChance + dodgeChance + ((maxHP - hp) / 2) + irwDodgeChance) // increase chance to dodge based on inherent chance and how much health has been lost
         {
             Dodge();
         }
@@ -667,7 +781,7 @@ public abstract class Enemy : MonoBehaviour {
         dashTime = dashFrames * Helper.frame;
         //Modify speed
         entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
-                                          //Remove from occupancy grid
+        //Remove from occupancy grid
         RequestRemoveFromEncounterGrid();
     }
 
@@ -822,8 +936,10 @@ public abstract class Enemy : MonoBehaviour {
     {
         //No longer in an encounter
         inEncounter = false;
+        //Fix abnormal states
+        ResetCombatStates();
         //Set move target to the return position
-        this.moveTarget = returnPosition;
+        this.moveTarget = startingPosition;
         //Set state to returning to said position
         this.enemyState = EnemyStates.ReturningFromEncounter;
     }

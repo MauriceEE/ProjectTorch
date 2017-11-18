@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5155EF77-0A9F-40B0-B10F-CC97ABD7B82D}" SchemaVersion="80">
+	<Switches>
+		<WorkUnit Name="Music" ID="{5155EF77-0A9F-40B0-B10F-CC97ABD7B82D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="AmbientMusicStatus" ID="{FF4B3D5B-766C-4FF6-B5F6-575D6DD4EF72}">
+					<ChildrenList>
+						<Switch Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
+						<Switch Name="MildThreat" ID="{AC040EFF-AD23-4152-885F-EF4D01DCC0FE}"/>
+						<Switch Name="MediumThreat" ID="{93F611D6-0090-44B2-B26A-20B09E1C1D02}"/>
+						<Switch Name="Sadness" ID="{44A8F2D2-1740-4E34-AB47-37F81F945FAC}"/>
+						<Switch Name="Wonder" ID="{51D6996E-57D4-4629-8820-05F5D6DE8C20}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="CombatMusicIntensity" ID="{62F5B761-FB48-4D2B-A229-28063F39BDB1}">
+					<ChildrenList>
+						<Switch Name="Low" ID="{4AC6D6DC-1C12-4F71-9068-9798B99FE63F}"/>
+						<Switch Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>
+						<Switch Name="High" ID="{3F004F36-0E36-4409-BDB8-581466ADCDFE}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

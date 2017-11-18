@@ -61,6 +61,9 @@ public class EnemyManager : MonoBehaviour {
     //Encounter objects will fetch these values when trying to see what kind of enemies to spawn
     public GameObject[] humanEnemyCategories;
     public GameObject[] shadowEnemyCategories;
+    public GameObject[] enemyCategories;
+    // zone
+    ZoneManager.ZoneNames currentZone;
     #endregion
 
     #region Properties
@@ -105,13 +108,14 @@ public class EnemyManager : MonoBehaviour {
         GenerateGridPositions();
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
         textMan = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
+        currentZone = ZoneManager.ZoneNames.Battlefield; // by default
     }
 	
 	void Update () {
         CleanupEnemies();
         if (encounterActive)
             ManageEncounter();
-	}
+    }
     #endregion
 
     #region Custom Methods
@@ -146,13 +150,19 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterEnemies.Add(zoneEnemies[i]);
                 zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
+                currentZone = zoneEnemies[i].GetComponent<Enemy>().zone;
             }
             if (encounterEnemies.Count > 6)
             {
+                Debug.Log("More than 6 enemies in encounter!");
                 Debug.Break();
                 throw new UnityException();//Don't allow more than 6 enemies in an encounter... if this line of code triggers then we need to fix something
             }
         }
+
+        // spawn any extra enemies
+        foreach (int key in enc.categoryXEnemies) SpawnExtraEnemies(key); // spawn any extra enemies
+
         Debug.Log("Starting Encounter... Enemies = " + encounterEnemies.Count + ", now assigning attack targets... @ " + Time.fixedTime);
         //Now that we have all the encounter enemies setup, we can assign attack targets
         for (int i = 0; i < encounterEnemies.Count; ++i)
@@ -231,6 +241,32 @@ public class EnemyManager : MonoBehaviour {
                 gameEnemies[i].SetActive(false);
             }
         }
+    }
+
+    /// <summary>
+    /// Spawns any extra enemies that the specified encounter object desires.
+    /// </summary>
+    /// <param name="enemyKey">Takes a number 0-5. Even numbers are shadow enemies and odd numbers are humans.
+    /// 0 and 1 are the basic enemies.
+    /// 2 and 3 are the brutes.
+    /// 4 and 5 are the special classes
+    /// </param>
+    public void SpawnExtraEnemies(int enemyKey)
+    {
+        if (enemyKey < enemyCategories.Length)
+        {
+            // spawn category enemies
+            GameObject newEnemy = Instantiate(enemyCategories[enemyKey], this.transform.position, this.transform.rotation);
+            // add enemy to all necessary data structures
+            encounterEnemies.Add(newEnemy);
+            zoneEnemies.Add(newEnemy);
+            gameEnemies = GameObject.FindGameObjectsWithTag("Enemy"); // remake gameEnemies array
+                                                                      // set enemy zone
+            newEnemy.GetComponent<Enemy>().zone = currentZone;
+            // start the encounter for that enemy
+            newEnemy.GetComponent<Enemy>().StartEncounter();
+        }
+        else Debug.Log("Enemy key greater than enemyCategory array length. Check the number you input.");
     }
 
     /// <summary>

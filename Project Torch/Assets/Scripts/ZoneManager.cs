@@ -269,6 +269,7 @@ public class ZoneManager : MonoBehaviour {
             return zonesSorted[ZoneNames.HumanTerritoryStage2]; //Temporary, will change later
 
         //Code shouldn't get here
+        Debug.Log("ZoneManager GetNextZone broke");
         Debug.Break();
         throw new UnityException();
     }

@@ -130,4 +130,20 @@
   <li>Defined active areas.</li>
   <li>Fixed level assignment issues with human soldiers.</li>
 </ul>
+<h2>Maurice Edwards - 11/16/17 - 2:00</h2>
+<ul>
+  <li>Finished coding categorical spawns. Even numbers spawn shadows, odds spawn humans, with classes being in order from basic, to brute, to special.</li>
+  <li>Increased enemy start-up by 10 for every enemy</li>
+  <li>Enemies now have windows of time after being hit multiple times where they have increased chances of doing reactions</li>
+  <li>A lot of miscellaneous combat changes. Read the build notes on the google doc in the Feedback folder.</li>
+</ul>
+<h2>Maurice Edwards - 11/16/17 - 20:52</h2>
+<ul>
+  <li>Increased shine recovery to 20 from 17</li>
+  <li>Shine now has a spotlight turn on during active frames to denote effective range</li>
+  <li>Shine now slows enemies to a third of their movement speed if it doesn't land the counter</li>
+  <li>Enemies now spawn lights when hit and stay lit for either 2 or 5 seconds, depending on if the shine hit was counter or not</li>
+  <li>Increased animation speeds for Shine and Thrust</li>
+  <li>Increased base darkness vignette size to .8 from .6</li>
+</ul>
 

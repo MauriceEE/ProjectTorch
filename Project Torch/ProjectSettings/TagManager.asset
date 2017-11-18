@@ -12,6 +12,7 @@ TagManager:
   - Thrust
   - Shine
   - Brazier
+  - ShineSpotlight
   layers:
   - Default
   - TransparentFX

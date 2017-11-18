@@ -16,7 +16,7 @@ public class StatusEffect {
     #endregion
     #region Properties
     public float Lifetime { get { return lifetime; } }
-    public float TimeActive { get { return timeActive; } }
+    public float TimeActive { get { return timeActive; } set { timeActive = value; } }
     public bool Alive { get { return alive; } }
     public StatusEffectManager.Buffs Buff { get { return buff; } }
     public StatusEffectManager.Debuffs Debuff { get { return debuff; } }
