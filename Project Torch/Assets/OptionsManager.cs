@@ -17,6 +17,10 @@ public class OptionsManager : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void SetMasterVolume() {
+        Debug.Log("Set Vol");
+        AkSoundEngine.SetRTPCValue("Master_Volume", (int)masterVol.value);
+    }
     public void SetResolution() {
         int width = 0;
         int height = 0;

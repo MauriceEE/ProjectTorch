@@ -52,7 +52,6 @@ public class UIManager : MonoBehaviour {
     }
     public void ShowOptions() {
         optionsCanvas.SetActive(true);
-        Debug.Log(optionsCanvas.activeSelf);
     }
     public void HideOptions() {
         optionsCanvas.SetActive(false);

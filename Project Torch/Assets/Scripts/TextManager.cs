@@ -14,8 +14,19 @@ public class TextManager : MonoBehaviour {
         KingOfDark,
         CaptainOfTheGuard,
         Altar,
+        BattlefieldGrave1,
         ST1Grave1,
         ST1Grave2,
+        ST2Grave1,
+        HT1Grave1,
+        HT1Grave2,
+        HT2Grave1,
+        HT2Grave2,
+        TH1Grave1,
+        TH1Grave2,
+        WZ1Grave1,
+        WZ2Grave1,
+        WZ2Grave2,
     }
     #endregion
 
@@ -106,15 +117,18 @@ public class TextManager : MonoBehaviour {
         lines.Add("Princess Escort - Temp",
             new string[]
             {
-                "Super Mario:\nNice of the princess to invite us over for a picnic, eh Luigi?",
-                "Mama Luigi:\nI hope she made lotsa spaghetti!"
+                "Captain Guard:\nMake haste men, for the path to our birthright lies ahead.",
+                "Captain Guard:\nSlay any who come near, we cannot afford to lose their princess now."
             });
         //TEMP - The princess when she's saved
         lines.Add("Princess - Saved",
             new string[]
             {
-                "Princess:\nOh HELL yeah, you saved me man!",
-                "Princess:\nI'm gonna go chill with my dad now"
+                "Princess:\nI thank you stranger",
+                "Princess:\nFrom within you, I sense you are like me.",
+                "Princess:\nThe flames we bear and the duties we carry are burdensome all the same.",
+                "Princess:\nThough grateful I am, I must return to my father's side.",
+                "Princess:\nFarewell and luck to your journey!"
             });
         //Battlefield Brazier
         lines.Add("Brazier - Battlefield",
@@ -154,6 +168,31 @@ public class TextManager : MonoBehaviour {
                 "Brazier:\nIn disgust, it was cast out in a Dragon's Exile.",
                 "Brazier:\nAn impossible creature, tasked with an impossibility."
             });
+        //WarZoneStage2 Brazier
+        lines.Add("Brazier - WarZoneStage2",
+            new string[]
+            {
+                "Brazier:\nA title, bestowed only upon those exiled from the Sky, is a brand of binding duty.",
+                "Brazier:\nTo wear this mark of shame, one eternally seeks to carry out their sacred task.",
+                "Brazier:\nWoe to the bearer of the dragons’ last title, cursed to wander unabsolved by those long dead,",
+                "Brazier:\nThe Adjudicator."
+            });
+        //TrueHumanStage1 Brazier
+        lines.Add("Brazier - TrueHumanStage1",
+            new string[]
+            {
+                "Brazier:\nThe Dragons descended, burning the World Serpent to ash.",
+                "Brazier:\nBegot from fire, born from ash,",
+                "Brazier:\nhumanity emerged from the embers of the True Flame."
+            });
+        //Battlefield Grave1
+        lines.Add("BattlefieldGrave1 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nThe first age, ruled by the Divine Beasts, the known world was forged atop the ocean depths.",
+                "Unmarked Grave:\nIn the second age, man inherited the world.",
+                "Unmarked Grave:\nIn the third age came the vengeful Shadow."
+            });
         //ShadowTerritoryStage1 Grave1
         lines.Add("ST1Grave1 - Default",
             new string[]
@@ -169,6 +208,82 @@ public class TextManager : MonoBehaviour {
                 "Makeshift Grave:\nWhen the plague spread over us, it took with it our pride.",
                 "Makeshift Grave:\nThe pride of man was broken.",
                 "Makeshift Grave:\nPerhaps, it is the great serpents calling for us to join them in death?"
+            });
+        //ShadowTerritoryStage2 Grave1
+        lines.Add("ST2Grave1 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nIt seeped from below the ground, a creeping death.",
+                "Makeshift Grave:\nThe plague reduced our loved ones and prosperous land to a mere memory."
+            });
+        //HumanTerritoryStage1 Grave1
+        lines.Add("HT1Grave1 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nAs our Queen lay buried with her son, the King’s once fiery spirit drowned in mournful tears.",
+                "Makeshift Grave:\nThat is when the Prophet came."
+            });
+        //HumanTerritoryStage1 Grave2
+        lines.Add("HT1Grave2 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nA tear, an ocean, a vessel for the emotions that bind us to this world.",
+                "Makeshift Grave:\nThe Prophet’s whispers brought with them a solace to the King.",
+                "Makeshift Grave:\nIt brought a way forward to a new future, a way out from the crumbling world of man."
+            });
+        //HumanTerritoryStage2 Grave1
+        lines.Add("HT2Grave1 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nThe Shadow, those who lived receded from our gaze, bore no dead from the plague.",
+                "Makeshift Grave:\nThey stood strong and unconcerned with the plight of the dying."
+            });
+        //HumanTerritoryStage2 Grave2
+        lines.Add("HT2Grave2 - Default",
+            new string[]
+            {
+                "Makeshift Grave:\nThe Princess of the Shadow held within her a flame.",
+                "Makeshift Grave:\nA true flame, one unclaimed and untainted.",
+                "Makeshift Grave:\nTo reclaim our right to the world, we would take this flame."
+            });
+        //TrueHumanStage1 Grave1
+        lines.Add("TH1Grave1 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nThe Serpents blessed us with their knowledge, gathered in their observance of the Dragon’s flame,",
+                "Unmarked Grave:\nthe True Flame: the Sun.",
+                "Unmarked Grave:\nFrom this, we birthed the False Flame and from that, we forged the world below the Sky."
+            });
+        //TrueHumanStage1 Grave2
+        lines.Add("TH1Grave2 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nTo merely look upon the Dragon’s Domain proved not enough and the Serpent’s asked of man to champion their cause.",
+                "Unmarked Grave:\nThey asked of us to construct towers to bridge Earth and Sky itself."
+            });
+        //WarZoneStage1 Grave1
+        lines.Add("WZ1Grave1 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nWar descended upon the world as it writhed under the slaughter of Dragon and Serpent.",
+                "Unmarked Grave:\nIt seemed the Serpents at last would have the True Flame.",
+                "Unmarked Grave:\nFraught with fear, the Dragons devoured the Sun to bear the Flame within themselves."
+            });
+        //WarZoneStage2 Grave1
+        lines.Add("WZ2Grave1 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nAs Serpent ash fell from the Sky, man rose to complete their duty.",
+                "Unmarked Grave:\nKindling the False Flame under ancient corpses, they set ablaze the once proud Dragons.",
+                "Unmarked Grave:\nBy war’s end, only man was left to inherit the world."
+            });
+        //WarZoneStage2 Grave2
+        lines.Add("WZ2Grave2 - Default",
+            new string[]
+            {
+                "Unmarked Grave:\nWith the Dragon ash of the False Flame, the world’s balance, lost in murder and death,",
+                "Unmarked Grave:\nwas found anew as it breathed life.",
+                "Unmarked Grave:\nDarkness befell the ashes and from them grew out The Shadow itself."
             });
     }
 #endregion

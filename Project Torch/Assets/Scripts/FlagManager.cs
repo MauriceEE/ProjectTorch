@@ -150,11 +150,44 @@ public class FlagManager : MonoBehaviour {
             case TextManager.InteractiveNPCNames.Altar:
                 ActivateDialogueLines("Altar - Default");
                 break;
+            case TextManager.InteractiveNPCNames.BattlefieldGrave1:
+                ActivateDialogueLines("BattlefieldGrave1 - Default");
+                break;
             case TextManager.InteractiveNPCNames.ST1Grave1:
                 ActivateDialogueLines("ST1Grave1 - Default");
                 break;
             case TextManager.InteractiveNPCNames.ST1Grave2:
                 ActivateDialogueLines("ST1Grave2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST2Grave1:
+                ActivateDialogueLines("ST2Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Grave1:
+                ActivateDialogueLines("HT1Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Grave2:
+                ActivateDialogueLines("HT1Grave2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT2Grave1:
+                ActivateDialogueLines("HT2Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT2Grave2:
+                ActivateDialogueLines("HT2Grave2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Grave1:
+                ActivateDialogueLines("TH1Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Grave2:
+                ActivateDialogueLines("TH1Grave2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ1Grave1:
+                ActivateDialogueLines("WZ1Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ2Grave1:
+                ActivateDialogueLines("WZ2Grave1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ2Grave2:
+                ActivateDialogueLines("WZ2Grave2 - Default");
                 break;
         }
     }
