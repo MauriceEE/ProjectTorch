@@ -11,6 +11,7 @@ State	ID	Name	State Group			Notes
 	77978275	Ambient	Music			
 	748895195	None	Music			
 	779278001	Death	Music			
+	2607556080	Menu	Music			
 	2764240573	Combat	Music			
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -54,7 +55,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	391023002	08_Omni Atari Bit Triangle Delay	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\08\08_Omni Atari Bit Triangle Delay_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\08\08_Omni Atari Bit Triangle Delay		40646
 	398286893	01_Kick	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\01\01_Kick_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\01\01_Kick		640245
 	407354187	05_Grinding Mids	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\05\05_Grinding Mids_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\05\05_Grinding Mids		232658
+	411247084	Temp_Ambient01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Temp_Ambient01_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Menu\Temp_Ambient01\Temp_Ambient01		727612
 	414605196	03_Grinding Mids ARP	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\03\03_Grinding Mids ARP_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\03\03_Grinding Mids ARP		498323
+	416137440	Ambient_demo_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Ambient_demo_01_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Menu\Temp_Ambient01\Ambient_demo_01		266698
 	422082381	04_Toms	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\04\04_Toms_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\04\04_Toms		339110
 	428047884	02_Zebra Squar Wave 2	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\02\02_Zebra Squar Wave 2_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\02\02_Zebra Squar Wave 2		281746
 	434406035	08_Metal Kit - Delay	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Interactive Music\Combat\08\08_Metal Kit - Delay_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat\08\08_Metal Kit - Delay		331089

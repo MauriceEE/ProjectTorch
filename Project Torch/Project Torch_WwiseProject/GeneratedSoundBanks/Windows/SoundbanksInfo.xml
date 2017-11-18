@@ -279,9 +279,17 @@
 					<ShortName>Interactive Music\Combat\05\05_Grinding Mids.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/05/05_Grinding Mids_AD29F36A.wem</Path>
 				</File>
+				<File Id="411247084" Language="SFX">
+					<ShortName>Temp_Ambient01.wav</ShortName>
+					<Path>SFX/Temp_Ambient01_AD29F36A.wem</Path>
+				</File>
 				<File Id="414605196" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Grinding Mids ARP_AD29F36A.wem</Path>
+				</File>
+				<File Id="416137440" Language="SFX">
+					<ShortName>Ambient_demo_01.wav</ShortName>
+					<Path>SFX/Ambient_demo_01_AD29F36A.wem</Path>
 				</File>
 				<File Id="422082381" Language="SFX">
 					<ShortName>Interactive Music\Combat\04\04_Toms.wav</ShortName>
