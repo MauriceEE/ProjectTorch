@@ -152,4 +152,12 @@
   <li>Finished Princess Rescue dialogue.</li>
   <li>Changed level layouts for many levels.</li>
 </ul>
-
+<h2>Garret Reynolds - 11/18/17 - 1:00AM</h2>
+<ul>
+  <li>Added new combat and ambient music</li>
+  <li>compressed audio to .vorbis</li>
+</ul>
+<h2>Garret Reynolds - 11/18/17 - 4:00PM</h2>
+<ul>  
+  <li>added menu music</li>
+</ul>
