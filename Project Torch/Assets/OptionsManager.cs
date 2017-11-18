@@ -10,16 +10,24 @@ public class OptionsManager : MonoBehaviour {
     public Dropdown resolution;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        AkSoundEngine.SetRTPCValue("Master_Volume", (int)masterVol.value);
+        AkSoundEngine.SetRTPCValue("Music_Volume", (int)musicVol.value);
+        AkSoundEngine.SetRTPCValue("SFX_Volume", (int)effectVol.value);
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
     public void SetMasterVolume() {
-        Debug.Log("Set Vol");
         AkSoundEngine.SetRTPCValue("Master_Volume", (int)masterVol.value);
+    }
+    public void SetMusicVolume() {
+        AkSoundEngine.SetRTPCValue("Music_Volume", (int)musicVol.value);
+    }
+    public void SetEffectsVolume() {
+        AkSoundEngine.SetRTPCValue("SFX_Volume", (int)effectVol.value);
     }
     public void SetResolution() {
         int width = 0;

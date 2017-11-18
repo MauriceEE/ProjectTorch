@@ -9,7 +9,6 @@ using UnityEngine;
 ///     handle everything else
 /// </summary>
 public class Enemy_Basic : Enemy {
-
     #region Override Methods
     public override void BreakGuard(float knockbackMultiplier)
     {
@@ -43,7 +42,10 @@ public class Enemy_Basic : Enemy {
 		if (!attackAudioPlayed && combatState == CombatStates.Active) {
 			if (faction == Enemy.EnemyFaction.Human) AkSoundEngine.PostEvent ("Human_Basic_Attack", gameObject);
 
-			if (faction == Enemy.EnemyFaction.Shadow) AkSoundEngine.PostEvent ("Shadow_Basic_Attack", gameObject);
+            if (faction == Enemy.EnemyFaction.Shadow) {
+                AkSoundEngine.PostEvent("Shadow_Basic_Attack", gameObject);
+                animator.Play("ShadowSlash");
+            }
 
             attackAudioPlayed = true;
 		}

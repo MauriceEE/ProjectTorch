@@ -132,6 +132,7 @@ public abstract class Enemy : MonoBehaviour {
     #endregion
 
     #region Public Fields
+    public Animator animator;
     //Health points
     public float hp;
     //Faction of this enemy
@@ -219,6 +220,7 @@ public abstract class Enemy : MonoBehaviour {
     }
 
     protected virtual void Awake () {
+        animator = GetComponent<Animator>();
         alive = true;
         hitFlashTimer = 0f;
         entity = this.GetComponent<Entity>();
