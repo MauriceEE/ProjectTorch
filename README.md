@@ -125,7 +125,7 @@
 <ul>
   <li>Added events for spearman attacks and non-integrated death music</li>
 </ul>
-<h2>Steven Ma - 11/15/17 - 17:22PM</h2>
+<h2>Steven Ma - 11/15/17 - 17:22</h2>
 <ul>
   <li>Defined active areas.</li>
   <li>Fixed level assignment issues with human soldiers.</li>
@@ -145,5 +145,11 @@
   <li>Enemies now spawn lights when hit and stay lit for either 2 or 5 seconds, depending on if the shine hit was counter or not</li>
   <li>Increased animation speeds for Shine and Thrust</li>
   <li>Increased base darkness vignette size to .8 from .6</li>
+</ul>
+<h2>Steven Ma - 11/18/17 - 15:58</h2>
+<ul>
+  <li>Made all graves and grave dialogue.</li>
+  <li>Finished Princess Rescue dialogue.</li>
+  <li>Changed level layouts for many levels.</li>
 </ul>
 
