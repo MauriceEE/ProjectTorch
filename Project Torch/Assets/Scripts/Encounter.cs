@@ -10,7 +10,8 @@ public class Encounter : MonoBehaviour {
     public enum SpecialEncounters
     {
         NONE,
-        PrincessRescue
+        PrincessRescue,
+        ThroneRoomFinalEncounter,
     }
     #endregion
 
