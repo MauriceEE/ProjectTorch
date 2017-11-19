@@ -114,7 +114,7 @@ public class TextManager : MonoBehaviour {
                 "Captain of the Gaurd:\nHerald us all to the Serpents’ Promised Flame!"
             });
         //TEMP - The dude escorting the princess
-        lines.Add("Princess Escort - Temp",
+        lines.Add("Princess Escort - Enter",
             new string[]
             {
                 "Captain Guard:\nMake haste men, for the path to our birthright lies ahead.",

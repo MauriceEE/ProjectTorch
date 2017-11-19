@@ -31,8 +31,7 @@ public class Enemy_PrincessEscort : Enemy {
     }
     protected void Start()
     {
-        if (type == EscortType.Captain)
-            flagMan.ActivateDialogueLines("Princess Escort - Temp");
+        
     }
     protected override void Update()
     {
