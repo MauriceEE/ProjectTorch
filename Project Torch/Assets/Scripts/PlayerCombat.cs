@@ -288,21 +288,21 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Slash:
                     // --do AABB for box 1--
                     AttackRoutine(slHB1, slDamage, slKnockbackTime, slKnockbackSpeed);
-                    GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
-                    tempObjBox1.transform.localPosition = new Vector3(slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
+                    //GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
+                    //tempObjBox1.transform.localPosition = new Vector3(slHB1.center.x * hitBoxDirectionMove, slHB1.center.y, 0);
                     if (attackTime > (slStartup + slHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
                         AttackRoutine(slHB2, slDamage, slKnockbackTime, slKnockbackSpeed);
-                        GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
-                        tempObjBox2.transform.localPosition = new Vector3(slHB2.center.x * hitBoxDirectionMove, slHB2.center.y, 0);
+                        //GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
+                        //tempObjBox2.transform.localPosition = new Vector3(slHB2.center.x * hitBoxDirectionMove, slHB2.center.y, 0);
                     }
                     if (attackTime > (slStartup + slHB3FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 3--
                         AttackRoutine(slHB3, slDamage, slKnockbackTime, slKnockbackSpeed);
-                        GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
-                        tempObjBox3.transform.localPosition = new Vector3(slHB3.center.x * hitBoxDirectionMove, slHB3.center.y, 0);
+                        //GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
+                        //tempObjBox3.transform.localPosition = new Vector3(slHB3.center.x * hitBoxDirectionMove, slHB3.center.y, 0);
                     }
                     if (attackTime > (slStartup + slActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
@@ -310,21 +310,21 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Thrust:
                     // --do AABB for box 1--
                     AttackRoutine(thHB1, thDamage, thKnockbackTime, thKnockbackSpeed);
-                    GameObject tempObjBox1th = Instantiate(tempHitboxObj[3] as GameObject, this.transform);
-                    tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);//original
+                    //GameObject tempObjBox1th = Instantiate(tempHitboxObj[3] as GameObject, this.transform);
+                    //tempObjBox1th.transform.localPosition = new Vector3(thHB1.center.x * hitBoxDirectionMove, thHB1.center.y, 0);//original
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 2--
                         AttackRoutine(thHB2, thDamage, thKnockbackTime, thKnockbackSpeed);
-                        GameObject tempObjBox2th = Instantiate(tempHitboxObj[4] as GameObject, this.transform);
-                        tempObjBox2th.transform.localPosition = new Vector3(thHB2.center.x * hitBoxDirectionMove, thHB2.center.y, 0);
+                        //GameObject tempObjBox2th = Instantiate(tempHitboxObj[4] as GameObject, this.transform);
+                        //tempObjBox2th.transform.localPosition = new Vector3(thHB2.center.x * hitBoxDirectionMove, thHB2.center.y, 0);
                     }
                     if (attackTime > (thStartup + thHB3FirstActiveFrame) * Helper.frame)
                     {
                         // --do AABB for box 3--
                         AttackRoutine(thHB3, thDamage, thKnockbackTime, thKnockbackSpeed);
-                        GameObject tempObjBox3th = Instantiate(tempHitboxObj[5] as GameObject, this.transform);
-                        tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
+                        //GameObject tempObjBox3th = Instantiate(tempHitboxObj[5] as GameObject, this.transform);
+                        //tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     }
                     if (attackTime > (thStartup + thActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
@@ -336,8 +336,8 @@ public class PlayerCombat : MonoBehaviour {
                     for (int i = 0; i < shHB.Length; ++i) 
                         Shine(shHB[i]);
                     //Spawn temp thingey
-                    GameObject tempObjBox = Instantiate(tempHitboxObj[6] as GameObject, this.transform);
-                    tempObjBox.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
+                    //GameObject tempObjBox = Instantiate(tempHitboxObj[6] as GameObject, this.transform);
+                    //tempObjBox.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     //Check going to recovery
                     if (attackTime > (shStartup + shActive) * Helper.frame)
                         combatState = CombatStates.Recovery;
