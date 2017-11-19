@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour {
             dialogueContainer.SetActive(true);
         this.dialogue = new Queue<string>(dialogue);
         this.currentSequenceName = sequenceName;
-        SetText(this.dialogue.Dequeue());
+        //SetText(this.dialogue.Dequeue());
     }
 
     // Update is called once per frame
