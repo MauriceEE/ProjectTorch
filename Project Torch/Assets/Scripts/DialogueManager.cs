@@ -48,18 +48,9 @@ public class DialogueManager : MonoBehaviour {
     string currentSequenceName;
     FlagManager flagMan;
 
-    //USE THIS METHOD TO ADD A DIALOGUE SEQUENCE TO THE TEXT BOX. 
-    public void AddDialogueSequence(string[] dialogue, string sequenceName) {
-        if (!dialogueContainer.activeInHierarchy)
-            dialogueContainer.SetActive(true);
-        this.dialogue = new Queue<string>(dialogue);
-        this.currentSequenceName = sequenceName;
-    }
-    
+
     // Use this for initialization
     void Start() {
-        //string[] temp = { "Joey:\n Yo", "Dude:\n Ayy lmao", "Joey:\n SHIT IT'S DA FUZZ" };
-        //AddDialogueSequence(temp);
         finishedDialogueSequence = false;
         //Debug.Log("----------Execute----------");
         //SetText(currentText);
@@ -76,6 +67,14 @@ public class DialogueManager : MonoBehaviour {
 
         //tManager = new TextManager();
         flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+    }
+    //USE THIS METHOD TO ADD A DIALOGUE SEQUENCE TO THE TEXT BOX. 
+    public void AddDialogueSequence(string[] dialogue, string sequenceName) {
+        if (!dialogueContainer.activeInHierarchy)
+            dialogueContainer.SetActive(true);
+        this.dialogue = new Queue<string>(dialogue);
+        this.currentSequenceName = sequenceName;
+        SetText(this.dialogue.Dequeue());
     }
 
     // Update is called once per frame
@@ -175,7 +174,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void SetTextAndShowImmediately()
     {
-        SetText(dialogue.Dequeue());
+        //SetText(dialogue.Dequeue());
     }
 
     //Add text to the end of the current active text

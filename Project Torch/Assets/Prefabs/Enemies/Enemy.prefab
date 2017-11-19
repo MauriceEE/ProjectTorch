@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95120043505137192}
   hp: 50
   faction: 0
   zone: 0

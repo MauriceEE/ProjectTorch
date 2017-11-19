@@ -44,7 +44,7 @@ public class Enemy_Basic : Enemy {
 
             if (faction == Enemy.EnemyFaction.Shadow) {
                 AkSoundEngine.PostEvent("Shadow_Basic_Attack", gameObject);
-                animator.Play("ShadowSlash");
+                animator.Play("Slash");
             }
 
             attackAudioPlayed = true;

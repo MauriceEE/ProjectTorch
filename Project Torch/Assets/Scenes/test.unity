@@ -548,18 +548,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -723,18 +721,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -1165,18 +1161,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -1370,18 +1364,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -1733,6 +1725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterEnemies: []
   surroundingGridOccupants: []
+  allySpeedMultiplier: 0
+  encounterAggressionLimit: 0
+  encounterAggressionLossPerSecond: 0
   encounterRadius: 12
   surroundingGridAngle: 22.2
   surroundingGridRadius: 4.8
@@ -1743,6 +1738,7 @@ MonoBehaviour:
   attackMaxWait: 3
   humanEnemyCategories: []
   shadowEnemyCategories: []
+  enemyCategories: []
 --- !u!23 &231480654
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1884,18 +1880,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -2538,18 +2532,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -2713,18 +2705,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -2959,18 +2949,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -3951,18 +3939,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -4126,18 +4112,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -4429,18 +4413,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -4759,18 +4741,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -4934,18 +4914,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -5230,18 +5208,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -5484,18 +5460,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -5730,18 +5704,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -6117,18 +6089,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -6360,18 +6330,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -6535,18 +6503,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -6841,18 +6807,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -7488,18 +7452,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -7663,18 +7625,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -7914,18 +7874,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -8201,18 +8159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -8540,18 +8496,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -8866,18 +8820,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -9041,18 +8993,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -9439,7 +9389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -9576,18 +9526,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -9821,6 +9769,7 @@ MonoBehaviour:
   player: {fileID: 1145523781}
   health: {fileID: 711161886}
   bar: {fileID: 1090040319}
+  maxHP: 100
 --- !u!1 &1049430447
 GameObject:
   m_ObjectHideFlags: 0
@@ -10029,18 +9978,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -10283,10 +10230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZ: 10
   maxZ: 0
-  minY: -5
-  maxY: -0.75
-  objs:
-  - {fileID: 1145523780}
 --- !u!1 &1103225842
 GameObject:
   m_ObjectHideFlags: 0
@@ -10613,18 +10556,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -10920,18 +10861,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -11095,18 +11034,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -11623,18 +11560,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -11911,18 +11846,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -12077,18 +12010,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -12999,18 +12930,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -13561,18 +13490,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -13736,18 +13663,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -13971,18 +13896,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -14244,18 +14167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -14606,18 +14527,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -15281,18 +15200,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 1
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -15681,7 +15598,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c9784aef0f6ed45a0f9459b659af73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  es: {fileID: 0}
+  menuCanvas: {fileID: 0}
   buttons: []
+  resume: {fileID: 0}
+  optionsCanvas: {fileID: 0}
 --- !u!4 &1910313593
 Transform:
   m_ObjectHideFlags: 0
@@ -16005,18 +15926,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -16194,18 +16113,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -17110,18 +17027,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   hp: 0
   faction: 0
   zone: 0
   knockbackFriction: 0
   guardBreakStunTime: 0
   maxVelocity: 0
-  ogMaxVelocity: 0
   arrivalRadius: 0
   attackRange: 0
-  ogAttackRange: 0
   awarenessRange: 0
-  isAttacking: 0
   atDamage: 0
   atStartup: 0
   atActive: 0
@@ -17621,6 +17536,7 @@ MonoBehaviour:
   currentText: 
   letterPause: 0.2
   textScrollPause: 0.07
+  dialogueContainer: {fileID: 0}
 --- !u!1 &2090401834
 GameObject:
   m_ObjectHideFlags: 0
