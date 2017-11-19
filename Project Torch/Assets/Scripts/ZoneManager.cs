@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// Handles zones/zone transition
 /// </summary>
@@ -27,7 +28,8 @@ public class ZoneManager : MonoBehaviour {
     {
         NONE,
         FadingOut,
-        FadingIn
+        FadingIn,
+        FadingToGameOver,
     }
     #endregion
 
@@ -129,6 +131,9 @@ public class ZoneManager : MonoBehaviour {
                 break;
             case TransitionPhase.FadingOut:
                 FadeOut();
+                break;
+            case TransitionPhase.FadingToGameOver:
+                FadeToGameOver();
                 break;
         }
     }
@@ -272,6 +277,27 @@ public class ZoneManager : MonoBehaviour {
         Debug.Log("ZoneManager GetNextZone broke");
         Debug.Break();
         throw new UnityException();
+    }
+    /// <summary>
+    /// Fades out and ends the game
+    /// </summary>
+    public void GameOver()
+    {
+        this.phase = TransitionPhase.FadingToGameOver;
+    }
+    /// <summary>
+    /// Fades to black and loads the game over scene
+    /// </summary>
+    protected void FadeToGameOver()
+    {
+        if (screenFade.color.a < 1)
+        {
+            Color fadeColor = screenFade.color;
+            fadeColor.a += Time.deltaTime;
+            screenFade.color = fadeColor;
+        }
+        else
+            SceneManager.LoadScene("GameOver");
     }
 #endregion
 }
