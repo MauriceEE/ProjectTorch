@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114750510894282836}
   - component: {fileID: 114396158617507554}
   - component: {fileID: 212599753836848964}
+  - component: {fileID: 95470072717043414}
   m_Layer: 0
   m_Name: Normal Human Enemy
   m_TagString: Enemy
@@ -68,6 +69,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8151405}
   m_EdgeRadius: 0
+--- !u!95 &95470072717043414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1438172028801248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59e1889913a6da944ab418362bd2f4a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114396158617507554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4613e9716cd011f40a061d24745bb310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95470072717043414}
   hp: 50
   faction: 1
   zone: 0

@@ -11742,7 +11742,7 @@ MonoBehaviour:
   memoryCutoffThreshold: 0.95
   monitorPoolSize: 128
   monitorQueuePoolSize: 64
-  callbackManagerBufferSize: 8
+  callbackManagerBufferSize: 4
   engineLogging: 1
 --- !u!114 &1021550973
 MonoBehaviour:
