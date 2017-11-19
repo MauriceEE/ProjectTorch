@@ -65,7 +65,7 @@ public class AkInitializer : MonoBehaviour
 	///Monitor Queue Pool size.  Size of the monitoring queue pool, in bytes. This parameter is not used in Release build.
 	public int monitorQueuePoolSize = c_MonitorQueuePoolSize;
 
-	public const int c_CallbackManagerBufferSize = 4;
+	public const int c_CallbackManagerBufferSize = 8;
 	///CallbackManager buffer size.  The size of the buffer used per-frame to transfer callback data. Default size is 4 KB, but you should increase this, if required.
 	public int callbackManagerBufferSize = c_CallbackManagerBufferSize;
 
