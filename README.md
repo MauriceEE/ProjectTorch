@@ -161,3 +161,9 @@
 <ul>  
   <li>added menu music</li>
 </ul>
+<h2>Connor Menard - 11/20/17 - 1:42PM</h2>
+<ul>
+  <li>Added SoundManager</li>
+  <li>Reworked current sound system (still requires renaming of sound events)</li>
+  <li>Added required sound cues (except for game end screen)</li>
+</ul>
