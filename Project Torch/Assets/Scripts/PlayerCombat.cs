@@ -189,7 +189,7 @@ public class PlayerCombat : MonoBehaviour {
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Slash;
                     //play Slash sound
-					AkSoundEngine.PostEvent ("Slash", gameObject);
+                    SoundManager.PlaySound(SoundManager.SoundEffects.PlayerSlash, this.gameObject);
                     if (consecSlashCount == 2) canAttack = false;
                     //entity.CanMove = false;
                     //entity.Speed /= 1.5f;
@@ -218,7 +218,7 @@ public class PlayerCombat : MonoBehaviour {
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Thrust;
                     //play Thrust sound
-					AkSoundEngine.PostEvent ("Thrust", gameObject);
+                    SoundManager.PlaySound(SoundManager.SoundEffects.PlayerThrust, this.gameObject);
                     canAttack = false;
                     entity.CanMove = false;
                     movement.CanDash = false;
@@ -246,7 +246,7 @@ public class PlayerCombat : MonoBehaviour {
                     combatState = CombatStates.Startup;
                     currentAttack = Attacks.Shine;
                     //play Shine sound
-					AkSoundEngine.PostEvent ("Shine", gameObject);
+                    SoundManager.PlaySound(SoundManager.SoundEffects.PlayerShine, this.gameObject);
                     canAttack = false;
                     entity.CanMove = false;
                     movement.CanDash = false;
@@ -669,6 +669,7 @@ public class PlayerCombat : MonoBehaviour {
         {
             Debug.Log("Player died");
             //TODO: Death stuff
+            SoundManager.PlaySound(SoundManager.SoundEffects.PlayerDeath, this.gameObject);
             //Flag as not in encounter to fix that up
             enemyMan.EncounterActive = false;
             ZoneManager zoneMan = GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>();
@@ -683,6 +684,11 @@ public class PlayerCombat : MonoBehaviour {
             }
             hp = 100;
             entity.FacingRight = true;
+        }
+        else
+        {
+            //Play not-death sound effect
+            SoundManager.PlaySound(SoundManager.SoundEffects.PlayerHit, this.gameObject);
         }
     }
 #endregion

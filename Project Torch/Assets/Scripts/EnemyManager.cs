@@ -130,7 +130,7 @@ public class EnemyManager : MonoBehaviour {
     public void StartEncounter(Encounter enc, Enemy.EnemyFaction hitEnemyFaction, Encounter.SpecialEncounters encounterType)
     {
         //change music to combat at encounter start
-		AkSoundEngine.PostEvent ("Music_Combat", gameObject);
+        SoundManager.PlayMusic(SoundManager.Music.Combat, this.gameObject);
         if (encounterActive)
             MergeEncounters();
         Helper.DebugLogDivider();
@@ -355,7 +355,7 @@ public class EnemyManager : MonoBehaviour {
             for (int i = 0; i < 6; ++i)
                 surroundingGridOccupants[i] = null;
             //change music to ambient at encounter end
-			AkSoundEngine.PostEvent ("Music_Ambient", gameObject);
+            SoundManager.PlayMusic(SoundManager.Music.Ambient, this.gameObject);
         }
     }
     /// <summary>

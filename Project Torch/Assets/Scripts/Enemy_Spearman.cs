@@ -11,7 +11,16 @@ using UnityEngine;
 public class Enemy_Spearman: Enemy {
 
     protected bool triedToDash = false;
-
+    #region Unity Defaults
+    protected void Start()
+    {
+        soundEffect_Attack = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanSpearmanAttack : SoundManager.SoundEffects.EnemyShadowSpearmanAttack;
+        soundEffect_Dash = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanSpearmanDash : SoundManager.SoundEffects.EnemyShadowSpearmanDash;
+        soundEffect_Death = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanSpearmanDeath : SoundManager.SoundEffects.EnemyShadowSpearmanDeath;
+        soundEffect_Hit = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanSpearmanHit : SoundManager.SoundEffects.EnemyShadowSpearmanHit;
+        soundEffect_Walk = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanSpearmanWalk : SoundManager.SoundEffects.EnemyShadowSpearmanWalk;
+    }
+    #endregion
     #region Override Methods
     public override void BreakGuard(float knockbackMultiplier)
     {

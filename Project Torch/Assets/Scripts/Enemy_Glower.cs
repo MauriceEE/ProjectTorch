@@ -27,6 +27,11 @@ public class Enemy_Glower : Enemy {
     protected void Start()
     {
         playerCombat = player.GetComponent<PlayerCombat>();
+        soundEffect_Attack = SoundManager.SoundEffects.EnemyShadowGlowerAttack;
+        soundEffect_Dash = SoundManager.SoundEffects.EnemyShadowGlowerDash;
+        soundEffect_Death = SoundManager.SoundEffects.EnemyShadowGlowerDeath;
+        soundEffect_Hit = SoundManager.SoundEffects.EnemyShadowGlowerHit;
+        soundEffect_Walk = SoundManager.SoundEffects.EnemyShadowGlowerWalk;
     }
     protected override void Update()
     {
@@ -79,6 +84,8 @@ public class Enemy_Glower : Enemy {
         {
             case CombatStates.Active:
                 entity.CanMove = false;
+                //Projectile shooting
+                //Change target depending on whether or not allied with player
                 if (!alliedWithPlayer)
                 {
                     GlowerProjectile shot = Instantiate(projectile).GetComponent<GlowerProjectile>();
@@ -87,6 +94,7 @@ public class Enemy_Glower : Enemy {
                         projectileLifetime);
                     shot.transform.position = this.transform.position;
                     shinedIncrements = 0;
+                    SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
                 }
                 else
                 {
@@ -98,6 +106,7 @@ public class Enemy_Glower : Enemy {
                     shinedIncrements = 0;
                     shot.AlliedWithPlayer = true;
                     shot.Target = enemyMan.GetNewAttackTarget(this.faction);
+                    SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
                 }
                 combatState = CombatStates.Recovery;
                 break;

@@ -11,6 +11,16 @@ using UnityEngine;
 
 public class Enemy_Brute : Enemy
 {
+    #region Unity Defaults
+    protected void Start()
+    {
+        soundEffect_Attack = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteAttack : SoundManager.SoundEffects.EnemyShadowBruteAttack;
+        soundEffect_Dash = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteDash : SoundManager.SoundEffects.EnemyShadowBruteDash;
+        soundEffect_Death = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteDeath : SoundManager.SoundEffects.EnemyShadowBruteDeath;
+        soundEffect_Hit = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteHit : SoundManager.SoundEffects.EnemyShadowBruteHit;
+        soundEffect_Walk = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteWalk : SoundManager.SoundEffects.EnemyShadowBruteWalk;
+    }
+    #endregion
     #region Override Methods
     public override void BreakGuard(float knockbackMultiplier)
     {
@@ -81,12 +91,7 @@ public class Enemy_Brute : Enemy
         base.UpdateCombatState();
         //play attack sound if attacking
 		if (!attackAudioPlayed && combatState == CombatStates.Active) {
-			if (faction == Enemy.EnemyFaction.Human)
-				AkSoundEngine.PostEvent ("Human_Brute_Attack", gameObject);
-
-			if (faction == Enemy.EnemyFaction.Shadow)
-				AkSoundEngine.PostEvent ("Shadow_Brute_Attack", gameObject);
-
+            SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
             attackAudioPlayed = true;
         }
         if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;

@@ -129,6 +129,12 @@ public abstract class Enemy : MonoBehaviour {
     protected float lightTimer;
     // bool for if the attack sound has played already
     protected bool attackAudioPlayed;
+    //--Audio cue names--
+    protected SoundManager.SoundEffects soundEffect_Attack;
+    protected SoundManager.SoundEffects soundEffect_Walk;
+    protected SoundManager.SoundEffects soundEffect_Dash;
+    protected SoundManager.SoundEffects soundEffect_Hit;
+    protected SoundManager.SoundEffects soundEffect_Death;
     #endregion
 
     #region Public Fields
@@ -316,6 +322,10 @@ public abstract class Enemy : MonoBehaviour {
 
         //Update speed in entity
         entity.Speed = Helper.Map(entity.Displacement.sqrMagnitude, 0f, maxVelocity * maxVelocity, 0f, 1f);
+
+        //Play movement sound effect only if not dashing
+        if (dashTime <= 0f)
+            SoundManager.SetSoundVolume(soundEffect_Walk, entity.Speed);
 
         //Move (even if displacement is zero)
         entity.Move();
@@ -590,8 +600,17 @@ public abstract class Enemy : MonoBehaviour {
             //Flag as dead if out of HP
             if (hp <= 0)
             {
+                //Flag as dead
                 alive = false;
-                return;//Get outta here to avoid wasting time on the other code
+                //Play death sound effect
+                SoundManager.PlaySound(soundEffect_Death, this.gameObject);
+                //Get outta here to avoid wasting time on the other code
+                return;
+            }
+            else
+            {
+                //play non-death sound effect
+                SoundManager.PlaySound(soundEffect_Hit, this.gameObject);
             }
             hitsTakenRecently++; // increment number of recent hits taken
             increasedReactionWindowTimer = initialIRWT; // reset IRWT
@@ -638,6 +657,7 @@ public abstract class Enemy : MonoBehaviour {
         {
             //If hit by thrust...
             if (attackType == PlayerCombat.Attacks.Thrust)
+            {
                 //Remove stack, and if that was the last one...
                 if (--guardStacks <= 0)
                 {
@@ -645,11 +665,12 @@ public abstract class Enemy : MonoBehaviour {
                     BreakGuard(2f);
                     guarding = false;
                 }
-            //Debug.Log(guardStacks);
-            //TODO: If hit by slash, do some reboud fancy thing
-            if (attackType == PlayerCombat.Attacks.Slash)
+            }
+            //if hit by slash...
+            else if (attackType == PlayerCombat.Attacks.Slash)
             {
-                Debug.Log("TODO: REBOUND THINGEY");
+                //Play the rebound sound effect
+                SoundManager.PlaySound(SoundManager.SoundEffects.PlayerSlashDeflected, player);
             }
         }
 
@@ -783,6 +804,8 @@ public abstract class Enemy : MonoBehaviour {
         dashTime = dashFrames * Helper.frame;
         //Modify speed
         entity.SpeedModifier *= dashSpeed;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
+        //Play dashing sound effect
+        SoundManager.PlaySound(soundEffect_Dash, this.gameObject);
         //Remove from occupancy grid
         RequestRemoveFromEncounterGrid();
     }

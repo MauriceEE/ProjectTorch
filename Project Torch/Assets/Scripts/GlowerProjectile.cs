@@ -131,6 +131,7 @@ public class GlowerProjectile : MonoBehaviour {
         GlowerProjectileAOE aoe = Instantiate(AOEexplosionObj).GetComponent<GlowerProjectileAOE>();
         aoe.AlliedWithPlayer = alliedWithPlayer;
         aoe.transform.position = this.transform.position;
+        SoundManager.PlaySound(SoundManager.SoundEffects.EnemyShadowGlowerExplosion, this.gameObject);
         Destroy(this.gameObject);
     }
     #endregion

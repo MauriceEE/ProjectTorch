@@ -9,6 +9,17 @@ using UnityEngine;
 ///     handle everything else
 /// </summary>
 public class Enemy_Basic : Enemy {
+    #region Unity Defaults
+    protected void Start()
+    {
+        //Assign sound effects based on whether human or shadow
+        soundEffect_Attack = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanAttack : SoundManager.SoundEffects.EnemyShadowAttack;
+        soundEffect_Dash = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanDash : SoundManager.SoundEffects.EnemyShadowDash;
+        soundEffect_Death = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanDeath : SoundManager.SoundEffects.EnemyShadowDeath;
+        soundEffect_Hit = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanHit : SoundManager.SoundEffects.EnemyShadowHit;
+        soundEffect_Walk = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanWalk : SoundManager.SoundEffects.EnemyShadowWalk;
+    }
+    #endregion
     #region Override Methods
     public override void BreakGuard(float knockbackMultiplier)
     {
@@ -40,15 +51,8 @@ public class Enemy_Basic : Enemy {
         base.UpdateCombatState();
         //play attack sound if attacking
 		if (!attackAudioPlayed && combatState == CombatStates.Active) {
-            if (faction == Enemy.EnemyFaction.Human) {
-                AkSoundEngine.PostEvent("Human_Basic_Attack", gameObject);
-                animator.Play("Slash");
-            }
-            if (faction == Enemy.EnemyFaction.Shadow) {
-                AkSoundEngine.PostEvent("Shadow_Basic_Attack", gameObject);
-                animator.Play("Slash");
-            }
-
+            animator.Play("Slash");
+            SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
             attackAudioPlayed = true;
 		}
         if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;

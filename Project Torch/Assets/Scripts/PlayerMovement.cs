@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
             if (canDash && (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.L))) 
             {
                 //play Dash sound
-                AkSoundEngine.PostEvent("Dash", gameObject);
+                SoundManager.PlaySound(SoundManager.SoundEffects.PlayerDash, this.gameObject);
 
                 //Start the dash timer
                 dashTime = dashFrames * Helper.frame;
@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour {
             entity.Speed = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).magnitude;
 
             //Play footstep sound
-            AkSoundEngine.SetRTPCValue("PlayerMovementSpeed", entity.Speed);
+            SoundManager.SetSoundVolume(SoundManager.SoundEffects.PlayerWalk, entity.Speed);
 
             //Move the player
             entity.Move();
