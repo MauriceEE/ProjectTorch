@@ -173,3 +173,7 @@
   <li>renamed sound events to match sound manager</li>
   <li>pausing, resuming, and navigating to the menu now affects the music</li>
 </ul>
+<h2>Garret Reynolds - 11/22/17 - 2:53PM</h2>
+<ul>
+  <li>began replacing player and basic enemy SFX</li>
+</ul>
