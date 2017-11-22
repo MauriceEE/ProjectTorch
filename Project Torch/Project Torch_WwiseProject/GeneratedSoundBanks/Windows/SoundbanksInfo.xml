@@ -66,17 +66,13 @@
 					<ShortName>Close_1.WAV</ShortName>
 					<Path>SFX/Close_1_B7F88020.wem</Path>
 				</File>
+				<File Id="42804537" Language="SFX">
+					<ShortName>PlayerSlashDeflected01.wav</ShortName>
+					<Path>SFX/PlayerSlashDeflected01_F7D0E330.wem</Path>
+				</File>
 				<File Id="78114416" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_C9C93460.wem</Path>
-				</File>
-				<File Id="92716449" Language="SFX">
-					<ShortName>pie_pan- 06.wav</ShortName>
-					<Path>SFX/pie_pan- 06_C6DDB7C6.wem</Path>
-				</File>
-				<File Id="100672609" Language="SFX">
-					<ShortName>Air Burst Short 12.wav</ShortName>
-					<Path>SFX/Air Burst Short 12_F7D0E330.wem</Path>
 				</File>
 				<File Id="128772641" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
@@ -98,25 +94,29 @@
 					<ShortName>Thick Plastic Hits 05.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 05_B6CDA5A2.wem</Path>
 				</File>
-				<File Id="304949470" Language="SFX">
-					<ShortName>Air Burst Short 11.wav</ShortName>
-					<Path>SFX/Air Burst Short 11_F7D0E330.wem</Path>
+				<File Id="252585733" Language="SFX">
+					<ShortName>HumanSlash01.wav</ShortName>
+					<Path>SFX/HumanSlash01_F7D0E330.wem</Path>
+				</File>
+				<File Id="288819436" Language="SFX">
+					<ShortName>EnemyHumanHit01.wav</ShortName>
+					<Path>SFX/EnemyHumanHit01_F7D0E330.wem</Path>
 				</File>
 				<File Id="309056163" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_AFBCAD86.wem</Path>
 				</File>
-				<File Id="553166943" Language="SFX">
-					<ShortName>Air Burst Short 10.wav</ShortName>
-					<Path>SFX/Air Burst Short 10_F7D0E330.wem</Path>
+				<File Id="508779539" Language="SFX">
+					<ShortName>PlayerThrust.wav</ShortName>
+					<Path>SFX/PlayerThrust_F7D0E330.wem</Path>
 				</File>
-				<File Id="824997395" Language="SFX">
-					<ShortName>Construction01_denoise.wav</ShortName>
-					<Path>SFX/Construction01_denoise_7CFCEDFE.wem</Path>
+				<File Id="616304823" Language="SFX">
+					<ShortName>PlayerShine01.wav</ShortName>
+					<Path>SFX/PlayerShine01_F7D0E330.wem</Path>
 				</File>
-				<File Id="844726469" Language="SFX">
-					<ShortName>Large knife swings_2.WAV</ShortName>
-					<Path>SFX/Large knife swings_2_CBC2B55E.wem</Path>
+				<File Id="755251734" Language="SFX">
+					<ShortName>PlayerDash01.wav</ShortName>
+					<Path>SFX/PlayerDash01_F7D0E330.wem</Path>
 				</File>
 				<File Id="855263217" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
@@ -130,17 +130,33 @@
 					<ShortName>Thick Plastic Hits 36.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 36_AFF4A735.wem</Path>
 				</File>
-				<File Id="918874852" Language="SFX">
-					<ShortName>Air Burst Short 09.wav</ShortName>
-					<Path>SFX/Air Burst Short 09_F7D0E330.wem</Path>
+				<File Id="877535839" Language="SFX">
+					<ShortName>EnemyShadowSlash.wav</ShortName>
+					<Path>SFX/EnemyShadowSlash_F7D0E330.wem</Path>
+				</File>
+				<File Id="904889417" Language="SFX">
+					<ShortName>ShadowHit01.wav</ShortName>
+					<Path>SFX/ShadowHit01_F7D0E330.wem</Path>
 				</File>
 				<File Id="939083768" Language="SFX">
 					<ShortName>Close_1.WAV</ShortName>
 					<Path>SFX/Close_1_3820EE0F.wem</Path>
 				</File>
+				<File Id="969397272" Language="SFX">
+					<ShortName>HumanHit01.wav</ShortName>
+					<Path>SFX/HumanHit01_F7D0E330.wem</Path>
+				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 32_0BDA7ABA.wem</Path>
+				</File>
+				<File Id="1052781010" Language="SFX">
+					<ShortName>HumanSlash01.wav</ShortName>
+					<Path>SFX/HumanSlash01_C9106BCE.wem</Path>
+				</File>
+				<File Id="1068839159" Language="SFX">
+					<ShortName>HumanBruteSlash01.wav</ShortName>
+					<Path>SFX/HumanBruteSlash01_EFBFD7AB.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -232,6 +248,10 @@
 					<ShortName>Interactive Music\Combat\04\04_Baritone GTR rhythm KS.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/04/04_Baritone GTR rhythm KS_AD29F36A.wem</Path>
 				</File>
+				<File Id="177507875" Language="SFX">
+					<ShortName>PlayerDeath03.wav</ShortName>
+					<Path>SFX/PlayerDeath03_F7D0E330.wem</Path>
+				</File>
 				<File Id="182141558" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/05/05_Snare_AD29F36A.wem</Path>
@@ -304,6 +324,10 @@
 					<ShortName>Interactive Music\Combat\01\01_Kick.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Kick_AD29F36A.wem</Path>
 				</File>
+				<File Id="399105959" Language="SFX">
+					<ShortName>PlayerDeath06.wav</ShortName>
+					<Path>SFX/PlayerDeath06_F7D0E330.wem</Path>
+				</File>
 				<File Id="407354187" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_Grinding Mids.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/05/05_Grinding Mids_AD29F36A.wem</Path>
@@ -355,6 +379,10 @@
 				<File Id="482818809" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Lead Guitar 3_bip.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Lead Guitar 3_bip_AD29F36A.wem</Path>
+				</File>
+				<File Id="483247989" Language="SFX">
+					<ShortName>PlayerDeath02.wav</ShortName>
+					<Path>SFX/PlayerDeath02_F7D0E330.wem</Path>
 				</File>
 				<File Id="486389964" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Toms.wav</ShortName>
@@ -567,6 +595,10 @@
 				<File Id="1032817041" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/07/07_HiHat_AD29F36A.wem</Path>
+				</File>
+				<File Id="1034122642" Language="SFX">
+					<ShortName>PlayerDeath05.wav</ShortName>
+					<Path>SFX/PlayerDeath05_F7D0E330.wem</Path>
 				</File>
 				<File Id="1034478485" Language="SFX">
 					<ShortName>Interactive Music\Combat\02\02_Kick.wav</ShortName>
