@@ -177,3 +177,7 @@
 <ul>
   <li>began replacing player and basic enemy SFX</li>
 </ul>
+<h2>Steven Ma - 11/22/17 - 6:43PM</h2>
+<ul>
+  <li>Added in more difficult boss encounters with different prefabs</li>
+</ul>
