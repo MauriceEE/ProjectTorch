@@ -106,7 +106,9 @@ public class PlayerCombat : MonoBehaviour {
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
+        //Debug.Log("Player switching Combat states");
         combatState = CombatStates.None;
+        //Debug.Log("Player switching Attacks");
         currentAttack = Attacks.None;
         entity = this.GetComponent<Entity>();
         movement = this.GetComponent<PlayerMovement>();
@@ -148,12 +150,13 @@ public class PlayerCombat : MonoBehaviour {
         //Apply buffs/debuffs
         entity.UpdateStatusEffects();
 
-        // TORCH "PLANT" CANCEL
+        // Pulse ability
         //Cancel attack and expand light radius
-        if (ppChange.enhancedRadius != true && Input.GetKeyDown(KeyCode.Space))
+        if (ppChange.enhancedRadius != true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button4)))
         {
             Cancel();
             ppChange.enhancedRadius = true;
+            foreach (GameObject enemy in enemyMan.encounterEnemies) enemy.GetComponent<Enemy>().ShareTheLight();
         }
 
         // Get frame adjustments, if any
@@ -186,7 +189,9 @@ public class PlayerCombat : MonoBehaviour {
 
                     attackTime = 0f;
                     //Start attacking
+                    //Debug.Log("Player switching Combat states");
                     combatState = CombatStates.Startup;
+                    //Debug.Log("Player switching Attacks");
                     currentAttack = Attacks.Slash;
                     //play Slash sound
                     SoundManager.PlaySound(SoundManager.SoundEffects.PlayerSlash, this.gameObject);
@@ -215,7 +220,9 @@ public class PlayerCombat : MonoBehaviour {
                     animator.Play("Thrust");
                     attackTime = 0f;
                     //Start attacking
+                    //Debug.Log("Player switching Combat states");
                     combatState = CombatStates.Startup;
+                    //Debug.Log("Player switching Attacks");
                     currentAttack = Attacks.Thrust;
                     //play Thrust sound
                     SoundManager.PlaySound(SoundManager.SoundEffects.PlayerThrust, this.gameObject);
@@ -243,7 +250,9 @@ public class PlayerCombat : MonoBehaviour {
                     animator.Play("Shine");
                     attackTime = 0f;
                     //Start shining
+                    //Debug.Log("Player switching Combat states");
                     combatState = CombatStates.Startup;
+                    //Debug.Log("Player switching Attacks");
                     currentAttack = Attacks.Shine;
                     //play Shine sound
                     SoundManager.PlaySound(SoundManager.SoundEffects.PlayerShine, this.gameObject);
@@ -264,15 +273,24 @@ public class PlayerCombat : MonoBehaviour {
                 //Check to move to active frames
                 case Attacks.Slash:
                     if (attackTime > slStartup * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Active;
+                    }
                     break;
                 case Attacks.Thrust:
                     if (attackTime > thStartup * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Active;
+                    }
                     break;
                 case Attacks.Shine:
                     if (attackTime > shStartup * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Active;
+                    }
                     break;
             }
         }
@@ -305,7 +323,10 @@ public class PlayerCombat : MonoBehaviour {
                         //tempObjBox3.transform.localPosition = new Vector3(slHB3.center.x * hitBoxDirectionMove, slHB3.center.y, 0);
                     }
                     if (attackTime > (slStartup + slActive) * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Recovery;
+                    }
                     break;
                 case Attacks.Thrust:
                     // --do AABB for box 1--
@@ -327,7 +348,10 @@ public class PlayerCombat : MonoBehaviour {
                         //tempObjBox3th.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     }
                     if (attackTime > (thStartup + thActive) * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Recovery;
+                    }
                     break;
                 case Attacks.Shine:
                     // turn on spotlight
@@ -340,7 +364,10 @@ public class PlayerCombat : MonoBehaviour {
                     //tempObjBox.transform.localPosition = new Vector3(thHB3.center.x * hitBoxDirectionMove, thHB3.center.y, 0);
                     //Check going to recovery
                     if (attackTime > (shStartup + shActive) * Helper.frame)
+                    {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.Recovery;
+                    }
                     break;
             }
         }
@@ -351,7 +378,9 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Slash:
                     if (attackTime > (slStartup + slActive + slRecovery) * Helper.frame)
                     {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.None;
+                        //Debug.Log("Player switching Attacks");
                         currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
@@ -365,7 +394,9 @@ public class PlayerCombat : MonoBehaviour {
                 case Attacks.Thrust:
                     if (attackTime > (thStartup + thActive + thRecovery) * Helper.frame)
                     {
+                        //Debug.Log("Player switching Combat states");
                         combatState = CombatStates.None;
+                        //Debug.Log("Player switching Attacks");
                         currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
@@ -380,7 +411,9 @@ public class PlayerCombat : MonoBehaviour {
                     {
                         // turn off spotlight
                         shineLight.intensity = 0;
+                        //.Log("Player switching Combat states");
                         combatState = CombatStates.None;
+                        //Debug.Log("Player switching Attacks");
                         currentAttack = Attacks.None;
                         canAttack = true;
                         entity.CanMove = true;
@@ -391,7 +424,9 @@ public class PlayerCombat : MonoBehaviour {
                     }
                     break;
                 case Attacks.None:
+                    //Debug.Log("Player switching Combat states");
                     combatState = CombatStates.None;
+                    //Debug.Log("Player switching Attacks");
                     currentAttack = Attacks.None;
                     canAttack = true;
                     entity.CanMove = true;
@@ -460,8 +495,8 @@ public class PlayerCombat : MonoBehaviour {
     {
         // Set combat state to Recovery
         combatState = CombatStates.Recovery;
-        // Set attackTime to the max float value to immediately end recovery frames
-        attackTime = float.MaxValue;
+        // Set attackTime to a high value to immediately end recovery frames
+        attackTime = 9999;
         movement.dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
     }
 

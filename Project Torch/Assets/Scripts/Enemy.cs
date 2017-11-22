@@ -188,6 +188,8 @@ public abstract class Enemy : MonoBehaviour {
     public int guardChance;
     public int counterAttackChance;
     public int dodgeChance;
+    // if illuminated
+    public bool lit;
     //DEBUG//
     [Header("//DEBUG//")]
     public GameObject[] tempHitboxObj;
@@ -258,6 +260,8 @@ public abstract class Enemy : MonoBehaviour {
         irwType = "dodge";
         ogAtStartup = atStartup;
         enemyLight = null;
+        lit = false;
+        stunTime = 0;
     }
 	
 	protected virtual void Update () {
@@ -274,10 +278,15 @@ public abstract class Enemy : MonoBehaviour {
         // update light timer
         if (lightTimer > 0)
         {
+            lit = true;
             lightTimer -= Time.deltaTime;
             maxVelocity = ogMaxVelocity / 3;
         }
-        else RemoveLight();
+        else
+        {
+            lit = false;
+            RemoveLight();
+        }
 
         // check if the enemy has taken hits recently
         if(hitsTakenRecently > 0)
@@ -316,9 +325,18 @@ public abstract class Enemy : MonoBehaviour {
         //Manage states
         UpdateEnemyState();
         UpdateCombatState();
-        stunTime -= Time.deltaTime;
-        if (stunTime < 0f)
+        if (stunTime > 0)
+        {
+            stunTime -= Time.deltaTime;
+            //enemyState = EnemyStates.Stunned;
+            //combatState = CombatStates.Stunned;
+        }
+        else if (stunTime <= 0f)
+        {
             stunTime = 0f;
+            //enemyState = EnemyStates.ReturningFromAttack;
+            //combatState = CombatStates.None;
+        }
 
         //Update speed in entity
         entity.Speed = Helper.Map(entity.Displacement.sqrMagnitude, 0f, maxVelocity * maxVelocity, 0f, 1f);
@@ -390,14 +408,19 @@ public abstract class Enemy : MonoBehaviour {
                     tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
                 }
                 if (attackTime > (atStartup + atActive) * Helper.frame)
+                {
+                    //Debug.Log("Switching Combat states 1");
                     combatState = CombatStates.Recovery;
+                }
                 break;
             case CombatStates.Recovery:
                 maxVelocity = ogMaxVelocity;
                 entity.CanMove = false;
                 if (attackTime > (atStartup + atActive + atRecovery) * Helper.frame)
                 {
+                    //Debug.Log("Switching Combat states 2");
                     combatState = CombatStates.None;
+                    //Debug.Log("Switching Enemy states 1");
                     enemyState = EnemyStates.ReturningFromAttack;
                     entity.CanMove = true;
                     //entity.Speed *= 1.5f;
@@ -408,14 +431,17 @@ public abstract class Enemy : MonoBehaviour {
             case CombatStates.Startup:
                 entity.CanMove = false;
                 if (attackTime > atStartup * Helper.frame)
+                {
+                    //Debug.Log("Switching Combat states 3");
                     combatState = CombatStates.Active;
+                }
                 break;
             case CombatStates.None:
                 //if (!inKnockback)
                 //entity.CanMove = true;
                 break;
             case CombatStates.Stunned:
-                if (stunTime < 0f)
+                if (stunTime <= 0f)
                     ResetCombatStates();
                 break;
         }
@@ -474,6 +500,7 @@ public abstract class Enemy : MonoBehaviour {
                 if (elapsedApproachTime > 3)
                 {
                     CancelOrHitStun(false);
+                    //Debug.Log("Switching Enemy states 2");
                     enemyState = EnemyStates.ReturningFromAttack;
                     elapsedApproachTime = 0f;
 
@@ -497,7 +524,9 @@ public abstract class Enemy : MonoBehaviour {
                 if ((this.transform.position - Helper.Vec2ToVec3(moveTarget)).sqrMagnitude <= Mathf.Pow(attackRange, 2))
                 {
                     //Change states accordingly
+                    //Debug.Log("Switching Combat states 4");
                     combatState = CombatStates.Startup;
+                    //Debug.Log("Switching Enemy states 3");
                     enemyState = EnemyStates.Attacking;
                     attackTime = 0f;
                 }
@@ -517,6 +546,7 @@ public abstract class Enemy : MonoBehaviour {
                 SeekTarget();
                 if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
                 {
+                    //Debug.Log("Switching Enemy states 4");
                     enemyState = EnemyStates.Idle;
                     //Prevent the enemy from continuously moving 
                     this.moveTarget = this.transform.position;
@@ -538,6 +568,7 @@ public abstract class Enemy : MonoBehaviour {
                     //Reset flag
                     dodging = false;
                     //Return from attack (i.e. let enemy manager figure out what to do next)
+                    //Debug.Log("Switching Enemy states 5");
                     enemyState = EnemyStates.ReturningFromAttack;
                     //Return speed to normal
                     entity.SpeedModifier = 1f;
@@ -558,7 +589,7 @@ public abstract class Enemy : MonoBehaviour {
                 UpdateKnockback();
                 break;
             case EnemyStates.Stunned:
-                if (stunTime < 0f)
+                if (stunTime <= 0f)
                     ResetCombatStates();
                 break;
             default:
@@ -580,10 +611,14 @@ public abstract class Enemy : MonoBehaviour {
             canMove = true;
             entity.Displacement = Vector2.zero;
             inKnockback = false;
+            //Debug.Log("Switching Enemy states 6");
             enemyState = EnemyStates.Idle;
         }
         else
+        {
+            //Debug.Log("Switching Enemy states 7");
             enemyState = EnemyStates.Knockback;
+        }
     }
     #endregion
     #region Combat Methods
@@ -692,12 +727,37 @@ public abstract class Enemy : MonoBehaviour {
     {
         Destroy(enemyLight);
         enemyLight = null;
+        lit = false;
     }
 
     public void SetLightTime(float timeLit)
     {
         lightTimer = timeLit;
         if (enemyLight == null) CreateLight();
+    }
+
+    public void ShareTheLight()
+    {
+        // if this enemy is lit
+        if (lit)
+        {
+            foreach (GameObject enemy in enemyMan.encounterEnemies)
+            {
+                // if the received enemy is not lit
+                if (enemy.GetComponent<Enemy>().lit == false)
+                {
+                    // get distance between this enemy and every other enemy
+                    float distance = Mathf.Sqrt(Mathf.Pow((this.transform.position.x - enemy.transform.position.x), 2) + Mathf.Pow((this.transform.position.y - enemy.transform.position.y), 2));
+
+                    // if in the light range
+                    if (distance <= this.enemyLight.range)
+                    {
+                        lightTimer = 5;
+                        enemy.GetComponent<Enemy>().SetLightTime(lightTimer);
+                    }
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -709,13 +769,15 @@ public abstract class Enemy : MonoBehaviour {
         //Flag guard broken state
 //        guardBroken = true;
         //Get stunned
-        stunTime = guardBreakStunTime;
+        //stunTime = guardBreakStunTime;  // TurnedStunOff
         //Modify knockback
         knockbackModifier = knockbackMultiplier;
         //Reset states
         ResetCombatStates();
         //Update states to stun
+        //Debug.Log("Switching Enemy states 8");
         enemyState = EnemyStates.Stunned;
+        //Debug.Log("Switching Combat states 5");
         combatState = CombatStates.Stunned;
         Debug.Log("Guard broken @ " + Time.fixedTime);
     }
@@ -726,7 +788,9 @@ public abstract class Enemy : MonoBehaviour {
     public void ResetCombatStates()
     {
         invincible = false;
+        //Debug.Log("Switching Enemy states 9");
         enemyState = EnemyStates.Idle;
+        //Debug.Log("Switching Combat states 6");
         combatState = CombatStates.None;
         isAttacking = false;
         attackTime = 0f;
@@ -797,6 +861,7 @@ public abstract class Enemy : MonoBehaviour {
         //Flag as dodging
         dodging = true;
         //Enter dodging state
+        //Debug.Log("Switching Enemy states 10");
         enemyState = EnemyStates.Dodging;
         //Set new move target away from player
         moveTarget = this.transform.position + (this.transform.position - player.transform.position) * 2;
@@ -824,6 +889,7 @@ public abstract class Enemy : MonoBehaviour {
         knockbackModifier = 1f;
         inKnockback = true;
         ResetCombatStates();
+        //Debug.Log("Switching Enemy states 11");
         enemyState = EnemyStates.Knockback;
     }
 
@@ -835,13 +901,13 @@ public abstract class Enemy : MonoBehaviour {
         //combatState = CombatStates.Recovery; // causes RunTime error
 
         // Set attackTime to the max float value to immediately end current state's frames
-        attackTime = float.MaxValue;
+        attackTime = 9999f;
 
         // reset dash time
         //dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
 
         // if hitstun, set hitstun frames
-        if (hitstun) stunTime = 20f * Helper.frame;
+        //if (hitstun) stunTime = 20f * Helper.frame; // TurnedStunOff
         // *Coded by Maurice Edwards
     }
 
@@ -966,6 +1032,7 @@ public abstract class Enemy : MonoBehaviour {
         //Set move target to the return position
         this.moveTarget = startingPosition;
         //Set state to returning to said position
+        //Debug.Log("Switching Enemy states 12");
         this.enemyState = EnemyStates.ReturningFromEncounter;
     }
 
@@ -978,6 +1045,7 @@ public abstract class Enemy : MonoBehaviour {
         //Assign player as target
         attackTarget = targetObj;
         //Change to move to attack state
+        //Debug.Log("Switching Enemy states 13");
         enemyState = EnemyStates.ApproachingToAttack;
     }
 
@@ -988,6 +1056,7 @@ public abstract class Enemy : MonoBehaviour {
     /// </summary>
     public void CircleAroundPlayer()
     {
+        //Debug.Log("Switching Enemy states 14");
         this.enemyState = EnemyStates.SurroundingPlayer;
     }
 

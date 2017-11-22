@@ -837,6 +837,7 @@ MonoBehaviour:
   guardChance: 15
   counterAttackChance: 0
   dodgeChance: 0
+  lit: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
@@ -6953,6 +6954,7 @@ MonoBehaviour:
   guardChance: 15
   counterAttackChance: 0
   dodgeChance: 0
+  lit: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
@@ -11081,6 +11083,7 @@ MonoBehaviour:
   guardChance: 15
   counterAttackChance: 0
   dodgeChance: 0
+  lit: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
@@ -11965,6 +11968,7 @@ MonoBehaviour:
   guardChance: 15
   counterAttackChance: 0
   dodgeChance: 0
+  lit: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
@@ -16206,6 +16210,7 @@ MonoBehaviour:
   guardChance: 15
   counterAttackChance: 0
   dodgeChance: 0
+  lit: 0
   tempHitboxObj:
   - {fileID: 1471923024897964, guid: 376623480f8d56b47a1514dba5a84b2c, type: 2}
   - {fileID: 1670782336531646, guid: 2099fc28fa391f742972fb82a56ce032, type: 2}
