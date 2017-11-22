@@ -167,3 +167,9 @@
   <li>Reworked current sound system (still requires renaming of sound events)</li>
   <li>Added required sound cues (except for game end screen)</li>
 </ul>
+<h2>Garret Reynolds - 11/21/17 - 10:10PM</h2>
+<ul>
+  <li>added sound manager events to wwiseproject</li>
+  <li>renamed sound events to match sound manager</li>
+  <li>pausing, resuming, and navigating to the menu now affects the music</li>
+</ul>

@@ -17,20 +17,49 @@
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Dash"/>
-				<Event Id="3244706930" Name="Human_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Basic_Attack"/>
-				<Event Id="3823776748" Name="Human_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Brute_Attack"/>
-				<Event Id="892714673" Name="Human_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Spearman_Attack"/>
+				<Event Id="2442141738" Name="EnemyHumanAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanAttack"/>
+				<Event Id="2271782150" Name="EnemyHumanBruteAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteAttack"/>
+				<Event Id="3590139274" Name="EnemyHumanBruteDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDash"/>
+				<Event Id="3408497084" Name="EnemyHumanBruteDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDeath"/>
+				<Event Id="2421117389" Name="EnemyHumanBruteHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteHit"/>
+				<Event Id="735920725" Name="EnemyHumanBruteWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteWalk"/>
+				<Event Id="3056021366" Name="EnemyHumanDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDash"/>
+				<Event Id="3658215168" Name="EnemyHumanDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDeath"/>
+				<Event Id="2928579217" Name="EnemyHumanHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanHit"/>
+				<Event Id="3466660987" Name="EnemyHumanSpearmanAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanAttack"/>
+				<Event Id="3304273307" Name="EnemyHumanSpearmanDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDash"/>
+				<Event Id="3685561835" Name="EnemyHumanSpearmanDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDeath"/>
+				<Event Id="143401290" Name="EnemyHumanSpearmanHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanHit"/>
+				<Event Id="2131966636" Name="EnemyHumanSpearmanWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanWalk"/>
+				<Event Id="2268161225" Name="EnemyHumanWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanWalk"/>
+				<Event Id="3335836155" Name="EnemyShadowAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowAttack"/>
+				<Event Id="2295227437" Name="EnemyShadowBruteAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteAttack"/>
+				<Event Id="2691316833" Name="EnemyShadowBruteDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDash"/>
+				<Event Id="2859281905" Name="EnemyShadowBruteDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDeath"/>
+				<Event Id="4206366272" Name="EnemyShadowBruteHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteHit"/>
+				<Event Id="2857301246" Name="EnemyShadowBruteWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteWalk"/>
+				<Event Id="1517887259" Name="EnemyShadowDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDash"/>
+				<Event Id="3179006571" Name="EnemyShadowDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDeath"/>
+				<Event Id="1138021477" Name="EnemyShadowGlowerAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerAttack"/>
+				<Event Id="3498057465" Name="EnemyShadowGlowerDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDash"/>
+				<Event Id="3876290745" Name="EnemyShadowGlowerDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDeath"/>
+				<Event Id="2420314586" Name="EnemyShadowGlowerExplosion" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerExplosion"/>
+				<Event Id="3945367480" Name="EnemyShadowGlowerHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerHit"/>
+				<Event Id="3385257286" Name="EnemyShadowGlowerWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerWalk"/>
+				<Event Id="3970335178" Name="EnemyShadowHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowHit"/>
+				<Event Id="345580588" Name="EnemyShadowWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowWalk"/>
+				<Event Id="2197986718" Name="GameEnd" ObjectPath="\Events\Interactive Music\GameEnd"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
-				<Event Id="3607314950" Name="Prepare_Footsteps" ObjectPath="\Events\Default Work Unit\Adjudicator\Prepare_Footsteps"/>
+				<Event Id="2525052962" Name="PlayerDash" ObjectPath="\Events\Default Work Unit\Player\PlayerDash"/>
+				<Event Id="3831688773" Name="PlayerHit" ObjectPath="\Events\Default Work Unit\Player\PlayerHit"/>
+				<Event Id="2522435555" Name="PlayerShine" ObjectPath="\Events\Default Work Unit\Player\PlayerShine"/>
+				<Event Id="3910121377" Name="PlayerSlash" ObjectPath="\Events\Default Work Unit\Player\PlayerSlash"/>
+				<Event Id="3747613209" Name="PlayerSlashDeflected" ObjectPath="\Events\Default Work Unit\Player\PlayerSlashDeflected"/>
+				<Event Id="41749840" Name="PlayerThrust" ObjectPath="\Events\Default Work Unit\Player\PlayerThrust"/>
+				<Event Id="1592629277" Name="PlayerWalk" ObjectPath="\Events\Default Work Unit\Player\PlayerWalk"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
-				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
-				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
-				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Shine"/>
-				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Slash"/>
-				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust"/>
-				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Player\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="28478523" Language="SFX">
@@ -125,10 +154,10 @@
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient"/>
-				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat"/>
-				<Event Id="3678931145" Name="Music_Death" ObjectPath="\Events\Interactive Music\Music_Death"/>
+				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Interactive Music\Ambient"/>
+				<Event Id="2764240573" Name="Combat" ObjectPath="\Events\Interactive Music\Combat"/>
 				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
+				<Event Id="1656947812" Name="PlayerDeath" ObjectPath="\Events\Default Work Unit\Player\PlayerDeath"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="8938262" Language="SFX">

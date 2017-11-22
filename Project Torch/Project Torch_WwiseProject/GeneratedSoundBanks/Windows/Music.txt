@@ -1,11 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3611180283	Music_Ambient			\Interactive Music\Music_Ambient	
-	3678931145	Music_Death			\Interactive Music\Music_Death	
+	77978275	Ambient			\Interactive Music\Ambient	
+	1656947812	PlayerDeath			\Default Work Unit\Player\PlayerDeath	
+	2764240573	Combat			\Interactive Music\Combat	
 	3725903807	Music_Start			\Interactive Music\Music_Start	
-	3944980085	Music_Combat			\Interactive Music\Music_Combat	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Music	
+	4091656514	GameState			\Default Work Unit\GameState	
 
 State	ID	Name	State Group			Notes
 	77978275	Ambient	Music			
@@ -13,6 +14,12 @@ State	ID	Name	State Group			Notes
 	779278001	Death	Music			
 	2607556080	Menu	Music			
 	2764240573	Combat	Music			
+	748895195	None	GameState			
+	984691642	InGame	GameState			
+	3092587493	Pause	GameState			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	436275851	Pause	GameState	\Interactive Music Hierarchy\Default Work Unit\Music_Player		
 
 Effect plug-ins	ID	Name	Type				Notes
 	957302628	Wwise Delay (Custom)	Wwise Delay			

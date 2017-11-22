@@ -370,7 +370,6 @@
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</TransitionList>
@@ -10064,8 +10063,21 @@
 							<StateGroupInfo>
 								<StateGroupRef Name="Music" ID="{2C691CED-8B73-43AE-80B1-F065F6451DA3}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{D302768D-C16F-42FA-9E39-E925AE261915}"/>
+							</StateGroupInfo>
 						</StateGroupList>
-						<CustomStateList/>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Pause" ID="{B3196C30-E3E3-4B81-9619-B26B912D7829}"/>
+								<State Name="Custom State" ID="{3B082CAB-C5DE-4341-B6FD-7321AD2DCDFB}" ShortID="436275851">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="32"/>
+										<Property Name="Volume" Type="Real64" Value="-8"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
 					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{A84B3B7B-7C59-49A5-98D8-BB6A29C1AC4D}">

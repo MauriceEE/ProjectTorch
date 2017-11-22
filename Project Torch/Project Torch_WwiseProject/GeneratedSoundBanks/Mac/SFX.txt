@@ -1,19 +1,48 @@
 Event	ID	Name			Wwise Object Path	Notes
+	41749840	PlayerThrust			\Default Work Unit\Player\PlayerThrust	
+	143401290	EnemyHumanSpearmanHit			\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanHit	
 	317641954	ButtonPress			\Default Work Unit\UI\ButtonPress	
+	345580588	EnemyShadowWalk			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowWalk	
 	454121546	Scroll			\Default Work Unit\UI\Scroll	
-	892714673	Human_Spearman_Attack			\Default Work Unit\Enemies\Human_Spearman_Attack	
+	735920725	EnemyHumanBruteWalk			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteWalk	
 	953277036	Resume			\Default Work Unit\UI\Resume	
-	1942692385	Dash			\Default Work Unit\Adjudicator\Attacks and Abilities\Dash	
-	2197345151	Thrust			\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust	
-	2547765723	Torch_Plant			\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant	
-	3055381918	Shine			\Default Work Unit\Adjudicator\Attacks and Abilities\Shine	
+	1138021477	EnemyShadowGlowerAttack			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerAttack	
+	1517887259	EnemyShadowDash			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDash	
+	1592629277	PlayerWalk			\Default Work Unit\Player\PlayerWalk	
+	2131966636	EnemyHumanSpearmanWalk			\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanWalk	
+	2197986718	GameEnd			\Interactive Music\GameEnd	
+	2268161225	EnemyHumanWalk			\Default Work Unit\Enemies\EnemyHuman\EnemyHumanWalk	
+	2271782150	EnemyHumanBruteAttack			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteAttack	
+	2295227437	EnemyShadowBruteAttack			\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteAttack	
+	2420314586	EnemyShadowGlowerExplosion			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerExplosion	
+	2421117389	EnemyHumanBruteHit			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteHit	
+	2442141738	EnemyHumanAttack			\Default Work Unit\Enemies\EnemyHuman\EnemyHumanAttack	
+	2522435555	PlayerShine			\Default Work Unit\Player\PlayerShine	
+	2525052962	PlayerDash			\Default Work Unit\Player\PlayerDash	
+	2547765723	Torch_Plant			\Default Work Unit\Player\Torch_Plant	
+	2691316833	EnemyShadowBruteDash			\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDash	
+	2857301246	EnemyShadowBruteWalk			\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteWalk	
+	2859281905	EnemyShadowBruteDeath			\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDeath	
+	2928579217	EnemyHumanHit			\Default Work Unit\Enemies\EnemyHuman\EnemyHumanHit	
+	3056021366	EnemyHumanDash			\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDash	
 	3092587493	Pause			\Default Work Unit\UI\Pause	
-	3244706930	Human_Basic_Attack			\Default Work Unit\Enemies\Human_Basic_Attack	
-	3498381063	Shadow_Brute_Attack			\Default Work Unit\Enemies\Shadow_Brute_Attack	
-	3607314950	Prepare_Footsteps			\Default Work Unit\Adjudicator\Prepare_Footsteps	
-	3817024617	Shadow_Basic_Attack			\Default Work Unit\Enemies\Shadow_Basic_Attack	
-	3823776748	Human_Brute_Attack			\Default Work Unit\Enemies\Human_Brute_Attack	
-	4107276880	Slash			\Default Work Unit\Adjudicator\Attacks and Abilities\Slash	
+	3179006571	EnemyShadowDeath			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDeath	
+	3304273307	EnemyHumanSpearmanDash			\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDash	
+	3335836155	EnemyShadowAttack			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowAttack	
+	3385257286	EnemyShadowGlowerWalk			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerWalk	
+	3408497084	EnemyHumanBruteDeath			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDeath	
+	3466660987	EnemyHumanSpearmanAttack			\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanAttack	
+	3498057465	EnemyShadowGlowerDash			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDash	
+	3590139274	EnemyHumanBruteDash			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDash	
+	3658215168	EnemyHumanDeath			\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDeath	
+	3685561835	EnemyHumanSpearmanDeath			\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDeath	
+	3747613209	PlayerSlashDeflected			\Default Work Unit\Player\PlayerSlashDeflected	
+	3831688773	PlayerHit			\Default Work Unit\Player\PlayerHit	
+	3876290745	EnemyShadowGlowerDeath			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDeath	
+	3910121377	PlayerSlash			\Default Work Unit\Player\PlayerSlash	
+	3945367480	EnemyShadowGlowerHit			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerHit	
+	3970335178	EnemyShadowHit			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowHit	
+	4206366272	EnemyShadowBruteHit			\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteHit	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2557281390	PlayerMovementSpeed			\Default Work Unit\PlayerMovementSpeed	

@@ -13,24 +13,53 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENT = 77978275U;
         static const AkUniqueID BUTTONPRESS = 317641954U;
-        static const AkUniqueID DASH = 1942692385U;
-        static const AkUniqueID HUMAN_BASIC_ATTACK = 3244706930U;
-        static const AkUniqueID HUMAN_BRUTE_ATTACK = 3823776748U;
-        static const AkUniqueID HUMAN_SPEARMAN_ATTACK = 892714673U;
-        static const AkUniqueID MUSIC_AMBIENT = 3611180283U;
-        static const AkUniqueID MUSIC_COMBAT = 3944980085U;
-        static const AkUniqueID MUSIC_DEATH = 3678931145U;
+        static const AkUniqueID COMBAT = 2764240573U;
+        static const AkUniqueID ENEMYHUMANATTACK = 2442141738U;
+        static const AkUniqueID ENEMYHUMANBRUTEATTACK = 2271782150U;
+        static const AkUniqueID ENEMYHUMANBRUTEDASH = 3590139274U;
+        static const AkUniqueID ENEMYHUMANBRUTEDEATH = 3408497084U;
+        static const AkUniqueID ENEMYHUMANBRUTEHIT = 2421117389U;
+        static const AkUniqueID ENEMYHUMANBRUTEWALK = 735920725U;
+        static const AkUniqueID ENEMYHUMANDASH = 3056021366U;
+        static const AkUniqueID ENEMYHUMANDEATH = 3658215168U;
+        static const AkUniqueID ENEMYHUMANHIT = 2928579217U;
+        static const AkUniqueID ENEMYHUMANSPEARMANATTACK = 3466660987U;
+        static const AkUniqueID ENEMYHUMANSPEARMANDASH = 3304273307U;
+        static const AkUniqueID ENEMYHUMANSPEARMANDEATH = 3685561835U;
+        static const AkUniqueID ENEMYHUMANSPEARMANHIT = 143401290U;
+        static const AkUniqueID ENEMYHUMANSPEARMANWALK = 2131966636U;
+        static const AkUniqueID ENEMYHUMANWALK = 2268161225U;
+        static const AkUniqueID ENEMYSHADOWATTACK = 3335836155U;
+        static const AkUniqueID ENEMYSHADOWBRUTEATTACK = 2295227437U;
+        static const AkUniqueID ENEMYSHADOWBRUTEDASH = 2691316833U;
+        static const AkUniqueID ENEMYSHADOWBRUTEDEATH = 2859281905U;
+        static const AkUniqueID ENEMYSHADOWBRUTEHIT = 4206366272U;
+        static const AkUniqueID ENEMYSHADOWBRUTEWALK = 2857301246U;
+        static const AkUniqueID ENEMYSHADOWDASH = 1517887259U;
+        static const AkUniqueID ENEMYSHADOWDEATH = 3179006571U;
+        static const AkUniqueID ENEMYSHADOWGLOWERATTACK = 1138021477U;
+        static const AkUniqueID ENEMYSHADOWGLOWERDASH = 3498057465U;
+        static const AkUniqueID ENEMYSHADOWGLOWERDEATH = 3876290745U;
+        static const AkUniqueID ENEMYSHADOWGLOWEREXPLOSION = 2420314586U;
+        static const AkUniqueID ENEMYSHADOWGLOWERHIT = 3945367480U;
+        static const AkUniqueID ENEMYSHADOWGLOWERWALK = 3385257286U;
+        static const AkUniqueID ENEMYSHADOWHIT = 3970335178U;
+        static const AkUniqueID ENEMYSHADOWWALK = 345580588U;
+        static const AkUniqueID GAMEEND = 2197986718U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID PAUSE = 3092587493U;
-        static const AkUniqueID PREPARE_FOOTSTEPS = 3607314950U;
+        static const AkUniqueID PLAYERDASH = 2525052962U;
+        static const AkUniqueID PLAYERDEATH = 1656947812U;
+        static const AkUniqueID PLAYERHIT = 3831688773U;
+        static const AkUniqueID PLAYERSHINE = 2522435555U;
+        static const AkUniqueID PLAYERSLASH = 3910121377U;
+        static const AkUniqueID PLAYERSLASHDEFLECTED = 3747613209U;
+        static const AkUniqueID PLAYERTHRUST = 41749840U;
+        static const AkUniqueID PLAYERWALK = 1592629277U;
         static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID SCROLL = 454121546U;
-        static const AkUniqueID SHADOW_BASIC_ATTACK = 3817024617U;
-        static const AkUniqueID SHADOW_BRUTE_ATTACK = 3498381063U;
-        static const AkUniqueID SHINE = 3055381918U;
-        static const AkUniqueID SLASH = 4107276880U;
-        static const AkUniqueID THRUST = 2197345151U;
         static const AkUniqueID TORCH_PLANT = 2547765723U;
     } // namespace EVENTS
 

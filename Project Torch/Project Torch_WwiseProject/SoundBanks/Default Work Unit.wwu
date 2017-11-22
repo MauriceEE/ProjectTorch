@@ -12,21 +12,50 @@
 						</Property>
 					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="Slash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerSlash" ID="{1600AF18-0305-4018-9CD8-50C8903A9663}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerSlashDeflected" ID="{8E19C2CE-A178-4069-85E7-F2072A1E335F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowBruteDeath" ID="{82E4C8EC-576D-41C8-A448-3B0A1F67B526}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Torch_Plant" ID="{9E753482-0DDE-4265-BDCE-95A7669C4992}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Shadow_Basic_Attack" ID="{925F175B-2656-4349-9502-D88C9EF8FADE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Dash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerWalk" ID="{CAF671C1-287E-42BD-AC9B-03E55C82DBC1}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanBruteHit" ID="{4539A6BF-BACF-42D1-B6B8-638AF58DE7A3}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowDash" ID="{667862B3-A158-4340-B333-BFD6F2D23991}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowAttack" ID="{925F175B-2656-4349-9502-D88C9EF8FADE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerDash" ID="{65FBC014-57DC-43BC-8418-1512C28A2908}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanBruteDeath" ID="{466B509E-422B-43C3-B5A9-766C31512943}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Resume" ID="{6D0C8E99-260A-43EB-A8F7-5BE239E8654F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Human_Spearman_Attack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanSpearmanAttack" ID="{A045AA2B-8D44-4451-8F29-644D15894B94}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanSpearmanDeath" ID="{6FDB4B47-4C8C-4488-B0DB-C1B08CB9784E}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanDash" ID="{3E1AFFE0-79A0-448B-9597-548960C1A5AA}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerHit" ID="{30B3AA91-AF19-450A-AA42-9082CFEEB934}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="GameEnd" ID="{B0514D08-A319-452C-AC48-AA999CA57441}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanDeath" ID="{6E20ACD1-BCF1-462E-A7A7-94A8DC4B77CC}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerDash" ID="{AD0EEA64-89B5-4683-9B3C-1026D7F12CE4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanSpearmanHit" ID="{513572F6-0032-4830-9FF6-C60076257979}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanWalk" ID="{66B993ED-A1C5-48C1-86F3-51917B1D9721}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{80918E80-D952-49C7-BC00-D89CD555693B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Shadow_Brute_Attack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Prepare_Footsteps" ID="{82EF69E2-3F9C-4B43-9DED-B6DB4C6D81D4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Shine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Human_Basic_Attack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Human_Brute_Attack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerExplosion" ID="{7554DD27-FC94-49ED-84A9-8730DE0EB6CF}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowBruteAttack" ID="{E114D724-92F5-49F9-8492-7468F221A40D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerDeath" ID="{26927817-C3C1-4A31-B6A5-D4F24FD77432}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanSpearmanWalk" ID="{1F3CCEB7-8EA1-4A34-8211-6A2200209CBF}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerHit" ID="{A97BBFB0-CD7A-4A38-8322-2523028A9BFE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowBruteHit" ID="{4C3D3A13-05AD-4A4D-B3A8-0EC6F412AEAB}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanHit" ID="{841B71B5-56A3-4B23-A3C3-70B78E28DC56}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerWalk" ID="{82EF69E2-3F9C-4B43-9DED-B6DB4C6D81D4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerShine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanAttack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanBruteAttack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanBruteDash" ID="{66009FE0-0E88-4C1D-A9BC-D6417B4A8307}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Thrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanBruteWalk" ID="{7958D5FB-B9A3-4D36-8C32-974C2D1DCD8D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyHumanSpearmanDash" ID="{CC451905-B3C0-4D53-8328-03BA5EEB689B}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowWalk" ID="{7C30A2CE-665F-4D73-B6B7-0EB241B017CC}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowDeath" ID="{0E6F5FC0-50F4-4DB3-9517-B16043EC0115}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowGlowerAttack" ID="{DECC0010-D195-4DFB-B08D-2E1E7E608FA9}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowBruteDash" ID="{AE56E954-6D73-4E38-97B6-6BFC3BAE41FC}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerThrust" ID="{19F70772-910C-4E5B-BD61-CC211FA3A50A}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowBruteWalk" ID="{F698979C-02A3-4E8E-801E-5A9C6AF040E0}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EnemyShadowHit" ID="{66F18DF6-F3C8-4F42-A11B-8EC5D1C45597}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -41,9 +70,9 @@
 					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Music_Start" ID="{A93330B6-2F58-4005-A77A-B711A2C9853E}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Music_Death" ID="{88992261-DFF6-4277-A9E6-814F447DE8BE}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Music_Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerDeath" ID="{88992261-DFF6-4277-A9E6-814F447DE8BE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

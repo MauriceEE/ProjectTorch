@@ -6,11 +6,11 @@
 				<SoundcasterSession Name="Music Test" ID="{476F4668-95B4-4DA7-813A-5EC3D456E8ED}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}"/>
+							<ObjectRef Name="Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Music_Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}"/>
+							<ObjectRef Name="Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}" WorkUnitID="{9E0BAA25-75AD-40C7-84D4-F510AD25B99D}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
@@ -45,7 +45,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Menu" ID="{23073EF2-001F-4715-B8DD-3E685984CC70}"/>
+						<CurrentStateRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}"/>
+						<CurrentStateRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>

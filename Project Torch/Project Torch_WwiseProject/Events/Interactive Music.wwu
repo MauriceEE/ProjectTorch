@@ -17,7 +17,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music_Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}">
+				<Event Name="Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}">
 					<ChildrenList>
 						<Action Name="" ID="{E5B3872B-8A96-4B5B-A171-30DF9E1563F4}" ShortID="621284398">
 							<PropertyList>
@@ -31,7 +31,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music_Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}">
+				<Event Name="Ambient" ID="{E7B47741-1A0B-4130-B48C-93861ECF4243}">
 					<ChildrenList>
 						<Action Name="" ID="{BEC240A5-0131-4B4A-827F-81A429DA025D}" ShortID="510471894">
 							<PropertyList>
@@ -45,31 +45,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music_Death" ID="{88992261-DFF6-4277-A9E6-814F447DE8BE}">
-					<ChildrenList>
-						<Action Name="" ID="{E686949F-C86D-435D-A925-2F319DD735E0}" ShortID="703975358">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Death" ID="{2367E19C-961E-4E12-8951-F49ABC8F9752}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{24420525-FC62-4DC5-929A-098EC479B94C}" ShortID="900390605">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-								<Property Name="Delay" Type="Real64" Value="3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="GameEnd" ID="{B0514D08-A319-452C-AC48-AA999CA57441}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

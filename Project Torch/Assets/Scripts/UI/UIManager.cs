@@ -26,8 +26,11 @@ public class UIManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape) && !isMenu && !optionsCanvas.activeSelf) {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
+			AkSoundEngine.SetState ("GameState", "Pause");
             if (Time.timeScale != 0f) { Time.timeScale = 0f; } 
-            else { Time.timeScale = 1f; }
+            else { Time.timeScale = 1f; 
+				AkSoundEngine.SetState ("GameState", "InGame");
+			}
             es.SetSelectedGameObject(resume.gameObject);
         }else if(Input.GetKeyDown(KeyCode.Escape) && optionsCanvas.activeSelf) {
             HideOptions();
@@ -60,6 +63,7 @@ public class UIManager : MonoBehaviour {
         menuCanvas.SetActive(false);
         es.SetSelectedGameObject(null);
         Time.timeScale = 1f;
+		AkSoundEngine.SetState ("GameState", "InGame");
     }
     public void ExitGame() {
         Application.Quit();
@@ -68,6 +72,7 @@ public class UIManager : MonoBehaviour {
     }
     public void LoadMainMenu() {
         SceneManager.LoadScene("Main Menu");
+		AkSoundEngine.SetState ("Music", "Menu");
 
     }
     public void LoadGame() {
