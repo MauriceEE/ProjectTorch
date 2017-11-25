@@ -62,10 +62,6 @@
 				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Player\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="28478523" Language="SFX">
-					<ShortName>Close_1.WAV</ShortName>
-					<Path>SFX/Close_1_B7F88020.wem</Path>
-				</File>
 				<File Id="42804537" Language="SFX">
 					<ShortName>PlayerSlashDeflected01.wav</ShortName>
 					<Path>SFX/PlayerSlashDeflected01_F7D0E330.wem</Path>
@@ -105,6 +101,10 @@
 				<File Id="309056163" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_AFBCAD86.wem</Path>
+				</File>
+				<File Id="483852296" Language="SFX">
+					<ShortName>PlayerDeath01.wav</ShortName>
+					<Path>SFX/PlayerDeath01_F7D0E330.wem</Path>
 				</File>
 				<File Id="508779539" Language="SFX">
 					<ShortName>PlayerThrust.wav</ShortName>
@@ -146,6 +146,10 @@
 					<ShortName>HumanHit01.wav</ShortName>
 					<Path>SFX/HumanHit01_F7D0E330.wem</Path>
 				</File>
+				<File Id="1000430789" Language="SFX">
+					<ShortName>EnemyShadowDeath01.wav</ShortName>
+					<Path>SFX/EnemyShadowDeath01_F7D0E330.wem</Path>
+				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 32_0BDA7ABA.wem</Path>
@@ -156,7 +160,7 @@
 				</File>
 				<File Id="1068839159" Language="SFX">
 					<ShortName>HumanBruteSlash01.wav</ShortName>
-					<Path>SFX/HumanBruteSlash01_EFBFD7AB.wem</Path>
+					<Path>SFX/HumanBruteSlash01_B500ECC1.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
