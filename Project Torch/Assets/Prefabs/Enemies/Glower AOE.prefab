@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 10
   activeDuration: 8
-  slowDuration: 5
+  slowDuration: 0.5
   radius: 1.12
 --- !u!198 &198720489906666782
 ParticleSystem:

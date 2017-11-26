@@ -109,9 +109,11 @@ public class GlowerProjectile : MonoBehaviour {
     protected void CheckCollisionsWithEnemies()
     {
         for (int i = 0; i < enemyMan.encounterEnemies.Count; ++i)
-            if (!enemyMan.encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer && 
+            if (!enemyMan.encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer &&
                 (this.transform.position - enemyMan.encounterEnemies[i].transform.position).sqrMagnitude < hitRadius * hitRadius)
+            {
                 Explode();
+            }
     }
     /// <summary>
     /// Checks distance to the player and explodes if contact is made
@@ -119,7 +121,10 @@ public class GlowerProjectile : MonoBehaviour {
     protected void CheckCollisionsWithPlayer()
     {
         if ((this.transform.position - player.transform.position).sqrMagnitude < hitRadius * hitRadius)
+        {
             Explode();
+            player.TakeDamage(5);
+        }
     }
     /// <summary>
     /// Billy Mays here with Kaboom

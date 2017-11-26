@@ -11,6 +11,7 @@ using UnityEngine;
 
 public class Enemy_Brute : Enemy
 {
+    protected float guardTime;
     #region Unity Defaults
     protected void Start()
     {
@@ -19,6 +20,10 @@ public class Enemy_Brute : Enemy
         soundEffect_Death = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteDeath : SoundManager.SoundEffects.EnemyShadowBruteDeath;
         soundEffect_Hit = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteHit : SoundManager.SoundEffects.EnemyShadowBruteHit;
         soundEffect_Walk = (faction == EnemyFaction.Human) ? SoundManager.SoundEffects.EnemyHumanBruteWalk : SoundManager.SoundEffects.EnemyShadowBruteWalk;
+        base.guardStacks += 1;
+        base.guarding = true;
+        if (base.guarding) baseColor = Color.yellow;
+        guardTime = 0;
     }
     #endregion
     #region Override Methods
@@ -28,7 +33,7 @@ public class Enemy_Brute : Enemy
     }
     protected override void React()
     {
-        base.maxGuardStacks = 3;
+        base.maxGuardStacks = 1;
         //Generate random chance between 0% and 100% (represented as 0 to 100)
         float rand = Random.Range(0f, 100f);
         //Check to see if we fell within guard's percent chance
@@ -80,11 +85,14 @@ public class Enemy_Brute : Enemy
     }
     public override void TakeDamage(float damage, PlayerCombat.Attacks attackType)
     {
+        guardTime = 0; // reset guard time on hit
         base.TakeDamage(damage, attackType);
     }
     protected override void UpdateColor()
     {
         base.UpdateColor();
+        if (!lit && faction == EnemyFaction.Shadow && base.guardStacks <= 0 && enemyState != EnemyStates.ApproachingToAttack && enemyState != EnemyStates.Attacking) baseColor.a = .75f;
+        this.GetComponent<SpriteRenderer>().color = baseColor;
     }
     protected override void UpdateCombatState()
     {
@@ -94,6 +102,29 @@ public class Enemy_Brute : Enemy
             SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
             attackAudioPlayed = true;
         }
+
+        // if no guard stacks, update guardTime
+        if (guardStacks <= 0) guardTime += Time.deltaTime;
+        else guardTime = 0;
+
+        switch(faction)
+        {
+            case EnemyFaction.Human:
+                if (guardTime >= 2.5f) // after 2 seconds, put up guard again
+                {
+                    Mathf.Clamp(guardStacks++, 0, 1);
+                    guarding = true;
+                }
+                break;
+            case EnemyFaction.Shadow:
+                if (guardTime >= 4.5f) // after 4 seconds, put up guard again
+                {
+                    Mathf.Clamp(guardStacks++, 0, 1);
+                    guarding = true;
+                }
+                break;
+        }
+
         if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;
     }
     protected override void UpdateEnemyState()

@@ -181,3 +181,13 @@
 <ul>
   <li>Added in more difficult boss encounters with different prefabs</li>
 </ul>
+<h2>Maurice Edwards - 11/26/17 - 0:34</h2>
+<ul>
+  <li>Reworked Brute. See Build Notes doc for details</li>
+  <li>Basic shadow enemies now turn partially opaque when going to attack</li>
+  <li>Adjusted Spearman start-up frames, attack range, and attack hitbox heights. See build notes for exact numbers</li>
+  <li>Adjust Glower across the board. See Build Notes doc for details.</li>
+  <li>Added and improved tutorials. Had to rewrite InstructionManager and InstructionTrigger</li>
+  <li>Adjusted some later encounters to better introduce enemies</li>
+  <li>Normalized damage and start-up frames of boss enemies</li>
+</ul>

@@ -32,10 +32,28 @@ public class Enemy_Glower : Enemy {
         soundEffect_Death = SoundManager.SoundEffects.EnemyShadowGlowerDeath;
         soundEffect_Hit = SoundManager.SoundEffects.EnemyShadowGlowerHit;
         soundEffect_Walk = SoundManager.SoundEffects.EnemyShadowGlowerWalk;
+
+        base.enemyLight = gameObject.AddComponent<Light>();
+        base.enemyLight.range = 3.5f;
+        base.enemyLight.intensity = 12;
+        base.enemyLight.color = new Color((155 / 255), (0 / 255), (155 / 255));
+        base.lightTimer = 0;
+        base.glower = true;
     }
     protected override void Update()
     {
+        // stay a purplish hue, Ponyboy
+        if (base.lightTimer <= 0)
+        {
+            //base.enemyLight = gameObject.AddComponent<Light>();
+            //base.enemyLight.range = 3.5f;
+            base.enemyLight.intensity = 3;
+            base.enemyLight.color = Color.magenta;
+        }
+
+        //BASE UPDATE
         base.Update();
+        
         //Check shine hit
         if (shinedCooldown > 0 && playerCombat.CurrentAttack == PlayerCombat.Attacks.Shine) 
         {

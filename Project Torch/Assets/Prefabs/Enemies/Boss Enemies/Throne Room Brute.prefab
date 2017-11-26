@@ -89,7 +89,7 @@ MonoBehaviour:
   arrivalRadius: 3
   attackRange: 1.8
   awarenessRange: 5
-  atDamage: 20
+  atDamage: 17
   atStartup: 30
   atActive: 14
   atRecovery: 12

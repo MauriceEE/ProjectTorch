@@ -92,7 +92,7 @@ MonoBehaviour:
   atDamage: 10
   atStartup: 17
   atActive: 0
-  atRecovery: 10
+  atRecovery: 120
   atKnockbackTime: 0
   atKnockbackSpeed: 0
   atEditorHitboxes: 1

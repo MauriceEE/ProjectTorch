@@ -280,6 +280,7 @@ public class EnemyManager : MonoBehaviour {
         int ogRando = rando;
         while (encounterEnemies[rando].GetComponent<Enemy>().faction == allyFaction)
         {
+            //Debug.Log("Forever allies?: " + Time.fixedTime);
             //Look for next enemy
             ++rando;
             //Make sure we're not out of bounds
@@ -391,6 +392,8 @@ public class EnemyManager : MonoBehaviour {
             int randIndex = Random.Range(0, 6);
             while (surroundingGridOccupants[randIndex] == null) 
             {
+                //Debug.Log("Infinite loop?: " + Time.fixedTime);
+                Debug.Log(randIndex);
                 ++randIndex;
                 if (randIndex >= 6)
                     randIndex = 0;
@@ -403,7 +406,7 @@ public class EnemyManager : MonoBehaviour {
             //Tell the enemy we found to attack
             surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
             //Remove him from the guys surrounding the player
-            surroundingGridOccupants[randIndex] = null;
+            surroundingGridOccupants[randIndex] = null; // I think this is a problem. ISSUE
             //Cooldown before next attack order
             timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
         }

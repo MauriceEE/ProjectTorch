@@ -99,6 +99,7 @@ public abstract class Enemy : MonoBehaviour {
     protected bool alliedWithPlayer;
     //Used for resetting
     protected Vector3 startingPosition;
+    protected bool glower;
     //Whether or not this enemy is being attacked by another
     //protected bool targetedByEnemy;
     // Base color
@@ -262,6 +263,7 @@ public abstract class Enemy : MonoBehaviour {
         enemyLight = null;
         lit = false;
         stunTime = 0;
+        glower = false;
     }
 	
 	protected virtual void Update () {
@@ -285,7 +287,7 @@ public abstract class Enemy : MonoBehaviour {
         else
         {
             lit = false;
-            RemoveLight();
+            if(!glower) RemoveLight();
         }
 
         // check if the enemy has taken hits recently
@@ -734,6 +736,9 @@ public abstract class Enemy : MonoBehaviour {
     {
         lightTimer = timeLit;
         if (enemyLight == null) CreateLight();
+        enemyLight.range = 3.5f;
+        enemyLight.intensity = 12;
+        enemyLight.color = new Color((255 / 255), (200 / 255), (144 / 255));
     }
 
     public void ShareTheLight()

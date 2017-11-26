@@ -45,6 +45,8 @@ public class Enemy_Basic : Enemy {
     protected override void UpdateColor()
     {
         base.UpdateColor();
+        if (!lit && faction == EnemyFaction.Shadow && enemyState == EnemyStates.ApproachingToAttack) baseColor.a = .5f;
+        this.GetComponent<SpriteRenderer>().color = baseColor;
     }
     protected override void UpdateCombatState()
     {

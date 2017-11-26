@@ -63,6 +63,7 @@ public class ZoneManager : MonoBehaviour {
     protected FlagManager flagMan;
     //Array of all possible zones in the game
     protected Zone[] zones;
+    protected InstructionManager instructMan;
     #endregion
 
     #region Properties
@@ -98,6 +99,7 @@ public class ZoneManager : MonoBehaviour {
         UpdateCameraClamp();
         //Get flag manager
         flagMan = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
+        instructMan = GameObject.Find("InstructionManagerGO").GetComponent<InstructionManager>();
     }
 
     void Start()
@@ -149,6 +151,7 @@ public class ZoneManager : MonoBehaviour {
     {
         phase = TransitionPhase.FadingOut;
         nextZone = _nextZone;
+        instructMan.changeInstructions("Off"); // turn off any lingering tutorials
         //newPlayerXCoordinate = newXCoordinate;
     }
     /// <summary>
