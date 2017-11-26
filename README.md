@@ -181,6 +181,11 @@
 <ul>
   <li>Added in more difficult boss encounters with different prefabs</li>
 </ul>
+<h2>Garret Reynolds - 11/25/17 - 5:11PM</h2>
+<ul>
+  <li>All enemies now have attack, hit, and death sounds.</li>
+  <li>All player events have sounds (PlayerWalk is still broken).</li>
+</ul>
 <h2>Maurice Edwards - 11/26/17 - 0:34</h2>
 <ul>
   <li>Reworked Brute. See Build Notes doc for details</li>

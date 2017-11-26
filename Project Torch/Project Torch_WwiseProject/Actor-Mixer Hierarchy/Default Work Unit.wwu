@@ -929,18 +929,6 @@
 				<Folder Name="Enemies" ID="{B4006014-4D27-42DC-A5EA-13271E9B0813}" ShortID="1072743668">
 					<ChildrenList>
 						<RandomSequenceContainer Name="EnemyHumanSpearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" ShortID="543232634">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>780</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -953,20 +941,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Torch_Plant_01" ID="{C37C4A63-E7E0-4749-9F82-BD76FD8A2D5A}" ShortID="419248414">
+								<Sound Name="PlayerThrust" ID="{AF54FF55-FE89-4AF5-861F-B27A13D88632}" ShortID="144558884">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{81EFADD1-BECD-408B-BDFA-B4EE44CBED6C}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="60"/>
-															<Property Name="Min" Type="Real64" Value="-60"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
+											<ValueList>
+												<Value>150</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -974,25 +954,23 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+											<ObjectRef Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Close_1" ID="{ACEDB4CF-1394-4E1A-B7E7-9DAAA318FB6C}" ShortID="226666135">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.20166897727659"/>
-												<Property Name="TrimBegin" Type="Real64" Value="10.01030768122"/>
-												<Property Name="TrimEnd" Type="Real64" Value="10.3064649402401"/>
-											</PropertyList>
+										<AudioFileSource Name="PlayerThrust" ID="{219CA99D-ECD0-470B-A813-6A44ADCE3BA5}" ShortID="632947490">
 											<Language>SFX</Language>
-											<AudioFile>Close_1.WAV</AudioFile>
+											<AudioFile>PlayerThrust.wav</AudioFile>
 											<ConvertedFileIDList>
-												<File ID="28478523"/>
+												<File ID="508779539"/>
 											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Close_1" ID="{ACEDB4CF-1394-4E1A-B7E7-9DAAA318FB6C}" Platform="Linked"/>
+										<ActiveSource Name="PlayerThrust" ID="{219CA99D-ECD0-470B-A813-6A44ADCE3BA5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1448,6 +1426,259 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="EnemyShadowSlash" ID="{318705F9-4B0C-4037-AD89-BD79E7DD6639}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyHumanBruteDeath" ID="{09362367-30FD-493F-AE70-ADE1B6D4788A}" ShortID="208781589">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="PlayerDeath01" ID="{A7A5455D-4077-48E1-A0BF-50F412C97D0F}" ShortID="492435166">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerDeath01" ID="{B4E63B33-536C-4CB6-96A6-D67F5500EE33}" ShortID="730008510">
+											<Language>SFX</Language>
+											<AudioFile>PlayerDeath01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="483852296"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerDeath01" ID="{B4E63B33-536C-4CB6-96A6-D67F5500EE33}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyHumanSpearmanHit" ID="{3B7E54B4-B32A-425F-9AFD-953C0CB4F166}" ShortID="517590182">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A67F5D74-A741-42DC-B543-2CF729CC8E25}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EnemyHumanHit01" ID="{3C8FCF02-EC09-493A-829A-FBBF8E93C91C}" ShortID="633269397">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyHumanHit01" ID="{14F8ACD7-113E-4AA1-8563-BFC86D8EF135}" ShortID="520410184">
+											<Language>SFX</Language>
+											<AudioFile>EnemyHumanHit01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="288819436"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyHumanHit01" ID="{14F8ACD7-113E-4AA1-8563-BFC86D8EF135}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyHumanSpearmanDeath" ID="{58A2E9AA-9C70-4D22-87C4-812DA42E70D6}" ShortID="43471791">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="PlayerDeath01" ID="{7516D298-A875-4FE0-A513-30A55A32F7D5}" ShortID="372184132">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-600</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerDeath01" ID="{23316E4D-EF70-47B6-891F-BC91BBDC638C}" ShortID="511139552">
+											<Language>SFX</Language>
+											<AudioFile>PlayerDeath01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="483852296"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerDeath01" ID="{23316E4D-EF70-47B6-891F-BC91BBDC638C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyShadowBruteDeath" ID="{FEEEF6DE-89D6-42AD-B070-5D8CC5B27CA4}" ShortID="547586967">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Outside_Verb" ID="{3F901C23-8EC5-42F2-9584-1BE3382928E0}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EnemyShadowDeath01" ID="{AE609CFD-4C89-4623-86C3-E2C2E33502BD}" ShortID="181882515">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>29</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-400</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyShadowDeath01" ID="{05E6F251-9109-4050-B73F-9A1E8F43F6A7}" ShortID="1056476939">
+											<Language>SFX</Language>
+											<AudioFile>EnemyShadowDeath01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="1000430789"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyShadowDeath01" ID="{05E6F251-9109-4050-B73F-9A1E8F43F6A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="EnemyShadowBruteHit" ID="{49906AA6-4565-4C56-A87D-BC30E53E6E5A}" ShortID="886693801">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ShadowHit01" ID="{4EB2C284-B344-4E91-AF82-9CEF61D7BCBE}" ShortID="557757217">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>53</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ShadowHit01" ID="{793AA0C0-3AAA-4FEA-B156-83B44042C6F2}" ShortID="80131160">
+											<Language>SFX</Language>
+											<AudioFile>ShadowHit01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="904889417"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ShadowHit01" ID="{793AA0C0-3AAA-4FEA-B156-83B44042C6F2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

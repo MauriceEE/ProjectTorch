@@ -48,7 +48,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2557281390	PlayerMovementSpeed			\Default Work Unit\PlayerMovementSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	28478523	Torch_Plant_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Close_1_B7F88020.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanSpearman Attack\Torch_Plant_01		5122
 	42804537	PlayerSlashDeflected01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerSlashDeflected01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerSlashDeflected\PlayerSlashDeflected01		22797
 	78114416	Bootsteps on wood_04	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bootsteps on wood_C9C93460.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_04		3934
 	128772641	Bootsteps on wood_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bootsteps on wood_122954F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_01		3704
@@ -59,17 +58,19 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	252585733	HumanSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\HumanSlash01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerSlash\HumanSlash01		9519
 	288819436	EnemyHumanHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\EnemyHumanHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteHit\EnemyHumanHit01		5159
 	309056163	Bootsteps on wood	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bootsteps on wood_AFBCAD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood		3635
-	508779539	PlayerThrust	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerThrust_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerThrust\PlayerThrust		4498
+	483852296	PlayerDeath01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerDeath01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteDeath\PlayerDeath01		19901
+	508779539	PlayerThrust	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerThrust_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanSpearman Attack\PlayerThrust		4498
 	616304823	PlayerShine01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerShine01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerShine\PlayerShine01		57018
 	755251734	PlayerDash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerDash01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerDash\PlayerDash01		11153
 	855263217	Bootsteps on wood_06	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bootsteps on wood_68BF4BF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_06		3860
 	861456897	Bootsteps on wood_03	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Bootsteps on wood_E4E86892.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_03		3672
 	871341411	Pause	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Thick Plastic Hits 36_AFF4A735.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pause		1181
 	877535839	EnemyShadowSlash	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\EnemyShadowSlash_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyShadowAttack\EnemyShadowSlash		6282
-	904889417	ShadowHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\ShadowHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyShadowHit\ShadowHit01		21875
+	904889417	ShadowHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\ShadowHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyShadowBruteHit\ShadowHit01		21875
 	939083768	Torch_Plant	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Close_1_3820EE0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Torch_Plant		1857
 	969397272	HumanHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\HumanHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerHit\HumanHit01		3619
+	1000430789	EnemyShadowDeath01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\EnemyShadowDeath01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyShadowBruteDeath\EnemyShadowDeath01		11198
 	1023094648	ButtonPress	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Thick Plastic Hits 32_0BDA7ABA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress		1141
 	1052781010	HumanSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\HumanSlash01_C9106BCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanAttack\HumanSlash01		4585
-	1068839159	HumanBruteSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\HumanBruteSlash01_EFBFD7AB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteAttack\HumanBruteSlash01		5466
+	1068839159	HumanBruteSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\HumanBruteSlash01_B500ECC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteAttack\HumanBruteSlash01		5466
 
