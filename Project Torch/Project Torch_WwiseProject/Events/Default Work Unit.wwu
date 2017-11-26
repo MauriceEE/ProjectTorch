@@ -260,12 +260,64 @@
 						</Folder>
 						<Folder Name="EnemyShadowGlower" ID="{62E978C2-9103-4AA2-BE80-FCC106759727}" ShortID="10404628">
 							<ChildrenList>
-								<Event Name="EnemyShadowGlowerAttack" ID="{DECC0010-D195-4DFB-B08D-2E1E7E608FA9}"/>
+								<Event Name="EnemyShadowGlowerAttack" ID="{DECC0010-D195-4DFB-B08D-2E1E7E608FA9}">
+									<ChildrenList>
+										<Action Name="" ID="{931F77E1-40EA-48F0-8B89-0A554212716D}" ShortID="352277378">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnemyShadowGlowerAttack" ID="{BA8D955B-EB0F-41B4-A454-1C9856498D1D}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="EnemyShadowGlowerWalk" ID="{CAF671C1-287E-42BD-AC9B-03E55C82DBC1}"/>
 								<Event Name="EnemyShadowGlowerDash" ID="{AD0EEA64-89B5-4683-9B3C-1026D7F12CE4}"/>
-								<Event Name="EnemyShadowGlowerHit" ID="{30B3AA91-AF19-450A-AA42-9082CFEEB934}"/>
-								<Event Name="EnemyShadowGlowerDeath" ID="{26927817-C3C1-4A31-B6A5-D4F24FD77432}"/>
-								<Event Name="EnemyShadowGlowerExplosion" ID="{7554DD27-FC94-49ED-84A9-8730DE0EB6CF}"/>
+								<Event Name="EnemyShadowGlowerHit" ID="{30B3AA91-AF19-450A-AA42-9082CFEEB934}">
+									<ChildrenList>
+										<Action Name="" ID="{EC6F2B4D-FA92-452C-83CB-B8829EBBA520}" ShortID="98745337">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnemyShadowBruteHit" ID="{49906AA6-4565-4C56-A87D-BC30E53E6E5A}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="EnemyShadowGlowerDeath" ID="{26927817-C3C1-4A31-B6A5-D4F24FD77432}">
+									<ChildrenList>
+										<Action Name="" ID="{5988FC64-6781-45DC-8784-9637FC9582E8}" ShortID="194103840">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnemyShadowBruteDeath" ID="{FEEEF6DE-89D6-42AD-B070-5D8CC5B27CA4}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="EnemyShadowGlowerExplosion" ID="{7554DD27-FC94-49ED-84A9-8730DE0EB6CF}">
+									<ChildrenList>
+										<Action Name="" ID="{9DD7456C-A719-49F0-82C5-18B81822237E}" ShortID="355679880">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnemyShadowGlowerExplosion" ID="{E3CC9D2B-51BC-4F8E-926E-383D141A39F7}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

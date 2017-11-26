@@ -45,7 +45,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="GameEnd" ID="{B0514D08-A319-452C-AC48-AA999CA57441}"/>
+				<Event Name="GameEnd" ID="{B0514D08-A319-452C-AC48-AA999CA57441}">
+					<ChildrenList>
+						<Action Name="" ID="{0FB9F7F0-048D-4171-BE29-11F76B464BAD}" ShortID="376518990">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{23073EF2-001F-4715-B8DD-3E685984CC70}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

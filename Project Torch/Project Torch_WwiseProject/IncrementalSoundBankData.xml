@@ -5,12 +5,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="3963137280" Timestamp="131554551520000000"/>
 				<File Name="Music" Hash="1225812869" Timestamp="131558537280000000"/>
-				<File Name="SFX" Hash="3112268659" Timestamp="131561211380000000"/>
+				<File Name="SFX" Hash="1843534334" Timestamp="131561844670000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2446178421" Timestamp="131561211380000000"/>
+				<File Name="" Hash="1498332851" Timestamp="131561844670000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -19,12 +19,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="1546169546" Timestamp="131554552320000000"/>
 				<File Name="Music" Hash="1225812869" Timestamp="131558537280000000"/>
-				<File Name="SFX" Hash="3112268659" Timestamp="131561211380000000"/>
+				<File Name="SFX" Hash="1843534334" Timestamp="131561844670000000"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2849200547" Timestamp="131561211380000000"/>
+				<File Name="" Hash="3657786497" Timestamp="131561844670000000"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

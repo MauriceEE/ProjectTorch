@@ -78,6 +78,10 @@
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_4E9B6C00.wem</Path>
 				</File>
+				<File Id="172231839" Language="SFX">
+					<ShortName>EnemyShadowGlowerAttack.wav</ShortName>
+					<Path>SFX/EnemyShadowGlowerAttack_F7D0E330.wem</Path>
+				</File>
 				<File Id="186580846" Language="SFX">
 					<ShortName>Air Burst Short 01.wav</ShortName>
 					<Path>SFX/Air Burst Short 01_F7D0E330.wem</Path>
@@ -117,6 +121,10 @@
 				<File Id="755251734" Language="SFX">
 					<ShortName>PlayerDash01.wav</ShortName>
 					<Path>SFX/PlayerDash01_F7D0E330.wem</Path>
+				</File>
+				<File Id="791402337" Language="SFX">
+					<ShortName>EnemyShadowGlowerExplosion.wav</ShortName>
+					<Path>SFX/EnemyShadowGlowerExplosion_F7D0E330.wem</Path>
 				</File>
 				<File Id="855263217" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
