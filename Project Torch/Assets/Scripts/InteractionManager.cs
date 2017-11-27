@@ -28,6 +28,8 @@ public class InteractionManager : MonoBehaviour
     protected Brazier[] braziers;
     //To avoid triggering dialogue multiple times
     protected bool dialogueActive;
+    //Enemy manager
+    protected EnemyManager enemyMan;
     #endregion
     #region Properties
     public bool DialogueActive { get { return dialogueActive; } set { dialogueActive = value; } }
@@ -42,6 +44,7 @@ public class InteractionManager : MonoBehaviour
         player = GameObject.Find("Player");
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
         braziers = GameObject.FindObjectsOfType(typeof(Brazier)) as Brazier[];
+        enemyMan = GameObject.Find("EnemyManagerGO").GetComponent<EnemyManager>();
         dialogueActive = false;
         //braziers = new Brazier[brazierObjs.Length];
         //for (int i = 0; i < brazierObjs.Length; ++i)
@@ -55,8 +58,8 @@ public class InteractionManager : MonoBehaviour
         {
             //Try to pick up an item
             inventory.PickUpNearbyItems();
-            //Try to interact with NPCs, Braziers...
-            if (CheckInteractiveNPCs() || CheckBraziers())
+            //Try to interact with NPCs, Braziers... only when NOT in combat
+            if (!enemyMan.EncounterActive && (CheckInteractiveNPCs() || CheckBraziers())) 
             {
                 dialogueActive = true;
                 return;
