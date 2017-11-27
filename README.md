@@ -196,3 +196,8 @@
   <li>Adjusted some later encounters to better introduce enemies</li>
   <li>Normalized damage and start-up frames of boss enemies</li>
 </ul>
+<h2>Connor Menard - 11/26/17 - 10:42PM</h2>
+<ul>
+  <li>Added waves/wave manager</li>
+  <li>Can no longer interact with NPCs when in combat, allowing for interactable enemies</li>
+</ul>
