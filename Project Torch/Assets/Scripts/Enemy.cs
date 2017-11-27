@@ -165,6 +165,8 @@ public abstract class Enemy : MonoBehaviour {
     public float awarenessRange;
     // If enemy is currently attacking
     protected bool isAttacking;
+    //Used for waves off screen
+    public bool ignoreAxisConstraints;
     [Header("Attack data")]
     public float atDamage;
     public float atStartup;
@@ -264,6 +266,7 @@ public abstract class Enemy : MonoBehaviour {
         lit = false;
         stunTime = 0;
         glower = false;
+        ignoreAxisConstraints = false;
     }
 	
 	protected virtual void Update () {

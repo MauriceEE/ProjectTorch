@@ -12,6 +12,7 @@ public class Encounter : MonoBehaviour {
         NONE,
         PrincessRescue,
         ThroneRoomFinalEncounter,
+        CastleKeepFinalEncounter,
     }
     #endregion
 

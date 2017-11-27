@@ -48,7 +48,8 @@ public class AxisConstraintsManager : MonoBehaviour {
         for (int i = 0; i < enemyMan.Enemies.Count; ++i)
         {
             UpdateZAxis(enemyMan.Enemies[i]);
-            KeepWithinBounds(enemyMan.Enemies[i]);
+            if (!enemyMan.Enemies[i].GetComponent<Enemy>().ignoreAxisConstraints)
+                KeepWithinBounds(enemyMan.Enemies[i]);
         }
 	}
     #endregion

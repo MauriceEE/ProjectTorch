@@ -26,7 +26,11 @@ public class EnemyManager : MonoBehaviour {
     //Aggression for the current encounter
     protected float encounterAggressionCurrent;
     //Text manager
-    TextManager textMan;
+    protected TextManager textMan;
+    //Wave manager
+    protected WaveManager waveMan;
+    //Used between waves; the encounter just pauses
+    protected bool encounterPaused = false;
     #endregion
 
     #region Public Fields
@@ -62,14 +66,13 @@ public class EnemyManager : MonoBehaviour {
     public GameObject[] humanEnemyCategories;
     public GameObject[] shadowEnemyCategories;
     public GameObject[] enemyCategories;
-    // zone
-    ZoneManager.ZoneNames currentZone;
     #endregion
 
     #region Properties
     public List<GameObject> Enemies { get { return zoneEnemies; } }
     public GameObject[] HumanEnemyCategories { get { return humanEnemyCategories; } }
     public GameObject[] ShadowEnemyCategories { get { return shadowEnemyCategories; } }
+    public bool EncounterPaused { get { return encounterPaused; } set { encounterPaused = value; } }
     public bool EncounterActive { get { return encounterActive; } set { encounterActive = value; } }
     public float EncounterAggressionCurrent { get { return encounterAggressionCurrent; } set { encounterAggressionCurrent = value; } }
     /// <summary>
@@ -108,7 +111,7 @@ public class EnemyManager : MonoBehaviour {
         GenerateGridPositions();
         flags = GameObject.Find("FlagManagerGO").GetComponent<FlagManager>();
         textMan = GameObject.Find("TextManagerGO").GetComponent<TextManager>();
-        currentZone = ZoneManager.ZoneNames.Battlefield; // by default
+        waveMan = GameObject.Find("WaveManagerGO").GetComponent<WaveManager>();
     }
 	
 	void Update () {
@@ -150,7 +153,6 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterEnemies.Add(zoneEnemies[i]);
                 zoneEnemies[i].GetComponent<Enemy>().StartEncounter();
-                currentZone = zoneEnemies[i].GetComponent<Enemy>().zone;
             }
             if (encounterEnemies.Count > 6)
             {
@@ -191,7 +193,7 @@ public class EnemyManager : MonoBehaviour {
     /// </summary>
     protected void MergeEncounters()
     {
-
+        Debug.Log("Merging encounters...... FINISH ME");
     }
 
     /// <summary>
@@ -262,7 +264,7 @@ public class EnemyManager : MonoBehaviour {
             zoneEnemies.Add(newEnemy);
             gameEnemies = GameObject.FindGameObjectsWithTag("Enemy"); // remake gameEnemies array
                                                                       // set enemy zone
-            newEnemy.GetComponent<Enemy>().zone = currentZone;
+            newEnemy.GetComponent<Enemy>().zone = GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().CurrentZone.zone;
             // start the encounter for that enemy
             newEnemy.GetComponent<Enemy>().StartEncounter();
         }
@@ -276,6 +278,7 @@ public class EnemyManager : MonoBehaviour {
     /// <returns>An enemy that can be set as the attack target</returns>
     public GameObject GetNewAttackTarget(Enemy.EnemyFaction allyFaction)
     {
+        Debug.Log("Finding new ally attack target...");
         int rando = Random.Range(0, encounterEnemies.Count);
         int ogRando = rando;
         while (encounterEnemies[rando].GetComponent<Enemy>().faction == allyFaction)
@@ -385,30 +388,33 @@ public class EnemyManager : MonoBehaviour {
     protected void MoveToAttackPlayer()
     {
         //If ready to attack, attack
-        if (CanEnemiesAttackPlayer() && timeBeforeNextAttack <= 0) 
+        if (timeBeforeNextAttack <= 0) 
         {
-            //Make random enemy attack
-            //This little bit here finds a random enemy among the ones circling the player in the grid cells
-            int randIndex = Random.Range(0, 6);
-            while (surroundingGridOccupants[randIndex] == null) 
+            if (CanEnemiesAttackPlayer())
             {
-                //Debug.Log("Infinite loop?: " + Time.fixedTime);
-                Debug.Log(randIndex);
-                ++randIndex;
-                if (randIndex >= 6)
-                    randIndex = 0;
+                //Make random enemy attack
+                //This little bit here finds a random enemy among the ones circling the player in the grid cells
+                int randIndex = Random.Range(0, 6);
+                while (surroundingGridOccupants[randIndex] == null)
+                {
+                    //Debug.Log("Infinite loop?: " + Time.fixedTime);
+                    Debug.Log(randIndex);
+                    ++randIndex;
+                    if (randIndex >= 6)
+                        randIndex = 0;
+                }
+                if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().AlliedWithPlayer)
+                {
+                    Debug.Log("player ally is attacking the player, fix me plz");
+                    //Debug.Break();
+                }
+                //Tell the enemy we found to attack
+                surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
+                //Remove him from the guys surrounding the player
+                surroundingGridOccupants[randIndex] = null; // I think this is a problem. ISSUE
+                                                            //Cooldown before next attack order
+                timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
             }
-            if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().AlliedWithPlayer)
-            {
-                Debug.Log("player ally is attacking the player, fix me plz");
-                //Debug.Break();
-            }
-            //Tell the enemy we found to attack
-            surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
-            //Remove him from the guys surrounding the player
-            surroundingGridOccupants[randIndex] = null; // I think this is a problem. ISSUE
-            //Cooldown before next attack order
-            timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
         }
         else
             timeBeforeNextAttack -= Time.deltaTime;
@@ -431,50 +437,80 @@ public class EnemyManager : MonoBehaviour {
     /// </summary>
     protected void CheckEncounterEnd()
     {
-        //Check to see if there are no enemies remaining in the encounter
-        if (encounterEnemies.Count == 0)
+        //But only do these checks if we aren't in the final encounter
+        if (currentEncounterType != Encounter.SpecialEncounters.CastleKeepFinalEncounter
+            && currentEncounterType != Encounter.SpecialEncounters.ThroneRoomFinalEncounter)
         {
-            float playerHP = player.GetComponent<PlayerCombat>().hp;
-            encounterActive = false;
-            //Special case: final boss encounter
-            if (currentEncounterType == Encounter.SpecialEncounters.ThroneRoomFinalEncounter)
-                GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
-            Debug.Log("No enemies remaining: encounter ending...");
-            playerHP += 30;
-            if (playerHP > 100) playerHP = 100;
-            return;
-        }
+            //Check to see if there are no enemies remaining in the encounter
+            if (encounterEnemies.Count == 0)
+            {
+                float playerHP = player.GetComponent<PlayerCombat>().hp;
+                encounterActive = false;
+                //Special case: final boss encounter
+                if (currentEncounterType == Encounter.SpecialEncounters.ThroneRoomFinalEncounter)
+                    GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
+                Debug.Log("No enemies remaining: encounter ending...");
+                playerHP += 30;
+                if (playerHP > 100) playerHP = 100;
+                return;
+            }
 
-        //Check to see if there are no enemies of the opposing faction
-        bool enemyRemains = false;
-        for (int i = 0; i < encounterEnemies.Count; ++i)
-        {
-            if (!encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer)
+            //Check to see if there are no enemies of the opposing faction
+            bool enemyRemains = false;
+            for (int i = 0; i < encounterEnemies.Count; ++i)
             {
-                enemyRemains = true;
-                break;
+                if (!encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer)
+                {
+                    enemyRemains = true;
+                    break;
+                }
+            }
+            if (!enemyRemains)
+            {
+                encounterActive = false;
+                Debug.Log("No more enemies of opposing faction, encounter ending...");
+                return;
+            }
+
+            //Check to see if the player fled by running outside awareness range of all enemies
+            bool fled = true;
+            for (int i = 0; i < encounterEnemies.Count; ++i)
+            {
+                if ((encounterEnemies[i].transform.position - player.transform.position).sqrMagnitude < Mathf.Pow(encounterEnemies[i].GetComponent<Enemy>().AwarenessRange, 2))
+                {
+                    fled = false;
+                    break;
+                }
+            }
+            encounterActive = !fled;
+            if (!encounterActive)
+                Debug.Log("Player fled: encounter ending...");
+        }
+        else
+        {
+            //STUFF HERE IS FOR FINAL BOSS ENCOUNTER ENDING
+            //Check to see if there are no enemies remaining in the encounter
+            if (!encounterPaused && encounterEnemies.Count == 0)
+            {
+                Debug.Log("CURRENT ENCOUNTER TYPE: " + currentEncounterType);
+                //If we're at the final wave...
+                if (waveMan.FinalWave(waveMan.SpecialEncounterTypeToWaveID(currentEncounterType)))
+                {
+                    Debug.Log("Final boss encounter over...");
+                    encounterActive = false;
+                    //TODO: King in downed state?
+                    GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
+                }
+                else
+                {
+                    Debug.Log("Next wave of final boss encounter...");
+                    //TODO: Trigger dialogue with the king?
+                    //Spawn the next wave after the cooldown
+                    waveMan.StartTimerForNextWave(waveMan.SpecialEncounterTypeToWaveID(currentEncounterType));
+                    encounterPaused = true;
+                }
             }
         }
-        if (!enemyRemains)
-        {
-            encounterActive = false;
-            Debug.Log("No more enemies of opposing faction, encounter ending...");
-            return;
-        }
-            
-        //Check to see if the player fled by running outside awareness range of all enemies
-        bool fled = true;
-        for (int i = 0; i < encounterEnemies.Count; ++i)
-        {
-            if ((encounterEnemies[i].transform.position - player.transform.position).sqrMagnitude < Mathf.Pow(encounterEnemies[i].GetComponent<Enemy>().AwarenessRange, 2)) 
-            {
-                fled = false;
-                break;
-            }
-        }
-        encounterActive = !fled;
-        if (!encounterActive)
-            Debug.Log("Player fled: encounter ending...");
     }
 
     /// <summary>
