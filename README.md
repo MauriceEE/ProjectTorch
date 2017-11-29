@@ -211,3 +211,8 @@
   <li>EnemyManager now checks what the selected enemy is doing before it tells it to attack and removes it from the grid</li>
   <li>Re-enabled stuns</li>
 </ul>
+<h2>Steven Ma - 11/29/17 - 6:40</h2>
+<ul>
+  <li>Added in all Unhostile Enemy Dialogue</li>
+  <li>Adjsuted some levels slightly</li>
+</ul>

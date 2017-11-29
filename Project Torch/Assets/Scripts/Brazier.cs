@@ -37,25 +37,33 @@ public class Brazier : MonoBehaviour {
         if(lit) GetComponent<SpriteRenderer>().color = new Color((255f/255f), (184f/255f), (184f/255f));
         else GetComponent<SpriteRenderer>().color = Color.white;
 
-        switch (zone)
+        //Checking again here because if this is put with the above time check, it will end the method early
+        if (GameObject.Find("TimeManagerGO").GetComponent<TimeManager>().torchTime > 0)
         {
-            case ZoneManager.ZoneNames.Battlefield:
-                return "Brazier - Battlefield";
-            case ZoneManager.ZoneNames.HumanTerritoryStage1:
-                return "Brazier - HumanTerritoryStage1";
-            case ZoneManager.ZoneNames.HumanTerritoryStage2:
-                return "Brazier - HumanTerritoryStage2";
-            case ZoneManager.ZoneNames.ShadowTerritoryStage1:
-                return "Brazier - ShadowTerritoryStage1";
-            case ZoneManager.ZoneNames.WarZone:
-                return "Brazier - WarZone";
-            case ZoneManager.ZoneNames.WarZoneStage2:
-                return "Brazier - WarZoneStage2";
-            case ZoneManager.ZoneNames.TrueHumanStage1:
-                return "Brazier - TrueHumanStage1";
+            switch (zone)
+            {
+                case ZoneManager.ZoneNames.Battlefield:
+                    return "Brazier - Battlefield";
+                case ZoneManager.ZoneNames.HumanTerritoryStage1:
+                    return "Brazier - HumanTerritoryStage1";
+                case ZoneManager.ZoneNames.HumanTerritoryStage2:
+                    return "Brazier - HumanTerritoryStage2";
+                case ZoneManager.ZoneNames.ShadowTerritoryStage1:
+                    return "Brazier - ShadowTerritoryStage1";
+                case ZoneManager.ZoneNames.WarZone:
+                    return "Brazier - WarZone";
+                case ZoneManager.ZoneNames.WarZoneStage2:
+                    return "Brazier - WarZoneStage2";
+                case ZoneManager.ZoneNames.TrueHumanStage1:
+                    return "Brazier - TrueHumanStage1";
 
-            default:
-                return null;
+                default:
+                    return null;
+            }
+        }
+        else
+        {
+            return "Brazier - NoTorch";
         }
     }
     #endregion

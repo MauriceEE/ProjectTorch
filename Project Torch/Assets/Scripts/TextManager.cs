@@ -27,6 +27,15 @@ public class TextManager : MonoBehaviour {
         WZ1Grave1,
         WZ2Grave1,
         WZ2Grave2,
+        ST1Human1,
+        ST2Shadow1,
+        HT1Human1,
+        HT1Human2,
+        HT2Human1,
+        TH1Human1,
+        TH1Human2,
+        WZ1Shadow1,
+        WZ1Human1,
     }
     #endregion
 
@@ -185,6 +194,15 @@ public class TextManager : MonoBehaviour {
                 "Brazier:\nBegot from fire, born from ash,",
                 "Brazier:\nhumanity emerged from the embers of the True Flame."
             });
+        //No Torch Brazier
+        lines.Add("Brazier - NoTorch",
+            new string[]
+            {
+                "Brazier:\nAs the embers shed from your withered torch, you feel lighter,",
+                "Brazier:\nyet dazed; confused.",
+                "Brazier:\nA gnawing pit can be felt in the depths of your stomach.",
+                "Brazier:\nYou have lost a part of yourself this day."
+            });
         //Battlefield Grave1
         lines.Add("BattlefieldGrave1 - Default",
             new string[]
@@ -281,9 +299,88 @@ public class TextManager : MonoBehaviour {
         lines.Add("WZ2Grave2 - Default",
             new string[]
             {
-                "Unmarked Grave:\nWith the Dragon ash of the False Flame, the world’s balance, lost in murder and death,",
-                "Unmarked Grave:\nwas found anew as it breathed life.",
-                "Unmarked Grave:\nDarkness befell the ashes and from them grew out The Shadow itself."
+                "Unmarked Grave:\nWith the Dragon ash left behind by the False Flame,",
+                "Unmarked Grave:\nthe world’s balance, thrown off by murder and death, sought to correct itself as it breathed new life.",
+                "Unmarked Grave:\nAs the True Flame faded, darkness befell the ashes and from them grew out The Shadow itself."
+            });
+        //ShadowTerritoryStage1 Dialogue1
+        lines.Add("ST1Human1 - Default",
+            new string[]
+            {
+                "Human:\nOutsider, you have come at a grave time.",
+                "Human:\nOur war with The Shadow is on the verge of reaching its bloody end.",
+                "Human:\nNot all are as kind as I am. There will be those who will tear you apart without a word.",
+                "Human:\nIf you are not here to aid us, then it's best you leave and quickly."
+            });
+        //ShadowTerritoryStage2 Dialogue1
+        lines.Add("ST2Shadow1 - Default",
+            new string[]
+            {
+                "Shadow:\nListen Outsider and listen well, the humans have wronged us.",
+                "Shadow:\nThey have taken our princess and spilt our blood upon our own land.",
+                "Shadow:\nForge ahead with our plight in mind and heed this last warning:",
+                "Shadow:\nBe wary of what lies ahead, the Fortress Guards slay all who come near."
+            });
+        //HumanTerritoryStage1 Dialogue1
+        lines.Add("HT1Human1 - Default",
+            new string[]
+            {
+                "Human:\nWe’ve lost my family, my friends and my future.",
+                "Human:\nThe plague took much from us.",
+                "Human:\nWe were lost, drowning in grief, yearning for a tomorrow.",
+                "Human:\nWe have found that tomorrow, Stranger, we must now merely fight for it."
+            });
+        //HumanTerritoryStage1 Dialogue2
+        lines.Add("HT1Human2 - Default",
+            new string[]
+            {
+                "Human:\nTheir princess holds within her a great, slumbering power.",
+                "Human:\nIn our hands, we can rebuild our world and reforge what we have lost.",
+                "Human:\nI implore you Wanderer, do not think ill of us, for we war to better the lives of our people."
+            });
+        //HumanTerritoryStage2 Dialogue1
+        lines.Add("HT2Human1 - Default",
+            new string[]
+            {
+                "Human:\nWell, look at that, a traveler.",
+                "Human:\nTake some advice and ready your sword. The Castle Guards up ahead give no quarter.",
+                "Human:\nWhen your eyes meet their own, they will be upon you.",
+                "Human:\nI’ll be over here, enjoying the view.",
+                "Human:\nDie tastefully now."
+            });
+        //TrueHumanStage1 Dialogue1
+        lines.Add("TH1Human1 - Default",
+            new string[]
+            {
+                "Human:\nThis land, this world, is our birthright.",
+                "Human:\nFrom the sacrifice of the Serpents and the downfall of the Dragons, we earned our place.",
+                "Human:\nWe will not stand idly by, watching ourselves waste away!"
+            });
+        //TrueHumanStage1 Dialogue2
+        lines.Add("TH1Human2 - Default",
+            new string[]
+            {
+                "Human:\nThe princess must die for us to live.",
+                "Human:\nOnce we harness the reincarnation of the True Flame, we will reign forever.",
+                "Human:\nNot since the Dragons discovered and devoured the Sun have we seen the True Flame and yet it lies within her.",
+                "Human:\nThe Serpent's ancient ambition will be fulfilled through us!"
+            });
+        //WarZoneStage1 Dialogue1
+        lines.Add("WZ1Shadow1 - Default",
+            new string[]
+            {
+                "Shadow:\nThey are irredeemable!",
+                "Shadow:\nHumanity must be purged from this world to prevent these atrocities from ever occurring again!",
+                "Shadow:\nThey care nothing of our people, of the world.",
+                "Shadow:\nThey would sooner sacrifice it all than be humbled!"
+            });
+        //WarZoneStage1 Dialogue2
+        lines.Add("WZ1Human1 - Default",
+            new string[]
+            {
+                "Human:\nOur cause is noble!",
+                "Human:\nOur people died in droves and thousands starve, lost in purpose or lie dead in the many graves.",
+                "Human:\nWe will, with all our might, push on to create a brighter future for our people!"
             });
     }
 #endregion
