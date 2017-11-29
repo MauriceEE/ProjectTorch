@@ -22,6 +22,7 @@ public class InstructionManager : MonoBehaviour {
         instructions.Add("Shine", "Press  [I]  to  slow  and  light  enemies");
         instructions.Add("Shine2", "Shine  when  an  enemy  flashes  purple  to attack  to  stun  them");
         instructions.Add("Brazier", "Press  [E] on  braziers  if  you  wish  to  light  the  next  level");
+        instructions.Add("BrazierCantLight", "Your flame has expired. You cannot light braziers anymore.");
         instructions.Add("Darkness", "Use  Shine  in  combat  to  manage  visibility.");
         instructions.Add("Pulse", "Press  [Spacebar]  to  extend  light  from  lit  enemies  to  unlit  enemies");
         instructions.Add("Brute", "Brutes put up yellow guards after some time. Hit them while you can!");

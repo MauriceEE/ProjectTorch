@@ -13,6 +13,7 @@ public class Brazier : MonoBehaviour {
     //Whether or not the brazier is lit
     public bool lit;
     #endregion
+    
 
     #region Custom Methods
     /// <summary>
@@ -24,7 +25,12 @@ public class Brazier : MonoBehaviour {
     /// </summary>
     public string IgniteBrazier()
     {
-        lit = !lit;
+        if (GameObject.Find("TimeManagerGO").GetComponent<TimeManager>().torchTime > 0)
+        {
+            lit = !lit;
+        }
+        else GameObject.Find("InstructionManagerGO").GetComponent<InstructionManager>().changeInstructions("BrazierCantLight");
+        
         Debug.Log("Brazier: " + lit);
         GameObject.Find("FlagManagerGO").GetComponent<FlagManager>().BrazierLit(zone, lit);
 
