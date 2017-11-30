@@ -56,7 +56,9 @@ public class FlagManager : MonoBehaviour {
     #region Public Fields
     //Number of enemy kills to set a faction hostile
     public int killsToTiggerHostility;
-#endregion
+    //Final encounter object
+    public Encounter kingOfManFinalBossEncounter;
+    #endregion
 
     #region Private Fields
     //Dictionary of all flags and a boolean to determine whether or not they're true
@@ -189,6 +191,33 @@ public class FlagManager : MonoBehaviour {
             case TextManager.InteractiveNPCNames.WZ2Grave2:
                 ActivateDialogueLines("WZ2Grave2 - Default");
                 break;
+            case TextManager.InteractiveNPCNames.ST1Human1:
+                ActivateDialogueLines("ST1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST2Shadow1:
+                ActivateDialogueLines("ST2Shadow1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Human1:
+                ActivateDialogueLines("HT1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Human2:
+                ActivateDialogueLines("HT1Human2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT2Human1:
+                ActivateDialogueLines("HT2Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Human1:
+                ActivateDialogueLines("TH1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Human2:
+                ActivateDialogueLines("TH1Human2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ1Shadow1:
+                ActivateDialogueLines("WZ1Shadow1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ1Human1:
+                ActivateDialogueLines("WZ1Human1 - Default");
+                break;
         }
     }
     /// <summary>
@@ -291,13 +320,19 @@ public class FlagManager : MonoBehaviour {
                 break;
         }
     }
-
+    /// <summary>
+    /// This gets called whenever a dialogue sequence ends
+    /// Put special event stuff here
+    /// </summary>
+    /// <param name="sequenceName">ID of the dialogue</param>
     public void DialogueEnded(string sequenceName)
     {
+        //Princess saved
         if (sequenceName == "Princess - Saved") 
-        {
             GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.Fleeing;
-        }
+        //King of Man final boss
+        if(sequenceName=="KING OF MAN DIALOGUE NAME GOES HERE!!!")
+            GameObject.Find("EnemyManagerGo").GetComponent<EnemyManager>().StartEncounter(kingOfManFinalBossEncounter, Enemy.EnemyFaction.Human, Encounter.SpecialEncounters.ThroneRoomFinalEncounter);
     }
 #endregion
 }

@@ -47,6 +47,7 @@ public class GlowerProjectile : MonoBehaviour {
         //Check collisions with player attacks if the player is thrusting and you aren't allied with him yet
         if (!alliedWithPlayer && player.CurrentAttack == PlayerCombat.Attacks.Thrust && CheckCollisionsWithPlayerHitboxes())
         {
+            Debug.Log("Glower projectile collided with player hitboxes @ " + Time.fixedTime);
             //Set as allied with player
             alliedWithPlayer = true;
             //Change homing target
@@ -82,6 +83,7 @@ public class GlowerProjectile : MonoBehaviour {
     /// <param name="_lifetime">Time until the shot dies</param>
     public void Setup(GameObject _originGlower, float _maxSpeed, float _radius, float _accelerationForceAmount, float _lifetime)
     {
+        originGlower = _originGlower;
         maxSpeed = _maxSpeed;
         hitRadius = _radius;
         accelerationForceMultiplier = _accelerationForceAmount;
@@ -99,7 +101,7 @@ public class GlowerProjectile : MonoBehaviour {
         List<Rect> hitboxes = player.GetActiveAttackHitboxes();
         //Loop through and if we're colliding (roughly) then return true
         for (int i = 0; i < hitboxes.Count; ++i)
-            if (Helper.AABB(hitboxRect, hitboxes[i]))
+            if ((this.transform.position - new Vector3(hitboxes[i].x, hitboxes[i].y, this.transform.position.z)).sqrMagnitude < hitboxRect.width * hitboxRect.width) 
                 return true;
         return false;
     }

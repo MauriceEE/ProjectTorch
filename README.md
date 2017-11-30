@@ -211,3 +211,15 @@
   <li>EnemyManager now checks what the selected enemy is doing before it tells it to attack and removes it from the grid</li>
   <li>Re-enabled stuns</li>
 </ul>
+<h2>Steven Ma - 11/29/17 - 6:40</h2>
+<ul>
+  <li>Added in all Unhostile Enemy Dialogue</li>
+  <li>Adjsuted some levels slightly</li>
+</ul>
+<h2>Connor Menard - 11/29/17 - 8:03PM</h2>
+<ul>
+  <li>Removed enemy temp hitboxes </li>
+  <li>Made it possible for enemies to auto-engage encounters</li>
+  <li>Started FlagManager final boss waves stetup for Steven</li>
+  <li>Glower projectile now is reflect-able</li>
+  <li>There's still some debugging junk in here... Sorry if it bothers you, I'm working on it</li>
