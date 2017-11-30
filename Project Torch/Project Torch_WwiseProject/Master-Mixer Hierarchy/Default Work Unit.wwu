@@ -66,10 +66,27 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Compressor (Custom)" ID="{23376F56-C1D0-4174-9925-29C00DD7BB54}" ShortID="976043934" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<PropertyList>
+												<Property Name="OutputGain" Type="Real32" Value="-3"/>
+												<Property Name="Ratio" Type="Real32" Value="3"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="0.75"/>
+												<Property Name="Threshold" Type="Real32" Value="-24.3"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<AuxBus Name="Reverb" ID="{B8DF1C50-7295-48C8-B79D-D2A43014E742}">
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
 								</AuxBus>
 							</ChildrenList>
 						</Bus>

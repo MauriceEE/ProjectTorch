@@ -13,11 +13,44 @@
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="CombatMusicIntensity" ID="{62F5B761-FB48-4D2B-A229-28063F39BDB1}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Low" ID="{4AC6D6DC-1C12-4F71-9068-9798B99FE63F}"/>
 						<Switch Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>
 						<Switch Name="High" ID="{3F004F36-0E36-4409-BDB8-581466ADCDFE}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="CombatIntensity" ID="{353D753A-05A8-4E7C-953B-15B2CD801034}"/>
+						<Curve Name="" ID="{FA242BDE-C425-494A-8E05-8A5DCDB0555E}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>

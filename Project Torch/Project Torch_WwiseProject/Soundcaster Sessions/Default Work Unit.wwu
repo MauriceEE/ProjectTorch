@@ -40,15 +40,20 @@
 							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="CombatIntensity" ID="{353D753A-05A8-4E7C-953B-15B2CD801034}"/>
+							<Value>3</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}"/>
-						<CurrentStateRef Name="Death" ID="{2367E19C-961E-4E12-8951-F49ABC8F9752}"/>
+						<CurrentStateRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>
 						<CurrentSwitchRef Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

@@ -1,3 +1,11 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	224141993	CombatMusicIntensity			\Music\CombatMusicIntensity	
+
+Switch	ID	Name	Switch Group			Notes
+	545371365	Low	CombatMusicIntensity			
+	2849147824	Medium	CombatMusicIntensity			
+	3550808449	High	CombatMusicIntensity			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	444815956	PlayerLife			\Default Work Unit\PlayerLife	
 	3991942870	Music			\Default Work Unit\Music	
@@ -10,6 +18,7 @@ State	ID	Name	State Group			Notes
 	77978275	Ambient	Music			
 	748895195	None	Music			
 	779278001	Death	Music			
+	2607556080	Menu	Music			
 	2764240573	Combat	Music			
 	748895195	None	GameState			
 	984691642	InGame	GameState			
@@ -31,4 +40,5 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	1990128658	Room_Medium	Wwise RoomVerb			
 

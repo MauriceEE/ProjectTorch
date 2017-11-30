@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/Garret/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/Garret/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/Garret/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/Garret 1/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/Garret/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/ProjectTorch/Project Torch/Project Torch_WwiseProject/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -204,29 +204,13 @@
 					<ShortName>Interactive Music\Combat\08\08_Lead Guitar 2_bip.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Lead Guitar 2_bip_AD29F36A.wem</Path>
 				</File>
-				<File Id="58942407" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Deep Undercover Synch 2.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Deep Undercover Synch 2_AD29F36A.wem</Path>
-				</File>
 				<File Id="66631532" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Snare_AD29F36A.wem</Path>
 				</File>
-				<File Id="69835257" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_HiHat_AD29F36A.wem</Path>
-				</File>
-				<File Id="72149099" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Omni Atari Bit Triangle ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Omni Atari Bit Triangle ARP_AD29F36A.wem</Path>
-				</File>
 				<File Id="77806563" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Zebra Squar Wave 2.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Zebra Squar Wave 2_AD29F36A.wem</Path>
-				</File>
-				<File Id="88018203" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Toms.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Toms_AD29F36A.wem</Path>
 				</File>
 				<File Id="102227295" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Da New Dog Bass.wav</ShortName>
@@ -236,25 +220,9 @@
 					<ShortName>Interactive Music\Combat\08\08_Cymbals.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Cymbals_AD29F36A.wem</Path>
 				</File>
-				<File Id="117608671" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_RChug 2_BillyAMP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_RChug 2_BillyAMP_AD29F36A.wem</Path>
-				</File>
-				<File Id="126979641" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-1\T-1_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-1/T-1_Da New Dog Bass_AD29F36A.wem</Path>
-				</File>
 				<File Id="136660971" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_HiHat_AD29F36A.wem</Path>
-				</File>
-				<File Id="144130695" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Toms.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="167406405" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_HiHat_AD29F36A.wem</Path>
 				</File>
 				<File Id="170293284" Language="SFX">
 					<ShortName>Interactive Music\Combat\04\04_Baritone GTR rhythm KS.wav</ShortName>
@@ -279,10 +247,6 @@
 				<File Id="205921949" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Deep Bowing Glass.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Deep Bowing Glass_AD29F36A.wem</Path>
-				</File>
-				<File Id="206792941" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Cymbals.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Cymbals_AD29F36A.wem</Path>
 				</File>
 				<File Id="210313311" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Baritone GTR rhythm KS.wav</ShortName>
@@ -320,10 +284,6 @@
 					<ShortName>Interactive Music\Combat\01\01_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Snare_AD29F36A.wem</Path>
 				</File>
-				<File Id="343650464" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Kick_AD29F36A.wem</Path>
-				</File>
 				<File Id="384760381" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Baritone GTR rhythm KS.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Baritone GTR rhythm KS_AD29F36A.wem</Path>
@@ -348,10 +308,6 @@
 					<ShortName>Temp_Ambient01.wav</ShortName>
 					<Path>SFX/Temp_Ambient01_AD29F36A.wem</Path>
 				</File>
-				<File Id="414605196" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Grinding Mids ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Grinding Mids ARP_AD29F36A.wem</Path>
-				</File>
 				<File Id="416137440" Language="SFX">
 					<ShortName>Ambient_demo_01.wav</ShortName>
 					<Path>SFX/Ambient_demo_01_AD29F36A.wem</Path>
@@ -359,10 +315,6 @@
 				<File Id="422082381" Language="SFX">
 					<ShortName>Interactive Music\Combat\04\04_Toms.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/04/04_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="428047884" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Zebra Squar Wave 2.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Zebra Squar Wave 2_AD29F36A.wem</Path>
 				</File>
 				<File Id="434406035" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Metal Kit - Delay.wav</ShortName>
@@ -372,25 +324,9 @@
 					<ShortName>Interactive Music\Combat\07\07_Mercenary.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/07/07_Mercenary_AD29F36A.wem</Path>
 				</File>
-				<File Id="448800367" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Da New Dog Bass ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Da New Dog Bass ARP_AD29F36A.wem</Path>
-				</File>
 				<File Id="471613444" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Grinding Mids ARP_AD29F36A.wem</Path>
-				</File>
-				<File Id="471837768" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Toms.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="476683699" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Kick_AD29F36A.wem</Path>
-				</File>
-				<File Id="482818809" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Lead Guitar 3_bip.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Lead Guitar 3_bip_AD29F36A.wem</Path>
 				</File>
 				<File Id="483247989" Language="SFX">
 					<ShortName>PlayerDeath02.wav</ShortName>
@@ -404,17 +340,9 @@
 					<ShortName>Interactive Music\Combat\06\06_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Grinding Mids ARP_AD29F36A.wem</Path>
 				</File>
-				<File Id="487663690" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Da New Dog Bass_AD29F36A.wem</Path>
-				</File>
 				<File Id="488263859" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Baritone GTR rhythm KS.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Baritone GTR rhythm KS_AD29F36A.wem</Path>
-				</File>
-				<File Id="512009139" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Omni Atari Bit Triangle Delay.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Omni Atari Bit Triangle Delay_AD29F36A.wem</Path>
 				</File>
 				<File Id="512658592" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Kick.wav</ShortName>
@@ -423,22 +351,6 @@
 				<File Id="523509611" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/05/05_HiHat_AD29F36A.wem</Path>
-				</File>
-				<File Id="545725281" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Omni Atari Bit Triangle dotted sync.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Omni Atari Bit Triangle dotted sync_AD29F36A.wem</Path>
-				</File>
-				<File Id="570950282" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Snare.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Snare_AD29F36A.wem</Path>
-				</File>
-				<File Id="572284729" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Da New Dog Bass_AD29F36A.wem</Path>
-				</File>
-				<File Id="584293968" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_RChug 1_BillyAMP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_RChug 1_BillyAMP_AD29F36A.wem</Path>
 				</File>
 				<File Id="617080917" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Lead Guitar 3_bip.wav</ShortName>
@@ -455,10 +367,6 @@
 				<File Id="652065009" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Deep Bowing Glass Glide.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Deep Bowing Glass Glide_AD29F36A.wem</Path>
-				</File>
-				<File Id="687809697" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Metal Kit - Delay.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Metal Kit - Delay_AD29F36A.wem</Path>
 				</File>
 				<File Id="694772028" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_Omni Atari Bit Triangle ARP.wav</ShortName>
@@ -484,49 +392,21 @@
 					<ShortName>Interactive Music\Combat\01\01_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Grinding Mids ARP_AD29F36A.wem</Path>
 				</File>
-				<File Id="737390527" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_RChug 3_BillyAMP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_RChug 3_BillyAMP_AD29F36A.wem</Path>
-				</File>
 				<File Id="739433037" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Deep Undercover Synch.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Deep Undercover Synch_AD29F36A.wem</Path>
-				</File>
-				<File Id="762793266" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Deep Bowing Glass Glide.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Deep Bowing Glass Glide_AD29F36A.wem</Path>
 				</File>
 				<File Id="764395170" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Deep Undercover Synch.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Deep Undercover Synch_AD29F36A.wem</Path>
 				</File>
-				<File Id="792300450" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Snare.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Snare_AD29F36A.wem</Path>
-				</File>
-				<File Id="792876635" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Snare.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Snare_AD29F36A.wem</Path>
-				</File>
 				<File Id="805484044" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Da New Dog Bass.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Da New Dog Bass_AD29F36A.wem</Path>
 				</File>
-				<File Id="807359470" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-1\T-1_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-1/T-1_HiHat_AD29F36A.wem</Path>
-				</File>
 				<File Id="809315024" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/07/07_Snare_AD29F36A.wem</Path>
-				</File>
-				<File Id="812396321" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Lead Guitar 2_bip.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Lead Guitar 2_bip_AD29F36A.wem</Path>
-				</File>
-				<File Id="835600983" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Grinding Mids ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Grinding Mids ARP_AD29F36A.wem</Path>
 				</File>
 				<File Id="838010951" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Cymbals.wav</ShortName>
@@ -535,10 +415,6 @@
 				<File Id="854356348" Language="SFX">
 					<ShortName>Interactive Music\Ambient\Synthetic-24b.wav</ShortName>
 					<Path>SFX/Interactive Music/Ambient/Synthetic-24b_AD29F36A.wem</Path>
-				</File>
-				<File Id="860659800" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Deep Bowing Glass Glide.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Deep Bowing Glass Glide_AD29F36A.wem</Path>
 				</File>
 				<File Id="877640226" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Kick.wav</ShortName>
@@ -560,18 +436,6 @@
 					<ShortName>Interactive Music\Combat\08\08_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_HiHat_AD29F36A.wem</Path>
 				</File>
-				<File Id="902980730" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Grinding Mids ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Grinding Mids ARP_AD29F36A.wem</Path>
-				</File>
-				<File Id="906825585" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Mercenary.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Mercenary_AD29F36A.wem</Path>
-				</File>
-				<File Id="915532491" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Cymbals.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Cymbals_AD29F36A.wem</Path>
-				</File>
 				<File Id="928715830" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Zebra Squar Wave 2.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Zebra Squar Wave 2_AD29F36A.wem</Path>
@@ -583,10 +447,6 @@
 				<File Id="972998009" Language="SFX">
 					<ShortName>Interactive Music\Ambient\Drums-24b.wav</ShortName>
 					<Path>SFX/Interactive Music/Ambient/Drums-24b_AD29F36A.wem</Path>
-				</File>
-				<File Id="989848017" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Da New Dog Bass_AD29F36A.wem</Path>
 				</File>
 				<File Id="993722707" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_HiHat.wav</ShortName>
@@ -612,37 +472,13 @@
 					<ShortName>PlayerDeath05.wav</ShortName>
 					<Path>SFX/PlayerDeath05_F7D0E330.wem</Path>
 				</File>
-				<File Id="1034478485" Language="SFX">
-					<ShortName>Interactive Music\Combat\02\02_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/02/02_Kick_AD29F36A.wem</Path>
-				</File>
-				<File Id="1035764079" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_Deep Undercover Synch.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_Deep Undercover Synch_AD29F36A.wem</Path>
-				</File>
-				<File Id="1039297215" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_RChug 2_bip.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_RChug 2_bip_AD29F36A.wem</Path>
-				</File>
 				<File Id="1041696890" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Snare_AD29F36A.wem</Path>
 				</File>
-				<File Id="1050586924" Language="SFX">
-					<ShortName>Interactive Music\Combat\03\03_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/03/03_HiHat_AD29F36A.wem</Path>
-				</File>
-				<File Id="1054990336" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-3\T-3_Metal Kit - revcym.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-3/T-3_Metal Kit - revcym_AD29F36A.wem</Path>
-				</File>
 				<File Id="1057902357" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Toms.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="1061619915" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Kick_AD29F36A.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

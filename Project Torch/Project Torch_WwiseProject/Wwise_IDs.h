@@ -134,6 +134,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID COMBATINTENSITY = 1253610732U;
         static const AkUniqueID MASTER_VOLUME = 4179668880U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;

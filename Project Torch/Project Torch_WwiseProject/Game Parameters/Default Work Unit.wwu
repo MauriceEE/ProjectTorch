@@ -30,6 +30,12 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="CombatIntensity" ID="{353D753A-05A8-4E7C-953B-15B2CD801034}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
