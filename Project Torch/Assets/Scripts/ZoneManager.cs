@@ -194,6 +194,23 @@ public class ZoneManager : MonoBehaviour {
         else
         {
             //If we get here, the screen is completely black, so...
+
+            // if there is a brazier active in the world/level
+            if (GameObject.FindGameObjectWithTag("Brazier") != null)
+            {
+                //Set darkness to opposite of brazier lit status
+                profileChanger.darkness = !GameObject.FindGameObjectWithTag("Brazier").GetComponent<Brazier>().lit;
+            }
+            else profileChanger.darkness = false; // if no brazier, next level will be lit
+            
+            // special cases
+            switch(nextZone.zone)
+            {
+                case ZoneManager.ZoneNames.FortressKeep:
+                    profileChanger.darkness = true;
+                    break;
+            }
+
             //Deactivate this zone
             SetZoneActive(currentZone, false);
             //Activate the next one
@@ -206,11 +223,7 @@ public class ZoneManager : MonoBehaviour {
             player.transform.position = new Vector3(0f, player.transform.position.y, player.transform.position.z);
             //Move to fade in phase
             phase = TransitionPhase.FadingIn;
-            //Set darkness to true if in dark places
-            profileChanger.darkness =
-                (currentZone.zone == ZoneNames.ShadowTerritoryStage1 ||
-                currentZone.zone == ZoneNames.ShadowTerritoryStage2 ||
-                currentZone.zone == ZoneNames.FortressKeep);
+
             //Update zone enemies
             enemyMan.GetEnemiesInCurrentZone(currentZone.zone);
         }
@@ -288,6 +301,8 @@ public class ZoneManager : MonoBehaviour {
     {
         this.phase = TransitionPhase.FadingToGameOver;
     }
+    
+
     /// <summary>
     /// Fades to black and loads the game over scene
     /// </summary>

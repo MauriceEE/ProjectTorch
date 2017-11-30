@@ -201,6 +201,21 @@
   <li>Added waves/wave manager</li>
   <li>Can no longer interact with NPCs when in combat, allowing for interactable enemies</li>
 </ul>
+<h2>Maurice Edwards - 11/29/17 - 2:37</h2>
+<ul>
+  <li>Braziers now properly determine the next level’s darkness status</li>
+  <li>Adjsuted UI scaling</li>
+  <li>Changed initial torch time to 900 (15 minutes)</li>
+  <li>Timer now dislays time in minutes and seconds, gradually changes color, and displays a phrase at the end instead of the time</li>
+  <li>Player can no longer light braziers when they have no time on the torch. Added instruction explaining this.</li>
+  <li>EnemyManager now checks what the selected enemy is doing before it tells it to attack and removes it from the grid</li>
+  <li>Re-enabled stuns</li>
+</ul>
+<h2>Steven Ma - 11/29/17 - 6:40</h2>
+<ul>
+  <li>Added in all Unhostile Enemy Dialogue</li>
+  <li>Adjsuted some levels slightly</li>
+</ul>
 <h2>Connor Menard - 11/29/17 - 8:03PM</h2>
 <ul>
   <li>Removed enemy temp hitboxes </li>
@@ -208,4 +223,3 @@
   <li>Started FlagManager final boss waves stetup for Steven</li>
   <li>Glower projectile now is reflect-able</li>
   <li>There's still some debugging junk in here... Sorry if it bothers you, I'm working on it</li>
-</ul>

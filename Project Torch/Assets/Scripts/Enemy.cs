@@ -497,6 +497,7 @@ public abstract class Enemy : MonoBehaviour {
                 isAttacking = true;
                 attackTime += Time.deltaTime;
                 entity.Displacement = Vector2.zero;//Can't move while attacking
+                //Debug.Log("Enemy attack target: " + attackTarget);
                 break;
             case EnemyStates.ApproachingToAttack:
                 Debug.Log("Approaching to attack @ " + Time.fixedTime);
@@ -796,7 +797,7 @@ public abstract class Enemy : MonoBehaviour {
         //Flag guard broken state
 //        guardBroken = true;
         //Get stunned
-        //stunTime = guardBreakStunTime;  // TurnedStunOff
+        stunTime = guardBreakStunTime;  // TurnedStunOff
         //Modify knockback
         knockbackModifier = knockbackMultiplier;
         //Reset states
@@ -928,13 +929,13 @@ public abstract class Enemy : MonoBehaviour {
         //combatState = CombatStates.Recovery; // causes RunTime error
 
         // Set attackTime to the max float value to immediately end current state's frames
-        attackTime = 9999f;
+        attackTime = atStartup + atActive + atRecovery;
 
         // reset dash time
         //dashTime = .00000001f; // incredibly small positive number so the next frame will end the dash
 
         // if hitstun, set hitstun frames
-        //if (hitstun) stunTime = 20f * Helper.frame; // TurnedStunOff
+        if (hitstun) stunTime = 20f * Helper.frame; // TurnedStunOff
         // *Coded by Maurice Edwards
     }
 

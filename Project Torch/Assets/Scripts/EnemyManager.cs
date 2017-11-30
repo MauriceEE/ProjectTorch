@@ -396,25 +396,46 @@ public class EnemyManager : MonoBehaviour {
                 //This little bit here finds a random enemy among the ones circling the player in the grid cells
                 int randIndex = Random.Range(0, 6);
                 int startRandIndex = randIndex;
+
+                /* // check to ensure the grid isn't entirely null, thus triggering an infinite loop
+                bool allNull = true;
+                for(int x = 0; x < surroundingGridOccupants.Length; x++)
+                {
+                    if (surroundingGridOccupants[x] != null) allNull = false;
+                    else if (x == (surroundingGridOccupants.Length - 1) && allNull == true) Debug.Break();
+
+                    Debug.Log(surroundingGridOccupants[x]);
+                }
+                */
+
                 while (surroundingGridOccupants[randIndex] == null)
                 {
                     //Debug.Log("Infinite loop?: " + Time.fixedTime);
-                    Debug.Log(randIndex);
+                    //Debug.Log(randIndex);
                     ++randIndex;
                     if (randIndex >= 6)
                         randIndex = 0;
                     if (randIndex == startRandIndex)
                     {
                         Debug.Log("INFINITE LOOP!!!!!!!1");
+                        // ... nope :/
                         Debug.Break();
                     }
                 }
                 //Tell the enemy we found to attack
-                surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
-                //Remove him from the guys surrounding the player
-                surroundingGridOccupants[randIndex] = null; // I think this is a problem. ISSUE
-                                                            //Cooldown before next attack order
-                timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
+                if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().EnemyState != Enemy.EnemyStates.ApproachingToAttack
+                    && !surroundingGridOccupants[randIndex].GetComponent<Enemy>().IsAttacking
+                    && surroundingGridOccupants[randIndex].GetComponent<Enemy>().EnemyState != Enemy.EnemyStates.Stunned
+                    && surroundingGridOccupants[randIndex].GetComponent<Enemy>().EnemyState != Enemy.EnemyStates.Knockback
+                    && surroundingGridOccupants[randIndex].GetComponent<Enemy>().EnemyState != Enemy.EnemyStates.Dodging)
+                {
+                    surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
+                    //Remove him from the guys surrounding the player
+                    surroundingGridOccupants[randIndex] = null;
+                    
+                    //Cooldown before next attack order
+                    timeBeforeNextAttack = Random.Range(attackMinWait, attackMaxWait);
+                }
             }
         }
         else

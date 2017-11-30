@@ -191,6 +191,33 @@ public class FlagManager : MonoBehaviour {
             case TextManager.InteractiveNPCNames.WZ2Grave2:
                 ActivateDialogueLines("WZ2Grave2 - Default");
                 break;
+            case TextManager.InteractiveNPCNames.ST1Human1:
+                ActivateDialogueLines("ST1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.ST2Shadow1:
+                ActivateDialogueLines("ST2Shadow1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Human1:
+                ActivateDialogueLines("HT1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT1Human2:
+                ActivateDialogueLines("HT1Human2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.HT2Human1:
+                ActivateDialogueLines("HT2Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Human1:
+                ActivateDialogueLines("TH1Human1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.TH1Human2:
+                ActivateDialogueLines("TH1Human2 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ1Shadow1:
+                ActivateDialogueLines("WZ1Shadow1 - Default");
+                break;
+            case TextManager.InteractiveNPCNames.WZ1Human1:
+                ActivateDialogueLines("WZ1Human1 - Default");
+                break;
         }
     }
     /// <summary>
