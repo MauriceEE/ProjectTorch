@@ -167,6 +167,8 @@ public abstract class Enemy : MonoBehaviour {
     protected bool isAttacking;
     //Used for waves off screen
     public bool ignoreAxisConstraints;
+    //Attack on sight
+    public bool engageWithinRange;
     [Header("Attack data")]
     public float atDamage;
     public float atStartup;
@@ -193,9 +195,6 @@ public abstract class Enemy : MonoBehaviour {
     public int dodgeChance;
     // if illuminated
     public bool lit;
-    //DEBUG//
-    [Header("//DEBUG//")]
-    public GameObject[] tempHitboxObj;
     #endregion
 
     #region Properties
@@ -390,8 +389,6 @@ public abstract class Enemy : MonoBehaviour {
                     AttackRoutine(atHB1, atDamage, atKnockbackTime, atKnockbackSpeed);
                 else
                     CheckCollisionsWithEnemies(atHB1);
-                GameObject tempObjBox1 = Instantiate(tempHitboxObj[0] as GameObject, this.transform);
-                tempObjBox1.transform.localPosition = new Vector3(atHB1.center.x * hitBoxDirectionMove, atHB1.center.y, 0);
                 if (attackTime > (atStartup + atHB2FirstActiveFrame) * Helper.frame)
                 {
                     // --do AABB for box 2--
@@ -399,8 +396,6 @@ public abstract class Enemy : MonoBehaviour {
                         AttackRoutine(atHB2, atDamage, atKnockbackTime, atKnockbackSpeed);
                     else
                         CheckCollisionsWithEnemies(atHB2);
-                    GameObject tempObjBox2 = Instantiate(tempHitboxObj[1] as GameObject, this.transform);
-                    tempObjBox2.transform.localPosition = new Vector3(atHB2.center.x * hitBoxDirectionMove, atHB2.center.y, 0);
                 }
                 if (attackTime > (atStartup + atHB3FirstActiveFrame) * Helper.frame)
                 {
@@ -409,8 +404,6 @@ public abstract class Enemy : MonoBehaviour {
                         AttackRoutine(atHB3, atDamage, atKnockbackTime, atKnockbackSpeed);
                     else
                         CheckCollisionsWithEnemies(atHB3);
-                    GameObject tempObjBox3 = Instantiate(tempHitboxObj[2] as GameObject, this.transform);
-                    tempObjBox3.transform.localPosition = new Vector3(atHB3.center.x * hitBoxDirectionMove, atHB3.center.y, 0);
                 }
                 if (attackTime > (atStartup + atActive) * Helper.frame)
                 {
@@ -468,6 +461,7 @@ public abstract class Enemy : MonoBehaviour {
         switch (enemyState)
         {
             case EnemyStates.Idle:
+                Debug.Log("idle @ " + Time.fixedTime);
                 //Nothing special for now.........
                 isAttacking = false;
                 maxVelocity = ogMaxVelocity;
@@ -480,9 +474,24 @@ public abstract class Enemy : MonoBehaviour {
                         enemyMan.SendAllyAttackOrder(this);
                 }
                 else
+                {
                     this.moveTarget = this.transform.position;
+                    //Check distance to player if necessary
+                    if (engageWithinRange)
+                    {
+                        //Auto-start encounter if enabled
+                        if ((player.transform.position - this.transform.position).sqrMagnitude < awarenessRange * awarenessRange)
+                        {
+                            if (encounter)
+                                encounter.GetComponent<Encounter>().StartEncounter(this.faction);
+                            else
+                                throw new UnityException("Encounter object not yet assigned to this enemy!");
+                        }
+                    }
+                }
                 break;
             case EnemyStates.Attacking:
+                Debug.Log("attacking @ " + Time.fixedTime);
                 elapsedApproachTime = 0f;
                 attackRange = ogAttackRange;
                 isAttacking = true;
@@ -490,6 +499,7 @@ public abstract class Enemy : MonoBehaviour {
                 entity.Displacement = Vector2.zero;//Can't move while attacking
                 break;
             case EnemyStates.ApproachingToAttack:
+                Debug.Log("Approaching to attack @ " + Time.fixedTime);
                 isAttacking = false; // might change this if it proves cheap
                 // increase movement speed
                 if (maxVelocity <= (3 * ogMaxVelocity))
@@ -539,6 +549,7 @@ public abstract class Enemy : MonoBehaviour {
                 //atStartup = ogAtStartup;
                 break;
             case EnemyStates.ReturningFromAttack:
+                Debug.Log("Returning from attack @ " + Time.fixedTime);
                 isAttacking = false;
                 counterattacking = false;
                 RequestMoveTarget();
@@ -548,22 +559,28 @@ public abstract class Enemy : MonoBehaviour {
                 //moveTarget = returnPosition;
                 //Merely move back to the return position and wait
                 //TODO: stuff after returning to the return position?
+                Debug.Log("Returning from encounter @ " + Time.fixedTime);
                 SeekTarget();
                 if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
                 {
+                    Debug.Log("Arrived at return position @ " + Time.fixedTime);
                     //Debug.Log("Switching Enemy states 4");
                     enemyState = EnemyStates.Idle;
                     //Prevent the enemy from continuously moving 
                     this.moveTarget = this.transform.position;
+                    //Reset displacement vector
+                    this.entity.Displacement = new Vector2(0f, 0f);
                 }
                 break;
             case EnemyStates.SurroundingPlayer:
+                Debug.Log("surrounding the player @ " + Time.fixedTime);
                 //Merely follow the enemy manager's orders (it handles updating move target automatically)
                 // IDEALLY: IF MOVING TOWARDS THE PLAYER, KEEP MAX MOVEMENT. IF NOT, REDUCE IT TO 1/3rd
                 maxVelocity = ogMaxVelocity / 2;
                 SeekTarget();
                 break;
             case EnemyStates.Dodging:
+                Debug.Log("dodging @ " + Time.fixedTime);
                 //Continue the dodge action
                 SeekTarget();
                 dashTime -= Time.deltaTime;
@@ -591,9 +608,11 @@ public abstract class Enemy : MonoBehaviour {
                 }
                 break;
             case EnemyStates.Knockback:
+                Debug.Log("knocked back @ " + Time.fixedTime);
                 UpdateKnockback();
                 break;
             case EnemyStates.Stunned:
+                Debug.Log("stunned @ " + Time.fixedTime);
                 if (stunTime <= 0f)
                     ResetCombatStates();
                 break;

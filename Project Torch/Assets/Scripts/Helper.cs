@@ -33,7 +33,8 @@ public class Helper{
     /// <param name="parentPosition">The position it's parented to</param>
     /// <returns>'r' in global coordinates</returns>
     public static Rect LocalToWorldRect(Rect r, Vector3 parentPosition) {
-        return new Rect(new Vector3(parentPosition.x + r.x, parentPosition.y + r.y, parentPosition.z), new Vector2(r.width, r.height));
+        return new Rect(parentPosition.x + r.x, parentPosition.y + r.y, r.width, r.height);
+        //return new Rect(new Vector3(parentPosition.x + r.x, parentPosition.y + r.y, parentPosition.z), new Vector2(r.width, r.height));
     }
 
     /// <summary>

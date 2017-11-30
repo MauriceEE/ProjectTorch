@@ -56,7 +56,9 @@ public class FlagManager : MonoBehaviour {
     #region Public Fields
     //Number of enemy kills to set a faction hostile
     public int killsToTiggerHostility;
-#endregion
+    //Final encounter object
+    public Encounter kingOfManFinalBossEncounter;
+    #endregion
 
     #region Private Fields
     //Dictionary of all flags and a boolean to determine whether or not they're true
@@ -291,13 +293,19 @@ public class FlagManager : MonoBehaviour {
                 break;
         }
     }
-
+    /// <summary>
+    /// This gets called whenever a dialogue sequence ends
+    /// Put special event stuff here
+    /// </summary>
+    /// <param name="sequenceName">ID of the dialogue</param>
     public void DialogueEnded(string sequenceName)
     {
+        //Princess saved
         if (sequenceName == "Princess - Saved") 
-        {
             GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.Fleeing;
-        }
+        //King of Man final boss
+        if(sequenceName=="KING OF MAN DIALOGUE NAME GOES HERE!!!")
+            GameObject.Find("EnemyManagerGo").GetComponent<EnemyManager>().StartEncounter(kingOfManFinalBossEncounter, Enemy.EnemyFaction.Human, Encounter.SpecialEncounters.ThroneRoomFinalEncounter);
     }
 #endregion
 }

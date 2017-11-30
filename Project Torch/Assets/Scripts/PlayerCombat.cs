@@ -598,21 +598,21 @@ public class PlayerCombat : MonoBehaviour {
             {
                 case Attacks.Shine:
                     for (int i = 0; i < shHB.Length; ++i)
-                        activeHitboxes.Add(GetHitboxSided(shHB[i]));
+                        activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(shHB[i], this.transform.position)));
                     break;
                 case Attacks.Slash:
-                    activeHitboxes.Add(GetHitboxSided(slHB1));
+                    activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(slHB1, this.transform.position)));
                     if (attackTime > (slStartup + slHB2FirstActiveFrame) * Helper.frame)
-                        activeHitboxes.Add(GetHitboxSided(slHB2));
+                        activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(slHB2, this.transform.position)));
                     if (attackTime > (slStartup + slHB3FirstActiveFrame) * Helper.frame)
-                        activeHitboxes.Add(slHB3);
+                        activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(slHB3, this.transform.position)));
                     break;
                 case Attacks.Thrust:
-                    activeHitboxes.Add(GetHitboxSided(thHB1));
+                    activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(thHB1, this.transform.position)));
                     if (attackTime > (thStartup + thHB2FirstActiveFrame) * Helper.frame)
-                        activeHitboxes.Add(GetHitboxSided(thHB2));
+                        activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(thHB2, this.transform.position)));
                     if (attackTime > (thStartup + thHB3FirstActiveFrame) * Helper.frame)
-                        activeHitboxes.Add(GetHitboxSided(thHB3));
+                        activeHitboxes.Add(GetHitboxSided(Helper.LocalToWorldRect(thHB3, this.transform.position)));
                     break;
                 case Attacks.None:
                     break;

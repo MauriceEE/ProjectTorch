@@ -201,3 +201,11 @@
   <li>Added waves/wave manager</li>
   <li>Can no longer interact with NPCs when in combat, allowing for interactable enemies</li>
 </ul>
+<h2>Connor Menard - 11/29/17 - 8:03PM</h2>
+<ul>
+  <li>Removed enemy temp hitboxes </li>
+  <li>Made it possible for enemies to auto-engage encounters</li>
+  <li>Started FlagManager final boss waves stetup for Steven</li>
+  <li>Glower projectile now is reflect-able</li>
+  <li>There's still some debugging junk in here... Sorry if it bothers you, I'm working on it</li>
+</ul>

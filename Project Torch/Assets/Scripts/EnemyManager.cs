@@ -395,6 +395,7 @@ public class EnemyManager : MonoBehaviour {
                 //Make random enemy attack
                 //This little bit here finds a random enemy among the ones circling the player in the grid cells
                 int randIndex = Random.Range(0, 6);
+                int startRandIndex = randIndex;
                 while (surroundingGridOccupants[randIndex] == null)
                 {
                     //Debug.Log("Infinite loop?: " + Time.fixedTime);
@@ -402,11 +403,11 @@ public class EnemyManager : MonoBehaviour {
                     ++randIndex;
                     if (randIndex >= 6)
                         randIndex = 0;
-                }
-                if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().AlliedWithPlayer)
-                {
-                    Debug.Log("player ally is attacking the player, fix me plz");
-                    //Debug.Break();
+                    if (randIndex == startRandIndex)
+                    {
+                        Debug.Log("INFINITE LOOP!!!!!!!1");
+                        Debug.Break();
+                    }
                 }
                 //Tell the enemy we found to attack
                 surroundingGridOccupants[randIndex].GetComponent<Enemy>().MoveToAttack(player);
@@ -605,7 +606,7 @@ public class EnemyManager : MonoBehaviour {
                 enemy.CircleAroundPlayer();
                 return GeneratePositionInGridCircle(2, enemy.transform.position);
             }
-            //THen try the left
+            //Then try the left
             else if (!surroundingGridOccupants[4])
             {
                 surroundingGridOccupants[4] = enemy.gameObject;
