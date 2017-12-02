@@ -88,6 +88,13 @@
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
+								<AuxBus Name="eighth_dly" ID="{4F5B2B04-2F1B-4972-AB43-4CD98DB1D909}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+											<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="SFX" ID="{ED29BD0C-E911-4480-AB66-B660706CEA38}">

@@ -36,9 +36,12 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Music\Reverb	
+	749923386	eighth_dly			\Default Work Unit\Master Audio Bus\Music\eighth_dly	
 	3695620394	Outside_Verb			\Default Work Unit\Master Audio Bus\SFX\Outside_Verb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	976043934	Wwise Compressor (Custom)	Wwise Compressor			
 	1990128658	Room_Medium	Wwise RoomVerb			
+	3487820010	One_Tap_Half_Second	Wwise Delay			
 

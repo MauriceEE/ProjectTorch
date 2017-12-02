@@ -160,6 +160,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID EIGHTH_DLY = 749923386U;
         static const AkUniqueID OUTSIDE_VERB = 3695620394U;
         static const AkUniqueID REVERB = 348963605U;
     } // namespace AUX_BUSSES

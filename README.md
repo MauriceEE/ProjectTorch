@@ -223,3 +223,10 @@
   <li>Started FlagManager final boss waves stetup for Steven</li>
   <li>Glower projectile now is reflect-able</li>
   <li>There's still some debugging junk in here... Sorry if it bothers you, I'm working on it</li>
+</ul>
+<h2>Garret Reynolds - 12/1/17 - 10:03PM</h2>
+<ul>
+  <li>Defined low, medium, and high intensity combat music loops and transitions.</li>
+  <li>Wwise Game Parameter CombatIntensity from values 0-3 determines which set of combat music will play. 1 = low, 2 = medium, 3 = high</li>
+  <li>audio mix adjustments</li>
+  </ul>
