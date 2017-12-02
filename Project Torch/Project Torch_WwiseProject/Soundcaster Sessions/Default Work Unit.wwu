@@ -50,7 +50,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}"/>
-						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
+						<CurrentStateRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>

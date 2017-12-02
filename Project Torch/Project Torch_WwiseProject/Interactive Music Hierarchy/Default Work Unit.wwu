@@ -695,6 +695,13 @@
 							</CueList>
 						</MusicSegment>
 						<MusicPlaylistContainer Name="Ambient" ID="{701896EB-89BB-47F1-B165-AF66C253694D}" ShortID="374049278">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
