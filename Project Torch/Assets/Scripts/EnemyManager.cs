@@ -193,7 +193,7 @@ public class EnemyManager : MonoBehaviour {
     /// </summary>
     protected void MergeEncounters()
     {
-        Debug.Log("Merging encounters...... FINISH ME");
+        Debug.Log("Merging encounters...... FINISH ME"); // <--- ---> <--- ---> X       Fatality: No Time Left In The Schedule
     }
 
     /// <summary>
@@ -340,11 +340,18 @@ public class EnemyManager : MonoBehaviour {
             encounterAggressionCurrent -= encounterAggressionLossPerSecond * Time.deltaTime;
             if (encounterAggressionCurrent < 0)
                 encounterAggressionCurrent = 0f;
+
             //Check if aggression is above limit and set aggression if true
             if (encounterAggressionCurrent >= encounterAggressionLimit)
             {
                 for (int i = 0; i < encounterEnemies.Count; ++i)
                 {
+                    if (encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer == true)
+                    {
+                        encounterEnemies[i].GetComponent<Enemy>().exclamPointMid.GetComponent<SpriteRenderer>().color = Color.red;
+                        encounterEnemies[i].GetComponent<Enemy>().exclamPointLeft.GetComponent<SpriteRenderer>().color = Color.red;
+                        encounterEnemies[i].GetComponent<Enemy>().exclamPointRight.GetComponent<SpriteRenderer>().color = Color.red;
+                    }
                     encounterEnemies[i].GetComponent<Enemy>().AlliedWithPlayer = false;
                     encounterEnemies[i].GetComponent<Entity>().SpeedModifier *= 1f;//NOTE: This was changed to use multiplication to test the new speed system @ 11/8
                 }
@@ -378,6 +385,36 @@ public class EnemyManager : MonoBehaviour {
                     e.MoveToAttack(GetNewAttackTarget(e.faction));
                 else if (e.EnemyState == Enemy.EnemyStates.ReturningFromAttack)//Make them attack again after they attack
                     e.MoveToAttack(e.AttackTarget);
+
+                // determine how many exclamation points to draw
+                switch (Mathf.FloorToInt(encounterAggressionLimit / encounterAggressionCurrent))
+                {
+                    default:
+                    case 0:
+                        e.exclamPointMid.GetComponent<SpriteRenderer>().color = Color.clear;
+                        e.exclamPointLeft.GetComponent<SpriteRenderer>().color = Color.clear;
+                        e.exclamPointRight.GetComponent<SpriteRenderer>().color = Color.clear;
+                        break;
+
+                    case 3:
+                        e.exclamPointMid.GetComponent<SpriteRenderer>().color = Color.white;
+                        break;
+                    case 2:
+                        e.exclamPointMid.GetComponent<SpriteRenderer>().color = Color.white;
+                        e.exclamPointLeft.GetComponent<SpriteRenderer>().color = Color.white;
+                        break;
+                    case 1:
+                        e.exclamPointMid.GetComponent<SpriteRenderer>().color = Color.red;
+                        e.exclamPointLeft.GetComponent<SpriteRenderer>().color = Color.red;
+                        e.exclamPointRight.GetComponent<SpriteRenderer>().color = Color.red;
+                        break;
+                }
+            }
+            else
+            {
+                e.exclamPointMid.GetComponent<SpriteRenderer>().color = Color.clear;
+                e.exclamPointLeft.GetComponent<SpriteRenderer>().color = Color.clear;
+                e.exclamPointRight.GetComponent<SpriteRenderer>().color = Color.clear;
             }
         }
     }

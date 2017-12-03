@@ -169,6 +169,10 @@ public abstract class Enemy : MonoBehaviour {
     public bool ignoreAxisConstraints;
     //Attack on sight
     public bool engageWithinRange;
+    // Exclamation points
+    public GameObject exclamPointMid;
+    public GameObject exclamPointLeft;
+    public GameObject exclamPointRight;
     [Header("Attack data")]
     public float atDamage;
     public float atStartup;

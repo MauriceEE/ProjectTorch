@@ -229,4 +229,13 @@
   <li>Defined low, medium, and high intensity combat music loops and transitions.</li>
   <li>Wwise Game Parameter CombatIntensity from values 0-3 determines which set of combat music will play. 1 = low, 2 = medium, 3 = high</li>
   <li>audio mix adjustments</li>
-  </ul>
+</ul>
+<h2>Maurice Edwards - 12/3/17 - 2:11</h2>
+<ul>
+  <li>Updated all enemy prefabs with exclamation points except boss enemies</li>
+  <li>Removed instances of boss enemies</li>
+  <li>Allied enemies now display exclamation points to convey aggression levels and betrayal</li>
+  <li>Put in King of the Dark sprite</li>
+  <li>Adjusted level bounds to make levels able to be completed</li>
+  <li>Implemented waves but left them disabled since we likely won't have time to balance and debug them</li>
+</ul>
