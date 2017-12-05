@@ -22,13 +22,14 @@ Custom State	ID	Name	State Group	Owner		Notes
 	436275851	Pause	GameState	\Interactive Music Hierarchy\Default Work Unit\Music_Player		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	1079998417	AmbientMusicMood			\Default Work Unit\AmbientMusicMood	
 	1253610732	CombatIntensity			\Default Work Unit\CombatIntensity	
 
 Effect plug-ins	ID	Name	Type				Notes
 	957302628	Wwise Delay (Custom)	Wwise Delay			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	8938262	03_Kick	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\04\04_Snare_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Combat Punctation\03_Kick		109279
+	8938262	04_Snare	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\04\04_Snare_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_medium\04\04_Snare		109279
 	14586678	04_Cymbals	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\04\04_Cymbals_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_medium\04\04_Cymbals		100216
 	23651261	Organic-24b	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Ambient\Organic-24b_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Ambient\Ambient\Organic-24b		4675984
 	41911302	08_Lead Guitar 2_bip	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\08\08_Lead Guitar 2_bip_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_high\08\08_Lead Guitar 2_bip		444549
@@ -70,7 +71,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	434406035	08_Metal Kit - Delay	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\08\08_Metal Kit - Delay_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_high\08\08_Metal Kit - Delay		331089
 	441591930	07_Mercenary	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\07\07_Mercenary_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_high\07\07_Mercenary		270164
 	471613444	08_Grinding Mids ARP	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\08\08_Grinding Mids ARP_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_high\08\08_Grinding Mids ARP		733217
-	471837768	03_Kick	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\02\02_Toms_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Combat Punctation\03_Kick		301529
+	471837768	02_Toms	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\02\02_Toms_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_medium\02\02_Toms		301529
 	482818809	03_Lead Guitar 3_bip	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\03\03_Lead Guitar 3_bip_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_medium\03\03_Lead Guitar 3_bip		288666
 	483247989	PlayerDeath02	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\PlayerDeath02_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerDeath\PlayerDeath02		19566
 	486389964	06_Snare	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Windows\SFX\Interactive Music\Combat\06\06_Toms_AD29F36A.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Player\Combat_high\06\06_Snare		253511

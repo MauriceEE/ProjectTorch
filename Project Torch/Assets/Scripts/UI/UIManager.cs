@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour {
  
         SceneManager.LoadSceneAsync("Loading");
         SceneManager.LoadSceneAsync("Game");
+		AkSoundEngine.SetState ("Music", "Ambient");
         
     }
     public void LoadCredits() {

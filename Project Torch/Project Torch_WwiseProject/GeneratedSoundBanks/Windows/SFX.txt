@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	345580588	EnemyShadowWalk			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowWalk	
 	454121546	Scroll			\Default Work Unit\UI\Scroll	
 	735920725	EnemyHumanBruteWalk			\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteWalk	
+	892714673	Human_Spearman_Attack			\Default Work Unit\Enemies\EnemyHumanSpearman\Human_Spearman_Attack	
 	953277036	Resume			\Default Work Unit\UI\Resume	
 	1138021477	EnemyShadowGlowerAttack			\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerAttack	
 	1517887259	EnemyShadowDash			\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDash	

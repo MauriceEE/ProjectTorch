@@ -45,6 +45,7 @@
 						<ObjectRef Name="PlayerShine" ID="{2DCED850-3A1B-4B7A-BC76-A1F4309CDAD7}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EnemyHumanAttack" ID="{255EE059-54C7-4B9D-9DB0-ABAF04F1CD5F}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EnemyHumanBruteAttack" ID="{9CB4FEEB-05DB-4B9F-A822-018384ECBCCE}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Human_Spearman_Attack" ID="{195B59F4-0E3E-4C0B-A0A2-81061A9904A4}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EnemyHumanBruteDash" ID="{66009FE0-0E88-4C1D-A9BC-D6417B4A8307}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EnemyHumanBruteWalk" ID="{7958D5FB-B9A3-4D36-8C32-974C2D1DCD8D}" WorkUnitID="{F625D043-55B3-4F69-A4F1-FC06A818FF00}" Filter="7" Origin="Manual"/>

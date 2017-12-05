@@ -153,6 +153,61 @@ public class ZoneManager : MonoBehaviour {
         nextZone = _nextZone;
         instructMan.changeInstructions("Off"); // turn off any lingering tutorials
         //newPlayerXCoordinate = newXCoordinate;
+		if (_nextZone.zone == ZoneNames.Battlefield) {
+			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 1);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 3);
+		}
+		if (_nextZone.zone == ZoneNames.PrincessRescue) {
+			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 3);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 5);
+		}
+		if (_nextZone.zone == ZoneNames.ShadowTerritoryStage2) {
+			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 3);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 5);
+		}
+		if (_nextZone.zone == ZoneNames.WarZone) {
+			//triggered combat music will be low intensity, ambient music will be "MildThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 1);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 3);
+		}
+		if (_nextZone.zone == ZoneNames.TrueHumanStage1) {
+			//triggered combat music will be low intensity, ambient music will be "Sadness"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 1);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 1);
+		}
+		if (_nextZone.zone == ZoneNames.ShadowTerritoryStage1) {
+			//triggered combat music will be low intensity, ambient music will be "Wonder"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 1);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 2);
+		}
+		if (_nextZone.zone == ZoneNames.FortressKeep){
+			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 2);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 4);
+		}
+		if (_nextZone.zone == ZoneNames.HumanTerritoryStage1) {
+			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 2);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 4);
+		}
+		if (_nextZone.zone == ZoneNames.HumanTerritoryStage2) {
+			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 3);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 5);
+		}
+		if (_nextZone.zone == ZoneNames.ThroneRoom) {
+			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 3);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 5);
+		}
+		if (_nextZone.zone == ZoneNames.WarZoneStage2) {
+			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
+			AkSoundEngine.SetRTPCValue ("CombatIntensity", 2);
+			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 4);
+		}
     }
     /// <summary>
     /// Locks the camera within a bounds, based on the zone

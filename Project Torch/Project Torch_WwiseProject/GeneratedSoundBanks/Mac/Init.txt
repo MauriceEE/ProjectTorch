@@ -1,10 +1,16 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
 	224141993	CombatMusicIntensity			\Music\CombatMusicIntensity	
+	1546524390	AmbientMusicStatus			\Music\AmbientMusicStatus	
 
 Switch	ID	Name	Switch Group			Notes
 	545371365	Low	CombatMusicIntensity			
 	2849147824	Medium	CombatMusicIntensity			
 	3550808449	High	CombatMusicIntensity			
+	70773388	GreatThreat	AmbientMusicStatus			
+	347704107	MildThreat	AmbientMusicStatus			
+	478431442	Sadness	AmbientMusicStatus			
+	2976041628	Wonder	AmbientMusicStatus			
+	3192291216	MediumThreat	AmbientMusicStatus			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	444815956	PlayerLife			\Default Work Unit\PlayerLife	

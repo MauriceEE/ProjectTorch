@@ -15,6 +15,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{2AC6AB45-0700-42F4-AD3C-A5DD212B6D1D}" ShortID="538036778">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{23073EF2-001F-4715-B8DD-3E685984CC70}" WorkUnitID="{1C6F15B7-5082-4AA6-809E-55AE31210F8C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Combat" ID="{A09BD9B1-1C85-4BF2-A43C-2334E45FA87F}">

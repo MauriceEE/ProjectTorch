@@ -49,6 +49,7 @@
 				<Event Id="3970335178" Name="EnemyShadowHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowHit"/>
 				<Event Id="345580588" Name="EnemyShadowWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowWalk"/>
 				<Event Id="2197986718" Name="GameEnd" ObjectPath="\Events\Interactive Music\GameEnd"/>
+				<Event Id="892714673" Name="Human_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\Human_Spearman_Attack"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
 				<Event Id="2525052962" Name="PlayerDash" ObjectPath="\Events\Default Work Unit\Player\PlayerDash"/>
 				<Event Id="3831688773" Name="PlayerHit" ObjectPath="\Events\Default Work Unit\Player\PlayerHit"/>

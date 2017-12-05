@@ -1891,10 +1891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f69dfb47daa4bea89b9fee47d85805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
-  lowerPoolSize: 2048
+  lowerPoolSize: 4096
   streamingPoolSize: 1024
   preparePoolSize: 0
   memoryCutoffThreshold: 0.95
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_positionOffsetData:
     positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
-  isEnvironmentAware: 1
+  isEnvironmentAware: 0
   isStaticObject: 0
   m_listeners:
     initialListenerList: []

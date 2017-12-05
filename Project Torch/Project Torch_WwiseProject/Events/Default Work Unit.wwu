@@ -51,6 +51,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Human_Spearman_Attack" ID="{195B59F4-0E3E-4C0B-A0A2-81061A9904A4}">
+									<ChildrenList>
+										<Action Name="" ID="{505C3FCC-C549-4D2F-9B08-52187A2F5AA2}" ShortID="473553323">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnemyHumanSpearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="EnemyHuman" ID="{0907253F-E197-478B-8DA0-62F1785230AB}" ShortID="599472307">

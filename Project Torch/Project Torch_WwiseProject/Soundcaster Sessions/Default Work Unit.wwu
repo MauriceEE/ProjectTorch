@@ -20,6 +20,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="AmbientMusicMood" ID="{CCB78AA3-3C2E-408D-89D8-F4855003B20A}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Master_Volume" ID="{55E5C7AB-7DA4-460B-B6E6-33894DE14BA4}"/>
 							<Value>100</Value>
 						</RTPCValue>
@@ -41,7 +45,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="CombatIntensity" ID="{353D753A-05A8-4E7C-953B-15B2CD801034}"/>
-							<Value>2</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
@@ -49,8 +53,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}"/>
-						<CurrentStateRef Name="Combat" ID="{63002C2A-A8AA-4093-AF46-B3A8A9C1D864}"/>
+						<CurrentStateRef Name="None" ID="{A440BFD1-C039-4C3F-A421-B6A5E8704DBE}"/>
+						<CurrentStateRef Name="None" ID="{794663F3-2990-48CD-BDD3-0936F1EB7FCC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>

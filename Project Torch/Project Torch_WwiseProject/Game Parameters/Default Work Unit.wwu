@@ -36,6 +36,13 @@
 						<Property Name="Max" Type="Real64" Value="3"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="AmbientMusicMood" ID="{CCB78AA3-3C2E-408D-89D8-F4855003B20A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="6"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

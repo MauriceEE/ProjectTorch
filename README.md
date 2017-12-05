@@ -242,7 +242,13 @@
 <h2>Connor Menard - 12/4/17 - 9:55PM</h2>
 <ul>
   <li>May have fixed the freezing bug (more testing required) </li>
-  <li>Removed the encounter with no enecounter enemies in it</li>
+  <li>Removed the encounter with no encounter enemies in it</li>
   <li>Added a failsafe case if there are more than 6 enemies in the grid - game no longer crashes</li>
   <li>Fixed some enemies in incorrect zones</li>
+</ul>
+<h2>Garret Reynolds - 12/5/17 - 10:37AM</h2>
+<ul>
+  <li>implemented zone specific music</li>
+  <li>fixed menu music</li>
+  <li>increased lower engine pool size </li>
 </ul>

@@ -4,13 +4,56 @@
 		<WorkUnit Name="Music" ID="{5155EF77-0A9F-40B0-B10F-CC97ABD7B82D}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="AmbientMusicStatus" ID="{FF4B3D5B-766C-4FF6-B5F6-575D6DD4EF72}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<Switch Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
-						<Switch Name="MildThreat" ID="{AC040EFF-AD23-4152-885F-EF4D01DCC0FE}"/>
-						<Switch Name="MediumThreat" ID="{93F611D6-0090-44B2-B26A-20B09E1C1D02}"/>
 						<Switch Name="Sadness" ID="{44A8F2D2-1740-4E34-AB47-37F81F945FAC}"/>
 						<Switch Name="Wonder" ID="{51D6996E-57D4-4629-8820-05F5D6DE8C20}"/>
+						<Switch Name="MildThreat" ID="{AC040EFF-AD23-4152-885F-EF4D01DCC0FE}"/>
+						<Switch Name="MediumThreat" ID="{93F611D6-0090-44B2-B26A-20B09E1C1D02}"/>
+						<Switch Name="GreatThreat" ID="{46FB1EA5-855C-4102-9B50-822E23929A0B}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="AmbientMusicMood" ID="{CCB78AA3-3C2E-408D-89D8-F4855003B20A}"/>
+						<Curve Name="" ID="{18B609AE-05C8-4E42-A12A-E8C8459EF4E9}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>5</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 				<SwitchGroup Name="CombatMusicIntensity" ID="{62F5B761-FB48-4D2B-A229-28063F39BDB1}">
 					<PropertyList>

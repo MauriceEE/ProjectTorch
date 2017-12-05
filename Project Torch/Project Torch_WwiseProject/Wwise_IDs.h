@@ -48,6 +48,7 @@ namespace AK
         static const AkUniqueID ENEMYSHADOWHIT = 3970335178U;
         static const AkUniqueID ENEMYSHADOWWALK = 345580588U;
         static const AkUniqueID GAMEEND = 2197986718U;
+        static const AkUniqueID HUMAN_SPEARMAN_ATTACK = 892714673U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PLAYERDASH = 2525052962U;
@@ -134,6 +135,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AMBIENTMUSICMOOD = 1079998417U;
         static const AkUniqueID COMBATINTENSITY = 1253610732U;
         static const AkUniqueID MASTER_VOLUME = 4179668880U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;

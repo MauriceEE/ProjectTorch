@@ -17,37 +17,59 @@
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="317641954" Name="ButtonPress" ObjectPath="\Events\Default Work Unit\UI\ButtonPress"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Dash"/>
-				<Event Id="3244706930" Name="Human_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Basic_Attack"/>
-				<Event Id="3823776748" Name="Human_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Brute_Attack"/>
-				<Event Id="892714673" Name="Human_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Human_Spearman_Attack"/>
+				<Event Id="2442141738" Name="EnemyHumanAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanAttack"/>
+				<Event Id="2271782150" Name="EnemyHumanBruteAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteAttack"/>
+				<Event Id="3590139274" Name="EnemyHumanBruteDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDash"/>
+				<Event Id="3408497084" Name="EnemyHumanBruteDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteDeath"/>
+				<Event Id="2421117389" Name="EnemyHumanBruteHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteHit"/>
+				<Event Id="735920725" Name="EnemyHumanBruteWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanBrute\EnemyHumanBruteWalk"/>
+				<Event Id="3056021366" Name="EnemyHumanDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDash"/>
+				<Event Id="3658215168" Name="EnemyHumanDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanDeath"/>
+				<Event Id="2928579217" Name="EnemyHumanHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanHit"/>
+				<Event Id="3466660987" Name="EnemyHumanSpearmanAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanAttack"/>
+				<Event Id="3304273307" Name="EnemyHumanSpearmanDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDash"/>
+				<Event Id="3685561835" Name="EnemyHumanSpearmanDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanDeath"/>
+				<Event Id="143401290" Name="EnemyHumanSpearmanHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanHit"/>
+				<Event Id="2131966636" Name="EnemyHumanSpearmanWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\EnemyHumanSpearmanWalk"/>
+				<Event Id="2268161225" Name="EnemyHumanWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHuman\EnemyHumanWalk"/>
+				<Event Id="3335836155" Name="EnemyShadowAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowAttack"/>
+				<Event Id="2295227437" Name="EnemyShadowBruteAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteAttack"/>
+				<Event Id="2691316833" Name="EnemyShadowBruteDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDash"/>
+				<Event Id="2859281905" Name="EnemyShadowBruteDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteDeath"/>
+				<Event Id="4206366272" Name="EnemyShadowBruteHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteHit"/>
+				<Event Id="2857301246" Name="EnemyShadowBruteWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowBrute\EnemyShadowBruteWalk"/>
+				<Event Id="1517887259" Name="EnemyShadowDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDash"/>
+				<Event Id="3179006571" Name="EnemyShadowDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowDeath"/>
+				<Event Id="1138021477" Name="EnemyShadowGlowerAttack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerAttack"/>
+				<Event Id="3498057465" Name="EnemyShadowGlowerDash" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDash"/>
+				<Event Id="3876290745" Name="EnemyShadowGlowerDeath" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerDeath"/>
+				<Event Id="2420314586" Name="EnemyShadowGlowerExplosion" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerExplosion"/>
+				<Event Id="3945367480" Name="EnemyShadowGlowerHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerHit"/>
+				<Event Id="3385257286" Name="EnemyShadowGlowerWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadowGlower\EnemyShadowGlowerWalk"/>
+				<Event Id="3970335178" Name="EnemyShadowHit" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowHit"/>
+				<Event Id="345580588" Name="EnemyShadowWalk" ObjectPath="\Events\Default Work Unit\Enemies\EnemyShadow\EnemyShadowWalk"/>
+				<Event Id="2197986718" Name="GameEnd" ObjectPath="\Events\Interactive Music\GameEnd"/>
+				<Event Id="892714673" Name="Human_Spearman_Attack" ObjectPath="\Events\Default Work Unit\Enemies\EnemyHumanSpearman\Human_Spearman_Attack"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\UI\Pause"/>
-				<Event Id="3607314950" Name="Prepare_Footsteps" ObjectPath="\Events\Default Work Unit\Adjudicator\Prepare_Footsteps"/>
+				<Event Id="2525052962" Name="PlayerDash" ObjectPath="\Events\Default Work Unit\Player\PlayerDash"/>
+				<Event Id="3831688773" Name="PlayerHit" ObjectPath="\Events\Default Work Unit\Player\PlayerHit"/>
+				<Event Id="2522435555" Name="PlayerShine" ObjectPath="\Events\Default Work Unit\Player\PlayerShine"/>
+				<Event Id="3910121377" Name="PlayerSlash" ObjectPath="\Events\Default Work Unit\Player\PlayerSlash"/>
+				<Event Id="3747613209" Name="PlayerSlashDeflected" ObjectPath="\Events\Default Work Unit\Player\PlayerSlashDeflected"/>
+				<Event Id="41749840" Name="PlayerThrust" ObjectPath="\Events\Default Work Unit\Player\PlayerThrust"/>
+				<Event Id="1592629277" Name="PlayerWalk" ObjectPath="\Events\Default Work Unit\Player\PlayerWalk"/>
 				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\UI\Resume"/>
 				<Event Id="454121546" Name="Scroll" ObjectPath="\Events\Default Work Unit\UI\Scroll"/>
-				<Event Id="3817024617" Name="Shadow_Basic_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Basic_Attack"/>
-				<Event Id="3498381063" Name="Shadow_Brute_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Shadow_Brute_Attack"/>
-				<Event Id="3055381918" Name="Shine" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Shine"/>
-				<Event Id="4107276880" Name="Slash" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Slash"/>
-				<Event Id="2197345151" Name="Thrust" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Thrust"/>
-				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Adjudicator\Attacks and Abilities\Torch_Plant"/>
+				<Event Id="2547765723" Name="Torch_Plant" ObjectPath="\Events\Default Work Unit\Player\Torch_Plant"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="28478523" Language="SFX">
-					<ShortName>Close_1.WAV</ShortName>
-					<Path>SFX/Close_1_B7F88020.wem</Path>
+				<File Id="42804537" Language="SFX">
+					<ShortName>PlayerSlashDeflected01.wav</ShortName>
+					<Path>SFX/PlayerSlashDeflected01_F7D0E330.wem</Path>
 				</File>
 				<File Id="78114416" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_C9C93460.wem</Path>
-				</File>
-				<File Id="92716449" Language="SFX">
-					<ShortName>pie_pan- 06.wav</ShortName>
-					<Path>SFX/pie_pan- 06_C6DDB7C6.wem</Path>
-				</File>
-				<File Id="100672609" Language="SFX">
-					<ShortName>Air Burst Short 12.wav</ShortName>
-					<Path>SFX/Air Burst Short 12_F7D0E330.wem</Path>
 				</File>
 				<File Id="128772641" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
@@ -69,25 +91,41 @@
 					<ShortName>Thick Plastic Hits 05.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 05_B6CDA5A2.wem</Path>
 				</File>
-				<File Id="304949470" Language="SFX">
-					<ShortName>Air Burst Short 11.wav</ShortName>
-					<Path>SFX/Air Burst Short 11_F7D0E330.wem</Path>
+				<File Id="252585733" Language="SFX">
+					<ShortName>HumanSlash01.wav</ShortName>
+					<Path>SFX/HumanSlash01_F7D0E330.wem</Path>
+				</File>
+				<File Id="288819436" Language="SFX">
+					<ShortName>EnemyHumanHit01.wav</ShortName>
+					<Path>SFX/EnemyHumanHit01_F7D0E330.wem</Path>
 				</File>
 				<File Id="309056163" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_AFBCAD86.wem</Path>
 				</File>
-				<File Id="553166943" Language="SFX">
-					<ShortName>Air Burst Short 10.wav</ShortName>
-					<Path>SFX/Air Burst Short 10_F7D0E330.wem</Path>
+				<File Id="483852296" Language="SFX">
+					<ShortName>PlayerDeath01.wav</ShortName>
+					<Path>SFX/PlayerDeath01_F7D0E330.wem</Path>
 				</File>
-				<File Id="824997395" Language="SFX">
-					<ShortName>Construction01_denoise.wav</ShortName>
-					<Path>SFX/Construction01_denoise_7CFCEDFE.wem</Path>
+				<File Id="508779539" Language="SFX">
+					<ShortName>PlayerThrust.wav</ShortName>
+					<Path>SFX/PlayerThrust_F7D0E330.wem</Path>
 				</File>
-				<File Id="844726469" Language="SFX">
-					<ShortName>Large knife swings_2.WAV</ShortName>
-					<Path>SFX/Large knife swings_2_CBC2B55E.wem</Path>
+				<File Id="603141643" Language="SFX">
+					<ShortName>EnemyShadowGlowerAttack02.wav</ShortName>
+					<Path>SFX/EnemyShadowGlowerAttack02_F7D0E330.wem</Path>
+				</File>
+				<File Id="616304823" Language="SFX">
+					<ShortName>PlayerShine01.wav</ShortName>
+					<Path>SFX/PlayerShine01_F7D0E330.wem</Path>
+				</File>
+				<File Id="755251734" Language="SFX">
+					<ShortName>PlayerDash01.wav</ShortName>
+					<Path>SFX/PlayerDash01_F7D0E330.wem</Path>
+				</File>
+				<File Id="791402337" Language="SFX">
+					<ShortName>EnemyShadowGlowerExplosion.wav</ShortName>
+					<Path>SFX/EnemyShadowGlowerExplosion_F7D0E330.wem</Path>
 				</File>
 				<File Id="855263217" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
@@ -101,17 +139,37 @@
 					<ShortName>Thick Plastic Hits 36.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 36_AFF4A735.wem</Path>
 				</File>
-				<File Id="918874852" Language="SFX">
-					<ShortName>Air Burst Short 09.wav</ShortName>
-					<Path>SFX/Air Burst Short 09_F7D0E330.wem</Path>
+				<File Id="877535839" Language="SFX">
+					<ShortName>EnemyShadowSlash.wav</ShortName>
+					<Path>SFX/EnemyShadowSlash_F7D0E330.wem</Path>
+				</File>
+				<File Id="904889417" Language="SFX">
+					<ShortName>ShadowHit01.wav</ShortName>
+					<Path>SFX/ShadowHit01_F7D0E330.wem</Path>
 				</File>
 				<File Id="939083768" Language="SFX">
 					<ShortName>Close_1.WAV</ShortName>
 					<Path>SFX/Close_1_3820EE0F.wem</Path>
 				</File>
+				<File Id="969397272" Language="SFX">
+					<ShortName>HumanHit01.wav</ShortName>
+					<Path>SFX/HumanHit01_F7D0E330.wem</Path>
+				</File>
+				<File Id="1000430789" Language="SFX">
+					<ShortName>EnemyShadowDeath01.wav</ShortName>
+					<Path>SFX/EnemyShadowDeath01_F7D0E330.wem</Path>
+				</File>
 				<File Id="1023094648" Language="SFX">
 					<ShortName>Thick Plastic Hits 32.wav</ShortName>
 					<Path>SFX/Thick Plastic Hits 32_0BDA7ABA.wem</Path>
+				</File>
+				<File Id="1052781010" Language="SFX">
+					<ShortName>HumanSlash01.wav</ShortName>
+					<Path>SFX/HumanSlash01_C9106BCE.wem</Path>
+				</File>
+				<File Id="1068839159" Language="SFX">
+					<ShortName>HumanBruteSlash01.wav</ShortName>
+					<Path>SFX/HumanBruteSlash01_B500ECC1.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -125,10 +183,10 @@
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3611180283" Name="Music_Ambient" ObjectPath="\Events\Interactive Music\Music_Ambient"/>
-				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Interactive Music\Music_Combat"/>
-				<Event Id="3678931145" Name="Music_Death" ObjectPath="\Events\Interactive Music\Music_Death"/>
+				<Event Id="77978275" Name="Ambient" ObjectPath="\Events\Interactive Music\Ambient"/>
+				<Event Id="2764240573" Name="Combat" ObjectPath="\Events\Interactive Music\Combat"/>
 				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Interactive Music\Music_Start"/>
+				<Event Id="1656947812" Name="PlayerDeath" ObjectPath="\Events\Default Work Unit\Player\PlayerDeath"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="8938262" Language="SFX">
@@ -155,10 +213,6 @@
 					<ShortName>Interactive Music\Combat\08\08_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Snare_AD29F36A.wem</Path>
 				</File>
-				<File Id="69835257" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_HiHat_AD29F36A.wem</Path>
-				</File>
 				<File Id="72149099" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Omni Atari Bit Triangle ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Omni Atari Bit Triangle ARP_AD29F36A.wem</Path>
@@ -183,25 +237,17 @@
 					<ShortName>Interactive Music\Combat\03\03_RChug 2_BillyAMP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_RChug 2_BillyAMP_AD29F36A.wem</Path>
 				</File>
-				<File Id="126979641" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-1\T-1_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-1/T-1_Da New Dog Bass_AD29F36A.wem</Path>
-				</File>
 				<File Id="136660971" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_HiHat_AD29F36A.wem</Path>
 				</File>
-				<File Id="144130695" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Toms.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="167406405" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_HiHat_AD29F36A.wem</Path>
-				</File>
 				<File Id="170293284" Language="SFX">
 					<ShortName>Interactive Music\Combat\04\04_Baritone GTR rhythm KS.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/04/04_Baritone GTR rhythm KS_AD29F36A.wem</Path>
+				</File>
+				<File Id="177507875" Language="SFX">
+					<ShortName>PlayerDeath03.wav</ShortName>
+					<Path>SFX/PlayerDeath03_F7D0E330.wem</Path>
 				</File>
 				<File Id="182141558" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_Snare.wav</ShortName>
@@ -218,10 +264,6 @@
 				<File Id="205921949" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Deep Bowing Glass.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Deep Bowing Glass_AD29F36A.wem</Path>
-				</File>
-				<File Id="206792941" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Cymbals.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Cymbals_AD29F36A.wem</Path>
 				</File>
 				<File Id="210313311" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Baritone GTR rhythm KS.wav</ShortName>
@@ -275,6 +317,10 @@
 					<ShortName>Interactive Music\Combat\01\01_Kick.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Kick_AD29F36A.wem</Path>
 				</File>
+				<File Id="399105959" Language="SFX">
+					<ShortName>PlayerDeath06.wav</ShortName>
+					<Path>SFX/PlayerDeath06_F7D0E330.wem</Path>
+				</File>
 				<File Id="407354187" Language="SFX">
 					<ShortName>Interactive Music\Combat\05\05_Grinding Mids.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/05/05_Grinding Mids_AD29F36A.wem</Path>
@@ -307,10 +353,6 @@
 					<ShortName>Interactive Music\Combat\07\07_Mercenary.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/07/07_Mercenary_AD29F36A.wem</Path>
 				</File>
-				<File Id="448800367" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Da New Dog Bass ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Da New Dog Bass ARP_AD29F36A.wem</Path>
-				</File>
 				<File Id="471613444" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Grinding Mids ARP_AD29F36A.wem</Path>
@@ -319,13 +361,13 @@
 					<ShortName>Interactive Music\Combat\02\02_Toms.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/02/02_Toms_AD29F36A.wem</Path>
 				</File>
-				<File Id="476683699" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Kick_AD29F36A.wem</Path>
-				</File>
 				<File Id="482818809" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Lead Guitar 3_bip.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Lead Guitar 3_bip_AD29F36A.wem</Path>
+				</File>
+				<File Id="483247989" Language="SFX">
+					<ShortName>PlayerDeath02.wav</ShortName>
+					<Path>SFX/PlayerDeath02_F7D0E330.wem</Path>
 				</File>
 				<File Id="486389964" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Toms.wav</ShortName>
@@ -334,10 +376,6 @@
 				<File Id="486488912" Language="SFX">
 					<ShortName>Interactive Music\Combat\06\06_Grinding Mids ARP.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/06/06_Grinding Mids ARP_AD29F36A.wem</Path>
-				</File>
-				<File Id="487663690" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Da New Dog Bass.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Da New Dog Bass_AD29F36A.wem</Path>
 				</File>
 				<File Id="488263859" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Baritone GTR rhythm KS.wav</ShortName>
@@ -358,10 +396,6 @@
 				<File Id="545725281" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Omni Atari Bit Triangle dotted sync.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Omni Atari Bit Triangle dotted sync_AD29F36A.wem</Path>
-				</File>
-				<File Id="570950282" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Snare.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Snare_AD29F36A.wem</Path>
 				</File>
 				<File Id="572284729" Language="SFX">
 					<ShortName>Interactive Music\Combat\03\03_Da New Dog Bass.wav</ShortName>
@@ -431,10 +465,6 @@
 					<ShortName>Interactive Music\Combat\08\08_Deep Undercover Synch.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Deep Undercover Synch_AD29F36A.wem</Path>
 				</File>
-				<File Id="792300450" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Snare.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Snare_AD29F36A.wem</Path>
-				</File>
 				<File Id="792876635" Language="SFX">
 					<ShortName>Interactive Music\Combat\02\02_Snare.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/02/02_Snare_AD29F36A.wem</Path>
@@ -442,10 +472,6 @@
 				<File Id="805484044" Language="SFX">
 					<ShortName>Interactive Music\Combat\08\08_Da New Dog Bass.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/08/08_Da New Dog Bass_AD29F36A.wem</Path>
-				</File>
-				<File Id="807359470" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-1\T-1_HiHat.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-1/T-1_HiHat_AD29F36A.wem</Path>
 				</File>
 				<File Id="809315024" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Snare.wav</ShortName>
@@ -455,10 +481,6 @@
 					<ShortName>Interactive Music\Combat\03\03_Lead Guitar 2_bip.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_Lead Guitar 2_bip_AD29F36A.wem</Path>
 				</File>
-				<File Id="835600983" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-2\T-2_Grinding Mids ARP.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-2/T-2_Grinding Mids ARP_AD29F36A.wem</Path>
-				</File>
 				<File Id="838010951" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Cymbals.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Cymbals_AD29F36A.wem</Path>
@@ -466,10 +488,6 @@
 				<File Id="854356348" Language="SFX">
 					<ShortName>Interactive Music\Ambient\Synthetic-24b.wav</ShortName>
 					<Path>SFX/Interactive Music/Ambient/Synthetic-24b_AD29F36A.wem</Path>
-				</File>
-				<File Id="860659800" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Deep Bowing Glass Glide.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Deep Bowing Glass Glide_AD29F36A.wem</Path>
 				</File>
 				<File Id="877640226" Language="SFX">
 					<ShortName>Interactive Music\Combat\07\07_Kick.wav</ShortName>
@@ -539,6 +557,10 @@
 					<ShortName>Interactive Music\Combat\07\07_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/07/07_HiHat_AD29F36A.wem</Path>
 				</File>
+				<File Id="1034122642" Language="SFX">
+					<ShortName>PlayerDeath05.wav</ShortName>
+					<Path>SFX/PlayerDeath05_F7D0E330.wem</Path>
+				</File>
 				<File Id="1034478485" Language="SFX">
 					<ShortName>Interactive Music\Combat\02\02_Kick.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/02/02_Kick_AD29F36A.wem</Path>
@@ -559,17 +581,9 @@
 					<ShortName>Interactive Music\Combat\03\03_HiHat.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/03/03_HiHat_AD29F36A.wem</Path>
 				</File>
-				<File Id="1054990336" Language="SFX">
-					<ShortName>Interactive Music\Combat\T-3\T-3_Metal Kit - revcym.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/T-3/T-3_Metal Kit - revcym_AD29F36A.wem</Path>
-				</File>
 				<File Id="1057902357" Language="SFX">
 					<ShortName>Interactive Music\Combat\01\01_Toms.wav</ShortName>
 					<Path>SFX/Interactive Music/Combat/01/01_Toms_AD29F36A.wem</Path>
-				</File>
-				<File Id="1061619915" Language="SFX">
-					<ShortName>Interactive Music\Combat\09\09_Kick.wav</ShortName>
-					<Path>SFX/Interactive Music/Combat/09/09_Kick_AD29F36A.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
