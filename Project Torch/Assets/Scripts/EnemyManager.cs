@@ -668,11 +668,12 @@ public class EnemyManager : MonoBehaviour {
                 return GeneratePositionInGridCircle(5, enemy.transform.position);
             }
         }
-        Debug.Log("SendMoveTarget method broke... Listing occupants");
-        for (int i = 0; i < 6; ++i)
-            Debug.Log(surroundingGridOccupants[i]);
-        Debug.Break();
-        throw new UnityException();//Code shouldn't ever reach here
+        //Ideally, the code should never reach here... Means something went wrong
+        Debug.Log("No empty spots in grid! Telling the enemy to stay still...");
+        //Move to next state
+        enemy.CircleAroundPlayer();
+        //Return the current position
+        return enemy.transform.position;
     }
 
     /// <summary>
