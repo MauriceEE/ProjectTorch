@@ -433,31 +433,15 @@ public class EnemyManager : MonoBehaviour {
                 //This little bit here finds a random enemy among the ones circling the player in the grid cells
                 int randIndex = Random.Range(0, 6);
                 int startRandIndex = randIndex;
-
-                /* // check to ensure the grid isn't entirely null, thus triggering an infinite loop
-                bool allNull = true;
-                for(int x = 0; x < surroundingGridOccupants.Length; x++)
-                {
-                    if (surroundingGridOccupants[x] != null) allNull = false;
-                    else if (x == (surroundingGridOccupants.Length - 1) && allNull == true) Debug.Break();
-
-                    Debug.Log(surroundingGridOccupants[x]);
-                }
-                */
-
+                //Find a location in the grid where there's an enemy
                 while (surroundingGridOccupants[randIndex] == null)
                 {
-                    //Debug.Log("Infinite loop?: " + Time.fixedTime);
-                    //Debug.Log(randIndex);
                     ++randIndex;
                     if (randIndex >= 6)
                         randIndex = 0;
+                    //Couldn't find any enemies to send, give up
                     if (randIndex == startRandIndex)
-                    {
-                        Debug.Log("INFINITE LOOP!!!!!!!1");
-                        // ... nope :/
-                        Debug.Break();
-                    }
+                        return;
                 }
                 //Tell the enemy we found to attack
                 if (surroundingGridOccupants[randIndex].GetComponent<Enemy>().EnemyState != Enemy.EnemyStates.ApproachingToAttack

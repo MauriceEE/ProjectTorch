@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour {
         combat = this.GetComponent<PlayerCombat>();
         playerCollider = this.GetComponent<Collider2D>();
         entity = this.GetComponent<Entity>();
+        SoundManager.PlaySound(SoundManager.SoundEffects.PlayerWalk, this.gameObject);
 	}
 	
 	void Update () {

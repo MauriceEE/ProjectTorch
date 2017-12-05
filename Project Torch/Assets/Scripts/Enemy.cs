@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 //using UnityEditor;
 /// <summary>
 /// Enemy class. Does a lot of stuff
@@ -8,6 +9,13 @@ using UnityEngine;
 /// UPDATE: As of 10/27, this is now a base abstract class and each enemy game object will need a subclass script
 /// </summary>
 public abstract class Enemy : MonoBehaviour {
+
+    /// <summary>
+    /// Whether or not debugging lines should run
+    /// Set this to false/remove this entirely upon release
+    /// </summary>
+    protected static bool DEBUG = false;
+
     #region Enums
     public enum EnemyStates
     {
@@ -465,7 +473,8 @@ public abstract class Enemy : MonoBehaviour {
         switch (enemyState)
         {
             case EnemyStates.Idle:
-                Debug.Log("idle @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("idle @ " + Time.fixedTime);
                 //Nothing special for now.........
                 isAttacking = false;
                 maxVelocity = ogMaxVelocity;
@@ -495,7 +504,8 @@ public abstract class Enemy : MonoBehaviour {
                 }
                 break;
             case EnemyStates.Attacking:
-                Debug.Log("attacking @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("attacking @ " + Time.fixedTime);
                 elapsedApproachTime = 0f;
                 attackRange = ogAttackRange;
                 isAttacking = true;
@@ -504,7 +514,8 @@ public abstract class Enemy : MonoBehaviour {
                 //Debug.Log("Enemy attack target: " + attackTarget);
                 break;
             case EnemyStates.ApproachingToAttack:
-                Debug.Log("Approaching to attack @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("Approaching to attack @ " + Time.fixedTime);
                 isAttacking = false; // might change this if it proves cheap
                 // increase movement speed
                 if (maxVelocity <= (3 * ogMaxVelocity))
@@ -554,7 +565,8 @@ public abstract class Enemy : MonoBehaviour {
                 //atStartup = ogAtStartup;
                 break;
             case EnemyStates.ReturningFromAttack:
-                Debug.Log("Returning from attack @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("Returning from attack @ " + Time.fixedTime);
                 isAttacking = false;
                 counterattacking = false;
                 RequestMoveTarget();
@@ -564,11 +576,13 @@ public abstract class Enemy : MonoBehaviour {
                 //moveTarget = returnPosition;
                 //Merely move back to the return position and wait
                 //TODO: stuff after returning to the return position?
-                Debug.Log("Returning from encounter @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("Returning from encounter @ " + Time.fixedTime);
                 SeekTarget();
                 if ((Helper.Vec3ToVec2(this.transform.position) - moveTarget).sqrMagnitude <= arrivalRadius)
                 {
-                    Debug.Log("Arrived at return position @ " + Time.fixedTime);
+                    if (DEBUG)
+                        Debug.Log("Arrived at return position @ " + Time.fixedTime);
                     //Debug.Log("Switching Enemy states 4");
                     enemyState = EnemyStates.Idle;
                     //Prevent the enemy from continuously moving 
@@ -578,14 +592,16 @@ public abstract class Enemy : MonoBehaviour {
                 }
                 break;
             case EnemyStates.SurroundingPlayer:
-                Debug.Log("surrounding the player @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("surrounding the player @ " + Time.fixedTime);
                 //Merely follow the enemy manager's orders (it handles updating move target automatically)
                 // IDEALLY: IF MOVING TOWARDS THE PLAYER, KEEP MAX MOVEMENT. IF NOT, REDUCE IT TO 1/3rd
                 maxVelocity = ogMaxVelocity / 2;
                 SeekTarget();
                 break;
             case EnemyStates.Dodging:
-                Debug.Log("dodging @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("dodging @ " + Time.fixedTime);
                 //Continue the dodge action
                 SeekTarget();
                 dashTime -= Time.deltaTime;
@@ -613,11 +629,13 @@ public abstract class Enemy : MonoBehaviour {
                 }
                 break;
             case EnemyStates.Knockback:
-                Debug.Log("knocked back @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("knocked back @ " + Time.fixedTime);
                 UpdateKnockback();
                 break;
             case EnemyStates.Stunned:
-                Debug.Log("stunned @ " + Time.fixedTime);
+                if (DEBUG)
+                    Debug.Log("stunned @ " + Time.fixedTime);
                 if (stunTime <= 0f)
                     ResetCombatStates();
                 break;
