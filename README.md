@@ -239,3 +239,8 @@
   <li>Adjusted level bounds to make levels able to be completed</li>
   <li>Implemented waves but left them disabled since we likely won't have time to balance and debug them</li>
 </ul>
+<h2>Connor Menard - 12/4/17 - 9:55PM</h2>
+<ul>
+  <li>May have fixed the freezing bug (more testing required) </li>
+  <li>Removed the encounter with no enecounter enemies in it</li>
+</ul>
