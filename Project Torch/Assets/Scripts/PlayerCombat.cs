@@ -707,7 +707,6 @@ public class PlayerCombat : MonoBehaviour {
             SoundManager.PlaySound(SoundManager.SoundEffects.PlayerDeath, this.gameObject);
             //Flag as not in encounter to fix that up
             enemyMan.EncounterActive = false;
-            enemyMan.
             ZoneManager zoneMan = GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>();
             switch (zoneMan.CurrentZone.zone)
             {
