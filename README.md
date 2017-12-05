@@ -243,4 +243,6 @@
 <ul>
   <li>May have fixed the freezing bug (more testing required) </li>
   <li>Removed the encounter with no enecounter enemies in it</li>
+  <li>Added a failsafe case if there are more than 6 enemies in the grid - game no longer crashes</li>
+  <li>Fixed some enemies in incorrect zones</li>
 </ul>
