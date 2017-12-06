@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
     //Makes the dash more smooth
     [Range(0.50f, 1.00f)]
     public float dashFriction;
+    public Animator animator;
     #endregion
 
     #region Private Fields
@@ -36,7 +37,6 @@ public class PlayerMovement : MonoBehaviour {
     //Reference to Entity base script
     protected Entity entity;
     #endregion
-
     #region Properties
     public bool CanDash { get { return canDash; } set { canDash = value; } }
     public Vector2 Speed { get { return entity.Displacement; } }
@@ -52,6 +52,12 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Thrust") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Slash") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Shine")) {
+            animator.Play("Walk");
+        }
+        /*if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
+            animator.Play("Idle");
+        }*/
         //If NOT DASHING
         if (dashTime <= 0f)
         {
