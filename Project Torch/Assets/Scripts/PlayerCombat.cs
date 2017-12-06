@@ -96,6 +96,7 @@ public class PlayerCombat : MonoBehaviour {
     private Light shineLight;
     public Light leftLight;
     public Light rightLight;
+    public Light torchLight;
     #endregion
 
     #region Properties

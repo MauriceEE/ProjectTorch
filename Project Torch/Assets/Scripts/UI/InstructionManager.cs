@@ -18,7 +18,7 @@ public class InstructionManager : MonoBehaviour {
         instructions.Add("Off", "");
         instructions.Add("Move", "WASD  to  move  and  [L]  to  evade  attacks");
         instructions.Add("Slash", "Press  [J]  to  deal  damage  with  Slash");
-        instructions.Add("Thrust", "Press  [K]  to  break  yellow  guards  with  Thrust.  Brutes  regenerate  guard");
+        instructions.Add("Thrust", "Press  [K]  to  break  yellow  guards  with  Thrust.  Guards  negate  Slash!");
         instructions.Add("Shine", "Press  [I]  to  slow  and  light  enemies");
         instructions.Add("Shine2", "Shine  when  an  enemy  flashes  purple  to attack  to  stun  them");
         instructions.Add("Brazier", "Press  [E] on  braziers  if  you  wish  to  light  the  next  level");

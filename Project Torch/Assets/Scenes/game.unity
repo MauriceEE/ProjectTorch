@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -12982,11 +12982,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!108 &1008960734 stripped
-Light:
-  m_PrefabParentObject: {fileID: 108150208462948468, guid: 463392aad12d7e745864467aac870e50,
-    type: 2}
-  m_PrefabInternal: {fileID: 1109750690}
 --- !u!1 &1010447419
 GameObject:
   m_ObjectHideFlags: 0
@@ -13312,7 +13307,7 @@ MonoBehaviour:
   memoryCutoffThreshold: 0.95
   monitorPoolSize: 128
   monitorQueuePoolSize: 64
-  callbackManagerBufferSize: 4
+  callbackManagerBufferSize: 8
   engineLogging: 1
 --- !u!114 &1021550973
 MonoBehaviour:
@@ -14854,34 +14849,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114790601740790012, guid: 463392aad12d7e745864467aac870e50,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1109750691}
-    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
-        type: 2}
-      propertyPath: leftLight
-      value: 
-      objectReference: {fileID: 1008960734}
-    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
-        type: 2}
-      propertyPath: rightLight
-      value: 
-      objectReference: {fileID: 1875027329}
-    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1109750691}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 463392aad12d7e745864467aac870e50, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &1109750691 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95410372744014996, guid: 463392aad12d7e745864467aac870e50,
-    type: 2}
-  m_PrefabInternal: {fileID: 1109750690}
 --- !u!1 &1112549813
 GameObject:
   m_ObjectHideFlags: 0
@@ -23795,11 +23765,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1442020592727078, guid: 0eba00d40852bf3468cd761950fa610c,
     type: 2}
   m_PrefabInternal: {fileID: 1503158238}
---- !u!108 &1875027329 stripped
-Light:
-  m_PrefabParentObject: {fileID: 108449686094791950, guid: 463392aad12d7e745864467aac870e50,
-    type: 2}
-  m_PrefabInternal: {fileID: 1109750690}
 --- !u!1 &1880159783
 GameObject:
   m_ObjectHideFlags: 0

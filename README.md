@@ -261,3 +261,10 @@
 <ul>
   <li>Player Footsteps now work</li>
 </ul>
+<h2>Maurice Edwards - 12/6/17 - 15:30</h2>
+<ul>
+  <li>Improved Pulse feedback</li>
+  <li>Increased player spotlight intensity and updated prefab</li>
+  <li>Updated Guard tooltip</li>
+  <li>Player now properly receives health after encounters</li>
+</ul>

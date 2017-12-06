@@ -260,7 +260,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.7352941, g: 0.44445765, b: 0.3135813, a: 1}
-  m_Intensity: 5
+  m_Intensity: 5.5
   m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -437,6 +437,7 @@ MonoBehaviour:
   animator: {fileID: 95410372744014996}
   leftLight: {fileID: 108150208462948468}
   rightLight: {fileID: 108449686094791950}
+  torchLight: {fileID: 108784112885680568}
 --- !u!212 &212442816226677262
 SpriteRenderer:
   m_ObjectHideFlags: 1

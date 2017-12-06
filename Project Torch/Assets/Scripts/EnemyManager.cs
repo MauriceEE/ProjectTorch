@@ -487,14 +487,13 @@ public class EnemyManager : MonoBehaviour {
             //Check to see if there are no enemies remaining in the encounter
             if (encounterEnemies.Count == 0)
             {
-                float playerHP = player.GetComponent<PlayerCombat>().hp;
                 encounterActive = false;
                 //Special case: final boss encounter
                 if (currentEncounterType == Encounter.SpecialEncounters.ThroneRoomFinalEncounter)
                     GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
                 Debug.Log("No enemies remaining: encounter ending...");
-                playerHP += 30;
-                if (playerHP > 100) playerHP = 100;
+                player.GetComponent<PlayerCombat>().hp += 15;
+                if (player.GetComponent<PlayerCombat>().hp > 100) player.GetComponent<PlayerCombat>().hp = 100;
                 return;
             }
 
@@ -512,6 +511,8 @@ public class EnemyManager : MonoBehaviour {
             {
                 encounterActive = false;
                 Debug.Log("No more enemies of opposing faction, encounter ending...");
+                player.GetComponent<PlayerCombat>().hp += 15;
+                if (player.GetComponent<PlayerCombat>().hp > 100) player.GetComponent<PlayerCombat>().hp = 100;
                 return;
             }
 

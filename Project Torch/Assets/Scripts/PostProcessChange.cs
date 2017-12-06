@@ -23,18 +23,25 @@ public class PostProcessChange : MonoBehaviour {
     private float vignetteStartingIntensity; // .6
     private float chromaticAbStartingIntensity; // .375
     private float grainStartingIntensity; // .11
+    private Color vignetteStartingColor;
     // desired current values
     private float desiredVignetteIntensity;
+    private Color desiredVignetteColor;
     private PlayerMovement playerMove;
     private float enhancedRadiusTime;
     // The camera
     private Camera gameCam;
+    // expansion rate
+    private float expansionRate;
+    // the player
+    private PlayerCombat playerCombatScript;
     #endregion
 
     // Use this for initialization
     void Start ()
     {
         playerMove = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        playerCombatScript = GameObject.Find("Player").GetComponent<PlayerCombat>();
         darkness = false;
         enhancedRadius = false;
         enhancedRadiusTime = 0;
@@ -47,6 +54,7 @@ public class PostProcessChange : MonoBehaviour {
         vignetteStartingIntensity = .8f;
         chromaticAbStartingIntensity = chromaticAberSettings.intensity;
         grainStartingIntensity = grainSettings.intensity;
+        expansionRate = .005f;
     }
 	
 	// Update is called once per frame
@@ -80,6 +88,8 @@ public class PostProcessChange : MonoBehaviour {
         if (enhancedRadius) affectRadius();
         else
         {
+            expansionRate = .005f;
+            desiredVignetteColor = vignetteStartingColor;
             if (darkness) desiredVignetteIntensity = vignetteStartingIntensity;
             else desiredVignetteIntensity = 0;
         }
@@ -92,9 +102,9 @@ public class PostProcessChange : MonoBehaviour {
         {
             case true: // grow
                 // increase values in small increments
-                if (vignetteSettings.intensity < desiredVignetteIntensity) vignetteSettings.intensity += .005f;
-                if (chromaticAberSettings.intensity < chromaticAbStartingIntensity) chromaticAberSettings.intensity += .005f;
-                if (grainSettings.intensity < grainStartingIntensity) grainSettings.intensity += .005f;
+                if (vignetteSettings.intensity < desiredVignetteIntensity) vignetteSettings.intensity += expansionRate;
+                if (chromaticAberSettings.intensity < chromaticAbStartingIntensity) chromaticAberSettings.intensity += expansionRate;
+                if (grainSettings.intensity < grainStartingIntensity) grainSettings.intensity += expansionRate;
                 break;
 
             case false: // shrink
@@ -103,21 +113,21 @@ public class PostProcessChange : MonoBehaviour {
                 // vignette
                 if (vignetteSettings.intensity > 0f)
                 {
-                    vignetteSettings.intensity -= .005f;
+                    vignetteSettings.intensity -= expansionRate;
                     if (vignetteSettings.intensity < 0) vignetteSettings.intensity = 0;
                 }
 
                 // chromatic aberration
                 if (chromaticAberSettings.intensity > 0f)
                 {
-                    chromaticAberSettings.intensity -= .005f;
+                    chromaticAberSettings.intensity -= expansionRate;
                     if (chromaticAberSettings.intensity < 0) chromaticAberSettings.intensity = 0;
                 }
 
                 // grain
                 if (grainSettings.intensity > 0f)
                 {
-                    grainSettings.intensity -= .005f;
+                    grainSettings.intensity -= expansionRate;
                     if (grainSettings.intensity < 0) grainSettings.intensity = 0;
                 }
                 break;
@@ -131,16 +141,29 @@ public class PostProcessChange : MonoBehaviour {
 
     private void affectRadius()
     {
+        expansionRate = .08f;
+        // update time
         enhancedRadiusTime += Time.deltaTime;
-        if(enhancedRadiusTime > 4f)
+
+        // after 4 seconds set intensity to 1
+        if (enhancedRadiusTime > 4f)
         {
             desiredVignetteIntensity = 1;
-            if(enhancedRadiusTime > 10f)
+            playerCombatScript.torchLight.range = 0;
+            expansionRate = .005f;
+            // after 10 seconds, return to normal
+            if (enhancedRadiusTime > 10f)
             {
                 enhancedRadiusTime = 0;
+                expansionRate = .005f;
+                playerCombatScript.torchLight.range = 4;
                 enhancedRadius = false;
             }
         }
-        else desiredVignetteIntensity = .33f;
+        else
+        {
+            desiredVignetteIntensity = .8f; // if less than 4, keep intensity at near max
+            playerCombatScript.torchLight.range = 1.5f;
+        }
     }
 }
