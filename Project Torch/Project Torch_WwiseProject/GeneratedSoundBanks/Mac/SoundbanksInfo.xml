@@ -71,6 +71,10 @@
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_C9C93460.wem</Path>
 				</File>
+				<File Id="84738350" Language="SFX">
+					<ShortName>Scroll03.wav</ShortName>
+					<Path>SFX/Scroll03_CD4224B0.wem</Path>
+				</File>
 				<File Id="128772641" Language="SFX">
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_122954F5.wem</Path>
@@ -87,9 +91,9 @@
 					<ShortName>Bootsteps on wood.wav</ShortName>
 					<Path>SFX/Bootsteps on wood_EE60A388.wem</Path>
 				</File>
-				<File Id="252553299" Language="SFX">
-					<ShortName>Thick Plastic Hits 05.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 05_B6CDA5A2.wem</Path>
+				<File Id="223385858" Language="SFX">
+					<ShortName>Scroll02.wav</ShortName>
+					<Path>SFX/Scroll02_7E500F35.wem</Path>
 				</File>
 				<File Id="252585733" Language="SFX">
 					<ShortName>HumanSlash01.wav</ShortName>
@@ -158,10 +162,6 @@
 				<File Id="1000430789" Language="SFX">
 					<ShortName>EnemyShadowDeath01.wav</ShortName>
 					<Path>SFX/EnemyShadowDeath01_F7D0E330.wem</Path>
-				</File>
-				<File Id="1023094648" Language="SFX">
-					<ShortName>Thick Plastic Hits 32.wav</ShortName>
-					<Path>SFX/Thick Plastic Hits 32_0BDA7ABA.wem</Path>
 				</File>
 				<File Id="1052781010" Language="SFX">
 					<ShortName>HumanSlash01.wav</ShortName>

@@ -133,6 +133,104 @@
 								<ActiveSource Name="Air Burst Short 01" ID="{6D6E0D9C-253B-4DA3-A843-D81E69870D49}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Scroll02" ID="{E2B4026D-4CAB-454A-A540-AAE3D38C34DE}" ShortID="524177745">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>53</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scroll02" ID="{B0936CC1-C015-42CD-8356-001524EBEC59}" ShortID="223385858">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0384100044662796"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.645824028584189"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.23626619026351"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Scroll02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scroll02" ID="{B0936CC1-C015-42CD-8356-001524EBEC59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Scroll03" ID="{0172B32D-E0EE-4A2F-9CD9-22E6EE34B3DF}" ShortID="112311863">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Scroll03" ID="{CFC0C187-42BF-440E-BD3E-F0CB408977FE}" ShortID="84738350">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0160786065207682"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.820902188476999"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.820902188476999"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Scroll03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Scroll03" ID="{CFC0C187-42BF-440E-BD3E-F0CB408977FE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Select 01" ID="{BB6544B7-F842-4612-A0E3-0E2CE54816E0}" ShortID="1054638224">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Select 01" ID="{AAFCDE4E-3EF3-4D9D-B003-4C333437EA9C}" ShortID="461226826">
+									<Language>SFX</Language>
+									<AudioFile>Select 01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Select 01" ID="{AAFCDE4E-3EF3-4D9D-B003-4C333437EA9C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Select 02" ID="{97F1DC53-D660-452A-A1CD-1FD43041BFBF}" ShortID="145867682">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{42834CBF-5E75-4807-89CA-1BF2ABCC967E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Select 02" ID="{A51E6597-9241-400B-B29A-320D0383EA6A}" ShortID="833976650">
+									<Language>SFX</Language>
+									<AudioFile>Select 02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Select 02" ID="{A51E6597-9241-400B-B29A-320D0383EA6A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{1BB50FD0-F07A-4CAF-A1E8-798E27A27B0D}" ShortID="741823652">
