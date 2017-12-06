@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945604058392810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: -3.54, z: -0.5}
+  m_LocalPosition: {x: -3, y: -3.54, z: -0.5}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113142439676138}
@@ -315,6 +315,7 @@ MonoBehaviour:
   dashFrames: 30
   dashSpeed: {x: 0.2, y: 0.25}
   dashFriction: 0.888
+  animator: {fileID: 95410372744014996}
   dashTime: 0
 --- !u!114 &114911502257054008
 MonoBehaviour:
@@ -433,7 +434,9 @@ MonoBehaviour:
   - {fileID: 1513927004183044, guid: 470ea5397e419b7489f3eb6cd6a63524, type: 2}
   - {fileID: 1116876888763320, guid: 83b69fe2fe3a38a45aef3df242900145, type: 2}
   - {fileID: 1805514888748696, guid: c28e100a0158a834f94d934a8945a422, type: 2}
-  animator: {fileID: 0}
+  animator: {fileID: 95410372744014996}
+  leftLight: {fileID: 108150208462948468}
+  rightLight: {fileID: 108449686094791950}
 --- !u!212 &212442816226677262
 SpriteRenderer:
   m_ObjectHideFlags: 1

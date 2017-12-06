@@ -388,9 +388,24 @@
 						</Event>
 						<Event Name="Scroll" ID="{C5500AD6-219C-4CB5-8A5C-5222A4C4C075}">
 							<ChildrenList>
-								<Action Name="" ID="{606C8B2D-86F5-4C6B-9111-4E78AA9B60EE}" ShortID="888694031">
+								<Action Name="" ID="{527E10DB-5DEB-4369-A12B-33816A2BCA31}" ShortID="232426807">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Scroll03" ID="{0172B32D-E0EE-4A2F-9CD9-22E6EE34B3DF}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{606C8B2D-86F5-4C6B-9111-4E78AA9B60EE}" ShortID="888694031">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -402,13 +417,38 @@
 						</Event>
 						<Event Name="ButtonPress" ID="{CD4754EE-E934-4415-B678-E26F74E3A53D}">
 							<ChildrenList>
-								<Action Name="" ID="{FC92B974-DC1F-4915-8185-A4467E8BCE6C}" ShortID="847647624">
+								<Action Name="" ID="{1AE33A45-D33E-498E-8DDE-6B26348286F4}" ShortID="312062574">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
+											<ObjectRef Name="Scroll02" ID="{E2B4026D-4CAB-454A-A540-AAE3D38C34DE}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FC92B974-DC1F-4915-8185-A4467E8BCE6C}" ShortID="847647624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
 											<ObjectRef Name="ButtonPress" ID="{B35158C5-FE00-4D34-8F50-9FA23F0C6DF1}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2B10BB0B-A083-4968-A981-D450FC66F658}" ShortID="637147706">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Scroll03" ID="{0172B32D-E0EE-4A2F-9CD9-22E6EE34B3DF}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

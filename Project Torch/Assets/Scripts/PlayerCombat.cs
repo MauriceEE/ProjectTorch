@@ -94,6 +94,8 @@ public class PlayerCombat : MonoBehaviour {
     private float hitFlashTimer;
     // spotlights for shine
     private Light shineLight;
+    public Light leftLight;
+    public Light rightLight;
     #endregion
 
     #region Properties
@@ -123,12 +125,12 @@ public class PlayerCombat : MonoBehaviour {
         if (entity.FacingRight)
         {
             hitBoxDirectionMove = 1;
-            shineLight = GameObject.Find("SpotlightLeft").GetComponent<Light>(); // Super confusing, but ok
+            shineLight = leftLight; // Super confusing, but ok
         }
         else
         {
             hitBoxDirectionMove = -1;
-            shineLight = GameObject.Find("SpotlightRight").GetComponent<Light>(); // Super confusing, but ok
+            shineLight = rightLight; // Super confusing, but ok
         }
 
         // update hitFlashTimer

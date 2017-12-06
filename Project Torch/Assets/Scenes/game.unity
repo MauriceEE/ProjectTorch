@@ -12982,6 +12982,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!108 &1008960734 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108150208462948468, guid: 463392aad12d7e745864467aac870e50,
+    type: 2}
+  m_PrefabInternal: {fileID: 1109750690}
 --- !u!1 &1010447419
 GameObject:
   m_ObjectHideFlags: 0
@@ -14850,6 +14855,21 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114790601740790012, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1109750691}
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: leftLight
+      value: 
+      objectReference: {fileID: 1008960734}
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
+        type: 2}
+      propertyPath: rightLight
+      value: 
+      objectReference: {fileID: 1875027329}
+    - target: {fileID: 114932952136386398, guid: 463392aad12d7e745864467aac870e50,
         type: 2}
       propertyPath: animator
       value: 
@@ -23775,6 +23795,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1442020592727078, guid: 0eba00d40852bf3468cd761950fa610c,
     type: 2}
   m_PrefabInternal: {fileID: 1503158238}
+--- !u!108 &1875027329 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108449686094791950, guid: 463392aad12d7e745864467aac870e50,
+    type: 2}
+  m_PrefabInternal: {fileID: 1109750690}
 --- !u!1 &1880159783
 GameObject:
   m_ObjectHideFlags: 0

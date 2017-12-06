@@ -347,10 +347,10 @@
 										</MusicTrack>
 										<MusicTrack Name="Ambient_demo_01" ID="{CAC9906F-8C4D-43AE-90F4-AA81839DA2A2}" ShortID="484673850">
 											<PropertyList>
-												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="MusicTrackType" Type="int16" Value="2"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-11</Value>
+														<Value>-24</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -382,6 +382,7 @@
 														<MusicClip Name="Ambient_demo_01" ID="{0BDB461A-2158-42FC-A507-218E042F8D3F}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="15277.7777777778"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="1312.41323240819"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="2112.96159237454"/>
 																<Property Name="PlayAt" Type="Real64" Value="3055.55555555556"/>
 															</PropertyList>
@@ -522,6 +523,10 @@
 													</ClipList>
 												</MusicTrackSequence>
 												<MusicTrackSequence Name="" ID="{34470A26-0D96-47E9-B6B2-26A29EB9742E}"/>
+												<MusicTrackSequence Name="" ID="{E008181A-E683-420E-AAF6-0CE5C75C45B8}"/>
+												<MusicTrackSequence Name="" ID="{DA641AD4-C53C-4EC0-9549-9819F363366B}"/>
+												<MusicTrackSequence Name="" ID="{C4FBDD52-552F-422D-8096-836FD6E3393F}"/>
+												<MusicTrackSequence Name="" ID="{BD75CA38-DE51-4949-832D-9C291438E73B}"/>
 											</SequenceList>
 										</MusicTrack>
 									</ChildrenList>
@@ -557,7 +562,6 @@
 								<MusicPlaylistItem Name="" ID="{51A8B270-BAA7-4F96-AEEF-8ACDA9320668}" ShortID="716944343">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
-										<Property Name="PlayMode" Type="int16" Value="2"/>
 									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{2DFB383E-C68B-419B-A376-88C18073D273}" ShortID="492056654">

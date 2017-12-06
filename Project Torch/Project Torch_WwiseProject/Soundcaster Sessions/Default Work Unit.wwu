@@ -49,12 +49,12 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="PlayerMovementSpeed" ID="{C23FB255-3CF2-4F1B-84DC-8A1433BA61FC}"/>
-							<Value>0</Value>
+							<Value>0.320069204152249</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{A440BFD1-C039-4C3F-A421-B6A5E8704DBE}"/>
-						<CurrentStateRef Name="None" ID="{794663F3-2990-48CD-BDD3-0936F1EB7FCC}"/>
+						<CurrentStateRef Name="InGame" ID="{76C492F4-EBE4-4984-94C9-4972872BE370}"/>
+						<CurrentStateRef Name="Ambient" ID="{085198E0-EF2A-42D7-80CD-08C856370C3C}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Medium" ID="{EE3DE1E0-8F6E-4741-B207-CC0DE59F6276}"/>

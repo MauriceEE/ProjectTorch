@@ -51,11 +51,12 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	42804537	PlayerSlashDeflected01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\PlayerSlashDeflected01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerSlashDeflected\PlayerSlashDeflected01		22797
 	78114416	Bootsteps on wood_04	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Bootsteps on wood_C9C93460.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_04		3934
+	84738350	Scroll03	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Scroll03_675818E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll03		11480
 	128772641	Bootsteps on wood_01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Bootsteps on wood_122954F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_01		3704
 	145434304	Bootsteps on wood_05	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Bootsteps on wood_4E9B6C00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_05		3575
 	186580846	Resume	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Air Burst Short 01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Resume		2684
 	205875646	Bootsteps on wood_02	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Bootsteps on wood_EE60A388.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood_02		3896
-	252553299	Scroll	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 05_B6CDA5A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll		1053
+	223385858	Scroll02	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Scroll02_40D1D279.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Scroll02		19887
 	252585733	HumanSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\HumanSlash01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerSlash\HumanSlash01		9519
 	288819436	EnemyHumanHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\EnemyHumanHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteHit\EnemyHumanHit01		5159
 	309056163	Bootsteps on wood	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Bootsteps on wood_AFBCAD86.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Bootsteps on wood		3635
@@ -73,7 +74,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	939083768	Torch_Plant	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Close_1_3820EE0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Torch_Plant		1857
 	969397272	HumanHit01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\HumanHit01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerHit\HumanHit01		3619
 	1000430789	EnemyShadowDeath01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\EnemyShadowDeath01_F7D0E330.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyShadowBruteDeath\EnemyShadowDeath01		11198
-	1023094648	ButtonPress	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\Thick Plastic Hits 32_0BDA7ABA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress		1141
 	1052781010	HumanSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\HumanSlash01_C9106BCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanAttack\HumanSlash01		4585
 	1068839159	HumanBruteSlash01	Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\.cache\Mac\SFX\HumanBruteSlash01_B500ECC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\EnemyHumanBruteAttack\HumanBruteSlash01		5466
 
