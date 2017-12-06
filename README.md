@@ -257,3 +257,7 @@
   <li>replaced UI sounds with dark sounds</li>
   <li>menu music is now less repetitive when left idling</li>
 </ul>
+<h2>Garret Reynolds - 12/6/17 - 1:10PM</h2>
+<ul>
+  <li>Player Footsteps now work</li>
+</ul>

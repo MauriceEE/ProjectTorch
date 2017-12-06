@@ -505,12 +505,12 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-13</Value>
+										<Value>-22</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{0AC905C3-B94D-43D4-8ACD-13EE33915E4E}" ShortID="177370753">

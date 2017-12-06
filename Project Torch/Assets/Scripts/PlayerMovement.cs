@@ -136,8 +136,8 @@ public class PlayerMovement : MonoBehaviour {
             entity.Speed = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).magnitude;
 
             //Play footstep sound
-            SoundManager.SetSoundVolume(SoundManager.SoundEffects.PlayerWalk, entity.Speed);
-
+        //    SoundManager.SetSoundVolume(SoundManager.SoundEffects.PlayerWalk, entity.Speed);
+			AkSoundEngine.SetRTPCValue("PlayerMovementSpeed", entity.Speed);
             //Move the player
             entity.Move();
         }

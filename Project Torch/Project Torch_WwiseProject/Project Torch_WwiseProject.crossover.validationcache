@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1487118848" DateHigh="30632862"/>
+	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1043020416" DateHigh="30633654"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
@@ -9,20 +9,20 @@
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Effects\Factory Effects.wwu" DateLow="3522605696" DateHigh="30632724"/>
-	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Events\Default Work Unit.wwu" DateLow="4015760128" DateHigh="30633432"/>
+	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Events\Default Work Unit.wwu" DateLow="2952955008" DateHigh="30633652"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Events\Interactive Music.wwu" DateLow="340923648" DateHigh="30633437"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="2616999168" DateHigh="30633317"/>
-	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2940923648" DateHigh="30633437"/>
+	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3712955008" DateHigh="30633652"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3522605696" DateHigh="30632724"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
-	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Project Torch_WwiseProject.crossover.wsettings" DateLow="3595956352" DateHigh="30633438"/>
+	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Project Torch_WwiseProject.crossover.wsettings" DateLow="1343020416" DateHigh="30633654"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Project Torch_WwiseProject.wproj" DateLow="3075936384" DateHigh="30629921"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Queries\Factory Queries.wwu" DateLow="1847698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="340923648" DateHigh="30633437"/>
-	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2940923648" DateHigh="30633437"/>
+	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1043020416" DateHigh="30633654"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\States\Default Work Unit.wwu" DateLow="3390580352" DateHigh="30630063"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1837698688" DateHigh="30629822"/>
 	<ValidationCacheItem File="Y:\ProjectTorch\Project Torch\Project Torch_WwiseProject\Switches\Music.wwu" DateLow="2616999168" DateHigh="30633317"/>
