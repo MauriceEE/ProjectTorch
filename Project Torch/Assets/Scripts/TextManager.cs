@@ -382,6 +382,25 @@ public class TextManager : MonoBehaviour {
                 "Human:\nOur people died in droves and thousands starve, lost in purpose or lie dead in the many graves.",
                 "Human:\nWe will, with all our might, push on to create a brighter future for our people!"
             });
+        //King of Man's Final Speech
+        lines.Add("King of Man - Default",
+            new string[]
+            {
+                "King of Man:\nWanderer, this was not your fight.",
+                "King of Man:\nIt saddens me to see to your death. Squandering your life for a war you do not understand.",
+                "King of Man:\nDo not resent me for fighting for me people. A King's duty is to light the way forward!",
+                "King of Man:\nI truly hope, in death, where you sleep with the Serpents, you will know peace."
+            });
+        //King of the Dark's Final Speech
+        lines.Add("King of the Dark - Default",
+            new string[]
+            {
+                "King of the Dark:\nYou’re all the same! So keen to fight for a cause that you leave unquestioned!",
+                "King of the Dark:\nYou will be as your morals are: Dead and forgotten.",
+                "King of the Dark:\nI would rip apart the Serpent's Earth and the Dragon's Sky before I would let her be sacrificed!",
+                "King of the Dark:\nMy daughter is more than your kindling, yet you refuse to understand.",
+                "King of the Dark:\nSo die you wretch!"
+            });
     }
 #endregion
 }

@@ -268,3 +268,7 @@
   <li>Updated Guard tooltip</li>
   <li>Player now properly receives health after encounters</li>
 </ul>
+<h2>Maurice Edwards - 12/6/17 - 5:28PM</h2>
+<ul>
+  <li>Added in endings functionality, except changing the ending text.</li>
+</ul>

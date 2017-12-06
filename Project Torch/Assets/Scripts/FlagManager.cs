@@ -58,6 +58,7 @@ public class FlagManager : MonoBehaviour {
     public int killsToTiggerHostility;
     //Final encounter object
     public Encounter kingOfManFinalBossEncounter;
+    public Encounter kingOfTheDarkFinalBossEncounter;
     #endregion
 
     #region Private Fields
@@ -331,8 +332,10 @@ public class FlagManager : MonoBehaviour {
         if (sequenceName == "Princess - Saved") 
             GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.Fleeing;
         //King of Man final boss
-        if(sequenceName=="KING OF MAN DIALOGUE NAME GOES HERE!!!")
+        if(sequenceName== "King of Man - Default")
             GameObject.Find("EnemyManagerGo").GetComponent<EnemyManager>().StartEncounter(kingOfManFinalBossEncounter, Enemy.EnemyFaction.Human, Encounter.SpecialEncounters.ThroneRoomFinalEncounter);
+        if (sequenceName == "King of the Dark - Default")
+            GameObject.Find("EnemyManagerGo").GetComponent<EnemyManager>().StartEncounter(kingOfTheDarkFinalBossEncounter, Enemy.EnemyFaction.Shadow, Encounter.SpecialEncounters.CastleKeepFinalEncounter);
     }
 #endregion
 }

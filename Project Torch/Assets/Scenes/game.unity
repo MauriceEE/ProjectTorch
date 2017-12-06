@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6910,7 +6910,7 @@ Prefab:
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: specialEncounterType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
@@ -10310,6 +10310,7 @@ Transform:
   - {fileID: 1823890753}
   - {fileID: 968980003}
   - {fileID: 1122506658}
+  - {fileID: 1535393505}
   m_Father: {fileID: 1981395766}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11187,6 +11188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killsToTiggerHostility: 10
   kingOfManFinalBossEncounter: {fileID: 0}
+  kingOfTheDarkFinalBossEncounter: {fileID: 0}
 --- !u!1001 &907395797
 Prefab:
   m_ObjectHideFlags: 0
@@ -13301,7 +13303,7 @@ MonoBehaviour:
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
-  lowerPoolSize: 2048
+  lowerPoolSize: 4096
   streamingPoolSize: 1024
   preparePoolSize: 0
   memoryCutoffThreshold: 0.95
@@ -15877,7 +15879,7 @@ Prefab:
     - target: {fileID: 114212441760164652, guid: 84db7083cb316554e99788d8924c6c73,
         type: 2}
       propertyPath: specialEncounterType
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84db7083cb316554e99788d8924c6c73, type: 2}
@@ -19204,6 +19206,49 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!1 &1535393504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1535393505}
+  - component: {fileID: 1535393506}
+  m_Layer: 0
+  m_Name: OpeningDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535393505
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535393504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.4, y: -4.230006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 818091452}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535393506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535393504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0fb0ae612fd2f4b9d9e2dcbd53b9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLinesName: King of Man - Default
+  range: 2.72
+  destroyAfterActivation: 0
 --- !u!1 &1539324133
 GameObject:
   m_ObjectHideFlags: 0
@@ -24433,6 +24478,7 @@ Transform:
   - {fileID: 1303540156}
   - {fileID: 1422676711}
   - {fileID: 240837699}
+  - {fileID: 2062028167}
   m_Father: {fileID: 1981395766}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25837,6 +25883,49 @@ GameObject:
   m_PrefabParentObject: {fileID: 1902904183417402, guid: 711eeed3bcec1fc47a4a39018d827268,
     type: 2}
   m_PrefabInternal: {fileID: 1298527698}
+--- !u!1 &2062028166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2062028167}
+  - component: {fileID: 2062028168}
+  m_Layer: 0
+  m_Name: OpeningDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2062028167
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062028166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.25, y: -4.230006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1909961562}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2062028168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062028166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0fb0ae612fd2f4b9d9e2dcbd53b9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLinesName: King of the Dark - Default
+  range: 2.72
+  destroyAfterActivation: 0
 --- !u!1 &2067973405 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1506544935941978, guid: 0eba00d40852bf3468cd761950fa610c,

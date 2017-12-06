@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
     string[] gameOverDialogue = { "As the King of the Dark lay slain, man rejoiced. No longer would they merely make do with the False Flame. From this day on, they would bear a true flame, a privilege long since coveted by the serpents, a desire inherited by man.",
      "Yet more royal blood would be spilt. A King and his Princess, meet their ends on this day. He, battered by war. She, sacrificed in the name of a perceived right.",
-     "The Adjudicator was found dead by the side of the murdered King. A burnt out torch of a long dead age, clutched in an bastard hand.",
+     "The Adjudicator was found dead by the side of the murdered King. A burnt out torch of a long dead age, clutched in a bastard hand.",
     };
     public float maxTime;
     float timer;
