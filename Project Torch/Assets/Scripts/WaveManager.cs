@@ -117,17 +117,14 @@ public class WaveManager : MonoBehaviour {
     /// <returns>True if it's the last one</returns>
     public bool FinalWave(WaveIDs waveID)
     {
-        bool result = false;
         switch (currentWaveID)
         {
             case WaveIDs.KingOfDarkFinalBoss:
-                result = currentWaveKingOfDark == kingOfDarkFinalBossWaves.Length;
-                break;
+                return currentWaveKingOfDark >= kingOfDarkFinalBossWaves.Length;
             case WaveIDs.KingOfManFinalBoss:
-                result = currentWaveKingOfMan == kingOfManFinalBossWaves.Length;
-                break;
+                return currentWaveKingOfMan >= kingOfManFinalBossWaves.Length;
         }
-        return result;
+        return true;
     }
 
     /// <summary>
