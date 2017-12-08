@@ -17097,7 +17097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e922ef46cd43e48955eff4046a00ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingZone: 5
+  startingZone: 3
   blackScreen: {fileID: 649163423}
 --- !u!1 &1327791921
 GameObject:

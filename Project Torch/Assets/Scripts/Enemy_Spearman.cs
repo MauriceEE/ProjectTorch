@@ -57,6 +57,7 @@ public class Enemy_Spearman: Enemy {
 			if (faction == Enemy.EnemyFaction.Shadow) AkSoundEngine.PostEvent ("Shadow_Spearman_Attack", gameObject);
 
             attackAudioPlayed = true;
+            animator.Play("Slash");
 		}
         if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;
 
