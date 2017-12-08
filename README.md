@@ -268,7 +268,7 @@
   <li>Updated Guard tooltip</li>
   <li>Player now properly receives health after encounters</li>
 </ul>
-<h2>Maurice Edwards - 12/6/17 - 5:28PM</h2>
+<h2>Steven Ma? - 12/6/17 - 5:28PM</h2>
 <ul>
   <li>Added in endings functionality, except changing the ending text.</li>
 </ul>
@@ -285,4 +285,9 @@
 <ul>
   <li>added delay to Spearman Attack sound to align with animation</li>
   <li>Re-generated soundbanks</li>
+</ul>
+<h2>Maurice Edwards - 12/8/17 - 15:19</h2>
+<ul>
+  <li>Shrunk Glower size</li>
+  <li>Added line of code to get Princess Rescue enemies to attack</li>
 </ul>

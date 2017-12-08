@@ -75,7 +75,10 @@ public class Enemy_PrincessEscort : Enemy {
         //play attack sound if attacking
 		if (combatState == CombatStates.Active) {
 			if (faction == Enemy.EnemyFaction.Human)
+            { 
 				AkSoundEngine.PostEvent ("Human_PrincessEscort_Attack", gameObject);
+                animator.Play("Slash");
+            }
 
 			if (faction == Enemy.EnemyFaction.Shadow)
 				AkSoundEngine.PostEvent ("Shadow_PrincessEscort_Attack", gameObject);
