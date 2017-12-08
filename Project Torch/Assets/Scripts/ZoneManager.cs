@@ -187,6 +187,9 @@ public class ZoneManager : MonoBehaviour {
 			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
 			AkSoundEngine.SetRTPCValue ("CombatIntensity", 2);
 			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 4);
+
+            //Sets the correct ending
+            EndingVariables.endNumber = 1;
 		}
 		if (_nextZone.zone == ZoneNames.HumanTerritoryStage1) {
 			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
@@ -202,7 +205,10 @@ public class ZoneManager : MonoBehaviour {
 			//triggered combat music will be high intensity, ambient music will be "GreatThreat"
 			AkSoundEngine.SetRTPCValue ("CombatIntensity", 3);
 			AkSoundEngine.SetRTPCValue ("AmbientMusicMood", 5);
-		}
+
+            //Sets the correct ending
+            EndingVariables.endNumber = 2;
+        }
 		if (_nextZone.zone == ZoneNames.WarZoneStage2) {
 			//triggered combat music will be medium intensity, ambient music will be "MediumThreat"
 			AkSoundEngine.SetRTPCValue ("CombatIntensity", 2);

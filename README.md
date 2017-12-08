@@ -277,3 +277,7 @@
   <li>”GameEnd” event now ends footsteps and starts menu music behind credits.</li>
   <li>Adjusted walk sound transitions</li>
 </ul>
+<h2>Steven Ma - 12/8/17 - 2:04PM</h2>
+<ul>
+  <li>Endings are fully functional.</li>
+</ul>

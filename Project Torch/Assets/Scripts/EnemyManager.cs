@@ -490,7 +490,10 @@ public class EnemyManager : MonoBehaviour {
                 encounterActive = false;
                 //Special case: final boss encounter
                 if (currentEncounterType == Encounter.SpecialEncounters.ThroneRoomFinalEncounter)
+                {
+                    //EndingVariables.endNumber = 2;
                     GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
+                }
                 Debug.Log("No enemies remaining: encounter ending...");
                 player.GetComponent<PlayerCombat>().hp += 15;
                 if (player.GetComponent<PlayerCombat>().hp > 100) player.GetComponent<PlayerCombat>().hp = 100;
@@ -543,6 +546,7 @@ public class EnemyManager : MonoBehaviour {
                     Debug.Log("Final boss encounter over...");
                     encounterActive = false;
                     //TODO: King in downed state?
+                    //EndingVariables.endNumber = 1;
                     GameObject.Find("ZoneManagerGO").GetComponent<ZoneManager>().GameOver();
                 }
                 else

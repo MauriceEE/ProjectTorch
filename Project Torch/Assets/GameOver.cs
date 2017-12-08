@@ -17,6 +17,8 @@ public class GameOver : MonoBehaviour {
     // Use this for initialization
     void Start() {
         timer = maxTime;
+
+        gameOverDialogue = EndingVariables.getEnding();
     }
 
     // Update is called once per frame

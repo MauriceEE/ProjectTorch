@@ -329,8 +329,11 @@ public class FlagManager : MonoBehaviour {
     public void DialogueEnded(string sequenceName)
     {
         //Princess saved
-        if (sequenceName == "Princess - Saved") 
+        if (sequenceName == "Princess - Saved")
+        {
             GameObject.Find("Princess").GetComponent<Princess>().State = Princess.PrincessStates.Fleeing;
+            EndingVariables.princessSaved = true;
+        }
         //King of Man final boss
         if(sequenceName== "King of Man - Default")
             GameObject.Find("EnemyManagerGo").GetComponent<EnemyManager>().StartEncounter(kingOfManFinalBossEncounter, Enemy.EnemyFaction.Human, Encounter.SpecialEncounters.ThroneRoomFinalEncounter);

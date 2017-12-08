@@ -82,16 +82,6 @@ public class TextManager : MonoBehaviour {
                 "Altar:\nThe time of your birth, when fire devoured fire."
             });
 
-        //The basic lines the King will say to you with no other triggers
-        lines.Add("King of Man - Default",
-            new string[]
-            {
-                "King of Man:\nGood traveler, I know not of your origin, be it the Serpent’s Earth or Dragon’s sky, but I beg of you to aid us in our time of need.",
-                "King of Man:\nAid us as we repel the invaders from the shadows so that we may retake our place in this world!",
-                "King of Man:\nTheir King’s fortress lies to the west.",
-                "King of Man:\nLead the charge as I fulfill the last wish of the Serpents."
-            });
-
         //The lines the King of the Dark says when he's at his last 15% of health and can't move
         lines.Add("King of the Dark - Downed",
             new string[]
@@ -325,7 +315,7 @@ public class TextManager : MonoBehaviour {
         lines.Add("HT1Human1 - Default",
             new string[]
             {
-                "Human:\nWe’ve lost my family, my friends and my future.",
+                "Human:\nI’ve lost my family, my friends and my future.",
                 "Human:\nThe plague took much from us.",
                 "Human:\nWe were lost, drowning in grief, yearning for a tomorrow.",
                 "Human:\nWe have found that tomorrow, Stranger, we must now merely fight for it."
