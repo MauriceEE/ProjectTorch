@@ -281,3 +281,8 @@
 <ul>
   <li>Endings are fully functional.</li>
 </ul>
+<h2>Garret Reynolds - 12/8/17 - 11:56AM</h2>
+<ul>
+  <li>added delay to Spearman Attack sound to align with animation</li>
+  <li>Re-generated soundbanks</li>
+</ul>

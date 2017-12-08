@@ -1027,6 +1027,13 @@
 				<Folder Name="Enemies" ID="{B4006014-4D27-42DC-A5EA-13271E9B0813}" ShortID="1072743668">
 					<ChildrenList>
 						<RandomSequenceContainer Name="EnemyHumanSpearman Attack" ID="{FB5B2CA4-2E97-423F-B5F3-44B96F2B7D11}" ShortID="543232634">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.65</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
