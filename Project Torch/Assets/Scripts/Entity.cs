@@ -37,6 +37,7 @@ public class Entity : MonoBehaviour {
     #region Public Fields
     //ID which will be cross-referenced in other managers to determine dialogue
     public TextManager.InteractiveNPCNames npcID;
+    public Animator animator;
     #endregion
 
     #region Properties
@@ -77,6 +78,10 @@ public class Entity : MonoBehaviour {
             right = (displacement.x > 0);
             //Update sprite if flipping if necessary
             this.GetComponent<SpriteRenderer>().flipX = right;
+        }
+        if(animator != null && !animator.GetCurrentAnimatorStateInfo(0).IsName("Slash") && speed > 1.0f) {
+            animator.Play("Walk");
+            //Debug.LogError("Walking");
         }
     }
 

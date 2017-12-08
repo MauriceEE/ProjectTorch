@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 11
+  animator: {fileID: 0}
 --- !u!212 &16494582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 16
+  animator: {fileID: 0}
 --- !u!212 &70234875
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2803,6 +2805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 9
+  animator: {fileID: 0}
 --- !u!212 &143933964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3818,6 +3821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 10
+  animator: {fileID: 0}
 --- !u!212 &267706752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7304,6 +7308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 15
+  animator: {fileID: 0}
 --- !u!212 &610419796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7383,7 +7388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4972537893376162, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4972537893376162, guid: 0eba00d40852bf3468cd761950fa610c, type: 2}
       propertyPath: m_LocalScale.x
@@ -9339,6 +9344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 8
+  animator: {fileID: 0}
 --- !u!212 &761726500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10993,7 +10999,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4148001922548174, guid: 61ac124ad8fef794e81a21824dccb648, type: 2}
       propertyPath: m_LocalScale.x
@@ -11330,6 +11336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 13
+  animator: {fileID: 0}
 --- !u!212 &909742062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13268,6 +13275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 6
+  animator: {fileID: 0}
 --- !u!1 &1021550971
 GameObject:
   m_ObjectHideFlags: 0
@@ -13303,13 +13311,13 @@ MonoBehaviour:
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
-  lowerPoolSize: 4096
+  lowerPoolSize: 2048
   streamingPoolSize: 1024
   preparePoolSize: 0
   memoryCutoffThreshold: 0.95
   monitorPoolSize: 128
   monitorQueuePoolSize: 64
-  callbackManagerBufferSize: 8
+  callbackManagerBufferSize: 4
   engineLogging: 1
 --- !u!114 &1021550973
 MonoBehaviour:
@@ -13730,6 +13738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 0
+  animator: {fileID: 0}
 --- !u!61 &1046978931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16360,6 +16369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 14
+  animator: {fileID: 0}
 --- !u!212 &1283136079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17087,7 +17097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e922ef46cd43e48955eff4046a00ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingZone: 0
+  startingZone: 5
   blackScreen: {fileID: 649163423}
 --- !u!1 &1327791921
 GameObject:
@@ -18518,6 +18528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 0
+  animator: {fileID: 0}
 --- !u!61 &1454479045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19643,6 +19654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 12
+  animator: {fileID: 0}
 --- !u!212 &1572953810
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19936,6 +19948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 7
+  animator: {fileID: 0}
 --- !u!212 &1587574785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20316,6 +20329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 5
+  animator: {fileID: 0}
 --- !u!212 &1609075005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22000,6 +22014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 4
+  animator: {fileID: 0}
 --- !u!1001 &1754051111
 Prefab:
   m_ObjectHideFlags: 0
@@ -23437,6 +23452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 17
+  animator: {fileID: 0}
 --- !u!212 &1854276544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23738,6 +23754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 2
+  animator: {fileID: 0}
 --- !u!61 &1868710512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25024,6 +25041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcID: 1
+  animator: {fileID: 0}
 --- !u!61 &1959479308
 BoxCollider2D:
   m_ObjectHideFlags: 0

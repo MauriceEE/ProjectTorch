@@ -113,6 +113,8 @@ public class Enemy_Glower : Enemy {
                     shot.transform.position = this.transform.position;
                     shinedIncrements = 0;
                     SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
+                    //play attack animation
+                    animator.Play("Slash");
                 }
                 else
                 {
@@ -125,6 +127,8 @@ public class Enemy_Glower : Enemy {
                     shot.AlliedWithPlayer = true;
                     shot.Target = enemyMan.GetNewAttackTarget(this.faction);
                     SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
+                    //play attack animation
+                    animator.Play("Slash");
                 }
                 combatState = CombatStates.Recovery;
                 break;
