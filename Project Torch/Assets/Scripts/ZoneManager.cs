@@ -371,6 +371,7 @@ public class ZoneManager : MonoBehaviour {
         }
         else
             SceneManager.LoadScene("GameOver");
+		AkSoundEngine.PostEvent ("GameEnd", gameObject);
     }
 #endregion
 }

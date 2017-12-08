@@ -67,6 +67,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{84D76362-C38F-4E93-BB38-E365E9823925}" ShortID="759238631">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{DE3068B1-20E7-41A8-AE29-FE31EBB21A2D}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

@@ -605,6 +605,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="PlayerWalk_Off" ID="{125EDA5F-87DE-4058-ACD8-CE37C1AC9DD7}">
+							<ChildrenList>
+								<Action Name="" ID="{2A551825-6431-4BE4-9B23-A36E49EC0EFB}" ShortID="154448146">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{DE3068B1-20E7-41A8-AE29-FE31EBB21A2D}" WorkUnitID="{41554F3F-D28F-48AB-A526-2CEB3C077E94}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

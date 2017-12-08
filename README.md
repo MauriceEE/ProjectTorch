@@ -272,3 +272,8 @@
 <ul>
   <li>Added in endings functionality, except changing the ending text.</li>
 </ul>
+<h2>Garret Reynolds - 12/7/17 - 9:36PM</h2>
+<ul>
+  <li>”GameEnd” event now ends footsteps and starts menu music behind credits.</li>
+  <li>Adjusted walk sound transitions</li>
+</ul>
