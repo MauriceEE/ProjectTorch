@@ -291,7 +291,13 @@
   <li>Shrunk Glower size</li>
   <li>Added line of code to get Princess Rescue enemies to attack</li>
 </ul>
-<h2>Maurice Edwards - 12/8/17 - 15:19</h2>
+<h2>Garret Reynolds (This is MJ rewriting Garret's log)</h2>
+<ul>
+  <li>Lowered footstep sound volume</li>
+  <li>Rebuilt sound banks</li>
+  <li>???</li>
+</ul>
+<h2>Maurice Edwards - 12/9/17 - 15:19</h2>
 <ul>
   <li>Added an enemy to both final encounters</li>
   <li>Removed an enemy from the 6 enemy encounter in Human Territory 2</li>
