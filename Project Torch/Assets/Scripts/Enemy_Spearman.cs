@@ -52,13 +52,18 @@ public class Enemy_Spearman: Enemy {
         base.UpdateCombatState();
         //play attack sound if attacking
 		if (!attackAudioPlayed && combatState == CombatStates.Active) {
-			if (faction == Enemy.EnemyFaction.Human) AkSoundEngine.PostEvent ("Human_Spearman_Attack", gameObject);
+
 
 			if (faction == Enemy.EnemyFaction.Shadow) AkSoundEngine.PostEvent ("Shadow_Spearman_Attack", gameObject);
+            attackAudioPlayed = true;
 
+
+        }
+        if(!attackAudioPlayed && combatState == CombatStates.Startup) {
+            if (faction == Enemy.EnemyFaction.Human) AkSoundEngine.PostEvent("Human_Spearman_Attack", gameObject);
             attackAudioPlayed = true;
             animator.Play("Slash");
-		}
+        }
         if (combatState == CombatStates.Recovery || combatState == CombatStates.None) attackAudioPlayed = false;
 
         if(!triedToDash && combatState == CombatStates.Recovery)

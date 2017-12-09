@@ -101,8 +101,11 @@ public class Enemy_Brute : Enemy
 		if (!attackAudioPlayed && combatState == CombatStates.Active) {
             SoundManager.PlaySound(soundEffect_Attack, this.gameObject);
             attackAudioPlayed = true;
+            
         }
-
+        if(combatState == CombatStates.Startup) {
+            animator.Play("Slash");
+        }
         // if no guard stacks, update guardTime
         if (guardStacks <= 0) guardTime += Time.deltaTime;
         else guardTime = 0;

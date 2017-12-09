@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Thrust") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Slash") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Shine")) {
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("Start"))) {
             animator.Play("Walk");
         }
         /*if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 //play Dash sound
                 SoundManager.PlaySound(SoundManager.SoundEffects.PlayerDash, this.gameObject);
-
+                animator.Play("Dash");
                 //Start the dash timer
                 dashTime = dashFrames * Helper.frame;
 
