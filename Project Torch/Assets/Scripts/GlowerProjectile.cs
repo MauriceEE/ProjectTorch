@@ -9,6 +9,7 @@ using UnityEngine;
 public class GlowerProjectile : MonoBehaviour {
     #region Public Fields
     public GameObject AOEexplosionObj;
+    public Animation animation;
     #endregion
     #region Private Fields
     protected Rect hitboxRect;
@@ -36,6 +37,7 @@ public class GlowerProjectile : MonoBehaviour {
         homingTarget = player.gameObject;
     }
     void Update () {
+        animation.Play();
         //Update acceleration
         acceleration = Helper.Vec3ToVec2(homingTarget.transform.position - this.transform.position).normalized * accelerationForceMultiplier;
         //Apply to velocity
