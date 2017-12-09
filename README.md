@@ -291,3 +291,10 @@
   <li>Shrunk Glower size</li>
   <li>Added line of code to get Princess Rescue enemies to attack</li>
 </ul>
+<h2>Maurice Edwards - 12/8/17 - 15:19</h2>
+<ul>
+  <li>Added an enemy to both final encounters</li>
+  <li>Removed an enemy from the 6 enemy encounter in Human Territory 2</li>
+  <li>Enlarged Glower projectile size</li>
+  <li>Adjusted Brute size, animations, and hitboxes</li>
+</ul>
