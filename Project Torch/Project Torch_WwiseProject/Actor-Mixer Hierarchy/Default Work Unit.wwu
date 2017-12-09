@@ -510,7 +510,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-30</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{0AC905C3-B94D-43D4-8ACD-13EE33915E4E}" ShortID="177370753">
@@ -1160,6 +1160,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="EnemyHumanHit01" ID="{9EDE6CCA-2898-41A2-A202-7EA5EA848E1F}" ShortID="811392100">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{076BC8AA-7C9C-4CB4-B49A-895691B9D8C2}"/>
@@ -1419,8 +1426,12 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="EnemyHumanBruteAttack" ID="{ECC54773-8263-44E1-A405-BEBC7EBBEB4F}" ShortID="989658506">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-425</Value>
+									</ValueList>
+								</Property>
 								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>

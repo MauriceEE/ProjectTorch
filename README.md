@@ -291,3 +291,9 @@
   <li>Shrunk Glower size</li>
   <li>Added line of code to get Princess Rescue enemies to attack</li>
 </ul>
+<h2>Garret Reynolds - 12/9/17 - 3:53PM</h2>
+<ul>
+  <li>Tweaked human brute attack sound</li>
+  <li>Lowered footsteps volume by 6dB</li>
+  <li>Re-generated soundbanks</li>
+</ul>
