@@ -426,6 +426,12 @@ MonoBehaviour:
 
 
 
+
+
+
+
+
+
     Design
 
     Combat Design: Maurice Edwards
@@ -443,6 +449,11 @@ MonoBehaviour:
 
 
 
+
+
+
+
+
     Art
 
     Animation: Alexia Munoz
@@ -450,6 +461,9 @@ MonoBehaviour:
     Character Art: Alexia Munoz
 
     Environment Art: Joey Tong
+
+
+
 
 
 
@@ -474,11 +488,19 @@ MonoBehaviour:
 
 
 
+
+
     Sound:
 
     Audio Engineer: Garret Reynolds
 
     Composer: Garret Reynolds
+
+    Additional Music: Ben magruder
+
+
+
+
 
 
 
@@ -509,8 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fed1b6e2762420448e60cc872011c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 20
-  scrollSpeed: 80
+  maxTime: 25
+  scrollSpeed: 400
 --- !u!1 &2105452055
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +686,7 @@ MonoBehaviour:
   memoryCutoffThreshold: 0.95
   monitorPoolSize: 128
   monitorQueuePoolSize: 64
-  callbackManagerBufferSize: 8
+  callbackManagerBufferSize: 4
   engineLogging: 1
 --- !u!114 &2146663493
 MonoBehaviour:
